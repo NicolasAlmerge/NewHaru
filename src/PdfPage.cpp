@@ -580,3 +580,21 @@ unsigned int PdfPage::textRect(const Box& box, const char* text, TextAlignment a
 unsigned int PdfPage::textRect(const Box& box, const std::string& text, TextAlignment alignment) {
     return textRect(box.getLeft(), box.getTop(), box.getRight(), box.getBottom(), text.c_str(), alignment);
 }
+
+void PdfPage::writeText(const char* text, const Coor2D& position) {
+    writeText(text, position.getX(), position.getY());
+}
+
+void PdfPage::writeText(const char* text, int xPos, int yPos) {
+    beginText();
+    textOut(xPos, yPos, text);
+    endText();
+}
+
+void PdfPage::writeText(const std::string& text, const Coor2D& position) {
+    writeText(text.c_str(), position);
+}
+
+void PdfPage::writeText(const std::string& text, int xPos, int yPos) {
+    writeText(text.c_str(), xPos, yPos);
+}

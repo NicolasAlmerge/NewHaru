@@ -294,38 +294,6 @@ void PdfDocument::resetErrorCode() {
     HPDF_ResetError(pdfDoc);
 }
 
-void PdfDocument::setCompressionMode(CompressionMode mode) {
-    HPDF_SetCompressionMode(pdfDoc, (unsigned int) mode);
-}
-
-void PdfDocument::setR2EncryptMode() {
-    HPDF_SetEncryptionMode(pdfDoc, HPDF_ENCRYPT_R2, 5U);
-}
-
-void PdfDocument::setR3EncryptMode(unsigned int keyLength) {
-    HPDF_SetEncryptionMode(pdfDoc, HPDF_ENCRYPT_R3, keyLength);
-}
-
-void PdfDocument::setR3EncryptMode(R3EncryptKeyLength keyLength) {
-    setR3EncryptMode((unsigned int) keyLength);
-}
-
-void PdfDocument::setPassword(const char* ownerPassword, const char* userPassword) {
-    HPDF_SetPassword(pdfDoc, ownerPassword, userPassword);
-}
-
-void PdfDocument::setPassword(const char* ownerPassword, const std::string& userPassword) {
-    setPassword(ownerPassword, userPassword.c_str());
-}
-
-void PdfDocument::setPassword(const std::string& ownerPassword, const char* userPassword) {
-    setPassword(ownerPassword.c_str(), userPassword);
-}
-
-void PdfDocument::setPassword(const std::string& ownerPassword, const std::string& userPassword) {
-    setPassword(ownerPassword.c_str(), userPassword.c_str());
-}
-
 
 /******************** PAGES HANDLING ********************/
 
@@ -474,6 +442,7 @@ void PdfDocument::useCNTFonts() {
 
 
 /******************** ENCODINGS ********************/
+
 Encoder PdfDocument::getEncoder(const char* name) {
     return Encoder(HPDF_GetEncoder(pdfDoc, name));
 }
@@ -520,105 +489,6 @@ void PdfDocument::useCNTEncodings() {
 
 void PdfDocument::useUTFEncodings() {
     HPDF_UseUTFEncodings(pdfDoc);
-}
-
-
-/******************** IMAGES LOADING ********************/
-Image PdfDocument::loadPNGImageFromFile(const char* fileName) {
-    return Image(HPDF_LoadPngImageFromFile(pdfDoc, fileName));
-}
-
-Image PdfDocument::loadPNGImageFromFile(const std::string& fileName) {
-    return loadPNGImageFromFile(fileName.c_str());
-}
-
-Image PdfDocument::loadPartialPNGImageFromFile(const char* fileName) {
-    return Image(HPDF_LoadPngImageFromFile2(pdfDoc, fileName));
-}
-
-Image PdfDocument::loadPartialPNGImageFromFile(const std::string& fileName) {
-    return loadPartialPNGImageFromFile(fileName.c_str());
-}
-
-Image PdfDocument::loadJPEGImageFromFile(const char* fileName) {
-    return Image(HPDF_LoadJpegImageFromFile(pdfDoc, fileName));
-}
-
-Image PdfDocument::loadJPEGImageFromFile(const std::string& fileName) {
-    return loadJPEGImageFromFile(fileName.c_str());
-}
-
-Image PdfDocument::loadRawImageFromFile(
-    const char* fileName, unsigned int width,
-    unsigned int height, ImageColorSpaceDevice colorSpace
-) {
-    return Image(HPDF_LoadRawImageFromFile(pdfDoc, fileName, width, height, (HPDF_ColorSpace) colorSpace));
-}
-
-Image PdfDocument::loadRawImageFromFile(
-    const std::string& fileName, unsigned int width,
-    unsigned int height, ImageColorSpaceDevice colorSpace
-) {
-    return loadRawImageFromFile(fileName.c_str(), width, height, colorSpace);
-}
-
-Image PdfDocument::loadRawImageFromMemory(
-    const unsigned char* bytes, unsigned int width,
-    unsigned int height, ImageColorSpaceDevice colorSpace,
-    BitsPerComponent bitsPerComponent
-) {
-    return Image(HPDF_LoadRawImageFromMem(pdfDoc, bytes, width, height, (HPDF_ColorSpace) colorSpace, (HPDF_UINT) bitsPerComponent));
-}
-
-Image PdfDocument::loadRawImageFromMemory(
-    const std::vector<unsigned char>& bytes, unsigned int width,
-    unsigned int height, ImageColorSpaceDevice colorSpace,
-    BitsPerComponent bitsPerComponent
-) {
-    return loadRawImageFromMemory(bytes.data(), width, height, colorSpace, bitsPerComponent);
-}
-
-Image PdfDocument::loadPNGImageFromMemory(const unsigned char* bytes, unsigned int size) {
-    return Image(HPDF_LoadPngImageFromMem(pdfDoc, bytes, size));
-}
-
-Image PdfDocument::loadPNGImageFromMemory(const std::vector<unsigned char>& bytes) {
-    return loadPNGImageFromMemory(bytes.data(), bytes.size());
-}
-
-Image PdfDocument::loadJPEGImageFromMemory(const unsigned char* bytes, unsigned int size) {
-    return Image(HPDF_LoadJpegImageFromMem(pdfDoc, bytes, size));
-}
-
-Image PdfDocument::loadJPEGImageFromMemory(const std::vector<unsigned char>& bytes) {
-    return loadJPEGImageFromMemory(bytes.data(), bytes.size());
-}
-
-
-/******************** ATTRIBUTES ********************/
-
-void PdfDocument::setPermission(Permissions permissions) {
-    HPDF_SetPermission(pdfDoc, permissions);
-}
-
-void PdfDocument::setAttribute(PdfDateTimeAttribute parameter, const DateTime& value) {
-    HPDF_SetInfoDateAttr(pdfDoc, (HPDF_InfoType) parameter, value.innerContent);
-}
-
-void PdfDocument::setAttribute(PdfStringAttribute parameter, const char* value) {
-    HPDF_SetInfoAttr(pdfDoc, (HPDF_InfoType) parameter, value);
-}
-
-void PdfDocument::setAttribute(PdfStringAttribute parameter, const std::string& value) {
-    setAttribute(parameter, value.c_str());
-}
-
-const char* PdfDocument::getInfoAttribute(PdfDateTimeAttribute parameter) {
-    return HPDF_GetInfoAttr(pdfDoc, (HPDF_InfoType) parameter);
-}
-
-const char* PdfDocument::getInfoAttribute(PdfStringAttribute parameter) {
-    return HPDF_GetInfoAttr(pdfDoc, (HPDF_InfoType) parameter);
 }
 
 
@@ -697,7 +567,140 @@ Outline PdfDocument::createOutline(const std::string& title) const {
 }
 
 
+/******************** IMAGES LOADING ********************/
+
+Image PdfDocument::loadPNGImageFromFile(const char* fileName) {
+    return Image(HPDF_LoadPngImageFromFile(pdfDoc, fileName));
+}
+
+Image PdfDocument::loadPNGImageFromFile(const std::string& fileName) {
+    return loadPNGImageFromFile(fileName.c_str());
+}
+
+Image PdfDocument::loadPartialPNGImageFromFile(const char* fileName) {
+    return Image(HPDF_LoadPngImageFromFile2(pdfDoc, fileName));
+}
+
+Image PdfDocument::loadPartialPNGImageFromFile(const std::string& fileName) {
+    return loadPartialPNGImageFromFile(fileName.c_str());
+}
+
+Image PdfDocument::loadJPEGImageFromFile(const char* fileName) {
+    return Image(HPDF_LoadJpegImageFromFile(pdfDoc, fileName));
+}
+
+Image PdfDocument::loadJPEGImageFromFile(const std::string& fileName) {
+    return loadJPEGImageFromFile(fileName.c_str());
+}
+
+Image PdfDocument::loadRawImageFromFile(
+    const char* fileName, unsigned int width,
+    unsigned int height, ImageColorSpaceDevice colorSpace
+) {
+    return Image(HPDF_LoadRawImageFromFile(pdfDoc, fileName, width, height, (HPDF_ColorSpace) colorSpace));
+}
+
+Image PdfDocument::loadRawImageFromFile(
+    const std::string& fileName, unsigned int width,
+    unsigned int height, ImageColorSpaceDevice colorSpace
+) {
+    return loadRawImageFromFile(fileName.c_str(), width, height, colorSpace);
+}
+
+Image PdfDocument::loadRawImageFromMemory(
+    const unsigned char* bytes, unsigned int width,
+    unsigned int height, ImageColorSpaceDevice colorSpace,
+    BitsPerComponent bitsPerComponent
+) {
+    return Image(HPDF_LoadRawImageFromMem(pdfDoc, bytes, width, height, (HPDF_ColorSpace) colorSpace, (HPDF_UINT) bitsPerComponent));
+}
+
+Image PdfDocument::loadRawImageFromMemory(
+    const std::vector<unsigned char>& bytes, unsigned int width,
+    unsigned int height, ImageColorSpaceDevice colorSpace,
+    BitsPerComponent bitsPerComponent
+) {
+    return loadRawImageFromMemory(bytes.data(), width, height, colorSpace, bitsPerComponent);
+}
+
+Image PdfDocument::loadPNGImageFromMemory(const unsigned char* bytes, unsigned int size) {
+    return Image(HPDF_LoadPngImageFromMem(pdfDoc, bytes, size));
+}
+
+Image PdfDocument::loadPNGImageFromMemory(const std::vector<unsigned char>& bytes) {
+    return loadPNGImageFromMemory(bytes.data(), bytes.size());
+}
+
+Image PdfDocument::loadJPEGImageFromMemory(const unsigned char* bytes, unsigned int size) {
+    return Image(HPDF_LoadJpegImageFromMem(pdfDoc, bytes, size));
+}
+
+Image PdfDocument::loadJPEGImageFromMemory(const std::vector<unsigned char>& bytes) {
+    return loadJPEGImageFromMemory(bytes.data(), bytes.size());
+}
+
+
+/******************** OTHER FUNCTIONS ********************/
+
+void PdfDocument::setAttribute(PdfStringAttribute parameter, const char* value) {
+    HPDF_SetInfoAttr(pdfDoc, (HPDF_InfoType) parameter, value);
+}
+
+void PdfDocument::setAttribute(PdfStringAttribute parameter, const std::string& value) {
+    setAttribute(parameter, value.c_str());
+}
+
+const char* PdfDocument::getInfoAttribute(PdfStringAttribute parameter) {
+    return HPDF_GetInfoAttr(pdfDoc, (HPDF_InfoType) parameter);
+}
+
+const char* PdfDocument::getInfoAttribute(PdfDateTimeAttribute parameter) {
+    return HPDF_GetInfoAttr(pdfDoc, (HPDF_InfoType) parameter);
+}
+
+void PdfDocument::setAttribute(PdfDateTimeAttribute parameter, const DateTime& value) {
+    HPDF_SetInfoDateAttr(pdfDoc, (HPDF_InfoType) parameter, value.innerContent);
+}
+
+void PdfDocument::setPassword(const char* ownerPassword, const char* userPassword) {
+    HPDF_SetPassword(pdfDoc, ownerPassword, userPassword);
+}
+
+void PdfDocument::setPassword(const char* ownerPassword, const std::string& userPassword) {
+    setPassword(ownerPassword, userPassword.c_str());
+}
+
+void PdfDocument::setPassword(const std::string& ownerPassword, const char* userPassword) {
+    setPassword(ownerPassword.c_str(), userPassword);
+}
+
+void PdfDocument::setPassword(const std::string& ownerPassword, const std::string& userPassword) {
+    setPassword(ownerPassword.c_str(), userPassword.c_str());
+}
+
+void PdfDocument::setPermission(Permissions permissions) {
+    HPDF_SetPermission(pdfDoc, permissions);
+}
+
+void PdfDocument::setR2EncryptMode() {
+    HPDF_SetEncryptionMode(pdfDoc, HPDF_ENCRYPT_R2, 5U);
+}
+
+void PdfDocument::setR3EncryptMode(unsigned int keyLength) {
+    HPDF_SetEncryptionMode(pdfDoc, HPDF_ENCRYPT_R3, keyLength);
+}
+
+void PdfDocument::setR3EncryptMode(R3EncryptKeyLength keyLength) {
+    setR3EncryptMode((unsigned int) keyLength);
+}
+
+void PdfDocument::setCompressionMode(CompressionMode mode) {
+    HPDF_SetCompressionMode(pdfDoc, (unsigned int) mode);
+}
+
+
 /******************** OPERATORS ********************/
+
 void PdfDocument::operator=(const PdfDocument& newDoc) {
     close();
     pdfDoc = newDoc.pdfDoc;

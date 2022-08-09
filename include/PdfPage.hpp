@@ -206,5 +206,10 @@ namespace pdf {
         unsigned int textRect(float left, float top, float right, float bottom, const std::string& text, TextAlignment alignment = TextAlignment::LEFT);
         unsigned int textRect(const Box& box, const char* text, TextAlignment alignment = TextAlignment::LEFT);
         unsigned int textRect(const Box& box, const std::string& text, TextAlignment alignment = TextAlignment::LEFT);
+
+        void writeText(const char* text, const Coor2D& position);
+        void writeText(const char* text, int xPos, int yPos);
+        void writeText(const std::string& text, const Coor2D& position);
+        void writeText(const std::string& text, int xPos, int yPos);
     };
 }
