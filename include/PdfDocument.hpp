@@ -64,7 +64,7 @@ namespace pdf {
         std::vector<unsigned char> readFromStream(unsigned int size);
         void rewindStream();
 
-        bool assertHasNullOrValidDocument() const;
+        bool hasDocument() const;
         bool isEmpty() const final override;
 
         void resetErrorHandler();

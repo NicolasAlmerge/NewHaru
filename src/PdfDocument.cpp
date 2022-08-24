@@ -270,7 +270,7 @@ void PdfDocument::rewindStream() {
     HPDF_ResetStream(pdfDoc);
 }
 
-bool PdfDocument::assertHasNullOrValidDocument() const {
+bool PdfDocument::hasDocument() const {
     return HPDF_HasDoc(pdfDoc);
 }
 
