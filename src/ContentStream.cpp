@@ -9,3 +9,7 @@ ContentStream::~ContentStream() {}
 bool ContentStream::isEmpty() const {
     return innerContent == nullptr;
 }
+
+bool ContentStream::operator==(const ContentStream& other) const {
+    return innerContent == other.innerContent;
+}

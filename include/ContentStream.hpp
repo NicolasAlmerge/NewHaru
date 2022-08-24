@@ -27,5 +27,6 @@ namespace pdf {
     public:
         virtual ~ContentStream() = 0;
         bool isEmpty() const final override;
+        bool operator==(const ContentStream& other) const;
     };
 }
