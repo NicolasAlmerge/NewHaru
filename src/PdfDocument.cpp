@@ -261,8 +261,7 @@ unsigned int PdfDocument::readFromStream(unsigned char* buffer, unsigned int siz
 std::vector<unsigned char> PdfDocument::readFromStream(unsigned int size) {
     std::vector<unsigned char> result;
     result.reserve(size);
-    unsigned int newSize = size;
-    HPDF_ReadFromStream(pdfDoc, result.data(), &newSize);
+    HPDF_ReadFromStream(pdfDoc, result.data(), &size);
     return result;
 }
 
