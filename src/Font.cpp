@@ -54,31 +54,33 @@ TextWidth Font::getTextWidth(const std::string& text) const {
     return getTextWidth((const unsigned char*) text.c_str(), text.size());
 }
 
-unsigned int Font::measureText(
+std::pair<unsigned int, float> Font::measureText(
     const unsigned char* text, unsigned int len,
     float width, float fontSize,
     float charSpace, float wordSpace,
-    bool wordwrap, float* realWidth
+    bool wordwrap
 ) const {
-    return HPDF_Font_MeasureText(
+    float realWidth;
+    unsigned int value = HPDF_Font_MeasureText(
         innerContent,
         text, len,
         width, fontSize,
         charSpace, wordSpace,
-        wordwrap, realWidth
+        wordwrap, &realWidth
     );
+    return {value, realWidth};
 }
 
-unsigned int Font::measureText(
+std::pair<unsigned int, float> Font::measureText(
     const std::string& text,
     float width, float fontSize,
     float charSpace, float wordSpace,
-    bool wordwrap, float* realWidth
+    bool wordwrap
 ) const {
     return measureText(
         (const unsigned char*) text.c_str(), text.size(),
         width, fontSize,
         charSpace, wordSpace,
-        wordwrap, realWidth
+        wordwrap
     );
 }

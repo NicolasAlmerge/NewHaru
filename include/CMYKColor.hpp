@@ -4,6 +4,7 @@
 
 namespace pdf {
     class PdfPage;
+    class RGBColor;
 
     class CMYKColor: public Color {
         _HPDF_CMYKColor innerContent;
@@ -24,5 +25,7 @@ namespace pdf {
         void setM(float value);
         void setY(float value);
         void setK(float value);
+
+        RGBColor toRGB() const;
     };
 }

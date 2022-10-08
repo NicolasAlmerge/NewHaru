@@ -1,6 +1,10 @@
 #include "../include/RGBColor.hpp"
+#include "../include/CMYKColor.hpp"
 using namespace pdf;
 
+
+#define MIN(a, b) ((a < b)? a: b)
+#define MAX(a, b) ((a < b)? b: a)
 
 RGBColor::RGBColor(_HPDF_RGBColor&& rgbColor): innerContent(rgbColor) {}
 
@@ -38,4 +42,14 @@ void RGBColor::setG(float value) {
 
 void RGBColor::setB(float value) {
     innerContent.b = value;
+}
+
+CMYKColor RGBColor::toCMYK() const {
+    const float R = getR() / 255.f;
+    const float G = getG() / 255.f;
+    const float B = getB() / 255.f;
+    const float _maxGB = MAX(G, B);
+    const float K = 1.f - MAX(R, _maxGB);
+    const float invK = 1.f - K;
+    return CMYKColor((1-R-K)/invK, (1-G-K)/invK, (1-B-K)/invK, K);
 }

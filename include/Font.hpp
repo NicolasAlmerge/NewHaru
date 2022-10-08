@@ -33,18 +33,18 @@ namespace pdf {
         TextWidth getTextWidth(const std::vector<unsigned char>& bytes, unsigned int length) const;
         TextWidth getTextWidth(const std::string& text) const;
 
-        unsigned int measureText(
+        std::pair<unsigned int, float> measureText(
             const unsigned char* text, unsigned int len,
             float width, float fontSize,
             float charSpace, float wordSpace,
-            bool wordwrap, float* realWidth = nullptr
+            bool wordwrap
         ) const;
 
-        unsigned int measureText(
+        std::pair<unsigned int, float> measureText(
             const std::string& text,
             float width, float fontSize,
             float charSpace, float wordSpace,
-            bool wordwrap, float* realWidth = nullptr
+            bool wordwrap
         ) const;
     };
 }

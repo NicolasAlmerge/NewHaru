@@ -3,6 +3,7 @@
 
 
 namespace pdf {
+    class CMYKColor;
     class PdfPage;
 
     class RGBColor: public Color {
@@ -22,5 +23,7 @@ namespace pdf {
         void setR(float value);
         void setG(float value);
         void setB(float value);
+
+        CMYKColor toCMYK() const;
     };
 }
