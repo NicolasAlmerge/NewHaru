@@ -53,3 +53,13 @@ CMYKColor RGBColor::toCMYK() const {
     const float invK = 1.f - K;
     return CMYKColor((1-R-K)/invK, (1-G-K)/invK, (1-B-K)/invK, K);
 }
+
+const RGBColor RGBColor::WHITE(1, 1, 1);
+const RGBColor RGBColor::BLACK(0, 0, 0);
+const RGBColor RGBColor::RED(1, 0, 0);
+const RGBColor RGBColor::GREEN(0, 1, 0);
+const RGBColor RGBColor::BLUE(0, 0, 1);
+const RGBColor RGBColor::CYAN(0, 1, 1);
+const RGBColor RGBColor::MAGENTA(1, 0, 1);
+const RGBColor RGBColor::YELLOW(1, 1, 0);
+const RGBColor RGBColor::GRAY(128/255, 128/255, 128/255);
