@@ -223,8 +223,7 @@ namespace pdf {
         void setPermission(Permissions permissions);
 
         void setR2EncryptMode();
-        void setR3EncryptMode(unsigned int keyLength = 16U);
-        void setR3EncryptMode(R3EncryptKeyLength keyLength);
+        void setR3EncryptMode(R3EncryptKeyLength keyLength = R3EncryptKeyLength::SIXTEEN);
 
         void setCompressionMode(CompressionMode mode);
 

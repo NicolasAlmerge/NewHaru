@@ -686,12 +686,8 @@ void PdfDocument::setR2EncryptMode() {
     HPDF_SetEncryptionMode(pdfDoc, HPDF_ENCRYPT_R2, 5U);
 }
 
-void PdfDocument::setR3EncryptMode(unsigned int keyLength) {
-    HPDF_SetEncryptionMode(pdfDoc, HPDF_ENCRYPT_R3, keyLength);
-}
-
 void PdfDocument::setR3EncryptMode(R3EncryptKeyLength keyLength) {
-    setR3EncryptMode((unsigned int) keyLength);
+    HPDF_SetEncryptionMode(pdfDoc, HPDF_ENCRYPT_R3, (unsigned int) keyLength);
 }
 
 void PdfDocument::setCompressionMode(CompressionMode mode) {
