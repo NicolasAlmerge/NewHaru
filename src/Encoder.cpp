@@ -22,7 +22,7 @@ ByteType Encoder::getByteType(const char* text, unsigned int index) const {
     switch (HPDF_Encoder_GetByteType(innerContent, text, index)) {
         case HPDF_BYTE_TYPE_SINGLE: return ByteType::SINGLE;
         case HPDF_BYTE_TYPE_LEAD: return ByteType::LEAD;
-        case HPDF_BYTE_TYPE_TRIAL: return ByteType::TRIAL;
+        case HPDF_BYTE_TYPE_TRAIL: return ByteType::TRAIL;
         default: return ByteType::UNKNOWN;
     }
 }

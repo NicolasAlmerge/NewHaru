@@ -32,6 +32,7 @@ namespace pdf {
     class PdfDocument: public PdfObject {
         mutable HPDF_Doc pdfDoc = nullptr;
         bool opened = false;
+        void _openPdf();
 
     public:
         /******************** CONSTRUCTORS & DESTRUCTOR ********************/

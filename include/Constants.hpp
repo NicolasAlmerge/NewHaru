@@ -221,7 +221,7 @@ namespace pdf {
     enum class ByteType {
         SINGLE = 0,
         LEAD,
-        TRIAL,
+        TRAIL,
         UNKNOWN
     };
 
@@ -259,7 +259,7 @@ namespace pdf {
     enum class LineCap {
         BUTT_END = 0,
         ROUND_END,
-        PROJECTING_SCUARE_END,
+        PROJECTING_SQUARE_END,
         LINECAP_EOF
     };
 

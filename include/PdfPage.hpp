@@ -158,8 +158,8 @@ namespace pdf {
         void setCMYKStroke(float c, float m, float y, float k);
         void setCMYKStroke(const CMYKColor& color);
 
-        void setDash(const unsigned short* dashPtn, unsigned int numElem, unsigned int phase = 0U);
-        void setDash(const unsigned short* dashPtn, DashModeNumberElements numElem, unsigned int phase = 0U);
+        void setDash(const float dashPtn[8], unsigned int numElem, unsigned int phase = 0U);
+        void setDash(const float dashPtn[8], DashModeNumberElements numElem, unsigned int phase = 0U);
         void setDash(const DashMode& mode);
 
         void setExternGState(const ContentStream& stream);

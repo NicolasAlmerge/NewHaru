@@ -11,7 +11,7 @@ namespace pdf {
         friend class PdfPage;
 
     public:
-        unsigned short* getPtn() const;
+        float* getPtn() const;
         unsigned int getNumberPtn() const;
         unsigned int getPhase() const;
         void setPtn(unsigned short value[8]);

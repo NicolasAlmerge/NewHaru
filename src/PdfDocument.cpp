@@ -187,16 +187,20 @@ PdfDocument::~PdfDocument() {
 
 /******************** BASIC FUNCTIONS ********************/
 
+void PdfDocument::_openPdf() {
+    if (!pdfDoc) {
+        throw NewPdfCreationFailedException("Cannot create pdf object", 0x1000, 0);
+    }
+    opened = true;
+}
+
 void PdfDocument::open() {
     open(errorHandler, nullptr);
 }
 
 void PdfDocument::open(void (&customErrorHandler)(unsigned long, unsigned long, void*), void* userData) {
     pdfDoc = HPDF_New(customErrorHandler, userData);
-    if (!pdfDoc) {
-        throw NewPdfCreationFailedException("Cannot create pdf object", 0x1000, 0);
-    }
-    opened = true;
+    _openPdf();
 }
 
 void PdfDocument::open(
@@ -204,10 +208,7 @@ void PdfDocument::open(
     void (&customErrorHandler)(unsigned long, unsigned long, void*), void* userData
 ) {
     pdfDoc = HPDF_NewEx(customErrorHandler, customAllocFunc, customFreeFunc, memPoolBufSize, userData);
-    if (!pdfDoc) {
-        throw NewPdfCreationFailedException("Cannot create pdf object", 0x1000, 0);
-    }
-    opened = true;
+    _openPdf();
 }
 
 void PdfDocument::close() {

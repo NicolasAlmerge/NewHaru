@@ -143,7 +143,7 @@ LineCap PdfPage::getLineCap() const {
     switch (HPDF_Page_GetLineCap(innerContent)) {
         case HPDF_BUTT_END: return LineCap::BUTT_END;
         case HPDF_ROUND_END: return LineCap::ROUND_END;
-        case HPDF_PROJECTING_SCUARE_END: return LineCap::PROJECTING_SCUARE_END;
+        case HPDF_PROJECTING_SQUARE_END: return LineCap::PROJECTING_SQUARE_END;
         default: return LineCap::LINECAP_EOF;
     }
 }
@@ -431,11 +431,11 @@ void PdfPage::setCMYKStroke(const CMYKColor& color) {
     setCMYKStroke(color.getC(), color.getM(), color.getY(), color.getK());
 }
 
-void PdfPage::setDash(const unsigned short* dashPtn, unsigned int numElem, unsigned int phase) {
+void PdfPage::setDash(const float dashPtn[8], unsigned int numElem, unsigned int phase) {
     HPDF_Page_SetDash(innerContent, dashPtn, numElem, phase);
 }
 
-void PdfPage::setDash(const unsigned short* dashPtn, DashModeNumberElements numElem, unsigned int phase) {
+void PdfPage::setDash(const float dashPtn[8], DashModeNumberElements numElem, unsigned int phase) {
     setDash(dashPtn, (unsigned int) numElem, phase);
 }
 

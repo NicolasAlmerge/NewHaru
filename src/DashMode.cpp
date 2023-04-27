@@ -4,8 +4,8 @@ using namespace pdf;
 
 DashMode::DashMode(HPDF_DashMode&& dashMode): innerContent(dashMode) {}
 
-unsigned short* DashMode::getPtn() const {
-    return (unsigned short*) innerContent.ptn;
+float* DashMode::getPtn() const {
+    return (float*) innerContent.ptn;
 }
 
 unsigned int DashMode::getNumberPtn() const {
