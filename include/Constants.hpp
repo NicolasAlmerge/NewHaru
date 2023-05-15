@@ -135,80 +135,54 @@ namespace pdf {
         LOWER_LETTERS
     };
 
-    class ByteEncoding {
-    public:
-        virtual ~ByteEncoding();
-        virtual const char* toString() const = 0;
+    enum class SingleByteEncoding {
+        StandardEncoding = 0,
+        MacRomanEncoding,
+        WinAnsiEncoding,
+        FontSpecific,
+        ISO8859_2,
+        ISO8859_3,
+        ISO8859_4,
+        ISO8859_5,
+        ISO8859_6,
+        ISO8859_7,
+        ISO8859_8,
+        ISO8859_9,
+        ISO8859_10,
+        ISO8859_11,
+        ISO8859_13,
+        ISO8859_14,
+        ISO8859_15,
+        ISO8859_16,
+        CP1250,
+        CP1251,
+        CP1252,
+        CP1253,
+        CP1254,
+        CP1255,
+        CP1256,
+        CP1257,
+        CP1258,
+        KOI8_R
     };
 
-    class SingleByteEncoding final: public ByteEncoding {
-    public:
-        enum Value {
-            StandardEncoding = 0,
-            MacRomanEncoding,
-            WinAnsiEncoding,
-            FontSpecific,
-            ISO8859_2,
-            ISO8859_3,
-            ISO8859_4,
-            ISO8859_5,
-            ISO8859_6,
-            ISO8859_7,
-            ISO8859_8,
-            ISO8859_9,
-            ISO8859_10,
-            ISO8859_11,
-            ISO8859_13,
-            ISO8859_14,
-            ISO8859_15,
-            ISO8859_16,
-            CP1250,
-            CP1251,
-            CP1252,
-            CP1253,
-            CP1254,
-            CP1255,
-            CP1256,
-            CP1257,
-            CP1258,
-            KOI8_R
-        };
-
-        constexpr SingleByteEncoding(Value value): value(value) {}
-        constexpr operator Value() const {return value;}
-        const char* toString() const final override;
-
-    private:
-        Value value;
-    };
-
-    class MultiByteEncoding final: public ByteEncoding {
-        public:
-        enum Value {
-            GB_EUC_H = 0,
-            GB_EUC_V,
-            GBK_EUC_H,
-            GBK_EUC_V,
-            ETen_B5_H,
-            ETen_B5_V,
-            NINETYms_RKSJ_H,
-            NINETYms_RKSJ_V,
-            NINETYmsp_RKSJ_H,
-            EUC_H,
-            EUC_V,
-            KSC_EUC_H,
-            KSC_EUC_V,
-            KSCms_UHC_H,
-            KSCms_UHC_HW_H,
-            KSCms_UHC_HW_V
-        };
-
-        constexpr MultiByteEncoding(Value value): value(value) {}
-        constexpr operator Value() const {return value;}
-        const char* toString() const final override;
-
-    private:
-        Value value;
+    enum class MultiByteEncoding {
+        GB_EUC_H = 0,
+        GB_EUC_V,
+        GBK_EUC_H,
+        GBK_EUC_V,
+        ETen_B5_H,
+        ETen_B5_V,
+        NINETYms_RKSJ_H,
+        NINETYms_RKSJ_V,
+        NINETYmsp_RKSJ_H,
+        EUC_H,
+        EUC_V,
+        KSC_EUC_H,
+        KSC_EUC_V,
+        KSCms_UHC_H,
+        KSCms_UHC_HW_H,
+        KSCms_UHC_HW_V
     };
 
     enum class EncoderType {

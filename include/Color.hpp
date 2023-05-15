@@ -3,12 +3,13 @@
 #include "PdfObject.hpp"
 
 namespace pdf {
-    class LinkAnnotation;
-    class TextAnnotation;
+    class RGBColor;
+    class CMYKColor;
 
-    class Color: public PdfObject {
-    public:
+    struct Color: public PdfObject {
         virtual ~Color() = 0;
+        virtual RGBColor toRGB() const = 0;
+        virtual CMYKColor toCMYK() const = 0;
     };
 }
 

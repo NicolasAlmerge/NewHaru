@@ -8,6 +8,7 @@ namespace pdf {
 
     class DateTime {
         _HPDF_Date innerContent;
+        friend class PdfDocument;
 
     public:
         DateTime();
@@ -17,7 +18,15 @@ namespace pdf {
             int offHour = 0, int offMinutes = 0
         );
 
-        friend class PdfDocument;
+        int getYear() const;
+        int getMonth() const;
+        int getDay() const;
+        int getHour() const;
+        int getMinutes() const;
+        int getSeconds() const;
+        UTCIndicator getUTCIndicator() const;
+        int getOffHour() const;
+        int getOffMinutes() const;
     };
 }
 

@@ -6,7 +6,7 @@ namespace pdf {
     class PdfPage;
     class RGBColor;
 
-    class CMYKColor: public Color {
+    class CMYKColor final: public Color {
         _HPDF_CMYKColor innerContent;
         CMYKColor(_HPDF_CMYKColor&& rgbColor);
         friend class PdfPage;
@@ -15,7 +15,7 @@ namespace pdf {
         CMYKColor();
         CMYKColor(float c, float m, float y, float k);
 
-        bool isEmpty() const final override;
+        bool isEmpty() const override;
 
         float getC() const;
         float getM() const;
@@ -26,7 +26,8 @@ namespace pdf {
         void setY(float value);
         void setK(float value);
 
-        RGBColor toRGB() const;
+        RGBColor toRGB() const override;
+        CMYKColor toCMYK() const override;
 
         const static CMYKColor WHITE;
         const static CMYKColor BLACK;

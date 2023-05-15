@@ -44,6 +44,10 @@ void RGBColor::setB(float value) {
     innerContent.b = value;
 }
 
+RGBColor RGBColor::toRGB() const {
+    return RGBColor(innerContent.r, innerContent.g, innerContent.b);
+}
+
 CMYKColor RGBColor::toCMYK() const {
     const float R = getR() / 255.f;
     const float G = getG() / 255.f;

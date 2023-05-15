@@ -55,6 +55,10 @@ RGBColor CMYKColor::toRGB() const {
     return RGBColor((1.f-getC())*K, (1.f-getM())*K, (1.f-getY())*K);
 }
 
+CMYKColor CMYKColor::toCMYK() const {
+    return CMYKColor(innerContent.c, innerContent.m, innerContent.y, innerContent.k);
+}
+
 const CMYKColor CMYKColor::WHITE(0, 0, 0, 0);
 const CMYKColor CMYKColor::BLACK(0, 0, 0, 1);
 const CMYKColor CMYKColor::RED(0, 1, 1, 0);

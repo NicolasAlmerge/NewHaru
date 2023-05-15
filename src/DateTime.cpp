@@ -2,17 +2,7 @@
 using namespace pdf;
 
 
-DateTime::DateTime() {
-    innerContent.year = 0;
-    innerContent.month = 0;
-    innerContent.day = 0;
-    innerContent.hour = 0;
-    innerContent.minutes = 0;
-    innerContent.seconds = 0;
-    innerContent.ind = ' ';
-    innerContent.off_hour = 0;
-    innerContent.off_minutes = 0;
-}
+DateTime::DateTime(): DateTime(0, 0, 0, 0, 0, 0) {}
 
 DateTime::DateTime(
     int year, int month, int day,
@@ -28,4 +18,45 @@ DateTime::DateTime(
     innerContent.ind = (char) ind;
     innerContent.off_hour = offHour;
     innerContent.off_minutes = offMinutes;
+}
+
+int DateTime::getYear() const {
+    return innerContent.year;
+}
+
+int DateTime::getMonth() const {
+    return innerContent.month;
+}
+
+int DateTime::getDay() const {
+    return innerContent.day;
+}
+
+int DateTime::getHour() const {
+    return innerContent.hour;
+}
+
+int DateTime::getMinutes() const {
+    return innerContent.minutes;
+}
+
+int DateTime::getSeconds() const {
+    return innerContent.seconds;
+}
+
+UTCIndicator DateTime::getUTCIndicator() const {
+    switch (innerContent.ind) {
+        case '+': return UTCIndicator::PLUS;
+        case '-': return UTCIndicator::MINUS;
+        case 'Z': return UTCIndicator::Z;
+        default: return UTCIndicator::NONE;
+    }
+}
+
+int DateTime::getOffHour() const {
+    return innerContent.off_hour;
+}
+
+int DateTime::getOffMinutes() const {
+    return innerContent.off_minutes;
 }

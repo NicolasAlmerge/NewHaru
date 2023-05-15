@@ -32,13 +32,16 @@ namespace pdf {
     class PdfDocument: public PdfObject {
         mutable HPDF_Doc pdfDoc = nullptr;
         bool opened = false;
-        void _openPdf();
+        bool CNSEncodingimported = false;
+        bool CNTEncodingimported = false;
+        bool JPEncodingimported = false;
+        bool KREncodingimported = false;
+        bool UTFEncodingimported = false;
 
     public:
         /******************** CONSTRUCTORS & DESTRUCTOR ********************/
         PdfDocument() noexcept;
         ~PdfDocument();
-
 
         /******************** BASIC FUNCTIONS ********************/
         void open();
@@ -55,13 +58,10 @@ namespace pdf {
         void freeResources();
         void freeAllResources();
 
-        void saveToFile(const char* fileName);
         void saveToFile(const std::string& fileName);
 
         void saveToStream();
         unsigned int getStreamSize() const;
-        void readFromStream(unsigned char* buffer, unsigned int* size);
-        unsigned int readFromStream(unsigned char* buffer, unsigned int size);
         std::vector<unsigned char> readFromStream(unsigned int size);
         void rewindStream();
 
@@ -72,7 +72,6 @@ namespace pdf {
         void setErrorHandler(void (&customErrorHandler)(unsigned long, unsigned long, void*));
         unsigned long getLastErrorCode() const;
         void resetErrorCode();
-
 
         /******************** PAGES HANDLING ********************/
         void setPageConfiguration(unsigned int pagePerPages);
@@ -89,47 +88,31 @@ namespace pdf {
         PdfPage addPage();
         PdfPage insertPageBefore(const PdfPage& page);
 
-        void addPageLabel(PageNumberStyle style = PageNumberStyle::DECIMAL, unsigned int pageNumber = 0U, unsigned int firstPage = 1U, const char* prefix = nullptr);
-
+        void addPageLabel(PageNumberStyle style = PageNumberStyle::DECIMAL, unsigned int pageNumber = 0U, unsigned int firstPage = 1U);
+        void addPageLabel(const std::string& prefix, PageNumberStyle style = PageNumberStyle::DECIMAL, unsigned int pageNumber = 0U, unsigned int firstPage = 1U);
 
         /******************** FONT HANDLING ********************/
-        Font getFont(const char* fontName, const char* encodingName = "StandardEncoding");
-        Font getFont(const char* fontName, const std::string& encodingName);
-        Font getFont(const std::string& fontName, const char* encodingName = "StandardEncoding");
-        Font getFont(const std::string& fontName, const std::string& encodingName);
+        Font getFont(const std::string& fontName, SingleByteEncoding encoding = SingleByteEncoding::StandardEncoding);
+        Font getFont(const std::string& fontName, MultiByteEncoding encoding);
 
-        Font getFont(const char* fontName, const SingleByteEncoding& encodingName);
-        Font getFont(const std::string& fontName, const SingleByteEncoding& encodingName);
-        Font getFont(const char* fontName, const MultiByteEncoding& encodingName);
-        Font getFont(const std::string& fontName, const MultiByteEncoding& encodingName);
-        Font getFont(const char* fontName, const ByteEncoding& encodingName);
-        Font getFont(const std::string& fontName, const ByteEncoding& encodingName);
+        std::string loadType1FontFromFile(const std::string& AFMFileName);
+        std::string loadType1FontFromFile(const std::string& AFMFileName, const std::string& dataFileName);
 
-        const char* loadType1FontFromFile(const char* AFMFileName, const char* dataFileName = nullptr);
-        const char* loadType1FontFromFile(const char* AFMFileName, const std::string& dataFileName);
-        const char* loadType1FontFromFile(const std::string& AFMFileName, const char* dataFileName = nullptr);
-        const char* loadType1FontFromFile(const std::string& AFMFileName, const std::string& dataFileName);
-
-        const char* loadTrueTypeFontFromFile(const char* fileName, bool embedding);
-        const char* loadTrueTypeFontFromFile(const std::string& fileName, bool embedding);
-        const char* loadTrueTypeFontFromFile(const char* fileName, unsigned int index, bool embedding);
-        const char* loadTrueTypeFontFromFile(const std::string& fileName, unsigned int index, bool embedding);
+        std::string loadTrueTypeFontFromFile(const std::string& fileName, bool embedding);
+        std::string loadTrueTypeFontFromFile(const std::string& fileName, unsigned int index, bool embedding);
 
         void useJPFonts();
         void useKRFonts();
         void useCNSFonts();
         void useCNTFonts();
 
-
         /******************** ENCODINGS ********************/
-        Encoder getEncoder(const char* name);
-        Encoder getEncoder(const std::string& name);
-        Encoder getEncoder(SingleByteEncoding name);
-        Encoder getEncoder(MultiByteEncoding name);
+        Encoder getEncoder(SingleByteEncoding encoding);
+        Encoder getEncoder(MultiByteEncoding encoding);
 
         Encoder getCurrentEncoder();
-        void setCurrentEncoder(const char* name);
-        void setCurrentEncoder(const std::string& name);
+        void setCurrentEncoder(SingleByteEncoding encoding);
+        void setCurrentEncoder(MultiByteEncoding encoding);
 
         void useJPEncodings();
         void useKREncodings();
@@ -137,56 +120,19 @@ namespace pdf {
         void useCNTEncodings();
         void useUTFEncodings();
 
-
         /******************** OUTLINE CREATION ********************/
-        Outline createOutline(const char* title, const Outline* parent, const Encoder* encoder) const;
-        Outline createOutline(const std::string& title, const Outline* parent, const Encoder* encoder) const;
-
-        Outline createOutline(const char* title, const Outline& parent, const Encoder* encoder) const;
-        Outline createOutline(const std::string& title, const Outline& parent, const Encoder* encoder) const;
-
-        Outline createOutline(const char* title, const Outline* parent, const Encoder& encoder) const;
-        Outline createOutline(const std::string& title, const Outline* parent, const Encoder& encoder) const;
-
-        Outline createOutline(const char* title, const Outline& parent, const Encoder& encoder) const;
+        Outline createOutline(const std::string& title) const;
+        Outline createOutline(const std::string& title, const Outline& parent) const;
+        Outline createOutline(const std::string& title, const Encoder& encoder) const;
         Outline createOutline(const std::string& title, const Outline& parent, const Encoder& encoder) const;
 
-        Outline createOutline(const char* title, const Encoder* encoder) const;
-        Outline createOutline(const std::string& title, const Encoder* encoder) const;
-
-        Outline createOutline(const char* title, const Encoder& encoder) const;
-        Outline createOutline(const std::string& title, const Encoder& encoder) const;
-
-        Outline createOutline(const char* title, const Outline* outline) const;
-        Outline createOutline(const std::string& title, const Outline* outline) const;
-
-        Outline createOutline(const char* title, const Outline& outline) const;
-        Outline createOutline(const std::string& title, const Outline& outline) const;
-
-        Outline createOutline(const char* title) const;
-        Outline createOutline(const std::string& title) const;
-
-
         /******************** IMAGES LOADING ********************/
-        Image loadPNGImageFromFile(const char* fileName);
         Image loadPNGImageFromFile(const std::string& fileName);
-
-        Image loadPartialPNGImageFromFile(const char* fileName);
         Image loadPartialPNGImageFromFile(const std::string& fileName);
 
         Image loadRawImageFromFile(
-            const char* fileName, unsigned int width,
-            unsigned int height, ImageColorSpaceDevice colorSpace
-        );
-        Image loadRawImageFromFile(
             const std::string& fileName, unsigned int width,
             unsigned int height, ImageColorSpaceDevice colorSpace
-        );
-
-        Image loadRawImageFromMemory(
-            const unsigned char* bytes, unsigned int width,
-            unsigned int height, ImageColorSpaceDevice colorSpace,
-            BitsPerComponent bitsPerComponent
         );
 
         Image loadRawImageFromMemory(
@@ -195,29 +141,18 @@ namespace pdf {
             BitsPerComponent bitsPerComponent
         );
 
-        Image loadPNGImageFromMemory(const unsigned char* bytes, unsigned int size);
         Image loadPNGImageFromMemory(const std::vector<unsigned char>& bytes);
-
-        Image loadJPEGImageFromMemory(const unsigned char* bytes, unsigned int size);
         Image loadJPEGImageFromMemory(const std::vector<unsigned char>& bytes);
-
-        Image loadJPEGImageFromFile(const char* fileName);
         Image loadJPEGImageFromFile(const std::string& fileName);
 
-
         /******************** OTHER FUNCTIONS ********************/
-
-        void setAttribute(PdfStringAttribute parameter, const char* value);
         void setAttribute(PdfStringAttribute parameter, const std::string& value);
-
-        const char* getInfoAttribute(PdfStringAttribute parameter);
-        const char* getInfoAttribute(PdfDateTimeAttribute parameter);
-
         void setAttribute(PdfDateTimeAttribute parameter, const DateTime& value);
 
-        void setPassword(const char* ownerPassword, const char* userPassword = nullptr);
-        void setPassword(const char* ownerPassword, const std::string& userPassword);
-        void setPassword(const std::string& ownerPassword, const char* userPassword = nullptr);
+        std::optional<std::string> getInfoAttribute(PdfStringAttribute parameter);
+        std::optional<std::string> getInfoAttribute(PdfDateTimeAttribute parameter);
+
+        void setPassword(const std::string& ownerPassword);
         void setPassword(const std::string& ownerPassword, const std::string& userPassword);
 
         void setPermission(Permissions permissions);
@@ -227,9 +162,16 @@ namespace pdf {
 
         void setCompressionMode(CompressionMode mode);
 
-
         /******************** OPERATORS ********************/
         void operator=(const PdfDocument& newDoc);
+
+    private:
+        void __openPdf();
+        Font __getFont(const char* fontName, const char* encodingName);
+        std::string __loadType1FontFromFile(const char* AFMFileName, const char* dataFileName);
+        Encoder __getEncoder(const char* name);
+        void __setCurrentEncoder(const char* name);
+        Outline __createOutline(const std::string& title, const Outline* parent, const Encoder* encoder) const;
     };
 }
 
