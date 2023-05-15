@@ -28,6 +28,6 @@ std::vector<float> DashMode::getPoints() const {
     return vec;
 }
 
-unsigned int DashMode::getPhase() const {
+float DashMode::getPhase() const {
     return innerContent.phase;
 }

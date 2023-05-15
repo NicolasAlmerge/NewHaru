@@ -16,7 +16,7 @@ namespace pdf {
         DashMode(const std::vector<float>& values = {}, float phase = 0.0);
 
         std::vector<float> getPoints() const;
-        unsigned int getPhase() const;
+        float getPhase() const;
     };
 }
 
