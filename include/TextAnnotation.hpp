@@ -1,6 +1,6 @@
-#pragma once
+#ifndef __HARUPP_TEXTANNOTATION_HPP__
+#define __HARUPP_TEXTANNOTATION_HPP__
 #include "Annotation.hpp"
-
 
 namespace pdf {
     class PdfPage;
@@ -14,3 +14,5 @@ namespace pdf {
         void setOpened(bool open);
     };
 }
+
+#endif // __HARUPP_TEXTANNOTATION_HPP__

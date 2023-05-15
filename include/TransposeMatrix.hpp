@@ -1,6 +1,6 @@
-#pragma once
+#ifndef __HARUPP_TRANSPOSEMATRIX_HPP__
+#define __HARUPP_TRANSPOSEMATRIX_HPP__
 #include "PdfPage.hpp"
-
 
 namespace pdf {
     class PdfPage;
@@ -31,3 +31,5 @@ namespace pdf {
         void setY(float value);
     };
 }
+
+#endif // __HARUPP_TRANSPOSEMATRIX_HPP__

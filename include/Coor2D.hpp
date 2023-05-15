@@ -1,6 +1,6 @@
-#pragma once
+#ifndef __HARUPP_COOR2D_HPP__
+#define __HARUPP_COOR2D_HPP__
 #include "PdfPage.hpp"
-
 
 namespace pdf {
     class Image;
@@ -24,3 +24,5 @@ namespace pdf {
         void setY(float value);
     };
 }
+
+#endif // __HARUPP_COOR2D_HPP__

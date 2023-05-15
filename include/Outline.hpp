@@ -1,7 +1,7 @@
-#pragma once
+#ifndef __HARUPP_OUTLINE_HPP__
+#define __HARUPP_OUTLINE_HPP__
 #include "PdfObject.hpp"
 #include "ContentStream.hpp"
-
 
 namespace pdf {
     class PdfDocument;
@@ -17,3 +17,5 @@ namespace pdf {
         void setDestination(const Destination& destination);
     };
 }
+
+#endif // __HARUPP_OUTLINE_HPP__

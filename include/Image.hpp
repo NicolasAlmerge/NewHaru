@@ -1,9 +1,8 @@
 #pragma once
-#include "PdfObject.hpp"
 #include "Coor2D.hpp"
-#include "Constants.hpp"
 #include "ContentStream.hpp"
-
+#include "Constants.hpp"
+#include "PdfObject.hpp"
 
 namespace pdf {
     typedef unsigned char int8;

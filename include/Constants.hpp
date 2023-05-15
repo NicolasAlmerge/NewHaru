@@ -1,5 +1,5 @@
-#pragma once
-
+#ifndef __HARUPP_CONSTANTS_HPP__
+#define __HARUPP_CONSTANTS_HPP__
 
 namespace pdf {
     enum class CompressionMode: unsigned int {
@@ -329,3 +329,5 @@ namespace pdf {
         EOF_MODE
     };
 }
+
+#endif // __HARUPP_CONSTANTS_HPP__

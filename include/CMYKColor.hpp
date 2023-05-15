@@ -1,6 +1,6 @@
-#pragma once
+#ifndef __HARUPP_CMYKCOLOR_HPP__
+#define __HARUPP_CMYKCOLOR_HPP__
 #include "Color.hpp"
-
 
 namespace pdf {
     class PdfPage;
@@ -42,3 +42,5 @@ namespace pdf {
         const static CMYKColor GRAY;
     };
 }
+
+#endif // __HARUPP_CMYKCOLOR_HPP__

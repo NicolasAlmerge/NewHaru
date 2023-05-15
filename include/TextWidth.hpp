@@ -1,6 +1,6 @@
-#pragma once
+#ifndef __HARUPP_TEXTWIDTH_HPP__
+#define __HARUPP_TEXTWIDTH_HPP__
 #include "hpdf.h"
-
 
 namespace pdf {
     class Font;
@@ -17,3 +17,5 @@ namespace pdf {
         unsigned int getNumberOfSpaces() const;
     };
 }
+
+#endif // __HARUPP_TEXTWIDTH_HPP__

@@ -1,6 +1,6 @@
-#pragma once
+#ifndef __HARUPP_PDFEXCEPTION_HPP__
+#define __HARUPP_PDFEXCEPTION_HPP__
 #include "iostream"
-
 
 namespace pdf {
     // Base pdf exception class
@@ -882,3 +882,5 @@ namespace pdf {
         }
     };
 }
+
+#endif // __HARUPP_PDFEXCEPTION_HPP__

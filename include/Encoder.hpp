@@ -1,8 +1,8 @@
-#pragma once
+#ifndef __HARUPP_ENCODER_HPP__
+#define __HARUPP_ENCODER_HPP__
 #include "PdfObject.hpp"
 #include "Constants.hpp"
-#include "iostream"
-
+#include "string"
 
 namespace pdf {
     class PdfDocument;
@@ -24,3 +24,5 @@ namespace pdf {
         WritingMode getWritingMode() const;
     };
 }
+
+#endif // __HARUPP_ENCODER_HPP__

@@ -1,6 +1,6 @@
-#pragma once
+#ifndef __HARUPP_BOX_HPP__
+#define __HARUPP_BOX_HPP__
 #include "PdfObject.hpp"
-
 
 namespace pdf {
     class Font;
@@ -22,3 +22,5 @@ namespace pdf {
         float getTop() const;
     };
 }
+
+#endif // __HARUPP_BOX_HPP__

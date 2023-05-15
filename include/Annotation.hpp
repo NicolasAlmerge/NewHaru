@@ -1,8 +1,8 @@
-#pragma once
+#ifndef __HARUPP_ANNOTATION_HPP__
+#define __HARUPP_ANNOTATION_HPP__
 #include "PdfObject.hpp"
 #include "Constants.hpp"
 #include "ContentStream.hpp"
-
 
 namespace pdf {
     class LinkAnnotation;
@@ -18,3 +18,5 @@ namespace pdf {
         void setBorderStyle(BorderStyle style, float width, unsigned short dashOn, unsigned short dashOff, unsigned short dashPhase);
     };
 }
+
+#endif // __HARUPP_ANNOTATION_HPP__

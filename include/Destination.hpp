@@ -1,6 +1,6 @@
-#pragma once
+#ifndef __HARUPP_DESTINATION_HPP__
+#define __HARUPP_DESTINATION_HPP__
 #include "PdfObject.hpp"
-
 
 namespace pdf {
     class Outline;
@@ -26,3 +26,5 @@ namespace pdf {
         void setFitBV(float top);
     };
 }
+
+#endif // __HARUPP_DESTINATION_HPP__

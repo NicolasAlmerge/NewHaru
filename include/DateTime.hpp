@@ -1,7 +1,7 @@
-#pragma once
-#include "hpdf.h"
+#ifndef __HARUPP_DATETIME_HPP__
+#define __HARUPP_DATETIME_HPP__
 #include "Constants.hpp"
-
+#include "hpdf.h"
 
 namespace pdf {
     class PdfDocument;
@@ -20,3 +20,5 @@ namespace pdf {
         friend class PdfDocument;
     };
 }
+
+#endif // __HARUPP_DATETIME_HPP__

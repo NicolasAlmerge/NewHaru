@@ -1,9 +1,9 @@
-#pragma once
+#ifndef __HARUPP_FONT_HPP__
+#define __HARUPP_FONT_HPP__
+#include "ContentStream.hpp"
 #include "PdfObject.hpp"
 #include "iostream"
 #include "vector"
-#include "ContentStream.hpp"
-
 
 namespace pdf {
     class PdfDocument;
@@ -48,3 +48,5 @@ namespace pdf {
         ) const;
     };
 }
+
+#endif // __HARUPP_FONT_HPP__

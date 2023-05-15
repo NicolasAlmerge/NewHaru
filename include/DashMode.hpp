@@ -1,6 +1,6 @@
-#pragma once
+#ifndef __HARUPP_DASHMODE_HPP__
+#define __HARUPP_DASHMODE_HPP__
 #include "PdfObject.hpp"
-
 
 namespace pdf {
     class PdfPage;
@@ -19,3 +19,5 @@ namespace pdf {
         void setPhase(unsigned int value);
     };
 }
+
+#endif // __HARUPP_DASHMODE_HPP__

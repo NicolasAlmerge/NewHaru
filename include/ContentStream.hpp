@@ -1,6 +1,6 @@
-#pragma once
+#ifndef __HARUPP_CONTENTSTREAM_HPP__
+#define __HARUPP_CONTENTSTREAM_HPP__
 #include "PdfObject.hpp"
-
 
 namespace pdf {
     class PdfPage;
@@ -30,3 +30,5 @@ namespace pdf {
         bool operator==(const ContentStream& other) const;
     };
 }
+
+#endif // __HARUPP_CONTENTSTREAM_HPP__

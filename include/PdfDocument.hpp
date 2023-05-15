@@ -1,5 +1,5 @@
-#pragma once
-#include "vector"
+#ifndef __HARUPP_PDFDOCUMENT_HPP__
+#define __HARUPP_PDFDOCUMENT_HPP__
 #include "Annotation.hpp"
 #include "Box.hpp"
 #include "CMYKColor.hpp"
@@ -22,7 +22,7 @@
 #include "TextAnnotation.hpp"
 #include "TextWidth.hpp"
 #include "TransposeMatrix.hpp"
-
+#include "vector"
 
 namespace pdf {
     constexpr int MAX_STRING_LEN = HPDF_LIMIT_MAX_STRING_LEN;
@@ -232,3 +232,5 @@ namespace pdf {
         void operator=(const PdfDocument& newDoc);
     };
 }
+
+#endif // __HARUPP_PDFDOCUMENT_HPP__

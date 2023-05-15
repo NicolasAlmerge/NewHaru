@@ -1,9 +1,9 @@
-#pragma once
-#include "PdfObject.hpp"
-#include "iostream"
-#include "Constants.hpp"
+#ifndef __HARUPP_PDFPAGE_HPP__
+#define __HARUPP_PDFPAGE_HPP__
 #include "ContentStream.hpp"
-
+#include "Constants.hpp"
+#include "PdfObject.hpp"
+#include "string"
 
 namespace pdf {
     class PdfDocument;
@@ -213,3 +213,5 @@ namespace pdf {
         void writeText(const std::string& text, int xPos, int yPos);
     };
 }
+
+#endif // __HARUPP_PDFPAGE_HPP__
