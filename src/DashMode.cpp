@@ -1,31 +1,33 @@
 #include "../include/DashMode.hpp"
+#include "../include/PdfException.hpp"
 using namespace pdf;
 
 
 DashMode::DashMode(HPDF_DashMode&& dashMode): innerContent(dashMode) {}
 
-float* DashMode::getPtn() const {
-    return (float*) innerContent.ptn;
+DashMode::DashMode(const std::vector<float>& values, float phase) {
+    if (values.size() > MAX_DASH_MODE_LENGTH)
+        throw ArrayCountException("Given vector exceeds max array length of 8", 0x1001, 0UL);
+
+    // Set attributes
+    innerContent.num_ptn = values.size();
+    for (unsigned int i = 0; i < values.size(); ++i) innerContent.ptn[i] = values[i];
+    innerContent.phase = phase;
 }
 
-unsigned int DashMode::getNumberPtn() const {
-    return innerContent.num_ptn;
+std::vector<float> DashMode::getPoints() const {
+    const float* points = innerContent.ptn;
+    unsigned int numberPoints = innerContent.num_ptn;
+
+    // Create a new vector object
+    std::vector<float> vec;
+    vec.reserve(numberPoints);
+
+    // Add points one by one
+    for (unsigned int i = 0; i < numberPoints; ++i) vec.push_back(points[i]);
+    return vec;
 }
 
 unsigned int DashMode::getPhase() const {
     return innerContent.phase;
-}
-
-void DashMode::setPtn(unsigned short value[8]) {
-    for (unsigned short i = 0; i < 8; ++i) {
-        innerContent.ptn[i] = value[i];
-    }
-}
-
-void DashMode::setNumberPtn(unsigned int value) {
-    innerContent.num_ptn = value;
-}
-
-void DashMode::setPhase(unsigned int value) {
-    innerContent.phase = value;
 }

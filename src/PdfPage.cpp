@@ -431,16 +431,8 @@ void PdfPage::setCMYKStroke(const CMYKColor& color) {
     setCMYKStroke(color.getC(), color.getM(), color.getY(), color.getK());
 }
 
-void PdfPage::setDash(const float dashPtn[8], unsigned int numElem, unsigned int phase) {
-    HPDF_Page_SetDash(innerContent, dashPtn, numElem, phase);
-}
-
-void PdfPage::setDash(const float dashPtn[8], DashModeNumberElements numElem, unsigned int phase) {
-    setDash(dashPtn, (unsigned int) numElem, phase);
-}
-
 void PdfPage::setDash(const DashMode& mode) {
-    setDash(mode.getPtn(), mode.getNumberPtn(), mode.getPhase());
+    HPDF_Page_SetDash(innerContent, mode.innerContent.ptn, mode.innerContent.num_ptn, mode.innerContent.phase);
 }
 
 void PdfPage::setExternGState(const ContentStream& stream) {
