@@ -279,18 +279,6 @@ namespace pdf {
         REPLACE
     };
 
-    enum class DashModeNumberElements: unsigned int {
-        ZERO = 0,
-        ONE,
-        TWO,
-        THREE,
-        FOUR,
-        FIVE,
-        SIX,
-        SEVEN,
-        EIGHT
-    };
-
     enum class TextRenderingMode {
         FILL = 0,
         STROKE,
