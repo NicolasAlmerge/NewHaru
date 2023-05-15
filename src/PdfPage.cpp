@@ -61,54 +61,30 @@ Destination PdfPage::createDestination() {
     return Destination(HPDF_Page_CreateDestination(innerContent));
 }
 
-TextAnnotation PdfPage::createTextAnnotation(const Box& box, const char* text, const Encoder& encoder) {
-    return TextAnnotation(HPDF_Page_CreateTextAnnot(innerContent, box.innerContent, text, encoder.innerContent));
+TextAnnotation PdfPage::createTextAnnotation(const std::string& text, const Box& box, const Encoder& encoder) {
+    return TextAnnotation(HPDF_Page_CreateTextAnnot(innerContent, box.innerContent, text.c_str(), encoder.innerContent));
 }
 
-TextAnnotation PdfPage::createTextAnnotation(const Box& box, const std::string& text, const Encoder& encoder) {
-    return createTextAnnotation(box, text.c_str(), encoder);
+TextAnnotation PdfPage::createTextAnnotation(const std::string& text, const Box& box) {
+    return TextAnnotation(HPDF_Page_CreateTextAnnot(innerContent, box.innerContent, text.c_str(), nullptr));
 }
 
-TextAnnotation PdfPage::createTextAnnotation(const Box& box, const char* text) {
-    return TextAnnotation(HPDF_Page_CreateTextAnnot(innerContent, box.innerContent, text, nullptr));
-}
-
-TextAnnotation PdfPage::createTextAnnotation(const Box& box, const std::string& text) {
-    return createTextAnnotation(box, text.c_str());
-}
-
-LinkAnnotation PdfPage::createLinkAnnotation(const Box& box, const Destination& destination) {
+LinkAnnotation PdfPage::createLinkAnnotation(const Destination& destination, const Box& box) {
     return LinkAnnotation(HPDF_Page_CreateLinkAnnot(innerContent, box.innerContent, destination.innerContent));
 }
 
-LinkAnnotation PdfPage::createURILinkAnnotation(const Box& box, const char* uri) {
-    return LinkAnnotation(HPDF_Page_CreateURILinkAnnot(innerContent, box.innerContent, uri));
-}
-
-LinkAnnotation PdfPage::createURILinkAnnotation(const Box& box, const std::string& uri) {
-    return createURILinkAnnotation(box, uri.c_str());
-}
-
-float PdfPage::getTextWidth(const char* text) const {
-    return HPDF_Page_TextWidth(innerContent, text);
+LinkAnnotation PdfPage::createURILinkAnnotation(const std::string& uri, const Box& box) {
+    return LinkAnnotation(HPDF_Page_CreateURILinkAnnot(innerContent, box.innerContent, uri.c_str()));
 }
 
 float PdfPage::getTextWidth(const std::string& text) const {
-    return getTextWidth(text.c_str());
+    return HPDF_Page_TextWidth(innerContent, text.c_str());
 }
 
-unsigned int PdfPage::measureText(
-    const char* text, float width,
-    bool wordWrap, float* realWidth
-) const {
-    return HPDF_Page_MeasureText(innerContent, text, width, wordWrap, realWidth);
-}
-
-unsigned int PdfPage::measureText(
-    const std::string& text, float width,
-    bool wordWrap, float* realWidth
-) const {
-    return measureText(text.c_str(), width, wordWrap, realWidth);
+std::pair<unsigned int, float> PdfPage::measureText(const std::string& text, float width, bool wordWrap) const {
+    float realWidth;
+    unsigned int val = HPDF_Page_MeasureText(innerContent, text.c_str(), width, wordWrap, &realWidth);
+    return {val, realWidth};
 }
 
 unsigned short PdfPage::getGMode() const {
@@ -255,24 +231,16 @@ void PdfPage::insertSharedContentStream(const ContentStream& sharedStream) {
     HPDF_Page_Insert_Shared_Content_Stream(innerContent, sharedStream.innerContent);
 }
 
-void PdfPage::arc(float x, float y, float radius, float ang1, float ang2) {
-    HPDF_Page_Arc(innerContent, x, y, radius, ang1, ang2);
-}
-
 void PdfPage::arc(const Coor2D& coors, float radius, float ang1, float ang2) {
-    arc(coors.getX(), coors.getY(), radius, ang1, ang2);
+    HPDF_Page_Arc(innerContent, coors.getX(), coors.getY(), radius, ang1, ang2);
 }
 
 void PdfPage::beginText() {
     HPDF_Page_BeginText(innerContent);
 }
 
-void PdfPage::circle(float x, float y, float radius) {
-    HPDF_Page_Circle(innerContent, x, y, radius);
-}
-
 void PdfPage::circle(const Coor2D& coors, float radius) {
-    circle(coors.getX(), coors.getY(), radius);
+    HPDF_Page_Circle(innerContent, coors.getX(), coors.getY(), radius);
 }
 
 void PdfPage::clip() {
@@ -295,12 +263,8 @@ void PdfPage::closePathFillStroke() {
     HPDF_Page_ClosePathFillStroke(innerContent);
 }
 
-void PdfPage::concat(float a, float b, float c, float d, float x, float y) {
-    HPDF_Page_Concat(innerContent, a, b, c, d, x, y);
-}
-
 void PdfPage::concat(const TransposeMatrix& matrix) {
-    concat(matrix.getA(), matrix.getB(), matrix.getC(), matrix.getD(), matrix.getX(), matrix.getY());
+    HPDF_Page_Concat(innerContent, matrix.getA(), matrix.getB(), matrix.getC(), matrix.getD(), matrix.getX(), matrix.getY());
 }
 
 void PdfPage::curveTo(float x1, float y1, float x2, float y2, float x3, float y3) {
@@ -315,20 +279,12 @@ void PdfPage::curveTo3(float x1, float y1, float x3, float y3) {
     HPDF_Page_CurveTo3(innerContent, x1, y1, x3, y3);
 }
 
-void PdfPage::drawImage(const Image& image, float x, float y, float width, float height) {
-    HPDF_Page_DrawImage(innerContent, image.innerContent, x, y, width, height);
-}
-
 void PdfPage::drawImage(const Image& image, const Coor2D& coors, float width, float height) {
-    drawImage(image, coors.getX(), coors.getY(), width, height);
-}
-
-void PdfPage::ellipse(float x, float y, float xRadius, float yRadius) {
-    HPDF_Page_Ellipse(innerContent, x, y, xRadius, yRadius);
+    HPDF_Page_DrawImage(innerContent, image.innerContent, coors.getX(), coors.getY(), width, height);
 }
 
 void PdfPage::ellipse(const Coor2D& coors, float xRadius, float yRadius) {
-    ellipse(coors.getX(), coors.getY(), xRadius, yRadius);
+    HPDF_Page_Ellipse(innerContent, coors.getX(), coors.getY(), xRadius, yRadius);
 }
 
 void PdfPage::endPath() {
@@ -371,36 +327,20 @@ void PdfPage::gSave() {
     HPDF_Page_GSave(innerContent);
 }
 
-void PdfPage::lineTo(float x, float y) {
-    HPDF_Page_LineTo(innerContent, x, y);
-}
-
 void PdfPage::lineTo(const Coor2D& coors) {
-    lineTo(coors.getX(), coors.getY());
-}
-
-void PdfPage::moveTextPos(float x, float y) {
-    HPDF_Page_MoveTextPos(innerContent, x, y);
+    HPDF_Page_LineTo(innerContent, coors.getX(), coors.getY());
 }
 
 void PdfPage::moveTextPos(const Coor2D& coors) {
-    moveTextPos(coors.getX(), coors.getY());
-}
-
-void PdfPage::moveTextPos2(float x, float y) {
-    HPDF_Page_MoveTextPos2(innerContent, x, y);
+    HPDF_Page_MoveTextPos(innerContent, coors.getX(), coors.getY());
 }
 
 void PdfPage::moveTextPos2(const Coor2D& coors) {
-    moveTextPos2(coors.getX(), coors.getY());
-}
-
-void PdfPage::moveTo(float x, float y) {
-    HPDF_Page_MoveTo(innerContent, x, y);
+    HPDF_Page_MoveTextPos2(innerContent, coors.getX(), coors.getY());
 }
 
 void PdfPage::moveTo(const Coor2D& coors) {
-    moveTo(coors.getX(), coors.getY());
+    HPDF_Page_MoveTo(innerContent, coors.getX(), coors.getY());
 }
 
 void PdfPage::moveToNextLine() {
@@ -415,20 +355,12 @@ void PdfPage::setCharSpace(float value) {
     HPDF_Page_SetCharSpace(innerContent, value);
 }
 
-void PdfPage::setCMYKFill(float c, float m, float y, float k) {
-    HPDF_Page_SetCMYKFill(innerContent, c, m, y, k);
-}
-
 void PdfPage::setCMYKFill(const CMYKColor& color) {
-    setCMYKFill(color.getC(), color.getM(), color.getY(), color.getK());
-}
-
-void PdfPage::setCMYKStroke(float c, float m, float y, float k) {
-    HPDF_Page_SetCMYKStroke(innerContent, c, m, y, k);
+    HPDF_Page_SetCMYKFill(innerContent, color.getC(), color.getM(), color.getY(), color.getK());
 }
 
 void PdfPage::setCMYKStroke(const CMYKColor& color) {
-    setCMYKStroke(color.getC(), color.getM(), color.getY(), color.getK());
+    HPDF_Page_SetCMYKStroke(innerContent, color.getC(), color.getM(), color.getY(), color.getK());
 }
 
 void PdfPage::setDash(const DashMode& mode) {
@@ -471,32 +403,20 @@ void PdfPage::setMiterLimit(float miterLimit) {
     HPDF_Page_SetMiterLimit(innerContent, miterLimit);
 }
 
-void PdfPage::setRGBFill(float r, float g, float b) {
-    HPDF_Page_SetRGBFill(innerContent, r, g, b);
-}
-
 void PdfPage::setRGBFill(const RGBColor& color) {
-    setRGBFill(color.getR(), color.getG(), color.getB());
-}
-
-void PdfPage::setRGBStroke(float r, float g, float b) {
-    HPDF_Page_SetRGBStroke(innerContent, r, g, b);
+    HPDF_Page_SetRGBFill(innerContent, color.getR(), color.getG(), color.getB());
 }
 
 void PdfPage::setRGBStroke(const RGBColor& color) {
-    setRGBStroke(color.getR(), color.getG(), color.getB());
+    HPDF_Page_SetRGBStroke(innerContent, color.getR(), color.getG(), color.getB());
 }
 
 void PdfPage::setTextLeading(float value) {
     HPDF_Page_SetTextLeading(innerContent, value);
 }
 
-void PdfPage::setTextMatrix(float a, float b, float c, float d, float x, float y) {
-    HPDF_Page_SetTextMatrix(innerContent, a, b, c, d, x, y);
-}
-
 void PdfPage::setTextMatrix(const TransposeMatrix& matrix) {
-    setTextMatrix(matrix.getA(), matrix.getB(), matrix.getC(), matrix.getD(), matrix.getX(), matrix.getY());
+    HPDF_Page_SetTextMatrix(innerContent, matrix.getA(), matrix.getB(), matrix.getC(), matrix.getD(), matrix.getX(), matrix.getY());
 }
 
 void PdfPage::setTextRenderingMode(TextRenderingMode mode) {
@@ -511,82 +431,45 @@ void PdfPage::setWordSpace(float value) {
     HPDF_Page_SetWordSpace(innerContent, value);
 }
 
-void PdfPage::showText(const char* text) {
-    HPDF_Page_ShowText(innerContent, text);
-}
-
 void PdfPage::showText(const std::string& text) {
-    showText(text.c_str());
-}
-
-void PdfPage::showTextNewLine(const char* text) {
-    HPDF_Page_ShowTextNextLine(innerContent, text);
+    HPDF_Page_ShowText(innerContent, text.c_str());
 }
 
 void PdfPage::showTextNewLine(const std::string& text) {
-    showTextNewLine(text.c_str());
-}
-
-void PdfPage::showTextNewLine(float wordSpace, float charSpace, const char* text) {
-    HPDF_Page_ShowTextNextLineEx(innerContent, wordSpace, charSpace, text);
+    HPDF_Page_ShowTextNextLine(innerContent, text.c_str());
 }
 
 void PdfPage::showTextNewLine(float wordSpace, float charSpace, const std::string& text) {
-    showTextNewLine(wordSpace, charSpace, text.c_str());
+    HPDF_Page_ShowTextNextLineEx(innerContent, wordSpace, charSpace, text.c_str());
 }
 
 void PdfPage::stroke() {
     HPDF_Page_Stroke(innerContent);
 }
 
-void PdfPage::textOut(float xPos, float yPos, const char* text) {
-    HPDF_Page_TextOut(innerContent, xPos, yPos, text);
+void PdfPage::textOut(const std::string& text, const Coor2D& position) {
+    HPDF_Page_TextOut(innerContent, position.getX(), position.getY(), text.c_str());
 }
 
-void PdfPage::textOut(float xPos, float yPos, const std::string& text) {
-    textOut(xPos, yPos, text.c_str());
-}
-
-void PdfPage::textOut(const Coor2D& coors, const char* text) {
-    textOut(coors.getX(), coors.getY(), text);
-}
-
-void PdfPage::textOut(const Coor2D& coors, const std::string& text) {
-    textOut(coors.getX(), coors.getY(), text.c_str());
-}
-
-unsigned int PdfPage::textRect(float left, float top, float right, float bottom, const char* text, TextAlignment alignment) {
-    unsigned int length;
-    HPDF_Page_TextRect(innerContent, left, top, right, bottom, text, (HPDF_TextAlignment) alignment, &length);
-    return length;
-}
-
-unsigned int PdfPage::textRect(float left, float top, float right, float bottom, const std::string& text, TextAlignment alignment) {
-    return textRect(left, top, right, bottom, text.c_str(), alignment);
-}
-
-unsigned int PdfPage::textRect(const Box& box, const char* text, TextAlignment alignment) {
-    return textRect(box.getLeft(), box.getTop(), box.getRight(), box.getBottom(), text, alignment);
+void PdfPage::textOut(const std::string& text) {
+    textOut(text, getCurrentTextPos());
 }
 
 unsigned int PdfPage::textRect(const Box& box, const std::string& text, TextAlignment alignment) {
-    return textRect(box.getLeft(), box.getTop(), box.getRight(), box.getBottom(), text.c_str(), alignment);
-}
-
-void PdfPage::writeText(const char* text, const Coor2D& position) {
-    writeText(text, position.getX(), position.getY());
-}
-
-void PdfPage::writeText(const char* text, int xPos, int yPos) {
-    beginText();
-    textOut(xPos, yPos, text);
-    endText();
+    unsigned int length;
+    HPDF_Page_TextRect(
+        innerContent, box.getLeft(), box.getTop(), box.getRight(), box.getBottom(),
+        text.c_str(), (HPDF_TextAlignment) alignment, &length
+    );
+    return length;
 }
 
 void PdfPage::writeText(const std::string& text, const Coor2D& position) {
-    writeText(text.c_str(), position);
+    beginText();
+    textOut(text, position);
+    endText();
 }
 
-void PdfPage::writeText(const std::string& text, int xPos, int yPos) {
-    writeText(text.c_str(), xPos, yPos);
+void PdfPage::writeText(const std::string& text) {
+    writeText(text, getCurrentTextPos());
 }
