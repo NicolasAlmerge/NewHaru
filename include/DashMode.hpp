@@ -5,7 +5,7 @@
 namespace pdf {
     class PdfPage;
 
-    class DashMode {
+    class DashMode final {
         HPDF_DashMode innerContent;
         DashMode(HPDF_DashMode&& box);
         friend class PdfPage;

@@ -11,7 +11,7 @@ namespace pdf {
     class TextWidth;
     class PdfPage;
 
-    class Font: public ContentStream {
+    class Font final: public ContentStream {
         Font(const HPDF_Font font);
         friend class PdfDocument;
         friend class PdfPage;

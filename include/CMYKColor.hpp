@@ -31,15 +31,12 @@ namespace pdf {
 
         const static CMYKColor WHITE;
         const static CMYKColor BLACK;
-
         const static CMYKColor RED;
         const static CMYKColor GREEN;
         const static CMYKColor BLUE;
-
         const static CMYKColor CYAN;
         const static CMYKColor MAGENTA;
         const static CMYKColor YELLOW;
-
         const static CMYKColor GRAY;
     };
 }

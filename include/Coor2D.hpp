@@ -6,7 +6,7 @@ namespace pdf {
     class Image;
     class PdfPage;
 
-    class Coor2D: public PdfObject {
+    class Coor2D final: public PdfObject {
         HPDF_Point innerContent;
         Coor2D(HPDF_Point&& coors);
         friend class Image;
@@ -16,7 +16,7 @@ namespace pdf {
         Coor2D();
         Coor2D(float x, float y);
 
-        bool isEmpty() const final override;
+        bool isEmpty() const override;
 
         float getX() const;
         float getY() const;

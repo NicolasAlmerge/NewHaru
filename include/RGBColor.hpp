@@ -29,15 +29,12 @@ namespace pdf {
 
         const static RGBColor WHITE;
         const static RGBColor BLACK;
-
         const static RGBColor RED;
         const static RGBColor GREEN;
         const static RGBColor BLUE;
-
         const static RGBColor CYAN;
         const static RGBColor MAGENTA;
         const static RGBColor YELLOW;
-
         const static RGBColor GRAY;
     };
 }

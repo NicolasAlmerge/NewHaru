@@ -20,7 +20,7 @@ namespace pdf {
     class DashMode;
     class ContentStream;
 
-    class PdfPage: public ContentStream {
+    class PdfPage final: public ContentStream {
         PdfPage(const HPDF_Page content);
         friend class PdfDocument;
 

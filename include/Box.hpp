@@ -6,7 +6,7 @@ namespace pdf {
     class Font;
     class PdfPage;
 
-    class Box: public PdfObject {
+    class Box final: public PdfObject {
         HPDF_Box innerContent;
         Box(HPDF_Box&& box);
         friend class Font;
@@ -15,7 +15,7 @@ namespace pdf {
     public:
         Box();
         Box(float left, float bottom, float right, float top);
-        bool isEmpty() const final override;
+        bool isEmpty() const override;
         float getLeft() const;
         float getBottom() const;
         float getRight() const;

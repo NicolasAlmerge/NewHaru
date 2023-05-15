@@ -18,17 +18,13 @@ EncoderType Encoder::getType() const {
     }
 }
 
-ByteType Encoder::getByteType(const char* text, unsigned int index) const {
-    switch (HPDF_Encoder_GetByteType(innerContent, text, index)) {
+ByteType Encoder::getByteType(const std::string& text, unsigned int index) const {
+    switch (HPDF_Encoder_GetByteType(innerContent, text.c_str(), index)) {
         case HPDF_BYTE_TYPE_SINGLE: return ByteType::SINGLE;
         case HPDF_BYTE_TYPE_LEAD: return ByteType::LEAD;
         case HPDF_BYTE_TYPE_TRAIL: return ByteType::TRAIL;
         default: return ByteType::UNKNOWN;
     }
-}
-
-ByteType Encoder::getByteType(const std::string& text, unsigned int index) const {
-    return getByteType(text.c_str(), index);
 }
 
 unsigned short Encoder::getUnicode(unsigned short code) const {

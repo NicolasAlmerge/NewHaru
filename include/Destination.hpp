@@ -7,7 +7,7 @@ namespace pdf {
     class PdfDocument;
     class PdfPage;
 
-    class Destination: public PdfObject {
+    class Destination final: public PdfObject {
         HPDF_Destination innerContent = nullptr;
         Destination(const HPDF_Destination destination);
         friend class Outline;
@@ -15,7 +15,7 @@ namespace pdf {
         friend class PdfPage;
 
     public:
-        bool isEmpty() const final override;
+        bool isEmpty() const override;
         void setXYZ(float left, float top, float zoom);
         void setFit();
         void setFitH(float top);

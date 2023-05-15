@@ -8,7 +8,7 @@ namespace pdf {
     class PdfDocument;
     class PdfPage;
 
-    class Encoder: public PdfObject {
+    class Encoder final: public PdfObject {
         mutable HPDF_Encoder innerContent = nullptr;
         Encoder(const HPDF_Encoder coors);
         friend class PdfDocument;
@@ -16,9 +16,8 @@ namespace pdf {
 
     public:
         Encoder();
-        bool isEmpty() const final override;
+        bool isEmpty() const override;
         EncoderType getType() const;
-        ByteType getByteType(const char* text, unsigned int index) const;
         ByteType getByteType(const std::string& text, unsigned int index) const;
         unsigned short getUnicode(unsigned short code) const;
         WritingMode getWritingMode() const;

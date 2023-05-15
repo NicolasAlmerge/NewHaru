@@ -6,7 +6,7 @@
 namespace pdf {
     class PdfDocument;
 
-    class DateTime {
+    class DateTime final {
         _HPDF_Date innerContent;
         friend class PdfDocument;
 

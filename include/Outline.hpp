@@ -13,7 +13,6 @@ namespace pdf {
 
     public:
         void setOpen(bool opened);
-        void setDestination(const Destination* destination);
         void setDestination(const Destination& destination);
     };
 }

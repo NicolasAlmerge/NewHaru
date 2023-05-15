@@ -9,10 +9,6 @@ void Outline::setOpen(bool opened) {
     HPDF_Outline_SetOpened(innerContent, opened);
 }
 
-void Outline::setDestination(const Destination* destination) {
-    HPDF_Outline_SetDestination(innerContent, destination? destination->innerContent: nullptr);
-}
-
 void Outline::setDestination(const Destination& destination) {
     HPDF_Outline_SetDestination(innerContent, destination.innerContent);
 }

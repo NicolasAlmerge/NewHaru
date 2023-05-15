@@ -5,7 +5,7 @@
 namespace pdf {
     class Font;
 
-    class TextWidth {
+    class TextWidth final {
         const HPDF_TextWidth innerContent;
         TextWidth(HPDF_TextWidth&& textWidth);
         friend class Font;

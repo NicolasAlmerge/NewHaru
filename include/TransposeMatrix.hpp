@@ -5,7 +5,7 @@
 namespace pdf {
     class PdfPage;
 
-    class TransposeMatrix: public PdfObject {
+    class TransposeMatrix final: public PdfObject {
         _HPDF_TransMatrix innerContent;
         TransposeMatrix(_HPDF_TransMatrix&& matrix);
         friend class PdfPage;
@@ -14,7 +14,7 @@ namespace pdf {
         TransposeMatrix();
         TransposeMatrix(float a, float b, float c, float d, float x, float y);
 
-        bool isEmpty() const final override;
+        bool isEmpty() const override;
 
         float getA() const;
         float getB() const;
