@@ -18,6 +18,7 @@
 #include "PdfException.hpp"
 #include "PdfObject.hpp"
 #include "PdfPage.hpp"
+#include "Permissions.hpp"
 #include "RGBColor.hpp"
 #include "TextAnnotation.hpp"
 #include "TextWidth.hpp"
@@ -160,7 +161,7 @@ namespace pdf {
         void setPassword(const std::string& ownerPassword);
         void setPassword(const std::string& ownerPassword, const std::string& userPassword);
 
-        void setPermission(Permissions permissions);
+        void setPermissions(const Permissions& permissions);
 
         void setR2EncryptMode();
         void setR3EncryptMode(R3EncryptKeyLength keyLength = R3EncryptKeyLength::SIXTEEN);

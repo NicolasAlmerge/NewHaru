@@ -95,17 +95,6 @@ namespace pdf {
         JUSTIFY
     };
 
-    enum Permissions {
-        READ_ONLY = 0,
-        PRINT = 4,
-        EDIT_CONTENT = 8,
-        COPY = 16,
-        EDIT_ANNOTATIONS = 32,
-
-        EDIT_ALL = EDIT_CONTENT | EDIT_ANNOTATIONS,
-        ALL_PERMS = PRINT | EDIT_ALL | COPY
-    };
-
     enum class PdfPageLayout {
         SINGLE_PAGE = 0,
         ONE_COLUMN,

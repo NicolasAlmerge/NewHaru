@@ -642,8 +642,8 @@ void PdfDocument::setPassword(const std::string& ownerPassword, const std::strin
     __setPassword(pdfDoc, ownerPassword.c_str(), userPassword.c_str());
 }
 
-void PdfDocument::setPermission(Permissions permissions) {
-    HPDF_SetPermission(pdfDoc, permissions);
+void PdfDocument::setPermissions(const Permissions& permissions) {
+    HPDF_SetPermission(pdfDoc, permissions.value);
 }
 
 void PdfDocument::setR2EncryptMode() {
