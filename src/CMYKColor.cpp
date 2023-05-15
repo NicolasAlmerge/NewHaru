@@ -34,22 +34,6 @@ float CMYKColor::getK() const {
     return innerContent.k;
 }
 
-void CMYKColor::setC(float value) {
-    innerContent.c = value;
-}
-
-void CMYKColor::setM(float value) {
-    innerContent.m = value;
-}
-
-void CMYKColor::setY(float value) {
-    innerContent.y = value;
-}
-
-void CMYKColor::setK(float value) {
-    innerContent.k = value;
-}
-
 RGBColor CMYKColor::toRGB() const {
     const float K = 255.f*(1.f-getK());
     return RGBColor((1.f-getC())*K, (1.f-getM())*K, (1.f-getY())*K);

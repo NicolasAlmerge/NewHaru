@@ -20,9 +20,6 @@ namespace pdf {
         float getR() const;
         float getG() const;
         float getB() const;
-        void setR(float value);
-        void setG(float value);
-        void setB(float value);
 
         RGBColor toRGB() const override;
         CMYKColor toCMYK() const override;

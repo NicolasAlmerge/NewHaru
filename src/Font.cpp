@@ -6,12 +6,14 @@ using namespace pdf;
 
 Font::Font(const HPDF_Font font): ContentStream(font) {}
 
-const char* Font::getName() const {
-    return HPDF_Font_GetFontName(innerContent);
+std::string Font::getName() const {
+    const char* value = HPDF_Font_GetFontName(innerContent);
+    return (value == nullptr)? std::string(): value;
 }
 
-const char* Font::getEncodingName() const {
-    return HPDF_Font_GetEncodingName(innerContent);
+std::string Font::getEncodingName() const {
+    const char* value = HPDF_Font_GetEncodingName(innerContent);
+    return (value == nullptr)? std::string(): value;
 }
 
 int Font::getUnicodeWidth(unsigned short character) const {
@@ -42,19 +44,19 @@ Box Font::getBoundingBox() const {
     return Box(HPDF_Font_GetBBox(innerContent));
 }
 
-TextWidth Font::getTextWidth(const unsigned char* bytes, unsigned int length) const {
+TextWidth Font::__getTextWidth(const unsigned char* bytes, unsigned int length) const {
     return TextWidth(HPDF_Font_TextWidth(innerContent, bytes, length));
 }
 
-TextWidth Font::getTextWidth(const std::vector<unsigned char>& bytes, unsigned int length) const {
-    return getTextWidth(bytes.data(), bytes.size());
+TextWidth Font::getTextWidth(const std::vector<unsigned char>& bytes) const {
+    return __getTextWidth(bytes.data(), bytes.size());
 }
 
 TextWidth Font::getTextWidth(const std::string& text) const {
-    return getTextWidth((const unsigned char*) text.c_str(), text.size());
+    return __getTextWidth((const unsigned char*) text.c_str(), text.size());
 }
 
-std::pair<unsigned int, float> Font::measureText(
+std::pair<unsigned int, float> Font::__measureText(
     const unsigned char* text, unsigned int len,
     float width, float fontSize,
     float charSpace, float wordSpace,
@@ -72,12 +74,26 @@ std::pair<unsigned int, float> Font::measureText(
 }
 
 std::pair<unsigned int, float> Font::measureText(
+    const std::vector<unsigned char>& bytes,
+    float width, float fontSize,
+    float charSpace, float wordSpace,
+    bool wordwrap
+) const {
+    return __measureText(
+        bytes.data(), bytes.size(),
+        width, fontSize,
+        charSpace, wordSpace,
+        wordwrap
+    );
+}
+
+std::pair<unsigned int, float> Font::measureText(
     const std::string& text,
     float width, float fontSize,
     float charSpace, float wordSpace,
     bool wordwrap
 ) const {
-    return measureText(
+    return __measureText(
         (const unsigned char*) text.c_str(), text.size(),
         width, fontSize,
         charSpace, wordSpace,

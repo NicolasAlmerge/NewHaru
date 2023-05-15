@@ -9,7 +9,7 @@ namespace pdf {
         const HPDF_TextWidth innerContent;
         TextWidth(HPDF_TextWidth&& textWidth);
         friend class Font;
-    
+
     public:
         unsigned int getNumberOfChars() const;
         unsigned int getNumberOfWords() const;

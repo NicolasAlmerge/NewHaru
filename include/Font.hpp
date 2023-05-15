@@ -2,7 +2,8 @@
 #define __HARUPP_FONT_HPP__
 #include "ContentStream.hpp"
 #include "PdfObject.hpp"
-#include "iostream"
+#include "string"
+#include "utility"
 #include "vector"
 
 namespace pdf {
@@ -17,8 +18,8 @@ namespace pdf {
         friend class PdfPage;
 
     public:
-        const char* getName() const;
-        const char* getEncodingName() const;
+        std::string getName() const;
+        std::string getEncodingName() const;
         int getUnicodeWidth(unsigned short character) const;
         float getActualWidth(unsigned short character, float fontSize) const;
 
@@ -29,12 +30,11 @@ namespace pdf {
         unsigned int getDistanceToLower() const;
         unsigned int getDistanceToUpper() const;
 
-        TextWidth getTextWidth(const unsigned char* bytes, unsigned int length) const;
-        TextWidth getTextWidth(const std::vector<unsigned char>& bytes, unsigned int length) const;
+        TextWidth getTextWidth(const std::vector<unsigned char>& bytes) const;
         TextWidth getTextWidth(const std::string& text) const;
 
         std::pair<unsigned int, float> measureText(
-            const unsigned char* text, unsigned int len,
+            const std::vector<unsigned char>& bytes,
             float width, float fontSize,
             float charSpace, float wordSpace,
             bool wordwrap
@@ -42,6 +42,15 @@ namespace pdf {
 
         std::pair<unsigned int, float> measureText(
             const std::string& text,
+            float width, float fontSize,
+            float charSpace, float wordSpace,
+            bool wordwrap
+        ) const;
+
+    private:
+        TextWidth __getTextWidth(const unsigned char* bytes, unsigned int length) const;
+        std::pair<unsigned int, float> __measureText(
+            const unsigned char* text, unsigned int len,
             float width, float fontSize,
             float charSpace, float wordSpace,
             bool wordwrap

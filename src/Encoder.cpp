@@ -3,8 +3,6 @@ using namespace pdf;
 
 Encoder::Encoder(const HPDF_Encoder coors) {}
 
-Encoder::Encoder() {}
-
 bool Encoder::isEmpty() const {
     return innerContent == nullptr;
 }

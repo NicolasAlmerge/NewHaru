@@ -32,18 +32,6 @@ float RGBColor::getB() const {
     return innerContent.b;
 }
 
-void RGBColor::setR(float value) {
-    innerContent.r = value;
-}
-
-void RGBColor::setG(float value) {
-    innerContent.g = value;
-}
-
-void RGBColor::setB(float value) {
-    innerContent.b = value;
-}
-
 RGBColor RGBColor::toRGB() const {
     return RGBColor(innerContent.r, innerContent.g, innerContent.b);
 }

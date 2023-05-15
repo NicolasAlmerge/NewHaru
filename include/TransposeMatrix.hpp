@@ -22,13 +22,6 @@ namespace pdf {
         float getD() const;
         float getX() const;
         float getY() const;
-
-        void setA(float value);
-        void setB(float value);
-        void setC(float value);
-        void setD(float value);
-        void setX(float value);
-        void setY(float value);
     };
 }
 

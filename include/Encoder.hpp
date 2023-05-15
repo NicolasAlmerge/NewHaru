@@ -15,7 +15,6 @@ namespace pdf {
         friend class PdfPage;
 
     public:
-        Encoder();
         bool isEmpty() const override;
         EncoderType getType() const;
         ByteType getByteType(const std::string& text, unsigned int index) const;

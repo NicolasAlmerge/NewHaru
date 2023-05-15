@@ -42,27 +42,3 @@ float TransposeMatrix::getX() const {
 float TransposeMatrix::getY() const {
     return innerContent.y;
 }
-
-void TransposeMatrix::setA(float value) {
-    innerContent.a = value;
-}
-
-void TransposeMatrix::setB(float value) {
-    innerContent.b = value;
-}
-
-void TransposeMatrix::setC(float value) {
-    innerContent.c = value;
-}
-
-void TransposeMatrix::setD(float value) {
-    innerContent.d = value;
-}
-
-void TransposeMatrix::setX(float value) {
-    innerContent.x = value;
-}
-
-void TransposeMatrix::setY(float value) {
-    innerContent.y = value;
-}
