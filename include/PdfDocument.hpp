@@ -32,6 +32,7 @@ namespace pdf {
     class PdfDocument: public PdfObject {
         mutable HPDF_Doc pdfDoc = nullptr;
         bool opened = false;
+        bool autoEncodingImportEnabled = false;
         bool CNSEncodingimported = false;
         bool CNTEncodingimported = false;
         bool JPEncodingimported = false;
@@ -120,6 +121,10 @@ namespace pdf {
         void useCNTEncodings();
         void useUTFEncodings();
 
+        bool isAutoEncodingImportsEnabled() const;
+        void enableAutoEncodingImports();
+        void disableAutoEncodingImports();
+
         /******************** OUTLINE CREATION ********************/
         Outline createOutline(const std::string& title) const;
         Outline createOutline(const std::string& title, const Outline& parent) const;
@@ -172,6 +177,7 @@ namespace pdf {
         Encoder __getEncoder(const char* name);
         void __setCurrentEncoder(const char* name);
         Outline __createOutline(const std::string& title, const Outline* parent, const Encoder* encoder) const;
+        void __autoImportEncoding(MultiByteEncoding encoding);
     };
 }
 

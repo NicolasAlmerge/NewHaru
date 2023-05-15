@@ -246,9 +246,7 @@ PdfDocument::~PdfDocument() {
 /******************** BASIC FUNCTIONS ********************/
 
 void PdfDocument::__openPdf() {
-    if (!pdfDoc) {
-        throw NewPdfCreationFailedException("Cannot create pdf object", 0x1000, 0);
-    }
+    if (!pdfDoc) throw NewPdfCreationFailedException("Cannot create pdf object", 0x1000, 0);
     opened = true;
 }
 
@@ -458,6 +456,18 @@ void PdfDocument::useCNTFonts() {
 
 /******************** ENCODINGS ********************/
 
+void PdfDocument::__autoImportEncoding(MultiByteEncoding encoding) {
+    if (encoding >= MultiByteEncoding::GB_EUC_H && encoding <= MultiByteEncoding::GBK_EUC_V) {
+        useCNSEncodings();
+    } else if (encoding >= MultiByteEncoding::ETen_B5_H && encoding <= MultiByteEncoding::ETen_B5_V) {
+        useCNTEncodings();
+    } else if (encoding >= MultiByteEncoding::NINETYms_RKSJ_H && encoding <= MultiByteEncoding::EUC_V) {
+        useJPEncodings();
+    } else if (encoding >= MultiByteEncoding::KSC_EUC_H && encoding <= MultiByteEncoding::KSCms_UHC_HW_V) {
+        useKREncodings();
+    }
+}
+
 Encoder PdfDocument::__getEncoder(const char* name) {
     return Encoder(HPDF_GetEncoder(pdfDoc, name));
 }
@@ -467,6 +477,7 @@ Encoder PdfDocument::getEncoder(SingleByteEncoding encoding) {
 }
 
 Encoder PdfDocument::getEncoder(MultiByteEncoding encoding) {
+    if (autoEncodingImportEnabled) __autoImportEncoding(encoding);
     return __getEncoder(multiByteEncodingToString(encoding));
 }
 
@@ -519,6 +530,18 @@ void PdfDocument::useUTFEncodings() {
         HPDF_UseUTFEncodings(pdfDoc);
         UTFEncodingimported = true;
     }
+}
+
+bool PdfDocument::isAutoEncodingImportsEnabled() const {
+    return autoEncodingImportEnabled;
+}
+
+void PdfDocument::enableAutoEncodingImports() {
+    autoEncodingImportEnabled = true;
+}
+
+void PdfDocument::disableAutoEncodingImports() {
+    autoEncodingImportEnabled = false;
 }
 
 
