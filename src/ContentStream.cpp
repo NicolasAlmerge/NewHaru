@@ -10,6 +10,10 @@ bool ContentStream::isEmpty() const {
     return innerContent == nullptr;
 }
 
-bool ContentStream::operator==(const ContentStream& other) const {
+bool ContentStream::operator ==(const ContentStream& other) const {
     return innerContent == other.innerContent;
+}
+
+bool ContentStream::operator !=(const ContentStream& other) const {
+    return !operator==(other);
 }
