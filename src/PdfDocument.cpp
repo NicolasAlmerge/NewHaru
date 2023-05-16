@@ -349,17 +349,19 @@ void PdfDocument::setPageConfiguration(unsigned int pagePerPages) {
     HPDF_SetPagesConfiguration(pdfDoc, pagePerPages);
 }
 
-void PdfDocument::setPageLayout(PdfPageLayout layout) {
+void PdfDocument::setPageLayout(PageLayout layout) {
     HPDF_SetPageLayout(pdfDoc, (HPDF_PageLayout) layout);
 }
 
-PdfPageLayout PdfDocument::getPageLayout() const {
+PageLayout PdfDocument::getPageLayout() const {
     switch (HPDF_GetPageLayout(pdfDoc)) {
-        case HPDF_PAGE_LAYOUT_SINGLE: return PdfPageLayout::SINGLE_PAGE;
-        case HPDF_PAGE_LAYOUT_ONE_COLUMN: return PdfPageLayout::ONE_COLUMN;
-        case HPDF_PAGE_LAYOUT_TWO_COLUMN_LEFT: return PdfPageLayout::TWO_COLUMN_LEFT;
-        case HPDF_PAGE_LAYOUT_TWO_COLUMN_RIGHT: return PdfPageLayout::TWO_COLUMN_RIGHT;
-        default: return PdfPageLayout::EOF_LAYOUT;
+        case HPDF_PAGE_LAYOUT_SINGLE: return PageLayout::SINGLE_PAGE;
+        case HPDF_PAGE_LAYOUT_ONE_COLUMN: return PageLayout::ONE_COLUMN;
+        case HPDF_PAGE_LAYOUT_TWO_COLUMN_LEFT: return PageLayout::TWO_COLUMN_LEFT;
+        case HPDF_PAGE_LAYOUT_TWO_COLUMN_RIGHT: return PageLayout::TWO_COLUMN_RIGHT;
+        case HPDF_PAGE_LAYOUT_TWO_PAGE_LEFT: return PageLayout::TWO_PAGE_LEFT;
+        case HPDF_PAGE_LAYOUT_TWO_PAGE_RIGHT: return PageLayout::TWO_PAGE_RIGHT;
+        default: return PageLayout::EOF_LAYOUT;
     }
 }
 
@@ -614,11 +616,11 @@ Image PdfDocument::loadJPEGImageFromMemory(const std::vector<unsigned char>& byt
 
 /******************** OTHER FUNCTIONS ********************/
 
-void PdfDocument::setAttribute(PdfStringAttribute parameter, const std::string& value) {
+void PdfDocument::setAttribute(StringAttribute parameter, const std::string& value) {
     HPDF_SetInfoAttr(pdfDoc, (HPDF_InfoType) parameter, value.c_str());
 }
 
-void PdfDocument::setAttribute(PdfDateTimeAttribute parameter, const DateTime& value) {
+void PdfDocument::setAttribute(DateTimeAttribute parameter, const DateTime& value) {
     HPDF_SetInfoDateAttr(pdfDoc, (HPDF_InfoType) parameter, value.innerContent);
 }
 
@@ -628,11 +630,11 @@ std::optional<std::string> __getInfoAttribute(HPDF_Doc pdfDoc, int parameter) {
     return value;
 }
 
-std::optional<std::string> PdfDocument::getInfoAttribute(PdfStringAttribute parameter) {
+std::optional<std::string> PdfDocument::getInfoAttribute(StringAttribute parameter) {
     return __getInfoAttribute(pdfDoc, (HPDF_InfoType) parameter);
 }
 
-std::optional<std::string> PdfDocument::getInfoAttribute(PdfDateTimeAttribute parameter) {
+std::optional<std::string> PdfDocument::getInfoAttribute(DateTimeAttribute parameter) {
     return __getInfoAttribute(pdfDoc, (HPDF_InfoType) parameter);
 }
 

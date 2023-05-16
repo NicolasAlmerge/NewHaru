@@ -26,9 +26,12 @@
 #include "vector"
 
 namespace pdf {
-    constexpr int MAX_STRING_LEN = HPDF_LIMIT_MAX_STRING_LEN;
-    constexpr int MAX_DICT_ELEMENT = HPDF_LIMIT_MAX_DICT_ELEMENT;
-    constexpr int MAX_GSTATE = HPDF_LIMIT_MAX_GSTATE;
+    /// Represents the maximum string length allowed.
+    constexpr unsigned int MAX_STRING_LEN = HPDF_LIMIT_MAX_STRING_LEN;
+    /// Represents the maximum number of indirect objects in a pdf file.
+    constexpr unsigned int MAX_DICT_ELEMENT = HPDF_LIMIT_MAX_DICT_ELEMENT;
+    /// Represents the maximum G state.
+    constexpr unsigned int MAX_GSTATE = HPDF_LIMIT_MAX_GSTATE;
 
     class PdfDocument: public PdfObject {
         mutable HPDF_Doc pdfDoc = nullptr;
@@ -66,8 +69,8 @@ namespace pdf {
         /******************** PAGES HANDLING ********************/
         void setPageConfiguration(unsigned int pagePerPages);
 
-        void setPageLayout(PdfPageLayout layout);
-        PdfPageLayout getPageLayout() const;
+        void setPageLayout(PageLayout layout);
+        PageLayout getPageLayout() const;
 
         void setPageMode(PageMode mode);
         PageMode getPageMode() const;
@@ -140,11 +143,11 @@ namespace pdf {
         Image loadJPEGImageFromFile(const std::string& fileName);
 
         /******************** OTHER FUNCTIONS ********************/
-        void setAttribute(PdfStringAttribute parameter, const std::string& value);
-        void setAttribute(PdfDateTimeAttribute parameter, const DateTime& value);
+        void setAttribute(StringAttribute parameter, const std::string& value);
+        void setAttribute(DateTimeAttribute parameter, const DateTime& value);
 
-        std::optional<std::string> getInfoAttribute(PdfStringAttribute parameter);
-        std::optional<std::string> getInfoAttribute(PdfDateTimeAttribute parameter);
+        std::optional<std::string> getInfoAttribute(StringAttribute parameter);
+        std::optional<std::string> getInfoAttribute(DateTimeAttribute parameter);
 
         void setPassword(const std::string& ownerPassword);
         void setPassword(const std::string& ownerPassword, const std::string& userPassword);

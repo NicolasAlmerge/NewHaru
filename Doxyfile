@@ -579,7 +579,7 @@ HIDE_UNDOC_CLASSES     = NO
 # documentation.
 # The default value is: NO.
 
-HIDE_FRIEND_COMPOUNDS  = NO
+HIDE_FRIEND_COMPOUNDS  = YES
 
 # If the HIDE_IN_BODY_DOCS tag is set to YES, doxygen will hide any
 # documentation blocks found inside the body of a function. If set to NO, these
@@ -670,7 +670,7 @@ SORT_MEMBER_DOCS       = YES
 # this will also influence the order of the classes in the class list.
 # The default value is: NO.
 
-SORT_BRIEF_DOCS        = NO
+SORT_BRIEF_DOCS        = YES
 
 # If the SORT_MEMBERS_CTORS_1ST tag is set to YES then doxygen will sort the
 # (brief and detailed) documentation of class members so that constructors and
@@ -682,7 +682,7 @@ SORT_BRIEF_DOCS        = NO
 # detailed member documentation.
 # The default value is: NO.
 
-SORT_MEMBERS_CTORS_1ST = NO
+SORT_MEMBERS_CTORS_1ST = YES
 
 # If the SORT_GROUP_NAMES tag is set to YES then doxygen will sort the hierarchy
 # of group names into alphabetical order. If set to NO the group names will
@@ -751,7 +751,7 @@ ENABLED_SECTIONS       =
 # documentation regardless of this setting.
 # Minimum value: 0, maximum value: 10000, default value: 30.
 
-MAX_INITIALIZER_LINES  = 30
+MAX_INITIALIZER_LINES  = 0
 
 # Set the SHOW_USED_FILES tag to NO to disable the list of files generated at
 # the bottom of the documentation of classes and structs. If set to YES, the
@@ -1675,7 +1675,7 @@ FULL_SIDEBAR           = NO
 # Minimum value: 0, maximum value: 20, default value: 4.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-ENUM_VALUES_PER_LINE   = 4
+ENUM_VALUES_PER_LINE   = 0
 
 # If the treeview is enabled (see GENERATE_TREEVIEW) then this tag can be used
 # to set the initial width (in pixels) of the frame in which the tree is shown.

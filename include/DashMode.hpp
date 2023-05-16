@@ -5,6 +5,7 @@
 #include "vector"
 
 namespace pdf {
+    /// Represents the maximum length of a dash mode.
     constexpr unsigned int MAX_DASH_MODE_LENGTH = 8UL;
 
     class DashMode final: public PdfObject {

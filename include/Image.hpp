@@ -5,6 +5,7 @@
 #include "PdfObject.hpp"
 
 namespace pdf {
+    /// Represents a 1-byte unsigned integer.
     typedef unsigned char int8;
 
     class Image final: public ContentStream {
