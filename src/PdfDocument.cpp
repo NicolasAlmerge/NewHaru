@@ -12,10 +12,8 @@ using namespace pdf;
 #define __HARUPP_ENCODING_INDEX_START       1
 #define __HARUPP_ENCODING_IMPORTS_LENGTH    5
 
-/**
- * PDF Document error handler.
-*/
-void errorHandler(unsigned long errorNo, unsigned long detailNo, void* userData) {
+
+static void __haruppErrorHandler(unsigned long errorNo, unsigned long detailNo, void* userData) {
     switch (errorNo) {
         case 0x1001: throw ArrayCountException("Internal error. Data consistency was lost.", errorNo, detailNo);
         case 0x1002: throw ArrayItemNotFoundException("Internal error. Data consistency was lost.", errorNo, detailNo);
@@ -189,7 +187,7 @@ void errorHandler(unsigned long errorNo, unsigned long detailNo, void* userData)
 }
 
 
-const char* singleByteEncodingToString(SingleByteEncoding encoding) {
+static const char* singleByteEncodingToString(SingleByteEncoding encoding) {
     switch (encoding) {
         case SingleByteEncoding::StandardEncoding: return "StandardEncoding";
         case SingleByteEncoding::MacRomanEncoding: return "MacRomanEncoding";
@@ -224,7 +222,7 @@ const char* singleByteEncodingToString(SingleByteEncoding encoding) {
 }
 
 
-const char* multiByteEncodingToString(MultiByteEncoding encoding) {
+static const char* multiByteEncodingToString(MultiByteEncoding encoding) {
     switch (encoding) {
         case MultiByteEncoding::GB_EUC_H: return "GB-EUC-H";
         case MultiByteEncoding::GB_EUC_V: return "GB-EUC-V";
@@ -268,7 +266,7 @@ PdfDocument::~PdfDocument() {
 /******************** BASIC FUNCTIONS ********************/
 
 void PdfDocument::open() {
-    pdfDoc = HPDF_New(errorHandler, nullptr);
+    pdfDoc = HPDF_New(__haruppErrorHandler, nullptr);
     if (pdfDoc == nullptr) throw NewPdfCreationFailedException("Cannot create pdf object", 0x1000, 0);
 
     // Initialise imports

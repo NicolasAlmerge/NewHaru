@@ -2,9 +2,9 @@
 #include "../include/CMYKColor.hpp"
 using namespace pdf;
 
-
-#define MIN(a, b) ((a < b)? a: b)
-#define MAX(a, b) ((a < b)? b: a)
+static constexpr float __haruppMax(float a, float b) {
+    return (a >= b)? a: b;
+}
 
 RGBColor::RGBColor(HPDF_RGBColor&& rgbColor): innerContent(rgbColor) {}
 
@@ -36,8 +36,8 @@ CMYKColor RGBColor::toCMYK() const noexcept {
     const float R = innerContent.r;
     const float G = innerContent.g;
     const float B = innerContent.b;
-    const float _maxGB = MAX(G, B);
-    const float K = 1.f - MAX(R, _maxGB);
+    const float _maxGB = __haruppMax(G, B);
+    const float K = 1.f - __haruppMax(R, _maxGB);
     const float invK = 1.f - K;
     return CMYKColor((1-R-K)/invK, (1-G-K)/invK, (1-B-K)/invK, K);
 }
