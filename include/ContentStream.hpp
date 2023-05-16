@@ -4,6 +4,14 @@
 #include "hpdf.h"
 
 namespace pdf {
+
+    /**
+     * \class  ContentStream
+     * @brief  Represents a content stream.
+     * @file   ContentStream.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class ContentStream: public PdfObject {
         mutable HPDF_Dict innerContent = nullptr;
         ContentStream(const HPDF_Dict dict);
@@ -18,9 +26,24 @@ namespace pdf {
 
     public:
         virtual ~ContentStream() = 0;
+
+        /**
+         * @brief Checks whether an object is empty.
+         * @return `true` if object is empty, `false` otherwise.
+        */
         bool isEmpty() const noexcept final override;
-        bool operator ==(const ContentStream& other) const noexcept;
-        bool operator !=(const ContentStream& other) const noexcept;
+
+        /**
+         * @brief Checks whether two content streams are equal.
+         * @return `true` if content streams are equal, `false` otherwise.
+        */
+        virtual bool operator ==(const ContentStream& other) const noexcept;
+
+        /**
+         * @brief Checks whether two content streams are not equal. This is equivalent to `!operator==(other)`.
+         * @return `true` if content streams are not equal, `false` otherwise.
+        */
+        virtual bool operator !=(const ContentStream& other) const noexcept final;
     };
 }
 
