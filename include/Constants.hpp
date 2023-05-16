@@ -324,10 +324,15 @@ namespace pdf {
         UNKNOWN
     };
 
+    /// Represents a byte type.
     enum class ByteType {
+        /// Single byte type.
         SINGLE = 0,
+        /// Leading byte type.
         LEAD,
+        /// Trailing byte type.
         TRAIL,
+        /// Unknown byte type.
         UNKNOWN
     };
 
