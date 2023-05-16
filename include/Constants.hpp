@@ -364,10 +364,15 @@ namespace pdf {
         INSERT
     };
 
+    /// Represents an annotation highlight mode.
     enum class AnnotationHighlightMode {
+        /// No highlight.
         NONE = 0,
+        /// Invert box.
         INVERT_BOX,
+        /// Invert border.
         INVERT_BORDER,
+        /// Down appearance.
         DOWN_APPEARANCE
     };
 
