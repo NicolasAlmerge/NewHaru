@@ -33,13 +33,22 @@ RGBColor RGBColor::toRGB() const noexcept {
 }
 
 CMYKColor RGBColor::toCMYK() const noexcept {
-    const float R = getR() / 255.f;
-    const float G = getG() / 255.f;
-    const float B = getB() / 255.f;
+    const float R = innerContent.r;
+    const float G = innerContent.g;
+    const float B = innerContent.b;
     const float _maxGB = MAX(G, B);
     const float K = 1.f - MAX(R, _maxGB);
     const float invK = 1.f - K;
     return CMYKColor((1-R-K)/invK, (1-G-K)/invK, (1-B-K)/invK, K);
+}
+
+bool RGBColor::operator==(const Color& other) const noexcept {
+    RGBColor otherColor = other.toRGB();
+    return (
+        innerContent.r == otherColor.innerContent.r &&
+        innerContent.g == otherColor.innerContent.g &&
+        innerContent.b == otherColor.innerContent.b
+    );
 }
 
 const RGBColor RGBColor::WHITE(1, 1, 1);

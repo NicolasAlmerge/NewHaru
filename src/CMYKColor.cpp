@@ -30,12 +30,22 @@ float CMYKColor::getK() const noexcept {
 }
 
 RGBColor CMYKColor::toRGB() const noexcept {
-    const float K = 255.f*(1.f-getK());
-    return RGBColor((1.f-getC())*K, (1.f-getM())*K, (1.f-getY())*K);
+    const float invK = 1.f-getK();
+    return RGBColor((1.f-getC())*invK, (1.f-getM())*invK, (1.f-getY())*invK);
 }
 
 CMYKColor CMYKColor::toCMYK() const noexcept {
     return CMYKColor(innerContent.c, innerContent.m, innerContent.y, innerContent.k);
+}
+
+bool CMYKColor::operator==(const Color& other) const noexcept {
+    CMYKColor otherColor = other.toCMYK();
+    return (
+        innerContent.c == otherColor.innerContent.c &&
+        innerContent.m == otherColor.innerContent.m &&
+        innerContent.y == otherColor.innerContent.y &&
+        innerContent.k == otherColor.innerContent.k
+    );
 }
 
 const CMYKColor CMYKColor::WHITE(0, 0, 0, 0);

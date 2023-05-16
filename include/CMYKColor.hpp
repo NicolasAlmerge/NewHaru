@@ -22,6 +22,7 @@ namespace pdf {
 
         RGBColor toRGB() const noexcept override;
         CMYKColor toCMYK() const noexcept override;
+        bool operator==(const Color& other) const noexcept override;
 
         const static CMYKColor WHITE;
         const static CMYKColor BLACK;

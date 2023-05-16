@@ -10,6 +10,9 @@ namespace pdf {
         virtual ~Color() = 0;
         virtual RGBColor toRGB() const noexcept = 0;
         virtual CMYKColor toCMYK() const noexcept = 0;
+
+        virtual bool operator==(const Color& other) const noexcept = 0;
+        virtual bool operator!=(const Color& other) const noexcept final;
     };
 }
 
