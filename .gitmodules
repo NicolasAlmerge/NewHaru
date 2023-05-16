@@ -1,0 +1,3 @@
+[submodule "docs-utils/doxygen-awesome-css"]
+	path = docs-utils/doxygen-awesome-css
+	url = https://github.com/jothepro/doxygen-awesome-css.git
