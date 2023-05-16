@@ -2,13 +2,13 @@
 using namespace pdf;
 
 
-DateTime::DateTime(): DateTime(0, 0, 0, 0, 0, 0) {}
+DateTime::DateTime() noexcept: DateTime(0, 0, 0, 0, 0, 0) {}
 
 DateTime::DateTime(
     int year, int month, int day,
     int hour, int minutes, int seconds, UTCIndicator ind,
     int offHour, int offMinutes
-) {
+) noexcept {
     innerContent.year = year;
     innerContent.month = month;
     innerContent.day = day;
@@ -20,31 +20,31 @@ DateTime::DateTime(
     innerContent.off_minutes = offMinutes;
 }
 
-int DateTime::getYear() const {
+int DateTime::getYear() const noexcept {
     return innerContent.year;
 }
 
-int DateTime::getMonth() const {
+int DateTime::getMonth() const noexcept {
     return innerContent.month;
 }
 
-int DateTime::getDay() const {
+int DateTime::getDay() const noexcept {
     return innerContent.day;
 }
 
-int DateTime::getHour() const {
+int DateTime::getHour() const noexcept {
     return innerContent.hour;
 }
 
-int DateTime::getMinutes() const {
+int DateTime::getMinutes() const noexcept {
     return innerContent.minutes;
 }
 
-int DateTime::getSeconds() const {
+int DateTime::getSeconds() const noexcept {
     return innerContent.seconds;
 }
 
-UTCIndicator DateTime::getUTCIndicator() const {
+UTCIndicator DateTime::getUTCIndicator() const noexcept {
     switch (innerContent.ind) {
         case '+': return UTCIndicator::PLUS;
         case '-': return UTCIndicator::MINUS;
@@ -53,10 +53,14 @@ UTCIndicator DateTime::getUTCIndicator() const {
     }
 }
 
-int DateTime::getOffHour() const {
+int DateTime::getOffHour() const noexcept {
     return innerContent.off_hour;
 }
 
-int DateTime::getOffMinutes() const {
+int DateTime::getOffMinutes() const noexcept {
     return innerContent.off_minutes;
+}
+
+bool DateTime::isEmpty() const noexcept {
+    return false;
 }

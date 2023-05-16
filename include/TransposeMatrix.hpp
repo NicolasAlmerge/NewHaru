@@ -10,17 +10,17 @@ namespace pdf {
         friend class PdfPage;
 
     public:
-        TransposeMatrix();
-        TransposeMatrix(float a, float b, float c, float d, float x, float y);
+        TransposeMatrix() noexcept;
+        TransposeMatrix(float a, float b, float c, float d, float x, float y) noexcept;
 
-        bool isEmpty() const override;
+        bool isEmpty() const noexcept override;
 
-        float getA() const;
-        float getB() const;
-        float getC() const;
-        float getD() const;
-        float getX() const;
-        float getY() const;
+        float getA() const noexcept;
+        float getB() const noexcept;
+        float getC() const noexcept;
+        float getD() const noexcept;
+        float getX() const noexcept;
+        float getY() const noexcept;
     };
 }
 

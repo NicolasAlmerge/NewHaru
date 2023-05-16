@@ -1,9 +1,9 @@
 #include "../include/Encoder.hpp"
 using namespace pdf;
 
-Encoder::Encoder(const HPDF_Encoder coors) {}
+Encoder::Encoder(const HPDF_Encoder coors): innerContent(coors) {}
 
-bool Encoder::isEmpty() const {
+bool Encoder::isEmpty() const noexcept {
     return innerContent == nullptr;
 }
 

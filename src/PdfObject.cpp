@@ -4,6 +4,6 @@ using namespace pdf;
 
 PdfObject::~PdfObject() {}
 
-PdfObject::operator bool() const {
+PdfObject::operator bool() const noexcept {
     return !isEmpty();
 }

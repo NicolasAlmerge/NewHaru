@@ -32,13 +32,7 @@ namespace pdf {
 
     class PdfDocument: public PdfObject {
         mutable HPDF_Doc pdfDoc = nullptr;
-        bool opened = false;
-        bool autoEncodingImportEnabled = false;
-        bool CNSEncodingimported = false;
-        bool CNTEncodingimported = false;
-        bool JPEncodingimported = false;
-        bool KREncodingimported = false;
-        bool UTFEncodingimported = false;
+        std::vector<bool> imports;
 
     public:
         /******************** CONSTRUCTORS & DESTRUCTOR ********************/
@@ -47,15 +41,10 @@ namespace pdf {
 
         /******************** BASIC FUNCTIONS ********************/
         void open();
-        void open(void (&customErrorHandler)(unsigned long, unsigned long, void*), void* userData = nullptr);
-        void open(
-            void* (&customAllocFunc)(unsigned int), void (&customFreeFunc)(void*), unsigned int memPoolBufSize,
-            void (&customErrorHandler)(unsigned long, unsigned long, void*), void* userData = nullptr
-        );
 
         void close();
         void newDocument();
-        bool isOpen() const;
+        bool isOpen() const noexcept;
 
         void freeResources();
         void freeAllResources();
@@ -68,11 +57,10 @@ namespace pdf {
         void rewindStream();
 
         bool hasDocument() const;
-        bool isEmpty() const final override;
+        bool isEmpty() const noexcept final override;
 
-        void resetErrorHandler();
-        void setErrorHandler(void (&customErrorHandler)(unsigned long, unsigned long, void*));
         unsigned long getLastErrorCode() const;
+        unsigned long getLastErrorDetail() const;
         void resetErrorCode();
 
         /******************** PAGES HANDLING ********************/
@@ -172,7 +160,8 @@ namespace pdf {
         void operator=(const PdfDocument& newDoc);
 
     private:
-        void __openPdf();
+        bool __getImportValue(int index) const;
+        void __setImportValue(int index, bool newValue);
         Font __getFont(const char* fontName, const char* encodingName);
         std::string __loadType1FontFromFile(const char* AFMFileName, const char* dataFileName);
         Encoder __getEncoder(const char* name);

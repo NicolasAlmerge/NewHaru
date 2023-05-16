@@ -12,7 +12,7 @@ namespace pdf {
         friend class PdfPage;
 
     public:
-        bool isEmpty() const override;
+        bool isEmpty() const noexcept override;
         void setXYZ(float left, float top, float zoom);
         void setFit();
         void setFitH(float top);

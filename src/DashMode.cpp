@@ -28,6 +28,10 @@ std::vector<float> DashMode::getPoints() const {
     return vec;
 }
 
-float DashMode::getPhase() const {
+float DashMode::getPhase() const noexcept {
     return innerContent.phase;
+}
+
+bool DashMode::isEmpty() const noexcept {
+    return false;
 }

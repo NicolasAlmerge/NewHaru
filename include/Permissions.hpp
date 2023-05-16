@@ -9,14 +9,14 @@ namespace pdf {
         friend class PdfDocument;
 
     public:
-        Permissions();
-        Permissions(bool canPrint, bool canEditContent, bool canCopy, bool canEditAnnotations);
+        Permissions() noexcept;
+        Permissions(bool canPrint, bool canEditContent, bool canCopy, bool canEditAnnotations) noexcept;
 
-        Permissions operator +(const Permissions& other) const;
-        bool operator ==(const Permissions& other) const;
-        bool operator !=(const Permissions& other) const;
+        Permissions operator +(const Permissions& other) const noexcept;
+        bool operator ==(const Permissions& other) const noexcept;
+        bool operator !=(const Permissions& other) const noexcept;
 
-        bool isEmpty() const override;
+        bool isEmpty() const noexcept override;
 
         const static Permissions READ_ONLY;
         const static Permissions PRINT;

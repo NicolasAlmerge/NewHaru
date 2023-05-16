@@ -2,6 +2,19 @@
 using namespace pdf;
 
 
+#define __HARUPP_AUTO_ENCODING_IMPORT_INDEX 0
+#define __HARUPP_CNS_ENCODING_INDEX         1
+#define __HARUPP_CNT_ENCODING_INDEX         2
+#define __HARUPP_JP_ENCODING_INDEX          3
+#define __HARUPP_KR_ENCODING_INDEX          4
+#define __HARUPP_UTF_ENCODING_INDEX         5
+
+#define __HARUPP_ENCODING_INDEX_START       1
+#define __HARUPP_ENCODING_IMPORTS_LENGTH    5
+
+/**
+ * PDF Document error handler.
+*/
 void errorHandler(unsigned long errorNo, unsigned long detailNo, void* userData) {
     switch (errorNo) {
         case 0x1001: throw ArrayCountException("Internal error. Data consistency was lost.", errorNo, detailNo);
@@ -234,6 +247,15 @@ const char* multiByteEncodingToString(MultiByteEncoding encoding) {
 }
 
 
+bool PdfDocument::__getImportValue(int index) const {
+    return imports[index];
+}
+
+void  PdfDocument::__setImportValue(int index, bool newValue) {
+    imports[index] = newValue;
+}
+
+
 /******************** CONSTRUCTORS & DESTRUCTOR ********************/
 
 PdfDocument::PdfDocument() noexcept {}
@@ -245,40 +267,28 @@ PdfDocument::~PdfDocument() {
 
 /******************** BASIC FUNCTIONS ********************/
 
-void PdfDocument::__openPdf() {
-    if (!pdfDoc) throw NewPdfCreationFailedException("Cannot create pdf object", 0x1000, 0);
-    opened = true;
-}
-
 void PdfDocument::open() {
-    open(errorHandler, nullptr);
-}
+    pdfDoc = HPDF_New(errorHandler, nullptr);
+    if (pdfDoc == nullptr) throw NewPdfCreationFailedException("Cannot create pdf object", 0x1000, 0);
 
-void PdfDocument::open(void (&customErrorHandler)(unsigned long, unsigned long, void*), void* userData) {
-    pdfDoc = HPDF_New(customErrorHandler, userData);
-    __openPdf();
-}
-
-void PdfDocument::open(
-    void* (&customAllocFunc)(unsigned int), void (&customFreeFunc)(void*), unsigned int memPoolBufSize,
-    void (&customErrorHandler)(unsigned long, unsigned long, void*), void* userData
-) {
-    pdfDoc = HPDF_NewEx(customErrorHandler, customAllocFunc, customFreeFunc, memPoolBufSize, userData);
-    __openPdf();
+    // Initialise imports
+    imports.reserve(__HARUPP_ENCODING_IMPORTS_LENGTH);
+    for (int _ = 0; _ < __HARUPP_ENCODING_IMPORTS_LENGTH; ++_) imports.push_back(false);
 }
 
 void PdfDocument::close() {
-    if (!opened) return;
-    HPDF_Free(pdfDoc);
-    opened = false;
+    if (pdfDoc != nullptr) {
+        HPDF_Free(pdfDoc);
+        pdfDoc = nullptr;
+    }
 }
 
 void PdfDocument::newDocument() {
     HPDF_NewDoc(pdfDoc);
 }
 
-bool PdfDocument::isOpen() const {
-    return opened;
+bool PdfDocument::isOpen() const noexcept {
+    return !isEmpty();
 }
 
 void PdfDocument::freeResources() {
@@ -287,6 +297,8 @@ void PdfDocument::freeResources() {
 
 void PdfDocument::freeAllResources() {
     HPDF_FreeDocAll(pdfDoc);
+    for (int i = __HARUPP_ENCODING_INDEX_START; i < __HARUPP_ENCODING_IMPORTS_LENGTH; ++i)
+        imports[i] = false;
 }
 
 void PdfDocument::saveToFile(const std::string& fileName) {
@@ -316,20 +328,16 @@ bool PdfDocument::hasDocument() const {
     return HPDF_HasDoc(pdfDoc);
 }
 
-bool PdfDocument::isEmpty() const {
+bool PdfDocument::isEmpty() const noexcept {
     return pdfDoc == nullptr;
-}
-
-void PdfDocument::resetErrorHandler() {
-    HPDF_SetErrorHandler(pdfDoc, nullptr);
-}
-
-void PdfDocument::setErrorHandler(void (&customErrorHandler)(unsigned long, unsigned long, void*)) {
-    HPDF_SetErrorHandler(pdfDoc, customErrorHandler);
 }
 
 unsigned long PdfDocument::getLastErrorCode() const {
     return HPDF_GetError(pdfDoc);
+}
+
+unsigned long PdfDocument::getLastErrorDetail() const {
+    return HPDF_GetErrorDetail(pdfDoc);
 }
 
 void PdfDocument::resetErrorCode() {
@@ -477,7 +485,7 @@ Encoder PdfDocument::getEncoder(SingleByteEncoding encoding) {
 }
 
 Encoder PdfDocument::getEncoder(MultiByteEncoding encoding) {
-    if (autoEncodingImportEnabled) __autoImportEncoding(encoding);
+    if (__getImportValue(__HARUPP_AUTO_ENCODING_IMPORT_INDEX)) __autoImportEncoding(encoding);
     return __getEncoder(multiByteEncodingToString(encoding));
 }
 
@@ -498,50 +506,50 @@ void PdfDocument::setCurrentEncoder(MultiByteEncoding encoding) {
 }
 
 void PdfDocument::useJPEncodings() {
-    if (!JPEncodingimported) {
+    if (!__getImportValue(__HARUPP_JP_ENCODING_INDEX)) {
         HPDF_UseJPEncodings(pdfDoc);
-        JPEncodingimported = true;
+        __setImportValue(__HARUPP_JP_ENCODING_INDEX, true);
     }
 }
 
 void PdfDocument::useKREncodings() {
-    if (!KREncodingimported) {
+    if (!__getImportValue(__HARUPP_KR_ENCODING_INDEX)) {
         HPDF_UseKREncodings(pdfDoc);
-        KREncodingimported = true;
+        __setImportValue(__HARUPP_KR_ENCODING_INDEX, true);
     }
 }
 
 void PdfDocument::useCNSEncodings() {
-    if (!CNSEncodingimported) {
+    if (!__getImportValue(__HARUPP_CNS_ENCODING_INDEX)) {
         HPDF_UseCNSEncodings(pdfDoc);
-        CNSEncodingimported = true;
+        __setImportValue(__HARUPP_CNS_ENCODING_INDEX, true);
     }
 }
 
 void PdfDocument::useCNTEncodings() {
-    if (!CNTEncodingimported) {
+    if (!__getImportValue(__HARUPP_CNT_ENCODING_INDEX)) {
         HPDF_UseCNTEncodings(pdfDoc);
-        CNTEncodingimported = true;
+        __setImportValue(__HARUPP_CNT_ENCODING_INDEX, true);
     }
 }
 
 void PdfDocument::useUTFEncodings() {
-    if (!UTFEncodingimported) {
+    if (!__getImportValue(__HARUPP_UTF_ENCODING_INDEX)) {
         HPDF_UseUTFEncodings(pdfDoc);
-        UTFEncodingimported = true;
+        __setImportValue(__HARUPP_UTF_ENCODING_INDEX, true);
     }
 }
 
 bool PdfDocument::isAutoEncodingImportsEnabled() const {
-    return autoEncodingImportEnabled;
+    return __getImportValue(__HARUPP_AUTO_ENCODING_IMPORT_INDEX);
 }
 
 void PdfDocument::enableAutoEncodingImports() {
-    autoEncodingImportEnabled = true;
+    __setImportValue(__HARUPP_AUTO_ENCODING_IMPORT_INDEX, true);
 }
 
 void PdfDocument::disableAutoEncodingImports() {
-    autoEncodingImportEnabled = false;
+    __setImportValue(__HARUPP_AUTO_ENCODING_IMPORT_INDEX, false);
 }
 
 

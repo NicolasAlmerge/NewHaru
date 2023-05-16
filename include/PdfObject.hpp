@@ -4,8 +4,8 @@
 namespace pdf {
     struct PdfObject {
         virtual ~PdfObject();
-        virtual bool isEmpty() const = 0;
-        virtual operator bool() const final;
+        virtual bool isEmpty() const noexcept = 0;
+        virtual operator bool() const noexcept final;
     };
 }
 

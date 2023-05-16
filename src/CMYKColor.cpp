@@ -5,41 +5,36 @@ using namespace pdf;
 
 CMYKColor::CMYKColor(HPDF_CMYKColor&& cmykColor): innerContent(cmykColor) {}
 
-CMYKColor::CMYKColor(): CMYKColor(HPDF_CMYKColor({0.f, 0.f, 0.f, 0.f})) {}
+CMYKColor::CMYKColor() noexcept: CMYKColor(HPDF_CMYKColor({0.f, 0.f, 0.f, 0.f})) {}
 
-CMYKColor::CMYKColor(float c, float m, float y, float k): CMYKColor(HPDF_CMYKColor({c, m, y, k})) {}
+CMYKColor::CMYKColor(float c, float m, float y, float k) noexcept: CMYKColor(HPDF_CMYKColor({c, m, y, k})) {}
 
-bool CMYKColor::isEmpty() const {
-    return (
-        innerContent.c == 0.f &&
-        innerContent.m == 0.f &&
-        innerContent.y == 0.f &&
-        innerContent.k == 0.f
-    );
+bool CMYKColor::isEmpty() const noexcept {
+    return false;
 }
 
-float CMYKColor::getC() const {
+float CMYKColor::getC() const noexcept {
     return innerContent.c;
 }
 
-float CMYKColor::getM() const {
+float CMYKColor::getM() const noexcept {
     return innerContent.m;
 }
 
-float CMYKColor::getY() const {
+float CMYKColor::getY() const noexcept {
     return innerContent.y;
 }
 
-float CMYKColor::getK() const {
+float CMYKColor::getK() const noexcept {
     return innerContent.k;
 }
 
-RGBColor CMYKColor::toRGB() const {
+RGBColor CMYKColor::toRGB() const noexcept {
     const float K = 255.f*(1.f-getK());
     return RGBColor((1.f-getC())*K, (1.f-getM())*K, (1.f-getY())*K);
 }
 
-CMYKColor CMYKColor::toCMYK() const {
+CMYKColor CMYKColor::toCMYK() const noexcept {
     return CMYKColor(innerContent.c, innerContent.m, innerContent.y, innerContent.k);
 }
 

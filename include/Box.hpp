@@ -11,13 +11,13 @@ namespace pdf {
         friend class PdfPage;
 
     public:
-        Box();
-        Box(float left, float bottom, float right, float top);
-        bool isEmpty() const override;
-        float getLeft() const;
-        float getBottom() const;
-        float getRight() const;
-        float getTop() const;
+        Box() noexcept;
+        Box(float left, float bottom, float right, float top) noexcept;
+        bool isEmpty() const noexcept override;
+        float getLeft() const noexcept;
+        float getBottom() const noexcept;
+        float getRight() const noexcept;
+        float getTop() const noexcept;
     };
 }
 

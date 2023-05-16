@@ -11,15 +11,15 @@ namespace pdf {
         friend class PdfPage;
 
     public:
-        Coor2D();
-        Coor2D(float x, float y);
+        Coor2D() noexcept;
+        Coor2D(float x, float y) noexcept;
 
-        bool isEmpty() const override;
+        bool isEmpty() const noexcept override;
 
-        float getX() const;
-        float getY() const;
-        void setX(float value);
-        void setY(float value);
+        float getX() const noexcept;
+        float getY() const noexcept;
+        void setX(float value) noexcept;
+        void setY(float value) noexcept;
     };
 }
 

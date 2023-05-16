@@ -8,8 +8,8 @@ namespace pdf {
 
     struct Color: public PdfObject {
         virtual ~Color() = 0;
-        virtual RGBColor toRGB() const = 0;
-        virtual CMYKColor toCMYK() const = 0;
+        virtual RGBColor toRGB() const noexcept = 0;
+        virtual CMYKColor toCMYK() const noexcept = 0;
     };
 }
 

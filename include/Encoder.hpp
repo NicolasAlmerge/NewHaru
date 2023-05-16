@@ -13,7 +13,7 @@ namespace pdf {
         friend class PdfPage;
 
     public:
-        bool isEmpty() const override;
+        bool isEmpty() const noexcept override;
         EncoderType getType() const;
         ByteType getByteType(const std::string& text, unsigned int index) const;
         unsigned short getUnicode(unsigned short code) const;

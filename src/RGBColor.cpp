@@ -8,35 +8,31 @@ using namespace pdf;
 
 RGBColor::RGBColor(HPDF_RGBColor&& rgbColor): innerContent(rgbColor) {}
 
-RGBColor::RGBColor(): RGBColor(HPDF_RGBColor({0.f, 0.f, 0.f})) {}
+RGBColor::RGBColor() noexcept: RGBColor(HPDF_RGBColor({0.f, 0.f, 0.f})) {}
 
-RGBColor::RGBColor(float r, float g, float b): RGBColor(HPDF_RGBColor({r, g, b})) {}
+RGBColor::RGBColor(float r, float g, float b) noexcept: RGBColor(HPDF_RGBColor({r, g, b})) {}
 
-bool RGBColor::isEmpty() const {
-    return (
-        innerContent.r == 0.f &&
-        innerContent.g == 0.f &&
-        innerContent.b == 0.f
-    );
+bool RGBColor::isEmpty() const noexcept {
+    return false;
 }
 
-float RGBColor::getR() const {
+float RGBColor::getR() const noexcept {
     return innerContent.r;
 }
 
-float RGBColor::getG() const {
+float RGBColor::getG() const noexcept {
     return innerContent.g;
 }
 
-float RGBColor::getB() const {
+float RGBColor::getB() const noexcept {
     return innerContent.b;
 }
 
-RGBColor RGBColor::toRGB() const {
+RGBColor RGBColor::toRGB() const noexcept {
     return RGBColor(innerContent.r, innerContent.g, innerContent.b);
 }
 
-CMYKColor RGBColor::toCMYK() const {
+CMYKColor RGBColor::toCMYK() const noexcept {
     const float R = getR() / 255.f;
     const float G = getG() / 255.f;
     const float B = getB() / 255.f;

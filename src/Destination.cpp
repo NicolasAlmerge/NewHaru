@@ -4,7 +4,7 @@ using namespace pdf;
 
 Destination::Destination(const HPDF_Destination destination): innerContent(destination) {}
 
-bool Destination::isEmpty() const {
+bool Destination::isEmpty() const noexcept {
     return innerContent == nullptr;
 }
 

@@ -10,17 +10,17 @@ namespace pdf {
         friend class PdfPage;
 
     public:
-        RGBColor();
-        RGBColor(float r, float g, float b);
+        RGBColor() noexcept;
+        RGBColor(float r, float g, float b) noexcept;
 
-        bool isEmpty() const override;
+        bool isEmpty() const noexcept override;
 
-        float getR() const;
-        float getG() const;
-        float getB() const;
+        float getR() const noexcept;
+        float getG() const noexcept;
+        float getB() const noexcept;
 
-        RGBColor toRGB() const override;
-        CMYKColor toCMYK() const override;
+        RGBColor toRGB() const noexcept override;
+        CMYKColor toCMYK() const noexcept override;
 
         const static RGBColor WHITE;
         const static RGBColor BLACK;

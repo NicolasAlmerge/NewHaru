@@ -18,9 +18,9 @@ namespace pdf {
 
     public:
         virtual ~ContentStream() = 0;
-        bool isEmpty() const final override;
-        bool operator ==(const ContentStream& other) const;
-        bool operator !=(const ContentStream& other) const;
+        bool isEmpty() const noexcept final override;
+        bool operator ==(const ContentStream& other) const noexcept;
+        bool operator !=(const ContentStream& other) const noexcept;
     };
 }
 

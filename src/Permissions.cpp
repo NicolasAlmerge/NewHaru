@@ -2,26 +2,26 @@
 using namespace pdf;
 
 
-Permissions::Permissions() {}
+Permissions::Permissions() noexcept {}
 
 Permissions::Permissions(unsigned int v): value(v) {}
 
-Permissions::Permissions(bool canPrint, bool canEditContent, bool canCopy, bool canEditAnnotations):
+Permissions::Permissions(bool canPrint, bool canEditContent, bool canCopy, bool canEditAnnotations) noexcept:
     value((canPrint << 2) | (canEditContent << 3) | (canCopy << 4) | (canEditAnnotations << 5)) {}
 
-Permissions Permissions::operator +(const Permissions& other) const {
+Permissions Permissions::operator +(const Permissions& other) const noexcept {
     return Permissions(value | other.value);
 }
 
-bool Permissions::operator ==(const Permissions& other) const {
+bool Permissions::operator ==(const Permissions& other) const noexcept {
     return value == other.value;
 }
 
-bool Permissions::operator !=(const Permissions& other) const {
+bool Permissions::operator !=(const Permissions& other) const noexcept {
     return !operator==(other);
 }
 
-bool Permissions::isEmpty() const {
+bool Permissions::isEmpty() const noexcept {
     return value != 0;
 }
 
