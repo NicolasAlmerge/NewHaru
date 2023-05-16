@@ -41,7 +41,7 @@ void PdfPage::setHeight(float value) {
     HPDF_Page_SetHeight(innerContent, value);
 }
 
-void PdfPage::setSizeAndOrientation(PageSize size, PageOrientation orientation) {
+void PdfPage::setSize(PageSize size, PageOrientation orientation) {
     HPDF_Page_SetSize(innerContent, (HPDF_PageSizes) size, (HPDF_PageDirection) orientation);
 }
 

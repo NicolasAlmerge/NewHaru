@@ -28,7 +28,7 @@ namespace pdf {
     public:
         void setWidth(float value);
         void setHeight(float value);
-        void setSizeAndOrientation(PageSize size, PageOrientation orientation);
+        void setSize(PageSize size, PageOrientation orientation = PageOrientation::PORTRAIT);
         void setRotation(PageRotation rotation);
 
         float getWidth() const;
