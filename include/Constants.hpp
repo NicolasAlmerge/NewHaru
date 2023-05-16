@@ -331,9 +331,13 @@ namespace pdf {
         UNKNOWN
     };
 
+    /// Represents a writing mode.
     enum class WritingMode {
+        /// Horizontal mode.
         HORIZONTAL = 0,
+        /// Vertical mode.
         VERTICAL,
+        /// Mode not found.
         EOF_MODE
     };
 
