@@ -21,5 +21,6 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3.9.3
       if: ${{ github.ref == 'refs/heads/main' }}
       with:
+        action_deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./docs/html
