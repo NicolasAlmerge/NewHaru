@@ -1,4 +1,5 @@
 #include "../include/Image.hpp"
+#include "string.h"
 using namespace pdf;
 
 

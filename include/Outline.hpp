@@ -1,10 +1,9 @@
 #ifndef __HARUPP_OUTLINE_HPP__
 #define __HARUPP_OUTLINE_HPP__
-#include "PdfObject.hpp"
 #include "ContentStream.hpp"
+#include "PdfObject.hpp"
 
 namespace pdf {
-    class PdfDocument;
     class Destination;
 
     class Outline: public ContentStream {

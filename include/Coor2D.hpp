@@ -1,11 +1,9 @@
 #ifndef __HARUPP_COOR2D_HPP__
 #define __HARUPP_COOR2D_HPP__
-#include "PdfPage.hpp"
+#include "PdfObject.hpp"
+#include "hpdf.h"
 
 namespace pdf {
-    class Image;
-    class PdfPage;
-
     class Coor2D final: public PdfObject {
         HPDF_Point innerContent;
         Coor2D(HPDF_Point&& coors);

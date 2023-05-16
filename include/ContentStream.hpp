@@ -1,17 +1,9 @@
 #ifndef __HARUPP_CONTENTSTREAM_HPP__
 #define __HARUPP_CONTENTSTREAM_HPP__
 #include "PdfObject.hpp"
+#include "hpdf.h"
 
 namespace pdf {
-    class PdfPage;
-    class Annotation;
-    class LinkAnnotation;
-    class TextAnnotation;
-    class Image;
-    class Font;
-    class Outline;
-    class PdfDocument;
-
     class ContentStream: public PdfObject {
         mutable HPDF_Dict innerContent = nullptr;
         ContentStream(const HPDF_Dict dict);

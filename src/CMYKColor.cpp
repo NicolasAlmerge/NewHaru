@@ -3,11 +3,11 @@
 using namespace pdf;
 
 
-CMYKColor::CMYKColor(_HPDF_CMYKColor&& cmykColor): innerContent(cmykColor) {}
+CMYKColor::CMYKColor(HPDF_CMYKColor&& cmykColor): innerContent(cmykColor) {}
 
-CMYKColor::CMYKColor(): CMYKColor(_HPDF_CMYKColor({0.f, 0.f, 0.f, 0.f})) {}
+CMYKColor::CMYKColor(): CMYKColor(HPDF_CMYKColor({0.f, 0.f, 0.f, 0.f})) {}
 
-CMYKColor::CMYKColor(float c, float m, float y, float k): CMYKColor(_HPDF_CMYKColor({c, m, y, k})) {}
+CMYKColor::CMYKColor(float c, float m, float y, float k): CMYKColor(HPDF_CMYKColor({c, m, y, k})) {}
 
 bool CMYKColor::isEmpty() const {
     return (

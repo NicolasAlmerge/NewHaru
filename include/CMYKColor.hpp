@@ -1,14 +1,12 @@
 #ifndef __HARUPP_CMYKCOLOR_HPP__
 #define __HARUPP_CMYKCOLOR_HPP__
 #include "Color.hpp"
+#include "hpdf.h"
 
 namespace pdf {
-    class PdfPage;
-    class RGBColor;
-
     class CMYKColor final: public Color {
-        _HPDF_CMYKColor innerContent;
-        CMYKColor(_HPDF_CMYKColor&& rgbColor);
+        HPDF_CMYKColor innerContent;
+        CMYKColor(HPDF_CMYKColor&& rgbColor);
         friend class PdfPage;
 
     public:

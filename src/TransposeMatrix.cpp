@@ -2,11 +2,11 @@
 using namespace pdf;
 
 
-TransposeMatrix::TransposeMatrix(_HPDF_TransMatrix&& matrix): innerContent(matrix) {}
+TransposeMatrix::TransposeMatrix(HPDF_TransMatrix&& matrix): innerContent(matrix) {}
 
-TransposeMatrix::TransposeMatrix(): TransposeMatrix(_HPDF_TransMatrix({0.f, 0.f, 0.f, 0.f, 0.f, 0.f})) {}
+TransposeMatrix::TransposeMatrix(): TransposeMatrix(HPDF_TransMatrix({0.f, 0.f, 0.f, 0.f, 0.f, 0.f})) {}
 
-TransposeMatrix::TransposeMatrix(float a, float b, float c, float d, float x, float y): TransposeMatrix(_HPDF_TransMatrix({a, b, c, d, x, y})) {}
+TransposeMatrix::TransposeMatrix(float a, float b, float c, float d, float x, float y): TransposeMatrix(HPDF_TransMatrix({a, b, c, d, x, y})) {}
 
 bool TransposeMatrix::isEmpty() const {
     return (

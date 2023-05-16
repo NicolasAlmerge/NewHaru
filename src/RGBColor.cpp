@@ -6,11 +6,11 @@ using namespace pdf;
 #define MIN(a, b) ((a < b)? a: b)
 #define MAX(a, b) ((a < b)? b: a)
 
-RGBColor::RGBColor(_HPDF_RGBColor&& rgbColor): innerContent(rgbColor) {}
+RGBColor::RGBColor(HPDF_RGBColor&& rgbColor): innerContent(rgbColor) {}
 
-RGBColor::RGBColor(): RGBColor(_HPDF_RGBColor({0.f, 0.f, 0.f})) {}
+RGBColor::RGBColor(): RGBColor(HPDF_RGBColor({0.f, 0.f, 0.f})) {}
 
-RGBColor::RGBColor(float r, float g, float b): RGBColor(_HPDF_RGBColor({r, g, b})) {}
+RGBColor::RGBColor(float r, float g, float b): RGBColor(HPDF_RGBColor({r, g, b})) {}
 
 bool RGBColor::isEmpty() const {
     return (

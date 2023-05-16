@@ -1,11 +1,9 @@
 #ifndef __HARUPP_BOX_HPP__
 #define __HARUPP_BOX_HPP__
 #include "PdfObject.hpp"
+#include "hpdf.h"
 
 namespace pdf {
-    class Font;
-    class PdfPage;
-
     class Box final: public PdfObject {
         HPDF_Box innerContent;
         Box(HPDF_Box&& box);

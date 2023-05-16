@@ -7,7 +7,6 @@
 #include "utility"
 
 namespace pdf {
-    class PdfDocument;
     class Destination;
     class TextAnnotation;
     class LinkAnnotation;
@@ -15,6 +14,7 @@ namespace pdf {
     class Encoder;
     class Coor2D;
     class Font;
+    class Image;
     class TransposeMatrix;
     class RGBColor;
     class CMYKColor;

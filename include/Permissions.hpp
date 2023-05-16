@@ -3,8 +3,6 @@
 #include "PdfObject.hpp"
 
 namespace pdf {
-    class PdfDocument;
-
     class Permissions final: public PdfObject {
         unsigned int value = 0UL;
         Permissions(unsigned int v);

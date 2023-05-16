@@ -1,6 +1,5 @@
 #ifndef __HARUPP_PDFOBJECT_HPP__
 #define __HARUPP_PDFOBJECT_HPP__
-#include "hpdf.h"
 
 namespace pdf {
     struct PdfObject {

@@ -4,8 +4,6 @@
 #include "hpdf.h"
 
 namespace pdf {
-    class PdfDocument;
-
     class DateTime final {
         _HPDF_Date innerContent;
         friend class PdfDocument;

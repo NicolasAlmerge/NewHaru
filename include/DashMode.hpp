@@ -1,11 +1,11 @@
 #ifndef __HARUPP_DASHMODE_HPP__
 #define __HARUPP_DASHMODE_HPP__
 #include "PdfObject.hpp"
+#include "hpdf.h"
 #include "vector"
 
 namespace pdf {
     constexpr unsigned int MAX_DASH_MODE_LENGTH = 8UL;
-    class PdfPage;
 
     class DashMode final {
         HPDF_DashMode innerContent;

@@ -3,8 +3,6 @@
 #include "Annotation.hpp"
 
 namespace pdf {
-    class PdfPage;
-
     class TextAnnotation final: public Annotation {
         TextAnnotation(const HPDF_Annotation destination);
         friend class PdfPage;

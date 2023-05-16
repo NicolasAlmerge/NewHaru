@@ -3,11 +3,9 @@
 #include "PdfObject.hpp"
 #include "Constants.hpp"
 #include "ContentStream.hpp"
+#include "hpdf.h"
 
 namespace pdf {
-    class LinkAnnotation;
-    class TextAnnotation;
-
     class Annotation: public ContentStream {
         Annotation(const HPDF_Annotation destination);
         friend class LinkAnnotation;

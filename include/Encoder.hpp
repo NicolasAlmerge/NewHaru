@@ -1,13 +1,11 @@
 #ifndef __HARUPP_ENCODER_HPP__
 #define __HARUPP_ENCODER_HPP__
-#include "PdfObject.hpp"
 #include "Constants.hpp"
+#include "PdfObject.hpp"
+#include "hpdf.h"
 #include "string"
 
 namespace pdf {
-    class PdfDocument;
-    class PdfPage;
-
     class Encoder final: public PdfObject {
         mutable HPDF_Encoder innerContent = nullptr;
         Encoder(const HPDF_Encoder coors);

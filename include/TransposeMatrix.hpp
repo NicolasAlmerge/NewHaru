@@ -1,13 +1,12 @@
 #ifndef __HARUPP_TRANSPOSEMATRIX_HPP__
 #define __HARUPP_TRANSPOSEMATRIX_HPP__
-#include "PdfPage.hpp"
+#include "PdfObject.hpp"
+#include "hpdf.h"
 
 namespace pdf {
-    class PdfPage;
-
     class TransposeMatrix final: public PdfObject {
-        _HPDF_TransMatrix innerContent;
-        TransposeMatrix(_HPDF_TransMatrix&& matrix);
+        HPDF_TransMatrix innerContent;
+        TransposeMatrix(HPDF_TransMatrix&& matrix);
         friend class PdfPage;
 
     public:

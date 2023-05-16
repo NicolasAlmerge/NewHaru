@@ -7,10 +7,8 @@
 #include "vector"
 
 namespace pdf {
-    class PdfDocument;
     class Box;
     class TextWidth;
-    class PdfPage;
 
     class Font final: public ContentStream {
         Font(const HPDF_Font font);

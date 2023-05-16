@@ -1,6 +1,7 @@
 #ifndef __HARUPP_PDFEXCEPTION_HPP__
 #define __HARUPP_PDFEXCEPTION_HPP__
-#include "iostream"
+#include "exception"
+#include "string"
 
 namespace pdf {
     // Base pdf exception class

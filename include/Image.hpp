@@ -6,7 +6,6 @@
 
 namespace pdf {
     typedef unsigned char int8;
-    class PdfDocument;
 
     class Image final: public ContentStream {
         Image(const HPDF_Image content);

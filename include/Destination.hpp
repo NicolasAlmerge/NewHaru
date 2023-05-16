@@ -1,12 +1,9 @@
 #ifndef __HARUPP_DESTINATION_HPP__
 #define __HARUPP_DESTINATION_HPP__
 #include "PdfObject.hpp"
+#include "hpdf.h"
 
 namespace pdf {
-    class Outline;
-    class PdfDocument;
-    class PdfPage;
-
     class Destination final: public PdfObject {
         HPDF_Destination innerContent = nullptr;
         Destination(const HPDF_Destination destination);

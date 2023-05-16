@@ -3,8 +3,6 @@
 #include "hpdf.h"
 
 namespace pdf {
-    class Font;
-
     class TextWidth final {
         const HPDF_TextWidth innerContent;
         TextWidth(HPDF_TextWidth&& textWidth);
