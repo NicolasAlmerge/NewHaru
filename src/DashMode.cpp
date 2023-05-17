@@ -24,7 +24,7 @@ DashMode::DashMode(const std::vector<float>& values, float phase) {
     innerContent.num_ptn = values.size();
     for (unsigned int i = 0; i < values.size(); ++i) {
         if (values[i] > MAX_DASH_MODE_SIZE) {
-            throw except::FloatOutOfRangeException("One element of vector of values exceeds MAX_DASH_MODE_SIZE", values[i]);
+            throw except::FloatOutOfRangeException("One element of vector of values exceeds MAX_DASH_MODE_SIZE", 0x1057, values[i]);
         }
         innerContent.ptn[i] = values[i];
     }
