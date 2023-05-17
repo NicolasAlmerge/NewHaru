@@ -198,6 +198,7 @@ var namespacepdf =
       [ "EOF_MODE", "namespacepdf.html#a185b62343554b9d4aa221ab1e4deb01da0e36b06d0fa0ca87456e68b63f5a8f33", null ]
     ] ],
     [ "MAX_DASH_MODE_LENGTH", "namespacepdf.html#ac092b0730e0b67be47adfeaceab63536", null ],
+    [ "MAX_DASH_MODE_SIZE", "namespacepdf.html#a05432ec60648c9cca78bf7c7574c4589", null ],
     [ "MAX_DICT_ELEMENT", "namespacepdf.html#ac1a8c2d21ea4169b1497e688d5687b4c", null ],
     [ "MAX_GSTATE", "namespacepdf.html#a293f9fe3165727d711aa6ee692b9a793", null ],
     [ "MAX_STRING_LEN", "namespacepdf.html#a0f45e9d2ddf6a248ba4d8635fdadb2a0", null ]

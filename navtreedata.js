@@ -52,7 +52,7 @@ var NAVTREEINDEX =
 "annotated.html",
 "classpdf_1_1except_1_1FloatOutOfRangeException.html#ab716f1cf6f90288a0e11ad17a6fffdd3",
 "classpdf_1_1except_1_1PageInvalidSizeException.html",
-"namespacepdf.html#ae657412ea775fa0a870ecc6baa900adca3e956761bb73b567713553cf7626cbb2"
+"namespacepdf.html#ae657412ea775fa0a870ecc6baa900adca24f812409e11369b0b507cbff4043b19"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
