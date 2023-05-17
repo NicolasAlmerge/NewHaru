@@ -1,7 +1,6 @@
 #ifndef __HARUPP_CONSTANTS_HPP__
 #define __HARUPP_CONSTANTS_HPP__
 
-
 /// Represents the Haru++ namespace.
 namespace pdf {
 
@@ -356,19 +355,19 @@ namespace pdf {
 
     /// Represents the icon of an annotation.
     enum class AnnotationIcon {
-        /// \image html "../../docs-utils/icons/0.png" height=30px
+        /// \image html "annotation-icon-0.png" height=30px
         COMMENT = 0,
-        /// \image html "../../docs-utils/icons/1.png" height=30px
+        /// \image html "annotation-icon-1.png" height=30px
         KEY,
-        /// \image html "../../docs-utils/icons/2.png" height=30px
+        /// \image html "annotation-icon-2.png" height=30px
         NOTE,
-        /// \image html "../../docs-utils/icons/3.png" height=30px
+        /// \image html "annotation-icon-3.png" height=30px
         HELP,
-        /// \image html "../../docs-utils/icons/4.png" height=30px
+        /// \image html "annotation-icon-4.png" height=30px
         NEW_PARAGRAPH,
-        /// \image html "../../docs-utils/icons/5.png" height=30px
+        /// \image html "annotation-icon-5.png" height=30px
         PARAGRAPH,
-        /// \image html "../../docs-utils/icons/6.png" height=30px
+        /// \image html "annotation-icon-6.png" height=30px
         INSERT
     };
 
