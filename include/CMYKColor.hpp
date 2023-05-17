@@ -21,7 +21,7 @@ namespace pdf {
 
         /**
          * @brief   Creates the white CMYKColor.
-         * @details This is equivalent to `CMYKColor(0, 0, 0, 0)`.
+         * @details This is equivalent to `CMYKColor(0, 0, 0, 0)` and CMYKColor::WHITE.
         */
         CMYKColor() noexcept;
 

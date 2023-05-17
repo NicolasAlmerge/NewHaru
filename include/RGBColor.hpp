@@ -20,7 +20,7 @@ namespace pdf {
     public:
         /**
          * @brief   Creates the black RGBColor.
-         * @details This is equivalent to `RGBColor(0, 0, 0)`.
+         * @details This is equivalent to `RGBColor(0, 0, 0)` and RGBColor::BLACK.
         */
         RGBColor() noexcept;
 

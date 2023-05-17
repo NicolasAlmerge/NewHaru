@@ -20,7 +20,8 @@ namespace pdf {
 
     public:
         /**
-         * @brief Creates an empty box.
+         * @brief   Creates an empty box.
+         * @details This is equivalent to `Box(0, 0, 0, 0)`.
         */
         Box() noexcept;
 

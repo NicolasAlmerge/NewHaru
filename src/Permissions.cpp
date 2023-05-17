@@ -13,6 +13,10 @@ Permissions Permissions::operator +(const Permissions& other) const noexcept {
     return Permissions(value | other.value);
 }
 
+Permissions Permissions::operator -(const Permissions& other) const noexcept {
+    return Permissions(value & ~other.value);
+}
+
 bool Permissions::operator ==(const Permissions& other) const noexcept {
     return value == other.value;
 }
