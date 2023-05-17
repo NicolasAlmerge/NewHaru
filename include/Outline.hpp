@@ -9,11 +9,12 @@ namespace pdf {
     /**
      * \class  Outline
      * @brief  Represents an outline.
+     * @note   Note that this class cannot be instantiated manually. Rather, it is created when calling PdfDocument::createOutline.
      * @file   Outline.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
     */
-    class Outline: public ContentStream {
+    class Outline final: public ContentStream {
         explicit Outline(const HPDF_Outline outline);
         friend class PdfDocument;
 

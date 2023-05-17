@@ -193,10 +193,36 @@ namespace pdf {
         void enableAutoEncodingImports();
         void disableAutoEncodingImports();
 
-        /******************** OUTLINE CREATION ********************/
+        /**
+         * @brief  Creates an Outline.
+         * @param  title The title to use for the outline.
+         * @return Newly created outline.
+        */
         Outline createOutline(const std::string& title) const;
+
+        /**
+         * @brief  Creates an Outline.
+         * @param  title The title to use for the outline.
+         * @param  parent The outline to use as parent.
+         * @return Newly created outline.
+        */
         Outline createOutline(const std::string& title, const Outline& parent) const;
+
+        /**
+         * @brief  Creates an Outline.
+         * @param  title The title to use for the outline.
+         * @param  encoder The encoder to use.
+         * @return Newly created outline.
+        */
         Outline createOutline(const std::string& title, const Encoder& encoder) const;
+
+        /**
+         * @brief  Creates an Outline.
+         * @param  title The title to use for the outline.
+         * @param  parent The outline to use as parent.
+         * @param  encoder The encoder to use.
+         * @return Newly created outline.
+        */
         Outline createOutline(const std::string& title, const Outline& parent, const Encoder& encoder) const;
 
         /**
