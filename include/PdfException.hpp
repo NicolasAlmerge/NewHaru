@@ -56,7 +56,7 @@ namespace pdf::except {
 
         /**
          * @brief   Returns the error name.
-         * @details This is just a string representation of the class name.
+         * @details This is simply a string representation of the class name.
          * @return  Error name.
         */
         virtual const char* getName() const noexcept = 0;
@@ -68,7 +68,13 @@ namespace pdf::except {
         virtual std::string getFullDescription() const noexcept final;
     };
 
-    // Failed to create a new pdf
+    /**
+     * \class  NewPdfCreationFailedException
+     * @brief  Represents the exception that occurs when creating a new pdf failed.
+     * @file   PdfException.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class NewPdfCreationFailedException: public PdfException {
         using PdfException::PdfException;
         public: const char* getName() const noexcept override {
