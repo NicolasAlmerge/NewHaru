@@ -7,11 +7,12 @@ var searchData=
   ['annotation_4',['Annotation',['../classpdf_1_1Annotation.html',1,'pdf']]],
   ['annotationexception_5',['AnnotationException',['../classpdf_1_1except_1_1AnnotationException.html',1,'pdf::except']]],
   ['annotationhighlightmode_6',['AnnotationHighlightMode',['../namespacepdf.html#aa08ac3c92146aac0f02d2bceeb32228a',1,'pdf']]],
-  ['annotationinvalidborderstyleexception_7',['AnnotationInvalidBorderStyleException',['../classpdf_1_1except_1_1AnnotationInvalidBorderStyleException.html',1,'pdf::except']]],
-  ['annotationinvalidiconexception_8',['AnnotationInvalidIconException',['../classpdf_1_1except_1_1AnnotationInvalidIconException.html',1,'pdf::except']]],
-  ['arraycountexception_9',['ArrayCountException',['../classpdf_1_1except_1_1ArrayCountException.html',1,'pdf::except']]],
-  ['arrayexception_10',['ArrayException',['../classpdf_1_1except_1_1ArrayException.html',1,'pdf::except']]],
-  ['arrayitemnotfoundexception_11',['ArrayItemNotFoundException',['../classpdf_1_1except_1_1ArrayItemNotFoundException.html',1,'pdf::except']]],
-  ['arrayitemunexpectedtypeexception_12',['ArrayItemUnexpectedTypeException',['../classpdf_1_1except_1_1ArrayItemUnexpectedTypeException.html',1,'pdf::except']]],
-  ['author_13',['AUTHOR',['../namespacepdf.html#a6395471b755daf67dee1f416606f8469a657bf13f12d567c344fba3e7afe3b3a3',1,'pdf']]]
+  ['annotationicon_7',['AnnotationIcon',['../namespacepdf.html#a59bcf0ed1d1f4ca3061205d4be6d1041',1,'pdf']]],
+  ['annotationinvalidborderstyleexception_8',['AnnotationInvalidBorderStyleException',['../classpdf_1_1except_1_1AnnotationInvalidBorderStyleException.html',1,'pdf::except']]],
+  ['annotationinvalidiconexception_9',['AnnotationInvalidIconException',['../classpdf_1_1except_1_1AnnotationInvalidIconException.html',1,'pdf::except']]],
+  ['arraycountexception_10',['ArrayCountException',['../classpdf_1_1except_1_1ArrayCountException.html',1,'pdf::except']]],
+  ['arrayexception_11',['ArrayException',['../classpdf_1_1except_1_1ArrayException.html',1,'pdf::except']]],
+  ['arrayitemnotfoundexception_12',['ArrayItemNotFoundException',['../classpdf_1_1except_1_1ArrayItemNotFoundException.html',1,'pdf::except']]],
+  ['arrayitemunexpectedtypeexception_13',['ArrayItemUnexpectedTypeException',['../classpdf_1_1except_1_1ArrayItemUnexpectedTypeException.html',1,'pdf::except']]],
+  ['author_14',['AUTHOR',['../namespacepdf.html#a6395471b755daf67dee1f416606f8469a657bf13f12d567c344fba3e7afe3b3a3',1,'pdf']]]
 ];

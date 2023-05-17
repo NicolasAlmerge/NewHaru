@@ -14,6 +14,8 @@ var searchData=
   ['fontspecific_11',['FontSpecific',['../namespacepdf.html#ae657412ea775fa0a870ecc6baa900adcae68ad164e2ee2d57120e0374586074ee',1,'pdf']]],
   ['four_12',['FOUR',['../namespacepdf.html#a2d157239c877ac13030d8e971e151857a341fee9692a2ed8f09906d40d23fb1f9',1,'pdf']]],
   ['fourteen_13',['FOURTEEN',['../namespacepdf.html#ac115523deb093c3d7fcafc3ac869ad79afcdaf7b88ebdd80fdb27931f5919f190',1,'pdf']]],
-  ['full_5fscreen_14',['FULL_SCREEN',['../namespacepdf.html#ae4e08ed1dede0afb26afb87c9a284a92ae1a502139199d41bcd8f603a6d579b70',1,'pdf']]],
-  ['functionskippedexception_15',['FunctionSkippedException',['../classpdf_1_1except_1_1FunctionSkippedException.html',1,'pdf::except']]]
+  ['freeallresources_14',['freeAllResources',['../classpdf_1_1PdfDocument.html#a6d0e921c91d1bde2fe9af74ea26d0da3',1,'pdf::PdfDocument']]],
+  ['freeresources_15',['freeResources',['../classpdf_1_1PdfDocument.html#aad910cbe4cfc1b8e18985cb39f945e9e',1,'pdf::PdfDocument']]],
+  ['full_5fscreen_16',['FULL_SCREEN',['../namespacepdf.html#ae4e08ed1dede0afb26afb87c9a284a92ae1a502139199d41bcd8f603a6d579b70',1,'pdf']]],
+  ['functionskippedexception_17',['FunctionSkippedException',['../classpdf_1_1except_1_1FunctionSkippedException.html',1,'pdf::except']]]
 ];

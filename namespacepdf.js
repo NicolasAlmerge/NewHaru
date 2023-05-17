@@ -30,6 +30,15 @@ var namespacepdf =
       [ "INVERT_BORDER", "namespacepdf.html#aa08ac3c92146aac0f02d2bceeb32228aa2b89fdc57ced8955517e80b295ec82a1", null ],
       [ "DOWN_APPEARANCE", "namespacepdf.html#aa08ac3c92146aac0f02d2bceeb32228aaac3d0726241691422e2b1c506730eb46", null ]
     ] ],
+    [ "AnnotationIcon", "namespacepdf.html#a59bcf0ed1d1f4ca3061205d4be6d1041", [
+      [ "COMMENT", "namespacepdf.html#a59bcf0ed1d1f4ca3061205d4be6d1041af2cd320b55767434dd48d81b165ea956", null ],
+      [ "KEY", "namespacepdf.html#a59bcf0ed1d1f4ca3061205d4be6d1041a3b5949e0c26b87767a4752a276de9570", null ],
+      [ "NOTE", "namespacepdf.html#a59bcf0ed1d1f4ca3061205d4be6d1041a10de4bc81f754b19b0d27246a0589c05", null ],
+      [ "HELP", "namespacepdf.html#a59bcf0ed1d1f4ca3061205d4be6d1041a4fc963e213bba362778f5c175eb4d5ff", null ],
+      [ "NEW_PARAGRAPH", "namespacepdf.html#a59bcf0ed1d1f4ca3061205d4be6d1041a1a1fc6ccb84a3d5fcdf72d0ada1dd3dd", null ],
+      [ "PARAGRAPH", "namespacepdf.html#a59bcf0ed1d1f4ca3061205d4be6d1041a2043613b40978710bda1c46662af3f3c", null ],
+      [ "INSERT", "namespacepdf.html#a59bcf0ed1d1f4ca3061205d4be6d1041a61ee777e7f71dc466c3b2c685d8d313b", null ]
+    ] ],
     [ "BitsPerComponent", "namespacepdf.html#a2d157239c877ac13030d8e971e151857", [
       [ "ONE", "namespacepdf.html#a2d157239c877ac13030d8e971e151857abc21e6484530fc9d0313cb816b733396", null ],
       [ "TWO", "namespacepdf.html#a2d157239c877ac13030d8e971e151857a0f82d86afa0f5dc965c5c15aca58dcfb", null ],
