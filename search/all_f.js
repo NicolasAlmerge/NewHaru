@@ -26,7 +26,7 @@ var searchData=
   ['pagesmissingkidsentryexception_23',['PagesMissingKidsEntryException',['../classpdf_1_1PagesMissingKidsEntryException.html',1,'pdf']]],
   ['pdf_24',['pdf',['../namespacepdf.html',1,'']]],
   ['pdfdocument_25',['PdfDocument',['../classpdf_1_1PdfDocument.html',1,'pdf']]],
-  ['pdfexception_26',['PdfException',['../classpdf_1_1PdfException.html',1,'pdf']]],
+  ['pdfexception_26',['PdfException',['../classpdf_1_1PdfException.html',1,'pdf::PdfException'],['../classpdf_1_1PdfException.html#a77430bcbca6b7122c138c338455999b3',1,'pdf::PdfException::PdfException()']]],
   ['pdfobject_27',['PdfObject',['../structpdf_1_1PdfObject.html',1,'pdf']]],
   ['pdfpage_28',['PdfPage',['../classpdf_1_1PdfPage.html',1,'pdf']]],
   ['permissions_29',['Permissions',['../classpdf_1_1Permissions.html',1,'pdf']]],
