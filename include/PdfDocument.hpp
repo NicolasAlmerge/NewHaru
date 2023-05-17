@@ -147,23 +147,69 @@ namespace pdf {
         Outline createOutline(const std::string& title, const Encoder& encoder) const;
         Outline createOutline(const std::string& title, const Outline& parent, const Encoder& encoder) const;
 
-        /******************** IMAGES LOADING ********************/
+        /**
+         * @brief  Loads a PNG image from a file.
+         * @param  fileName The image filename.
+         * @return Image from the filename.
+        */
         Image loadPNGImageFromFile(const std::string& fileName);
+
+        /**
+         * @brief  Loads a PNG image from memory.
+         * @param  bytes Vector of bytes to use.
+         * @return Image from memory.
+        */
+        Image loadPNGImageFromMemory(const std::vector<unsigned char>& bytes);
+
+        /**
+         * @brief Loads a PNG image from a file.
+         * @note  Unlike ::loadPNGImageFromFile, only the size and color properties are loaded.
+         *        The main data is loaded just before the image object is written to PDF, then deleted immediately.
+         * @param  fileName The image filename.
+         * @return Image from the filename.
+        */
         Image loadPartialPNGImageFromFile(const std::string& fileName);
 
+        /**
+         * @brief  Loads a raw image from a file.
+         * @param  fileName The image filename.
+         * @param  width The width of the image.
+         * @param  height The height of the image.
+         * @param  colorSpace Color space to use.
+         * @return New Image object.
+        */
         Image loadRawImageFromFile(
             const std::string& fileName, unsigned int width,
             unsigned int height, ImageColorSpaceDevice colorSpace
         );
 
+        /**
+         * @brief  Loads a raw image from memory.
+         * @param  bytes Vector of bytes encoding the image.
+         * @param  width The width of the image.
+         * @param  height The height of the image.
+         * @param  colorSpace The color space to use.
+         * @param  bitsPerComponent Number of bits per component.
+         * @return New Image object.
+        */
         Image loadRawImageFromMemory(
             const std::vector<unsigned char>& bytes, unsigned int width,
             unsigned int height, ImageColorSpaceDevice colorSpace,
             BitsPerComponent bitsPerComponent
         );
 
-        Image loadPNGImageFromMemory(const std::vector<unsigned char>& bytes);
+        /**
+         * @brief  Loads a JPEG image from memory.
+         * @param  bytes Vector of bytes to use.
+         * @return Image from memory.
+        */
         Image loadJPEGImageFromMemory(const std::vector<unsigned char>& bytes);
+
+        /**
+         * @brief  Loads a JPEG image from a file.
+         * @param  fileName The image filename.
+         * @return Image from the filename.
+        */
         Image loadJPEGImageFromFile(const std::string& fileName);
 
         /******************** OTHER FUNCTIONS ********************/
@@ -173,12 +219,42 @@ namespace pdf {
         std::optional<std::string> getInfoAttribute(StringAttribute parameter);
         std::optional<std::string> getInfoAttribute(DateTimeAttribute parameter);
 
+        /**
+         * @brief Sets the owner password for a pdf document (with no user password).
+         * @param ownerPassword Owner password (cannot be empty).
+         * @throw except::InvalidPasswordException if `ownerPassword` is empty.
+        */
         void setPassword(const std::string& ownerPassword);
+
+        /**
+         * @brief Sets the owner and user passwords for a pdf document.
+         * @param ownerPassword Owner password (cannot be empty).
+         * @param userPassword  User password (can be empty, but cannot be equal to `ownerPassword`).
+         * @throw except::InvalidPasswordException if `ownerPassword` is empty or `ownerPassword` equals `userPassword`.
+        */
         void setPassword(const std::string& ownerPassword, const std::string& userPassword);
 
+        /**
+         * @brief   Sets the pdf document permissions.
+         * @param   permissions The permissions to use.
+         * @warning A ::setPassword function must be called before calling this function.
+         * @throws  except::EncryptionNotSetException if no password has been set.
+        */
         void setPermissions(const Permissions& permissions);
 
+        /**
+         * @brief   Sets the R2 encryption mode.
+         * @warning A ::setPassword function must be called before calling this function.
+         * @throws  except::EncryptionNotSetException if no password has been set.
+        */
         void setR2EncryptMode();
+
+        /**
+         * @brief   Sets the R3 encryption mode.
+         * @param   keyLength Key length to use.
+         * @warning A ::setPassword function must be called before calling this function.
+         * @throws  except::EncryptionNotSetException if no password has been set.
+        */
         void setR3EncryptMode(R3EncryptKeyLength keyLength = R3EncryptKeyLength::SIXTEEN);
 
         void setCompressionMode(CompressionMode mode);
