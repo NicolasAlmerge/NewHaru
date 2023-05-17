@@ -21,7 +21,8 @@ var searchData=
   ['cp1256_18',['CP1256',['../namespacepdf.html#ae657412ea775fa0a870ecc6baa900adca72a661a6e3ff8094af56611b056890ce',1,'pdf']]],
   ['cp1257_19',['CP1257',['../namespacepdf.html#ae657412ea775fa0a870ecc6baa900adcab00d45c387f6f12480f3c8ec49dd90a9',1,'pdf']]],
   ['cp1258_20',['CP1258',['../namespacepdf.html#ae657412ea775fa0a870ecc6baa900adca939a63abefd0243c6dc81470b5f2d7bd',1,'pdf']]],
-  ['creation_5fdate_21',['CREATION_DATE',['../namespacepdf.html#a3b00f99c42f3866b828407c8c3f7d3d2a1b56fd59b75da24a245e635aa5d460d1',1,'pdf']]],
-  ['creator_22',['CREATOR',['../namespacepdf.html#a6395471b755daf67dee1f416606f8469a71867d2546785ba58a16552639a722c2',1,'pdf']]],
-  ['cyan_23',['CYAN',['../classpdf_1_1RGBColor.html#a988f2f0fea9f2e63a670b9e3c74521ae',1,'pdf::RGBColor::CYAN()'],['../classpdf_1_1CMYKColor.html#ab4cee7745f584a9974b2d5b9e5e57a13',1,'pdf::CMYKColor::CYAN()']]]
+  ['createdestination_21',['createDestination',['../classpdf_1_1PdfPage.html#afb379bea5085f7303ba19ba76e0c8a8b',1,'pdf::PdfPage']]],
+  ['creation_5fdate_22',['CREATION_DATE',['../namespacepdf.html#a3b00f99c42f3866b828407c8c3f7d3d2a1b56fd59b75da24a245e635aa5d460d1',1,'pdf']]],
+  ['creator_23',['CREATOR',['../namespacepdf.html#a6395471b755daf67dee1f416606f8469a71867d2546785ba58a16552639a722c2',1,'pdf']]],
+  ['cyan_24',['CYAN',['../classpdf_1_1CMYKColor.html#ab4cee7745f584a9974b2d5b9e5e57a13',1,'pdf::CMYKColor::CYAN()'],['../classpdf_1_1RGBColor.html#a988f2f0fea9f2e63a670b9e3c74521ae',1,'pdf::RGBColor::CYAN()']]]
 ];

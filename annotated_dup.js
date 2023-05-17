@@ -130,7 +130,7 @@ var annotated_dup =
       [ "Outline", "classpdf_1_1Outline.html", "classpdf_1_1Outline" ],
       [ "PdfDocument", "classpdf_1_1PdfDocument.html", "classpdf_1_1PdfDocument" ],
       [ "PdfObject", "structpdf_1_1PdfObject.html", "structpdf_1_1PdfObject" ],
-      [ "PdfPage", "classpdf_1_1PdfPage.html", null ],
+      [ "PdfPage", "classpdf_1_1PdfPage.html", "classpdf_1_1PdfPage" ],
       [ "Permissions", "classpdf_1_1Permissions.html", "classpdf_1_1Permissions" ],
       [ "RGBColor", "classpdf_1_1RGBColor.html", "classpdf_1_1RGBColor" ],
       [ "TextAnnotation", "classpdf_1_1TextAnnotation.html", "classpdf_1_1TextAnnotation" ],

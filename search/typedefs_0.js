@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['int8_0',['int8',['../namespacepdf.html#aa8d593369877e60776da35e7af1b9bf6',1,'pdf']]]
+  ['uint8_0',['uint8',['../namespacepdf.html#a73c081a78daae9d73f854f8d4818f4ef',1,'pdf']]]
 ];
