@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['cannotgetpngimagepalletexception_0',['CannotGetPNGImagePalletException',['../classpdf_1_1CannotGetPNGImagePalletException.html',1,'pdf']]],
+  ['cannotgetpngimagepalletexception_0',['CannotGetPNGImagePalletException',['../classpdf_1_1except_1_1CannotGetPNGImagePalletException.html',1,'pdf::except']]],
   ['center_1',['CENTER',['../namespacepdf.html#a15087d60cd2ac679f049619d8d22ce9aac397289ee45877be0cd49811fe245b4e',1,'pdf']]],
   ['cmyk_2',['CMYK',['../namespacepdf.html#a1ca03f90325acb5a5eb104d37bff4b09afaa655c7dee48c19cd0bfc8187af941a',1,'pdf']]],
   ['cmykcolor_3',['CMYKColor',['../classpdf_1_1CMYKColor.html#a8932ed2e97bb4edcd2096050d5170279',1,'pdf::CMYKColor::CMYKColor() noexcept'],['../classpdf_1_1CMYKColor.html#ab0feb2d40f068e73cef7fa0b976514cf',1,'pdf::CMYKColor::CMYKColor(float c, float m, float y, float k) noexcept'],['../classpdf_1_1CMYKColor.html',1,'pdf::CMYKColor']]],

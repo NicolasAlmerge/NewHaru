@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['undefinedexception_0',['UndefinedException',['../classpdf_1_1UndefinedException.html',1,'pdf']]],
+  ['undefinedexception_0',['UndefinedException',['../classpdf_1_1except_1_1UndefinedException.html',1,'pdf::except']]],
   ['unknown_1',['UNKNOWN',['../namespacepdf.html#a0aa2132b461e2c2249ee24f6e920c1cea696b031073e74bf2cb98e5ef201d4aa3',1,'pdf']]],
-  ['unknownclassexception_2',['UnknownClassException',['../classpdf_1_1UnknownClassException.html',1,'pdf']]],
-  ['unsupportedfonttypeexception_3',['UnsupportedFontTypeException',['../classpdf_1_1UnsupportedFontTypeException.html',1,'pdf']]],
-  ['unsupportedfunctionexception_4',['UnsupportedFunctionException',['../classpdf_1_1UnsupportedFunctionException.html',1,'pdf']]],
-  ['unsupportedjpegformatexception_5',['UnsupportedJPEGFormatException',['../classpdf_1_1UnsupportedJPEGFormatException.html',1,'pdf']]],
-  ['unsupportedtype1fontexception_6',['UnsupportedType1FontException',['../classpdf_1_1UnsupportedType1FontException.html',1,'pdf']]],
+  ['unknownclassexception_2',['UnknownClassException',['../classpdf_1_1except_1_1UnknownClassException.html',1,'pdf::except']]],
+  ['unsupportedfonttypeexception_3',['UnsupportedFontTypeException',['../classpdf_1_1except_1_1UnsupportedFontTypeException.html',1,'pdf::except']]],
+  ['unsupportedfunctionexception_4',['UnsupportedFunctionException',['../classpdf_1_1except_1_1UnsupportedFunctionException.html',1,'pdf::except']]],
+  ['unsupportedjpegformatexception_5',['UnsupportedJPEGFormatException',['../classpdf_1_1except_1_1UnsupportedJPEGFormatException.html',1,'pdf::except']]],
+  ['unsupportedtype1fontexception_6',['UnsupportedType1FontException',['../classpdf_1_1except_1_1UnsupportedType1FontException.html',1,'pdf::except']]],
   ['upper_5fletters_7',['UPPER_LETTERS',['../namespacepdf.html#a302e30614b41148a53284d28d33ace0ca62b423dbf6cb294670cc5fc42abab8c7',1,'pdf']]],
   ['upper_5froman_8',['UPPER_ROMAN',['../namespacepdf.html#a302e30614b41148a53284d28d33ace0caee4586491b6688e6f50ec2b022ec877e',1,'pdf']]],
   ['us4x6_9',['US4x6',['../namespacepdf.html#a764804d041eb19d9aeb0a7f91ce1b33ea21dc2ac692ef13fc764b4c8d69839f70',1,'pdf']]],
