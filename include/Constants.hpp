@@ -384,10 +384,15 @@ namespace pdf {
         DOWN_APPEARANCE
     };
 
+    /// Represents a line cap.
     enum class LineCap {
+        /// Butt ending.
         BUTT_END = 0,
+        /// Round ending.
         ROUND_END,
+        /// Projecting square ending.
         PROJECTING_SQUARE_END,
+        /// Linecap not found.
         LINECAP_EOF
     };
 
