@@ -7,5 +7,6 @@ var searchData=
   ['black_4',['BLACK',['../classpdf_1_1CMYKColor.html#a9c56a49f5554c2035668d5a75e350ed8',1,'pdf::CMYKColor::BLACK()'],['../classpdf_1_1RGBColor.html#a36e8e1dcf89b074728589fdeb42ff3e0',1,'pdf::RGBColor::BLACK()']]],
   ['blue_5',['BLUE',['../classpdf_1_1CMYKColor.html#aba91dcb137539a9fa62c667184b2f595',1,'pdf::CMYKColor::BLUE()'],['../classpdf_1_1RGBColor.html#a5619758f89eeae776d067a4f537e6222',1,'pdf::RGBColor::BLUE()']]],
   ['box_6',['Box',['../classpdf_1_1Box.html#a7118dc9f5f163c6e50a7685713eb5c72',1,'pdf::Box::Box() noexcept'],['../classpdf_1_1Box.html#a6be08fb85cb5b23adf03b93b35fed603',1,'pdf::Box::Box(float left, float bottom, float right, float top) noexcept'],['../classpdf_1_1Box.html',1,'pdf::Box']]],
-  ['bytetype_7',['ByteType',['../namespacepdf.html#a0aa2132b461e2c2249ee24f6e920c1ce',1,'pdf']]]
+  ['butt_5fend_7',['BUTT_END',['../namespacepdf.html#a835005b64985ee2b42315f412e09bc31a70912559aceda9e49670d2b84b701f34',1,'pdf']]],
+  ['bytetype_8',['ByteType',['../namespacepdf.html#a0aa2132b461e2c2249ee24f6e920c1ce',1,'pdf']]]
 ];

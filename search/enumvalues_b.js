@@ -5,6 +5,7 @@ var searchData=
   ['left_2',['LEFT',['../namespacepdf.html#a15087d60cd2ac679f049619d8d22ce9aa684d325a7303f52e64011467ff5c5758',1,'pdf']]],
   ['legal_3',['LEGAL',['../namespacepdf.html#a764804d041eb19d9aeb0a7f91ce1b33eac53151ffd180a17416e8f09b1ca4bfc3',1,'pdf']]],
   ['letter_4',['LETTER',['../namespacepdf.html#a764804d041eb19d9aeb0a7f91ce1b33ea293c501027368f9a83d91179af6a4316',1,'pdf']]],
-  ['lower_5fletters_5',['LOWER_LETTERS',['../namespacepdf.html#a302e30614b41148a53284d28d33ace0caa9aa86104aa44b2215179eea33f5eabe',1,'pdf']]],
-  ['lower_5froman_6',['LOWER_ROMAN',['../namespacepdf.html#a302e30614b41148a53284d28d33ace0cad316800c62f1bb90c114e6826bdbd565',1,'pdf']]]
+  ['linecap_5feof_5',['LINECAP_EOF',['../namespacepdf.html#a835005b64985ee2b42315f412e09bc31ad06567424077aa8659d116eb1b1d0a25',1,'pdf']]],
+  ['lower_5fletters_6',['LOWER_LETTERS',['../namespacepdf.html#a302e30614b41148a53284d28d33ace0caa9aa86104aa44b2215179eea33f5eabe',1,'pdf']]],
+  ['lower_5froman_7',['LOWER_ROMAN',['../namespacepdf.html#a302e30614b41148a53284d28d33ace0cad316800c62f1bb90c114e6826bdbd565',1,'pdf']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['utcindicator_0',['UTCIndicator',['../namespacepdf.html#a1633355b91d465e3f5cf4baa1d32f227',1,'pdf']]]
+  ['textalignment_0',['TextAlignment',['../namespacepdf.html#a15087d60cd2ac679f049619d8d22ce9a',1,'pdf']]]
 ];

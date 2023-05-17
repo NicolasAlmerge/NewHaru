@@ -70,6 +70,12 @@ var namespacepdf =
       [ "RGB", "namespacepdf.html#a1ca03f90325acb5a5eb104d37bff4b09a889574aebacda6bfd3e534e2b49b8028", null ],
       [ "CMYK", "namespacepdf.html#a1ca03f90325acb5a5eb104d37bff4b09afaa655c7dee48c19cd0bfc8187af941a", null ]
     ] ],
+    [ "LineCap", "namespacepdf.html#a835005b64985ee2b42315f412e09bc31", [
+      [ "BUTT_END", "namespacepdf.html#a835005b64985ee2b42315f412e09bc31a70912559aceda9e49670d2b84b701f34", null ],
+      [ "ROUND_END", "namespacepdf.html#a835005b64985ee2b42315f412e09bc31a7c67e8f63ba629fc684b9a0826afad29", null ],
+      [ "PROJECTING_SQUARE_END", "namespacepdf.html#a835005b64985ee2b42315f412e09bc31af960b7ddb9bd6b884bf2a21bdd815aba", null ],
+      [ "LINECAP_EOF", "namespacepdf.html#a835005b64985ee2b42315f412e09bc31ad06567424077aa8659d116eb1b1d0a25", null ]
+    ] ],
     [ "MultiByteEncoding", "namespacepdf.html#a1c2d53c24a8f8bc1a27930ad36b7a385", [
       [ "GB_EUC_H", "namespacepdf.html#a1c2d53c24a8f8bc1a27930ad36b7a385ab3d5741e306a24d98cd34b0d460a91a4", null ],
       [ "GB_EUC_V", "namespacepdf.html#a1c2d53c24a8f8bc1a27930ad36b7a385a746c60145f5cd9312a07e3433408e384", null ],
