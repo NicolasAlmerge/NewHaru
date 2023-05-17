@@ -1,4 +1,5 @@
 #include "../include/DashMode.hpp"
+#include "../include/PdfException.hpp"
 using namespace pdf;
 
 
@@ -18,8 +19,15 @@ DashMode DashMode::__from(HPDF_DashMode&& value) {
 DashMode::DashMode(): DashMode(std::vector<float>()) {}
 
 DashMode::DashMode(const std::vector<float>& values, float phase) {
+    if (values.size() > MAX_DASH_MODE_LENGTH)
+        throw except::PageModeOutOfRangeException("Values length exceed MAX_DASH_MODE_LENGTH.", 0x1070, values.size());
     innerContent.num_ptn = values.size();
-    for (unsigned int i = 0; i < values.size(); ++i) innerContent.ptn[i] = values[i];
+    for (unsigned int i = 0; i < values.size(); ++i) {
+        if (values[i] > MAX_DASH_MODE_SIZE) {
+            throw except::FloatOutOfRangeException("One element of vector of values exceeds MAX_DASH_MODE_SIZE", values[i]);
+        }
+        innerContent.ptn[i] = values[i];
+    }
     innerContent.phase = values.empty()? 0.0: phase;
 }
 
