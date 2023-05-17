@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['gray_0',['GRAY',['../classpdf_1_1CMYKColor.html#ad04e4d922d857f59950f0a98dc25bef2',1,'pdf::CMYKColor::GRAY()'],['../classpdf_1_1RGBColor.html#ab81b44f4c5bf7bf9efa00b1e73ce26b0',1,'pdf::RGBColor::GRAY()']]],
-  ['green_1',['GREEN',['../classpdf_1_1CMYKColor.html#ac8ae18bdad39ccea8eaaa75c2f81a0c3',1,'pdf::CMYKColor::GREEN()'],['../classpdf_1_1RGBColor.html#a90f2b402462c0d13212a6a22556b1064',1,'pdf::RGBColor::GREEN()']]]
+  ['copy_0',['COPY',['../classpdf_1_1Permissions.html#a902805b25b55e1f770931e9b681d2eee',1,'pdf::Permissions']]],
+  ['cyan_1',['CYAN',['../classpdf_1_1CMYKColor.html#ab4cee7745f584a9974b2d5b9e5e57a13',1,'pdf::CMYKColor::CYAN()'],['../classpdf_1_1RGBColor.html#a988f2f0fea9f2e63a670b9e3c74521ae',1,'pdf::RGBColor::CYAN()']]]
 ];

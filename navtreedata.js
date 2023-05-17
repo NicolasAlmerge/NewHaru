@@ -39,7 +39,7 @@ var NAVTREE =
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
+        [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
@@ -50,9 +50,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classpdf_1_1except_1_1FloatOutOfRangeException.html#ab716f1cf6f90288a0e11ad17a6fffdd3",
-"classpdf_1_1except_1_1PageInvalidSizeException.html",
-"namespacepdf.html#ae657412ea775fa0a870ecc6baa900adca24f812409e11369b0b507cbff4043b19"
+"classpdf_1_1except_1_1EncryptionNotSetException.html",
+"classpdf_1_1except_1_1PageInvalidFontException.html",
+"namespacepdf.html#ac092b0730e0b67be47adfeaceab63536"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

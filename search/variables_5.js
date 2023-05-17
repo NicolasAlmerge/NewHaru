@@ -1,4 +1,9 @@
 var searchData=
 [
-  ['white_0',['WHITE',['../classpdf_1_1CMYKColor.html#a67714b5e2e6056afb8fc8fe50f1c32b9',1,'pdf::CMYKColor::WHITE()'],['../classpdf_1_1RGBColor.html#a8d97da99c9d553ef192d3ca85cc9ea40',1,'pdf::RGBColor::WHITE()']]]
+  ['magenta_0',['MAGENTA',['../classpdf_1_1CMYKColor.html#a6540656c7b9c6d9089aa0194fdcba536',1,'pdf::CMYKColor::MAGENTA()'],['../classpdf_1_1RGBColor.html#ac54c1a04ccf5d8ecd989e56d6ff36f6a',1,'pdf::RGBColor::MAGENTA()']]],
+  ['max_5fdash_5fmode_5flength_1',['MAX_DASH_MODE_LENGTH',['../namespacepdf.html#ac092b0730e0b67be47adfeaceab63536',1,'pdf']]],
+  ['max_5fdash_5fmode_5fsize_2',['MAX_DASH_MODE_SIZE',['../namespacepdf.html#a05432ec60648c9cca78bf7c7574c4589',1,'pdf']]],
+  ['max_5fdict_5felement_3',['MAX_DICT_ELEMENT',['../namespacepdf.html#ac1a8c2d21ea4169b1497e688d5687b4c',1,'pdf']]],
+  ['max_5fgstate_4',['MAX_GSTATE',['../namespacepdf.html#a293f9fe3165727d711aa6ee692b9a793',1,'pdf']]],
+  ['max_5fstring_5flen_5',['MAX_STRING_LEN',['../namespacepdf.html#a0f45e9d2ddf6a248ba4d8635fdadb2a0',1,'pdf']]]
 ];
