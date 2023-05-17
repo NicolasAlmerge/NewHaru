@@ -125,6 +125,10 @@ var hierarchy =
         [ "pdf::except::ZLIBException", "classpdf_1_1except_1_1ZLIBException.html", null ]
       ] ]
     ] ],
+    [ "pdf::OpenableContent", "structpdf_1_1OpenableContent.html", [
+      [ "pdf::Outline", "classpdf_1_1Outline.html", null ],
+      [ "pdf::TextAnnotation", "classpdf_1_1TextAnnotation.html", null ]
+    ] ],
     [ "pdf::PdfObject", "structpdf_1_1PdfObject.html", [
       [ "pdf::Box", "classpdf_1_1Box.html", null ],
       [ "pdf::Color", "structpdf_1_1Color.html", [
