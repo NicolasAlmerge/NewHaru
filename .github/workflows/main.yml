@@ -18,6 +18,7 @@ jobs:
       with:
         doxyfile-path: "./Doxyfile"
         working-directory: "."
+        additional-packages: "./docs-utils"
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3.9.3
