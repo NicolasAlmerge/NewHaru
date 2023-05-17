@@ -47,10 +47,39 @@ namespace pdf {
         */
         Destination createDestination();
 
+        /**
+         * @brief   Creates a TextAnnotation on this page.
+         * @details By default, the TextAnnotation will have the AnnotationIcon::NOTE icon.
+         * @param   text String content of the annotation.
+         * @param   box Bounding box to use.
+         * @param   encoder Encoder to use.
+         * @return  Newly created TextAnnotation.
+        */
         TextAnnotation createTextAnnotation(const std::string& text, const Box& box, const Encoder& encoder);
+
+        /**
+         * @brief   Creates a TextAnnotation on this page.
+         * @details By default, the TextAnnotation will have the AnnotationIcon::NOTE icon.
+         * @param   text String content of the annotation.
+         * @param   box Bounding box to use.
+         * @return  Newly created TextAnnotation.
+        */
         TextAnnotation createTextAnnotation(const std::string& text, const Box& box);
 
+        /**
+         * @brief  Creates a LinkAnnotation on this page.
+         * @param  destination Destination the annotation will point to.
+         * @param  box Bounding box to use.
+         * @return Newly created LinkAnnotation.
+        */
         LinkAnnotation createLinkAnnotation(const Destination& destination, const Box& box);
+
+        /**
+         * @brief  Creates a LinkAnnotation on this page.
+         * @param  uri URI the annotation will point to.
+         * @param  box Bounding box to use.
+         * @return Newly created LinkAnnotation.
+        */
         LinkAnnotation createURILinkAnnotation(const std::string& uri, const Box& box);
 
         float getTextWidth(const std::string& text) const;

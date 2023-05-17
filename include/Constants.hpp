@@ -316,10 +316,15 @@ namespace pdf {
         KSCms_UHC_HW_V
     };
 
+    /// Represents an encoder type.
     enum class EncoderType {
+        /// Single byte encoder type.
         SINGLE_BYTE = 0,
+        /// Double byte encoder type.
         DOUBLE_BYTE,
+        /// Uninitialized encoder type.
         UNINITIALIZED,
+        /// Unknown encoder type.
         UNKNOWN
     };
 
@@ -345,11 +350,17 @@ namespace pdf {
         EOF_MODE
     };
 
+    /// Represents a border style.
     enum class BorderStyle {
+        /// Solid style.
         SOLID,
+        /// Dashed style.
         DASHED,
+        /// Beveled style.
         BEVELED,
+        /// Inset style.
         INSET,
+        /// Underlined style.
         UNDERLINED
     };
 
@@ -395,57 +406,103 @@ namespace pdf {
         LINECAP_EOF
     };
 
+    /// Represents a line join.
     enum class LineJoin {
+        /// Miter join.
         MITER_JOIN = 0,
+        /// Round join.
         ROUND_JOIN,
+        /// Bevel join.
         BEVEL_JOIN,
+        /// Line join not found.
         LINEJOIN_EOF
     };
 
+    /// Represents a color space.
     enum class ColorSpace {
+        /// Device gray.
         DEVICE_GRAY = 0,
+        /// Device RGB.
         DEVICE_RGB,
+        /// Device CMYK.
         DEVICE_CMYK,
+        /// Cal gray.
         CAL_GRAY,
+        /// Cal RGB.
         CAL_RGB,
+        /// Lab.
         LAB,
+        /// ICC based.
         ICC_BASED,
+        /// Separation.
         SEPARATION,
+        /// Device N.
         DEVICE_N,
+        /// Indexed.
         INDEXED,
+        /// Pattern.
         PATTERN,
+        /// Color space not found.
         EOF_COLOR_SPACE
     };
 
+    /// Represents a transition style.
     enum class TransitionStyle {
+        /// Wipe right transition.
         WIPE_RIGHT = 0,
+        /// Wipe up transition.
         WIPE_UP,
+        /// Wipe left transition.
         WIPE_LEFT,
+        /// Wipe down transition.
         WIPE_DOWN,
+        /// Barn doors horizontal out transition.
         BARN_DOORS_HORIZONTAL_OUT,
+        /// Barn doors horizontal in transition.
         BARN_DOORS_HORIZONTAL_IN,
+        /// Barn doors vertical out transition.
         BARN_DOORS_VERTICAL_OUT,
+        /// Barn doors horizontal in transition.
         BARN_DOORS_VERTICAL_IN,
+        /// Box out transition.
         BOX_OUT,
+        /// Box in transition.
         BOX_IN,
+        /// Blinds horizontal transition.
         BLINDS_HORIZONTAL,
+        /// Blinds vertical transition.
         BLINDS_VERTICAL,
+        /// Dissolve transition.
         DISSOLVE,
+        /// Glitter right transition.
         GLITTER_RIGHT,
+        /// Glitter down transition.
         GLITTER_DOWN,
+        /// Glitter top left to bottom right transition.
         GLITTER_TOP_LEFT_TO_BOTTOM_RIGHT,
+        /// Replace transition.
         REPLACE
     };
 
+    /// Represents a text rendering mode.
     enum class TextRenderingMode {
+        /// Fill mode.
         FILL = 0,
+        /// Stroke mode.
         STROKE,
+        /// Fill then stroke mode.
         FILL_THEN_STROKE,
+        /// Invisible mode.
         INVISIBLE,
+        /// Fill clipping mode.
         FILL_CLIPPING,
+        /// Stroke clipping mode.
         STROKE_CLIPPING,
+        /// Fill and stroke clipping mode.
         FILL_STROKE_CLIPPING,
+        /// Clipping mode.
         CLIPPING,
+        /// Text rendering mode not found.
         EOF_MODE
     };
 }

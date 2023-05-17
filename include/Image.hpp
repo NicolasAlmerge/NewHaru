@@ -5,7 +5,11 @@
 #include "PdfObject.hpp"
 
 namespace pdf {
-    /// Represents a 1-byte unsigned integer.
+
+    /**
+     * @brief   Represents a 1-byte unsigned integer.
+     * @details This can hold values from `0` to `255` included.
+    */
     typedef unsigned char uint8;
 
     /**

@@ -7,6 +7,8 @@ namespace pdf {
     /**
      * \class  LinkAnnotation
      * @brief  Represents a pdf link annotation.
+     * @note   Note that this class cannot be instantiated manually. Rather, it is created when calling
+     *         PdfPage::createLinkAnnotation and PdfPage::createURILinkAnnotation.
      * @file   LinkAnnotation.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
