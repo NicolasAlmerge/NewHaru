@@ -34,6 +34,10 @@ namespace pdf {
         float getWidth() const;
         float getHeight() const;
 
+        /**
+         * @brief  Creates a destination to this page.
+         * @return Newly created Destination.
+        */
         Destination createDestination();
 
         TextAnnotation createTextAnnotation(const std::string& text, const Box& box, const Encoder& encoder);

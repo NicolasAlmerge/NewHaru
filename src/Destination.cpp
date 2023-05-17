@@ -36,6 +36,6 @@ void Destination::setFitBH(float top) {
     HPDF_Destination_SetFitBH(innerContent, top);
 }
 
-void Destination::setFitBV(float top) {
-    HPDF_Destination_SetFitBV(innerContent, top);
+void Destination::setFitBV(float left) {
+    HPDF_Destination_SetFitBV(innerContent, left);
 }

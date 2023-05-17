@@ -32,7 +32,7 @@ ColorSpace Image::getColorSpace() const {
     return ColorSpace::EOF_COLOR_SPACE;
 }
 
-void Image::setColorMask(int8 rmin, int8 rmax, int8 gmin, int8 gmax, int8 bmin, int8 bmax) {
+void Image::setColorMask(uint8 rmin, uint8 rmax, uint8 gmin, uint8 gmax, uint8 bmin, uint8 bmax) {
     HPDF_Image_SetColorMask(innerContent, rmin, rmax, gmin, gmax, bmin, bmax);
 }
 

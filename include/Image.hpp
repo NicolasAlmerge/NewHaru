@@ -6,7 +6,7 @@
 
 namespace pdf {
     /// Represents a 1-byte unsigned integer.
-    typedef unsigned char int8;
+    typedef unsigned char uint8;
 
     /**
      * \class  Image
@@ -65,7 +65,7 @@ namespace pdf {
          * @param bmin Lower limit of blue.
          * @param bmax Upper limit of blue.
         */
-        void setColorMask(int8 rmin, int8 rmax, int8 gmin, int8 gmax, int8 bmin, int8 bmax);
+        void setColorMask(uint8 rmin, uint8 rmax, uint8 gmin, uint8 gmax, uint8 bmin, uint8 bmax);
 
         /**
          * @brief Sets a mask from an Image.

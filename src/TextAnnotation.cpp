@@ -8,6 +8,6 @@ void TextAnnotation::setIcon(AnnotationIcon icon) {
     HPDF_TextAnnot_SetIcon(innerContent, (HPDF_AnnotIcon) icon);
 }
 
-void TextAnnotation::setOpened(bool open) {
+void TextAnnotation::setOpen(bool open) {
     HPDF_TextAnnot_SetOpened(innerContent, open);
 }
