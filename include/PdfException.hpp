@@ -3,7 +3,8 @@
 #include "exception"
 #include "string"
 
-namespace pdf {
+/// Represents the Haru++ exception namespace.
+namespace pdf::except {
 
     /**
      * \class  PdfException

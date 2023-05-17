@@ -1,5 +1,6 @@
 #include "../include/PdfDocument.hpp"
 using namespace pdf;
+using namespace pdf::except;
 
 
 #define __HARUPP_AUTO_ENCODING_IMPORT_INDEX 0
