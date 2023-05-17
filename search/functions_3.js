@@ -1,4 +1,32 @@
 var searchData=
 [
-  ['isempty_0',['isEmpty',['../classpdf_1_1Box.html#a704d1bf4d28f89efcc0df2362c51593e',1,'pdf::Box::isEmpty()'],['../classpdf_1_1CMYKColor.html#a5338bfe1a1dd97eb2142529d8f282180',1,'pdf::CMYKColor::isEmpty()'],['../classpdf_1_1ContentStream.html#a49ba9bf60a533a26f6e1e1e5e8f7db4d',1,'pdf::ContentStream::isEmpty()'],['../classpdf_1_1Coor2D.html#a3ad317b8746907302b121baa9f6df337',1,'pdf::Coor2D::isEmpty()'],['../classpdf_1_1DashMode.html#a931c51ed5934a28166814d77793392bf',1,'pdf::DashMode::isEmpty()'],['../classpdf_1_1DateTime.html#a6dbe7facf343f385ae1c5512906b9d57',1,'pdf::DateTime::isEmpty()'],['../classpdf_1_1Destination.html#a82a9b68de2a0400697144c4bf0a28c4e',1,'pdf::Destination::isEmpty()'],['../classpdf_1_1Encoder.html#a2bf78cfaa147e4cf0d8394c16ce3c638',1,'pdf::Encoder::isEmpty()'],['../classpdf_1_1PdfDocument.html#a98ee45b75300ce3f57647510bed8be73',1,'pdf::PdfDocument::isEmpty()'],['../structpdf_1_1PdfObject.html#a97a92fcb78b21920a6d477b2e394d41f',1,'pdf::PdfObject::isEmpty()'],['../classpdf_1_1Permissions.html#ade179d1831c68c0c338438149063cac7',1,'pdf::Permissions::isEmpty()'],['../classpdf_1_1RGBColor.html#a0247810ccbea05cda9f64df49f91bfdc',1,'pdf::RGBColor::isEmpty()'],['../classpdf_1_1TextWidth.html#a53bad92da79aeedd2c67b36904bfbaaa',1,'pdf::TextWidth::isEmpty()'],['../classpdf_1_1TransposeMatrix.html#a8e7f6ffdba4a3ffd71ab821cf4150283',1,'pdf::TransposeMatrix::isEmpty()']]]
+  ['getb_0',['getB',['../classpdf_1_1RGBColor.html#a05c5ac9fe31855bac7611cf0403ee246',1,'pdf::RGBColor']]],
+  ['getbottom_1',['getBottom',['../classpdf_1_1Box.html#abd43a228a7307764e93ddf396b861572',1,'pdf::Box']]],
+  ['getbytetype_2',['getByteType',['../classpdf_1_1Encoder.html#a02a2be389fbc8e6ac6f65cc9805d9e30',1,'pdf::Encoder']]],
+  ['getc_3',['getC',['../classpdf_1_1CMYKColor.html#ab893dd06744f3166f5f5d0cf2f229d34',1,'pdf::CMYKColor']]],
+  ['getcurrentencoder_4',['getCurrentEncoder',['../classpdf_1_1PdfDocument.html#a5c6e9ec36a9c5ed732102c841f2da364',1,'pdf::PdfDocument']]],
+  ['getday_5',['getDay',['../classpdf_1_1DateTime.html#a049554357a7041b2eea3e025815df82d',1,'pdf::DateTime']]],
+  ['getencoder_6',['getEncoder',['../classpdf_1_1PdfDocument.html#acbec37be3b5511f9d072fcfe8e1d6f0e',1,'pdf::PdfDocument::getEncoder(SingleByteEncoding encoding)'],['../classpdf_1_1PdfDocument.html#a06033d3cd9f06b3ecf325b3a9ff12fc2',1,'pdf::PdfDocument::getEncoder(MultiByteEncoding encoding)']]],
+  ['getg_7',['getG',['../classpdf_1_1RGBColor.html#a8a5021b2a534b130e0058a2d933ce3c8',1,'pdf::RGBColor']]],
+  ['gethour_8',['getHour',['../classpdf_1_1DateTime.html#a149bc828e363a2494599c07a097ef0bc',1,'pdf::DateTime']]],
+  ['getk_9',['getK',['../classpdf_1_1CMYKColor.html#abed541a86220b9463c54fe89ed14758a',1,'pdf::CMYKColor']]],
+  ['getleft_10',['getLeft',['../classpdf_1_1Box.html#a0ca672fce7e48cf448120996f8d61673',1,'pdf::Box']]],
+  ['getm_11',['getM',['../classpdf_1_1CMYKColor.html#a1c3268306e00003e030c118d31ae02f3',1,'pdf::CMYKColor']]],
+  ['getminutes_12',['getMinutes',['../classpdf_1_1DateTime.html#a11220548d264d96c636a4b6ab3f51e3a',1,'pdf::DateTime']]],
+  ['getmonth_13',['getMonth',['../classpdf_1_1DateTime.html#a30191ad2207ceb463a02eb2dec6f437e',1,'pdf::DateTime']]],
+  ['getoffhour_14',['getOffHour',['../classpdf_1_1DateTime.html#a64715dbccfbfa87f9681618d8f8380b0',1,'pdf::DateTime']]],
+  ['getoffminutes_15',['getOffMinutes',['../classpdf_1_1DateTime.html#ac7776953cf010bc9df4363190aef4b75',1,'pdf::DateTime']]],
+  ['getphase_16',['getPhase',['../classpdf_1_1DashMode.html#acab5de821cd19ecc16f41a3b2e5d874f',1,'pdf::DashMode']]],
+  ['getpoints_17',['getPoints',['../classpdf_1_1DashMode.html#a80fdc4b30d0252afaceae366cd6df020',1,'pdf::DashMode']]],
+  ['getr_18',['getR',['../classpdf_1_1RGBColor.html#afee629afc6c548c27165a509d6551ef5',1,'pdf::RGBColor']]],
+  ['getright_19',['getRight',['../classpdf_1_1Box.html#ad9d74588e9dfd15e1063bd27ed7b3675',1,'pdf::Box']]],
+  ['getseconds_20',['getSeconds',['../classpdf_1_1DateTime.html#a9763feaa6c66eddf504f8536cc2bda3c',1,'pdf::DateTime']]],
+  ['gettop_21',['getTop',['../classpdf_1_1Box.html#a61f8c392af5bae6f6dd3e24d38a9a275',1,'pdf::Box']]],
+  ['gettype_22',['getType',['../classpdf_1_1Encoder.html#a21ad446795201d83fe18909996a85ffe',1,'pdf::Encoder']]],
+  ['getunicode_23',['getUnicode',['../classpdf_1_1Encoder.html#a0f2e5a94277cb323b4e6d95ed8e019c6',1,'pdf::Encoder']]],
+  ['getutcindicator_24',['getUTCIndicator',['../classpdf_1_1DateTime.html#aa0c29ea72efb4588bae9c2ea9dbaa3b6',1,'pdf::DateTime']]],
+  ['getwritingmode_25',['getWritingMode',['../classpdf_1_1Encoder.html#ae124cab1b29d1084047bf36db000fbf3',1,'pdf::Encoder']]],
+  ['getx_26',['getX',['../classpdf_1_1Coor2D.html#ab89a5eb34bc420e535c5c787f53bba9a',1,'pdf::Coor2D']]],
+  ['gety_27',['getY',['../classpdf_1_1CMYKColor.html#adbae575e8adebb281964ef2355d78c47',1,'pdf::CMYKColor::getY()'],['../classpdf_1_1Coor2D.html#a0f7c04c7a6e203a91491a9d7e37f77ec',1,'pdf::Coor2D::getY()']]],
+  ['getyear_28',['getYear',['../classpdf_1_1DateTime.html#a4285f968af4a19fa7a3f8faf06fc1bd7',1,'pdf::DateTime']]]
 ];

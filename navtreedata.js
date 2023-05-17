@@ -50,8 +50,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classpdf_1_1PageInvalidIndexException.html",
-"namespacepdf.html#ae657412ea775fa0a870ecc6baa900adcaba228697eec39ab804b0a5a1285f287b"
+"classpdf_1_1InvalidTTCFileException.html",
+"namespacepdf.html#aa8d593369877e60776da35e7af1b9bf6"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

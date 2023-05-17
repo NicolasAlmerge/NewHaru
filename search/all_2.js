@@ -8,7 +8,7 @@ var searchData=
   ['comm10_5',['COMM10',['../namespacepdf.html#a764804d041eb19d9aeb0a7f91ce1b33ea1882898c85fadcef56f3589a2835626a',1,'pdf']]],
   ['compressionmode_6',['CompressionMode',['../namespacepdf.html#ae3b11e790be6bd8dccee5fc0ac1b867a',1,'pdf']]],
   ['contentstream_7',['ContentStream',['../classpdf_1_1ContentStream.html',1,'pdf']]],
-  ['coor2d_8',['Coor2D',['../classpdf_1_1Coor2D.html',1,'pdf']]],
+  ['coor2d_8',['Coor2D',['../classpdf_1_1Coor2D.html#a9be510feebfec3fb29ace0bcd590a988',1,'pdf::Coor2D::Coor2D(float x, float y) noexcept'],['../classpdf_1_1Coor2D.html#a64186e631018fcbdc83ba2d865bbfd2e',1,'pdf::Coor2D::Coor2D() noexcept'],['../classpdf_1_1Coor2D.html',1,'pdf::Coor2D']]],
   ['cp1250_9',['CP1250',['../namespacepdf.html#ae657412ea775fa0a870ecc6baa900adcaba08dd58ad5185637555ed2486e0a8b3',1,'pdf']]],
   ['cp1251_10',['CP1251',['../namespacepdf.html#ae657412ea775fa0a870ecc6baa900adcace2d515aeab463cd7fba877275dfae25',1,'pdf']]],
   ['cp1252_11',['CP1252',['../namespacepdf.html#ae657412ea775fa0a870ecc6baa900adcae1bce893fecdc291e55333d3ba7af9e2',1,'pdf']]],
