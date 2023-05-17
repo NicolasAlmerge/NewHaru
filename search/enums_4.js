@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['imagecolorspacedevice_0',['ImageColorSpaceDevice',['../namespacepdf.html#a1ca03f90325acb5a5eb104d37bff4b09',1,'pdf']]]
+  ['encodertype_0',['EncoderType',['../namespacepdf.html#afac96fbfe799a8304ffc9618a6f7882a',1,'pdf']]]
 ];

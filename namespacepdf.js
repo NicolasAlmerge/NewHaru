@@ -45,11 +45,32 @@ var namespacepdf =
       [ "FOUR", "namespacepdf.html#a2d157239c877ac13030d8e971e151857a341fee9692a2ed8f09906d40d23fb1f9", null ],
       [ "EIGHT", "namespacepdf.html#a2d157239c877ac13030d8e971e151857a960df6d77e65cd185ca4f3501db634eb", null ]
     ] ],
+    [ "BorderStyle", "namespacepdf.html#a5d28a3bbb9a26d49d3222d3101f3fd0e", [
+      [ "SOLID", "namespacepdf.html#a5d28a3bbb9a26d49d3222d3101f3fd0ead0dea69649a83749aa6bdf176092e8c9", null ],
+      [ "DASHED", "namespacepdf.html#a5d28a3bbb9a26d49d3222d3101f3fd0ea8e3a10cd3a9f7ba14e8229c287ad3c2c", null ],
+      [ "BEVELED", "namespacepdf.html#a5d28a3bbb9a26d49d3222d3101f3fd0eabadc5ff7d238b69083baddc098daa767", null ],
+      [ "INSET", "namespacepdf.html#a5d28a3bbb9a26d49d3222d3101f3fd0ea0a4158f121607386016b87aabcdabc93", null ],
+      [ "UNDERLINED", "namespacepdf.html#a5d28a3bbb9a26d49d3222d3101f3fd0eaabb51020114b64b40a49f6ed0e4da7c2", null ]
+    ] ],
     [ "ByteType", "namespacepdf.html#a0aa2132b461e2c2249ee24f6e920c1ce", [
       [ "SINGLE", "namespacepdf.html#a0aa2132b461e2c2249ee24f6e920c1cea0679273e201afd0bf57af3961f8a23b8", null ],
       [ "LEAD", "namespacepdf.html#a0aa2132b461e2c2249ee24f6e920c1ceadaa3b1e8f6a0603a00b4de70420b2844", null ],
       [ "TRAIL", "namespacepdf.html#a0aa2132b461e2c2249ee24f6e920c1ceaaaaa969ded464fb875e8f46a907d85d7", null ],
       [ "UNKNOWN", "namespacepdf.html#a0aa2132b461e2c2249ee24f6e920c1cea696b031073e74bf2cb98e5ef201d4aa3", null ]
+    ] ],
+    [ "ColorSpace", "namespacepdf.html#aa8f368d4b0688731e8658696843add90", [
+      [ "DEVICE_GRAY", "namespacepdf.html#aa8f368d4b0688731e8658696843add90afec8ee7fb9552ccf7b9ae0eb834f2d10", null ],
+      [ "DEVICE_RGB", "namespacepdf.html#aa8f368d4b0688731e8658696843add90a6b4195a9683a3fd7ab21ad97e57e07d7", null ],
+      [ "DEVICE_CMYK", "namespacepdf.html#aa8f368d4b0688731e8658696843add90a02d8eed9196251d9a24dd4d15b8bf759", null ],
+      [ "CAL_GRAY", "namespacepdf.html#aa8f368d4b0688731e8658696843add90a157c604e0c889cb105d859f22f83043b", null ],
+      [ "CAL_RGB", "namespacepdf.html#aa8f368d4b0688731e8658696843add90ae593949135914f0c85e8006d591d2831", null ],
+      [ "LAB", "namespacepdf.html#aa8f368d4b0688731e8658696843add90aa18771cf7e181cdf9dad769d494bafef", null ],
+      [ "ICC_BASED", "namespacepdf.html#aa8f368d4b0688731e8658696843add90a9ef1ee847fbba323354f5ef8aec18a11", null ],
+      [ "SEPARATION", "namespacepdf.html#aa8f368d4b0688731e8658696843add90a57bce4c304020f768514656b3aea51fd", null ],
+      [ "DEVICE_N", "namespacepdf.html#aa8f368d4b0688731e8658696843add90ac12020df1f5bec4f398fb6b5848be71b", null ],
+      [ "INDEXED", "namespacepdf.html#aa8f368d4b0688731e8658696843add90a7480c2820154d14ec47fdf08bb008aeb", null ],
+      [ "PATTERN", "namespacepdf.html#aa8f368d4b0688731e8658696843add90a04ab50cd8ffc1031a09ac85aa6c5f76a", null ],
+      [ "EOF_COLOR_SPACE", "namespacepdf.html#aa8f368d4b0688731e8658696843add90a0cc992f788221d5f280652271bc78a8c", null ]
     ] ],
     [ "CompressionMode", "namespacepdf.html#ae3b11e790be6bd8dccee5fc0ac1b867a", [
       [ "NONE", "namespacepdf.html#ae3b11e790be6bd8dccee5fc0ac1b867aab50339a10e1de285ac99d4c3990b8693", null ],
@@ -65,6 +86,12 @@ var namespacepdf =
       [ "CREATION_DATE", "namespacepdf.html#a3b00f99c42f3866b828407c8c3f7d3d2a1b56fd59b75da24a245e635aa5d460d1", null ],
       [ "MODIFICATION_DATE", "namespacepdf.html#a3b00f99c42f3866b828407c8c3f7d3d2a09563c3f3d20d5741cc69bc0eedfb974", null ]
     ] ],
+    [ "EncoderType", "namespacepdf.html#afac96fbfe799a8304ffc9618a6f7882a", [
+      [ "SINGLE_BYTE", "namespacepdf.html#afac96fbfe799a8304ffc9618a6f7882aa41406a1bccdde61a0508b5bd5daabb1d", null ],
+      [ "DOUBLE_BYTE", "namespacepdf.html#afac96fbfe799a8304ffc9618a6f7882aaff2bb61b7cd56e60a679676ba42280fc", null ],
+      [ "UNINITIALIZED", "namespacepdf.html#afac96fbfe799a8304ffc9618a6f7882aadd652546039b18970b8dcf2cff824268", null ],
+      [ "UNKNOWN", "namespacepdf.html#afac96fbfe799a8304ffc9618a6f7882aa696b031073e74bf2cb98e5ef201d4aa3", null ]
+    ] ],
     [ "ImageColorSpaceDevice", "namespacepdf.html#a1ca03f90325acb5a5eb104d37bff4b09", [
       [ "GRAY", "namespacepdf.html#a1ca03f90325acb5a5eb104d37bff4b09a48bf014c704c9eaae100a98006a37bf7", null ],
       [ "RGB", "namespacepdf.html#a1ca03f90325acb5a5eb104d37bff4b09a889574aebacda6bfd3e534e2b49b8028", null ],
@@ -75,6 +102,12 @@ var namespacepdf =
       [ "ROUND_END", "namespacepdf.html#a835005b64985ee2b42315f412e09bc31a7c67e8f63ba629fc684b9a0826afad29", null ],
       [ "PROJECTING_SQUARE_END", "namespacepdf.html#a835005b64985ee2b42315f412e09bc31af960b7ddb9bd6b884bf2a21bdd815aba", null ],
       [ "LINECAP_EOF", "namespacepdf.html#a835005b64985ee2b42315f412e09bc31ad06567424077aa8659d116eb1b1d0a25", null ]
+    ] ],
+    [ "LineJoin", "namespacepdf.html#aa9e3397de4151ce2f9c1f3c1befe9017", [
+      [ "MITER_JOIN", "namespacepdf.html#aa9e3397de4151ce2f9c1f3c1befe9017a65947f1194c0aa56e4260a2f26170e6c", null ],
+      [ "ROUND_JOIN", "namespacepdf.html#aa9e3397de4151ce2f9c1f3c1befe9017a41b008dda24374e411749df15d5536ee", null ],
+      [ "BEVEL_JOIN", "namespacepdf.html#aa9e3397de4151ce2f9c1f3c1befe9017ada0a37c461ffef62dec51c38170524fb", null ],
+      [ "LINEJOIN_EOF", "namespacepdf.html#aa9e3397de4151ce2f9c1f3c1befe9017a06c368afc8c094d40fc7e0f4df58a57e", null ]
     ] ],
     [ "MultiByteEncoding", "namespacepdf.html#a1c2d53c24a8f8bc1a27930ad36b7a385", [
       [ "GB_EUC_H", "namespacepdf.html#a1c2d53c24a8f8bc1a27930ad36b7a385ab3d5741e306a24d98cd34b0d460a91a4", null ],
@@ -200,6 +233,36 @@ var namespacepdf =
       [ "RIGHT", "namespacepdf.html#a15087d60cd2ac679f049619d8d22ce9aa21507b40c80068eda19865706fdc2403", null ],
       [ "CENTER", "namespacepdf.html#a15087d60cd2ac679f049619d8d22ce9aac397289ee45877be0cd49811fe245b4e", null ],
       [ "JUSTIFY", "namespacepdf.html#a15087d60cd2ac679f049619d8d22ce9aa1a8c137fb3ff9dc6fa1a59e8743fc1e9", null ]
+    ] ],
+    [ "TextRenderingMode", "namespacepdf.html#aa753899963097980b71bf3098cbe68f6", [
+      [ "FILL", "namespacepdf.html#aa753899963097980b71bf3098cbe68f6ae8225b11842409df543692aebed34fd1", null ],
+      [ "STROKE", "namespacepdf.html#aa753899963097980b71bf3098cbe68f6a3157895ac925120f0b65fef154d2037e", null ],
+      [ "FILL_THEN_STROKE", "namespacepdf.html#aa753899963097980b71bf3098cbe68f6a9e6f4bae55710a300ec8b5bafd84db95", null ],
+      [ "INVISIBLE", "namespacepdf.html#aa753899963097980b71bf3098cbe68f6a5fb351568336ebb294804f81e3c8663d", null ],
+      [ "FILL_CLIPPING", "namespacepdf.html#aa753899963097980b71bf3098cbe68f6a044444397628d044c2f49befba84a8b0", null ],
+      [ "STROKE_CLIPPING", "namespacepdf.html#aa753899963097980b71bf3098cbe68f6a5210d53af9556bb3d819eab7a4666dd2", null ],
+      [ "FILL_STROKE_CLIPPING", "namespacepdf.html#aa753899963097980b71bf3098cbe68f6af229ea200f6fcf0fb66b5614f019566b", null ],
+      [ "CLIPPING", "namespacepdf.html#aa753899963097980b71bf3098cbe68f6a10140b86ceeb330915bd2fdda1b1ef37", null ],
+      [ "EOF_MODE", "namespacepdf.html#aa753899963097980b71bf3098cbe68f6a0e36b06d0fa0ca87456e68b63f5a8f33", null ]
+    ] ],
+    [ "TransitionStyle", "namespacepdf.html#a87d185ce927425e090cf2afba8d6289d", [
+      [ "WIPE_RIGHT", "namespacepdf.html#a87d185ce927425e090cf2afba8d6289da067f8632962b3e73a0f7f2855ba0c25a", null ],
+      [ "WIPE_UP", "namespacepdf.html#a87d185ce927425e090cf2afba8d6289da82b446659d94277abbc85d9ef7422cfc", null ],
+      [ "WIPE_LEFT", "namespacepdf.html#a87d185ce927425e090cf2afba8d6289da304998bb4a500fc1c3aee967192c79cf", null ],
+      [ "WIPE_DOWN", "namespacepdf.html#a87d185ce927425e090cf2afba8d6289dadf35c7fba30446595b34770c5f11707f", null ],
+      [ "BARN_DOORS_HORIZONTAL_OUT", "namespacepdf.html#a87d185ce927425e090cf2afba8d6289da05818bee5a1b87e7811c0e0c6372af52", null ],
+      [ "BARN_DOORS_HORIZONTAL_IN", "namespacepdf.html#a87d185ce927425e090cf2afba8d6289da3ab77163dda5669cb84a50bb41bd2fc3", null ],
+      [ "BARN_DOORS_VERTICAL_OUT", "namespacepdf.html#a87d185ce927425e090cf2afba8d6289dacc06f468fea919bf9b0e9592c3cd0c2c", null ],
+      [ "BARN_DOORS_VERTICAL_IN", "namespacepdf.html#a87d185ce927425e090cf2afba8d6289da4b3cd8a2a7b5f4a72cde8ce250d28be1", null ],
+      [ "BOX_OUT", "namespacepdf.html#a87d185ce927425e090cf2afba8d6289daea2fe71ebc67447d2de499a8bbe3273c", null ],
+      [ "BOX_IN", "namespacepdf.html#a87d185ce927425e090cf2afba8d6289da6a060afa20287d2af7155fffccaaeeda", null ],
+      [ "BLINDS_HORIZONTAL", "namespacepdf.html#a87d185ce927425e090cf2afba8d6289da815d8d7709021ba26de1d2730c6f1196", null ],
+      [ "BLINDS_VERTICAL", "namespacepdf.html#a87d185ce927425e090cf2afba8d6289da54cb71d774476402031100b35bead98e", null ],
+      [ "DISSOLVE", "namespacepdf.html#a87d185ce927425e090cf2afba8d6289da5d6f5c7a1164c6cb5b32c170d1884d7d", null ],
+      [ "GLITTER_RIGHT", "namespacepdf.html#a87d185ce927425e090cf2afba8d6289da66ab058f13d3534daa009d066dd8cbe6", null ],
+      [ "GLITTER_DOWN", "namespacepdf.html#a87d185ce927425e090cf2afba8d6289da821dc6d8a6f116d98b50554de6d511e9", null ],
+      [ "GLITTER_TOP_LEFT_TO_BOTTOM_RIGHT", "namespacepdf.html#a87d185ce927425e090cf2afba8d6289dacb2cbb76fd7f13b9226d9516042a1bd4", null ],
+      [ "REPLACE", "namespacepdf.html#a87d185ce927425e090cf2afba8d6289da560a2dd6f6744646473b3b19e1fe96d7", null ]
     ] ],
     [ "UTCIndicator", "namespacepdf.html#a1633355b91d465e3f5cf4baa1d32f227", [
       [ "NONE", "namespacepdf.html#a1633355b91d465e3f5cf4baa1d32f227ab50339a10e1de285ac99d4c3990b8693", null ],

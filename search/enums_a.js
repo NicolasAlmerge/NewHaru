@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['textalignment_0',['TextAlignment',['../namespacepdf.html#a15087d60cd2ac679f049619d8d22ce9a',1,'pdf']]]
+  ['singlebyteencoding_0',['SingleByteEncoding',['../namespacepdf.html#ae657412ea775fa0a870ecc6baa900adc',1,'pdf']]],
+  ['stringattribute_1',['StringAttribute',['../namespacepdf.html#a6395471b755daf67dee1f416606f8469',1,'pdf']]]
 ];

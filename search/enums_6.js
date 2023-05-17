@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['multibyteencoding_0',['MultiByteEncoding',['../namespacepdf.html#a1c2d53c24a8f8bc1a27930ad36b7a385',1,'pdf']]]
+  ['linecap_0',['LineCap',['../namespacepdf.html#a835005b64985ee2b42315f412e09bc31',1,'pdf']]],
+  ['linejoin_1',['LineJoin',['../namespacepdf.html#aa9e3397de4151ce2f9c1f3c1befe9017',1,'pdf']]]
 ];

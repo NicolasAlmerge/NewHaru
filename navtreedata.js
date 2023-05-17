@@ -51,9 +51,9 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "classpdf_1_1PdfPage.html",
-"classpdf_1_1except_1_1InvalidFontDefTypeException.html#ad71b6c2bc1d4880b13254257a3cd8e89",
-"classpdf_1_1except_1_1UnsupportedJPEGFormatException.html#ab6d79d561616ddce8b49a86c4727e0c4",
-"structpdf_1_1PdfObject.html#a94c42c94a266fe631ed224f273efff51"
+"classpdf_1_1except_1_1InvalidException.html#ab3588e6a2ae8d06d4850c48337b6cc6e",
+"classpdf_1_1except_1_1UnsupportedFontTypeException.html#a745ef9d2420c19a04f43a022ce7d8b92",
+"namespacepdf.html#ae3b11e790be6bd8dccee5fc0ac1b867aa61a96ffcb251bb9bf0abf8fec19d0ea8"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

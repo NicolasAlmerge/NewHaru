@@ -12,6 +12,7 @@ var searchData=
   ['metadata_9',['METADATA',['../namespacepdf.html#ae3b11e790be6bd8dccee5fc0ac1b867aa8a9c0818e0622aadfcb2e59cfe5299b4',1,'pdf']]],
   ['minus_10',['MINUS',['../namespacepdf.html#a1633355b91d465e3f5cf4baa1d32f227affc0d9b54a1fe677c4c9e6b050e67c81',1,'pdf']]],
   ['missingfilenameentryexception_11',['MissingFileNameEntryException',['../classpdf_1_1except_1_1MissingFileNameEntryException.html',1,'pdf::except']]],
-  ['modification_5fdate_12',['MODIFICATION_DATE',['../namespacepdf.html#a3b00f99c42f3866b828407c8c3f7d3d2a09563c3f3d20d5741cc69bc0eedfb974',1,'pdf']]],
-  ['multibyteencoding_13',['MultiByteEncoding',['../namespacepdf.html#a1c2d53c24a8f8bc1a27930ad36b7a385',1,'pdf']]]
+  ['miter_5fjoin_12',['MITER_JOIN',['../namespacepdf.html#aa9e3397de4151ce2f9c1f3c1befe9017a65947f1194c0aa56e4260a2f26170e6c',1,'pdf']]],
+  ['modification_5fdate_13',['MODIFICATION_DATE',['../namespacepdf.html#a3b00f99c42f3866b828407c8c3f7d3d2a09563c3f3d20d5741cc69bc0eedfb974',1,'pdf']]],
+  ['multibyteencoding_14',['MultiByteEncoding',['../namespacepdf.html#a1c2d53c24a8f8bc1a27930ad36b7a385',1,'pdf']]]
 ];
