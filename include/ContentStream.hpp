@@ -22,7 +22,6 @@ namespace pdf {
         friend class PdfDocument;
         friend class Image;
         friend class Font;
-        friend class OpenableContent;
         friend class Outline;
 
     public:
