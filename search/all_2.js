@@ -14,7 +14,7 @@ var searchData=
   ['comment_11',['COMMENT',['../namespacepdf.html#a59bcf0ed1d1f4ca3061205d4be6d1041af2cd320b55767434dd48d81b165ea956',1,'pdf']]],
   ['compressionmode_12',['CompressionMode',['../namespacepdf.html#ae3b11e790be6bd8dccee5fc0ac1b867a',1,'pdf']]],
   ['contentstream_13',['ContentStream',['../classpdf_1_1ContentStream.html',1,'pdf']]],
-  ['coor2d_14',['Coor2D',['../classpdf_1_1Coor2D.html#a9be510feebfec3fb29ace0bcd590a988',1,'pdf::Coor2D::Coor2D(float x, float y) noexcept'],['../classpdf_1_1Coor2D.html#a64186e631018fcbdc83ba2d865bbfd2e',1,'pdf::Coor2D::Coor2D() noexcept'],['../classpdf_1_1Coor2D.html',1,'pdf::Coor2D']]],
+  ['coor2d_14',['Coor2D',['../classpdf_1_1Coor2D.html#a64186e631018fcbdc83ba2d865bbfd2e',1,'pdf::Coor2D::Coor2D() noexcept'],['../classpdf_1_1Coor2D.html#a9be510feebfec3fb29ace0bcd590a988',1,'pdf::Coor2D::Coor2D(float x, float y) noexcept'],['../classpdf_1_1Coor2D.html',1,'pdf::Coor2D']]],
   ['copy_15',['COPY',['../classpdf_1_1Permissions.html#a902805b25b55e1f770931e9b681d2eee',1,'pdf::Permissions']]],
   ['cp1250_16',['CP1250',['../namespacepdf.html#ae657412ea775fa0a870ecc6baa900adcaba08dd58ad5185637555ed2486e0a8b3',1,'pdf']]],
   ['cp1251_17',['CP1251',['../namespacepdf.html#ae657412ea775fa0a870ecc6baa900adcace2d515aeab463cd7fba877275dfae25',1,'pdf']]],
@@ -27,9 +27,10 @@ var searchData=
   ['cp1258_24',['CP1258',['../namespacepdf.html#ae657412ea775fa0a870ecc6baa900adca939a63abefd0243c6dc81470b5f2d7bd',1,'pdf']]],
   ['createdestination_25',['createDestination',['../classpdf_1_1PdfPage.html#afb379bea5085f7303ba19ba76e0c8a8b',1,'pdf::PdfPage']]],
   ['createlinkannotation_26',['createLinkAnnotation',['../classpdf_1_1PdfPage.html#a5c360750bd1b76476d655d609c9096ca',1,'pdf::PdfPage']]],
-  ['createtextannotation_27',['createTextAnnotation',['../classpdf_1_1PdfPage.html#a329aa473c009cd20e7cbedcfcfcd5cf9',1,'pdf::PdfPage::createTextAnnotation(const std::string &amp;text, const Box &amp;box)'],['../classpdf_1_1PdfPage.html#a0490bb312e3add10e55c4a9ddc79ff1b',1,'pdf::PdfPage::createTextAnnotation(const std::string &amp;text, const Box &amp;box, const Encoder &amp;encoder)']]],
-  ['createurilinkannotation_28',['createURILinkAnnotation',['../classpdf_1_1PdfPage.html#ab13a0f161df38b29d19c5df29388c568',1,'pdf::PdfPage']]],
-  ['creation_5fdate_29',['CREATION_DATE',['../namespacepdf.html#a3b00f99c42f3866b828407c8c3f7d3d2a1b56fd59b75da24a245e635aa5d460d1',1,'pdf']]],
-  ['creator_30',['CREATOR',['../namespacepdf.html#a6395471b755daf67dee1f416606f8469a71867d2546785ba58a16552639a722c2',1,'pdf']]],
-  ['cyan_31',['CYAN',['../classpdf_1_1RGBColor.html#a988f2f0fea9f2e63a670b9e3c74521ae',1,'pdf::RGBColor::CYAN()'],['../classpdf_1_1CMYKColor.html#ab4cee7745f584a9974b2d5b9e5e57a13',1,'pdf::CMYKColor::CYAN()']]]
+  ['createoutline_27',['createOutline',['../classpdf_1_1PdfDocument.html#ace9d705e2271dbbb1809fbab2910cd8f',1,'pdf::PdfDocument::createOutline(const std::string &amp;title, const Outline &amp;parent, const Encoder &amp;encoder) const'],['../classpdf_1_1PdfDocument.html#a510a92a13247be8a76e5a163106123c0',1,'pdf::PdfDocument::createOutline(const std::string &amp;title, const Encoder &amp;encoder) const'],['../classpdf_1_1PdfDocument.html#ad253ed48b03f6b40f59f79ec633ad9ac',1,'pdf::PdfDocument::createOutline(const std::string &amp;title, const Outline &amp;parent) const'],['../classpdf_1_1PdfDocument.html#ab78fd2e67228addcd6d183c2207408ff',1,'pdf::PdfDocument::createOutline(const std::string &amp;title) const']]],
+  ['createtextannotation_28',['createTextAnnotation',['../classpdf_1_1PdfPage.html#a329aa473c009cd20e7cbedcfcfcd5cf9',1,'pdf::PdfPage::createTextAnnotation(const std::string &amp;text, const Box &amp;box)'],['../classpdf_1_1PdfPage.html#a0490bb312e3add10e55c4a9ddc79ff1b',1,'pdf::PdfPage::createTextAnnotation(const std::string &amp;text, const Box &amp;box, const Encoder &amp;encoder)']]],
+  ['createurilinkannotation_29',['createURILinkAnnotation',['../classpdf_1_1PdfPage.html#ab13a0f161df38b29d19c5df29388c568',1,'pdf::PdfPage']]],
+  ['creation_5fdate_30',['CREATION_DATE',['../namespacepdf.html#a3b00f99c42f3866b828407c8c3f7d3d2a1b56fd59b75da24a245e635aa5d460d1',1,'pdf']]],
+  ['creator_31',['CREATOR',['../namespacepdf.html#a6395471b755daf67dee1f416606f8469a71867d2546785ba58a16552639a722c2',1,'pdf']]],
+  ['cyan_32',['CYAN',['../classpdf_1_1RGBColor.html#a988f2f0fea9f2e63a670b9e3c74521ae',1,'pdf::RGBColor::CYAN()'],['../classpdf_1_1CMYKColor.html#ab4cee7745f584a9974b2d5b9e5e57a13',1,'pdf::CMYKColor::CYAN()']]]
 ];
