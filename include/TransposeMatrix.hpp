@@ -6,7 +6,7 @@
 namespace pdf {
     class TransposeMatrix final: public PdfObject {
         HPDF_TransMatrix innerContent;
-        TransposeMatrix(HPDF_TransMatrix&& matrix);
+        explicit TransposeMatrix(HPDF_TransMatrix&& matrix);
         friend class PdfPage;
 
     public:

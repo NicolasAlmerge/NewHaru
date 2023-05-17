@@ -17,7 +17,7 @@ namespace pdf {
     */
     class DashMode final: public PdfObject {
         HPDF_DashMode innerContent;
-        DashMode(HPDF_DashMode&& dashMode);
+        static DashMode __from(HPDF_DashMode&& value);
         friend class PdfPage;
 
     public:

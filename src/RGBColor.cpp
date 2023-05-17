@@ -2,6 +2,7 @@
 #include "../include/CMYKColor.hpp"
 using namespace pdf;
 
+
 static constexpr float __haruppMax(float a, float b) {
     return (a >= b)? a: b;
 }

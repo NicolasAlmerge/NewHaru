@@ -14,7 +14,7 @@ namespace pdf {
     */
     class CMYKColor final: public Color {
         HPDF_CMYKColor innerContent;
-        CMYKColor(HPDF_CMYKColor&& rgbColor);
+        explicit CMYKColor(HPDF_CMYKColor&& rgbColor);
         friend class PdfPage;
 
     public:

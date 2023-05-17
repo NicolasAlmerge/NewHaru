@@ -6,7 +6,7 @@
 namespace pdf {
     class Destination final: public PdfObject {
         HPDF_Destination innerContent = nullptr;
-        Destination(const HPDF_Destination destination);
+        explicit Destination(const HPDF_Destination destination);
         friend class Outline;
         friend class PdfDocument;
         friend class PdfPage;

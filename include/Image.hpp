@@ -9,7 +9,7 @@ namespace pdf {
     typedef unsigned char int8;
 
     class Image final: public ContentStream {
-        Image(const HPDF_Image content);
+        explicit Image(const HPDF_Image content);
         friend class PdfDocument;
 
     public:

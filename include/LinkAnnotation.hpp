@@ -4,7 +4,7 @@
 
 namespace pdf {
     class LinkAnnotation final: public Annotation {
-        LinkAnnotation(const HPDF_Annotation destination);
+        explicit LinkAnnotation(const HPDF_Annotation destination);
         friend class PdfPage;
 
     public:

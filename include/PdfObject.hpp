@@ -14,13 +14,14 @@ namespace pdf {
         virtual ~PdfObject();
 
         /**
-         * @brief Checks whether an object is empty.
+         * @brief  Checks whether an object is empty.
          * @return `true` if object is empty, `false` otherwise.
         */
         virtual bool isEmpty() const noexcept = 0;
 
         /**
-         * @brief Checks whether an object is not empty. This is equivalent to: `!isEmpty()`.
+         * @brief   Checks whether an object is not empty.
+         * @details This is equivalent to: `!isEmpty()`.
          * @return `true` if object is not empty, `false` otherwise.
         */
         virtual operator bool() const noexcept final;

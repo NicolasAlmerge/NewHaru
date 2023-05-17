@@ -17,7 +17,7 @@ namespace pdf {
     */
     class Encoder final: public PdfObject {
         mutable HPDF_Encoder innerContent = nullptr;
-        Encoder(const HPDF_Encoder coors);
+        explicit Encoder(const HPDF_Encoder coors);
         friend class PdfDocument;
         friend class PdfPage;
 

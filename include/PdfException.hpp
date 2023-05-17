@@ -4,24 +4,66 @@
 #include "string"
 
 namespace pdf {
-    // Base pdf exception class
+
+    /**
+     * \class  PdfException
+     * @brief  Represents the base exception class.
+     * @file   PdfException.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class PdfException: public std::exception {
-        const char* errorMessage;
+        std::string errorMessage;
         unsigned long errorCode;
         unsigned long detailCode;
-        bool _hasDetailCode;
 
     public:
-        PdfException(const char* data, unsigned long errorCode, unsigned long detailCode, bool hasDetailCode = false) noexcept;
-        PdfException(const std::string& data, unsigned long errorCode, unsigned long detailCode, bool hasDetailCode = false) noexcept;
+
+        /**
+         * @brief Creates a new PdfException with parameters.
+         * @param data Error message.
+         * @param errorCode Error code.
+         * @param detailCode Detail code.
+        */
+        PdfException(const std::string& data, unsigned long errorCode, unsigned long detailCode = 0U) noexcept;
         virtual ~PdfException() noexcept = 0;
 
+        /**
+         * @brief  Returns the error text.
+         * @return Error text.
+        */
         virtual const char* what() const noexcept override final;
+
+        /**
+         * @brief  Returns the error code.
+         * @return Error code.
+        */
         virtual unsigned long getErrorCode() const noexcept final;
+
+        /**
+         * @brief  Returns the error detail code.
+         * @return Error detail code.
+        */
         virtual unsigned long getDetailCode() const noexcept final;
+
+        /**
+         * @brief   Returns whether a detail code has been set.
+         * @details This is equivalent to `getDetailCode() != 0U`.
+         * @return `true` if a detail code has been set, `false` otherwise.
+        */
         virtual bool hasDetailCode() const noexcept final;
 
+        /**
+         * @brief   Returns the error name.
+         * @details This is just a string representation of the class name.
+         * @return  Error name.
+        */
         virtual const char* getName() const noexcept = 0;
+
+        /**
+         * @brief  Returns a string consisting of the error name and description.
+         * @return Error full description.
+        */
         virtual std::string getFullDescription() const noexcept final;
     };
 

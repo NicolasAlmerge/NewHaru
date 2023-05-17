@@ -14,7 +14,7 @@ namespace pdf {
     */
     class Coor2D final: public PdfObject {
         HPDF_Point innerContent;
-        Coor2D(HPDF_Point&& coors);
+        explicit Coor2D(HPDF_Point&& coors);
         friend class Image;
         friend class PdfPage;
 

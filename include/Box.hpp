@@ -14,7 +14,7 @@ namespace pdf {
     */
     class Box final: public PdfObject {
         HPDF_Box innerContent;
-        Box(HPDF_Box&& box);
+        explicit Box(HPDF_Box&& box);
         friend class Font;
         friend class PdfPage;
 

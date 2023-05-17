@@ -14,7 +14,7 @@ namespace pdf {
     */
     class ContentStream: public PdfObject {
         mutable HPDF_Dict innerContent = nullptr;
-        ContentStream(const HPDF_Dict dict);
+        explicit ContentStream(const HPDF_Dict dict);
         friend class PdfPage;
         friend class Annotation;
         friend class LinkAnnotation;
@@ -28,19 +28,20 @@ namespace pdf {
         virtual ~ContentStream() = 0;
 
         /**
-         * @brief Checks whether an object is empty.
+         * @brief   Checks whether an object is empty.
          * @return `true` if object is empty, `false` otherwise.
         */
         bool isEmpty() const noexcept final override;
 
         /**
-         * @brief Checks whether two content streams are equal.
+         * @brief   Checks whether two content streams are equal.
          * @return `true` if content streams are equal, `false` otherwise.
         */
         virtual bool operator ==(const ContentStream& other) const noexcept;
 
         /**
-         * @brief Checks whether two content streams are not equal. This is equivalent to `!operator==(other)`.
+         * @brief   Checks whether two content streams are not equal.
+         * @details This is equivalent to `!operator==(other)`.
          * @return `true` if content streams are not equal, `false` otherwise.
         */
         virtual bool operator !=(const ContentStream& other) const noexcept final;

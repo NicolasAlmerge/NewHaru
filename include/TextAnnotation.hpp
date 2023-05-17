@@ -4,7 +4,7 @@
 
 namespace pdf {
     class TextAnnotation final: public Annotation {
-        TextAnnotation(const HPDF_Annotation destination);
+        explicit TextAnnotation(const HPDF_Annotation destination);
         friend class PdfPage;
 
     public:

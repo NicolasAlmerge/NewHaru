@@ -2,7 +2,18 @@
 using namespace pdf;
 
 
-DashMode::DashMode(HPDF_DashMode&& dashMode): innerContent(dashMode) {}
+static constexpr unsigned int __haruppMin(unsigned int a, unsigned int b) {
+    return (a <= b)? a: b;
+}
+
+DashMode DashMode::__from(HPDF_DashMode&& value) {
+    DashMode dashMode;
+    dashMode.innerContent.num_ptn = __haruppMin(value.num_ptn, MAX_DASH_MODE_LENGTH);
+    dashMode.innerContent.phase = value.phase;
+    for (unsigned int i = 0; i < dashMode.innerContent.num_ptn; ++i)
+        dashMode.innerContent.ptn[i] = value.ptn[i];
+    return dashMode;
+}
 
 DashMode::DashMode(): DashMode(std::vector<float>()) {}
 

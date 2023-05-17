@@ -14,7 +14,7 @@ namespace pdf {
     */
     class RGBColor final: public Color {
         HPDF_RGBColor innerContent;
-        RGBColor(HPDF_RGBColor&& rgbColor);
+        explicit RGBColor(HPDF_RGBColor&& rgbColor);
         friend class PdfPage;
 
     public:

@@ -5,7 +5,7 @@
 namespace pdf {
     class Permissions final: public PdfObject {
         unsigned int value = 0UL;
-        Permissions(unsigned int v);
+        explicit Permissions(unsigned int v);
         friend class PdfDocument;
 
     public:

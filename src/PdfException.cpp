@@ -2,13 +2,8 @@
 using namespace pdf;
 
 
-PdfException::PdfException(
-    const char* data, unsigned long errorCode, unsigned long detailCode, bool hasDetailCode
-) noexcept: errorMessage(data), errorCode(errorCode), detailCode(detailCode), _hasDetailCode(hasDetailCode) {}
-
-PdfException::PdfException(
-    const std::string& data, unsigned long errorCode, unsigned long detailCode, bool hasDetailCode
-) noexcept: errorMessage(data.c_str()), errorCode(errorCode), detailCode(detailCode), _hasDetailCode(hasDetailCode) {}
+PdfException::PdfException(const std::string& data, unsigned long errorCode, unsigned long detailCode) noexcept:
+    errorMessage(data), errorCode(errorCode), detailCode(detailCode) {}
 
 PdfException::~PdfException() noexcept {}
 
@@ -21,15 +16,15 @@ unsigned long PdfException::getDetailCode() const noexcept {
 }
 
 const char* PdfException::what() const noexcept {
-    return errorMessage;
+    return errorMessage.c_str();
 }
 
 bool PdfException::hasDetailCode() const noexcept {
-    return _hasDetailCode;
+    return detailCode != 0U;
 }
 
 std::string PdfException::getFullDescription() const noexcept {
-    return std::string(getName()) + std::string(": ") + std::string(what());
+    return std::string(getName()) + std::string(": ") + errorMessage;
 }
 
 StreamException::~StreamException() noexcept {}

@@ -22,7 +22,7 @@ namespace pdf {
     class ContentStream;
 
     class PdfPage final: public ContentStream {
-        PdfPage(const HPDF_Page content);
+        explicit PdfPage(const HPDF_Page content);
         friend class PdfDocument;
 
     public:

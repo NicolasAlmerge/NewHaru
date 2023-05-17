@@ -15,7 +15,7 @@ namespace pdf {
      * @date   2023-05-16
     */
     class Annotation: public ContentStream {
-        Annotation(const HPDF_Annotation destination);
+        explicit Annotation(const HPDF_Annotation destination);
         friend class LinkAnnotation;
         friend class TextAnnotation;
 

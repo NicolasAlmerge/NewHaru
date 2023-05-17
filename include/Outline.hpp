@@ -7,7 +7,7 @@ namespace pdf {
     class Destination;
 
     class Outline: public ContentStream {
-        Outline(const HPDF_Outline outline);
+        explicit Outline(const HPDF_Outline outline);
         friend class PdfDocument;
 
     public:

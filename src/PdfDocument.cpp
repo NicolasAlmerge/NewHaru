@@ -44,8 +44,8 @@ static void __haruppErrorHandler(unsigned long errorNo, unsigned long detailNo, 
 
         case 0x1015: throw MemoryAllocationFailedException("Memory allocation failed.", errorNo, detailNo);
 
-        case 0x1016: throw FileIOException("File processing failed. (Detailed code is set.)", errorNo, detailNo, true);
-        case 0x1017: throw FileOpenException("Cannot open a file. (Detailed code is set.)", errorNo, detailNo, true);
+        case 0x1016: throw FileIOException("File processing failed. (Detailed code is set.)", errorNo, detailNo);
+        case 0x1017: throw FileOpenException("Cannot open a file. (Detailed code is set.)", errorNo, detailNo);
 
         case 0x1019: throw FontExistsException("Tried to load a font that has been registered.", errorNo, detailNo);
 
@@ -384,7 +384,7 @@ void PdfDocument::setOpenDestination(const Destination& destination) {
 }
 
 PdfPage PdfDocument::getCurrentPage() const {
-    return HPDF_GetCurrentPage(pdfDoc);
+    return PdfPage(HPDF_GetCurrentPage(pdfDoc));
 }
 
 PdfPage PdfDocument::addPage() {

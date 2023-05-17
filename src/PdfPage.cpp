@@ -138,7 +138,7 @@ float PdfPage::getMiterLimit() const {
 }
 
 DashMode PdfPage::getDash() const {
-    return DashMode(HPDF_Page_GetDash(innerContent));
+    return DashMode::__from(HPDF_Page_GetDash(innerContent));
 }
 
 float PdfPage::getFlatness() const {
