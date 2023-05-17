@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['rgbcolor_0',['RGBColor',['../classpdf_1_1RGBColor.html#ab765e64dffd5fe3f1d8e741d5569e6f9',1,'pdf::RGBColor::RGBColor() noexcept'],['../classpdf_1_1RGBColor.html#a14aa01617ea736b96eec177aa278e973',1,'pdf::RGBColor::RGBColor(float r, float g, float b) noexcept']]]
+  ['pdfexception_0',['PdfException',['../classpdf_1_1except_1_1PdfException.html#a3e74afdef329206ae7d779fdc41332dd',1,'pdf::except::PdfException']]],
+  ['permissions_1',['Permissions',['../classpdf_1_1Permissions.html#a64d5402fd77c0db763db733e99294bd2',1,'pdf::Permissions::Permissions() noexcept'],['../classpdf_1_1Permissions.html#aecbf19c52f57fa2ea3f6d19e5efa046c',1,'pdf::Permissions::Permissions(bool canPrint, bool canEditContent, bool canCopy, bool canEditAnnotations) noexcept']]]
 ];

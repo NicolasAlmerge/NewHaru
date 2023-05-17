@@ -7,6 +7,13 @@ var searchData=
   ['letter_4',['LETTER',['../namespacepdf.html#a764804d041eb19d9aeb0a7f91ce1b33ea293c501027368f9a83d91179af6a4316',1,'pdf']]],
   ['libpngexception_5',['LibPNGException',['../classpdf_1_1except_1_1LibPNGException.html',1,'pdf::except']]],
   ['linkannotation_6',['LinkAnnotation',['../classpdf_1_1LinkAnnotation.html',1,'pdf']]],
-  ['lower_5fletters_7',['LOWER_LETTERS',['../namespacepdf.html#a302e30614b41148a53284d28d33ace0caa9aa86104aa44b2215179eea33f5eabe',1,'pdf']]],
-  ['lower_5froman_8',['LOWER_ROMAN',['../namespacepdf.html#a302e30614b41148a53284d28d33ace0cad316800c62f1bb90c114e6826bdbd565',1,'pdf']]]
+  ['loadjpegimagefromfile_7',['loadJPEGImageFromFile',['../classpdf_1_1PdfDocument.html#afce500035bdfb91402d84a73af45267e',1,'pdf::PdfDocument']]],
+  ['loadjpegimagefrommemory_8',['loadJPEGImageFromMemory',['../classpdf_1_1PdfDocument.html#a34a8f3d9c22fd16ec5932601d13d27f0',1,'pdf::PdfDocument']]],
+  ['loadpartialpngimagefromfile_9',['loadPartialPNGImageFromFile',['../classpdf_1_1PdfDocument.html#a4093c30ddbfad9f7c288f1bf2c078c6a',1,'pdf::PdfDocument']]],
+  ['loadpngimagefromfile_10',['loadPNGImageFromFile',['../classpdf_1_1PdfDocument.html#a2346a4c974acfcd06f841bfadedafbda',1,'pdf::PdfDocument']]],
+  ['loadpngimagefrommemory_11',['loadPNGImageFromMemory',['../classpdf_1_1PdfDocument.html#a5d5f7190465ab49548e90d70a1f5f0c6',1,'pdf::PdfDocument']]],
+  ['loadrawimagefromfile_12',['loadRawImageFromFile',['../classpdf_1_1PdfDocument.html#a6437d1139b7193dc80cdd4ace34d776d',1,'pdf::PdfDocument']]],
+  ['loadrawimagefrommemory_13',['loadRawImageFromMemory',['../classpdf_1_1PdfDocument.html#ad00bf0096af6b5aef8ae64bfe1493288',1,'pdf::PdfDocument']]],
+  ['lower_5fletters_14',['LOWER_LETTERS',['../namespacepdf.html#a302e30614b41148a53284d28d33ace0caa9aa86104aa44b2215179eea33f5eabe',1,'pdf']]],
+  ['lower_5froman_15',['LOWER_ROMAN',['../namespacepdf.html#a302e30614b41148a53284d28d33ace0cad316800c62f1bb90c114e6826bdbd565',1,'pdf']]]
 ];
