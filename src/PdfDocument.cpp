@@ -268,7 +268,7 @@ PdfDocument::~PdfDocument() {
 
 void PdfDocument::open() {
     pdfDoc = HPDF_New(__haruppErrorHandler, nullptr);
-    if (pdfDoc == nullptr) throw NewPdfCreationFailedException("Cannot create pdf object", 0x1000, 0);
+    if (pdfDoc == nullptr) throw MemoryAllocationFailedException("Cannot create pdf object", 0x1015, 0);
 
     // Initialise imports
     imports.reserve(__HARUPP_ENCODING_IMPORTS_LENGTH);
@@ -666,9 +666,6 @@ void PdfDocument::setR3EncryptMode(R3EncryptKeyLength keyLength) {
 void PdfDocument::setCompressionMode(CompressionMode mode) {
     HPDF_SetCompressionMode(pdfDoc, (unsigned int) mode);
 }
-
-
-/******************** OPERATORS ********************/
 
 void PdfDocument::operator=(const PdfDocument& newDoc) {
     close();
