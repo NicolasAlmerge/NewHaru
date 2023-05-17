@@ -11,7 +11,7 @@ namespace pdf {
      * @date   2023-05-16
     */
     struct PdfObject {
-        virtual ~PdfObject();
+        virtual ~PdfObject() noexcept = 0;
 
         /**
          * @brief  Checks whether an object is empty.

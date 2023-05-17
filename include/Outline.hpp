@@ -2,6 +2,7 @@
 #define __HARUPP_OUTLINE_HPP__
 #include "ContentStream.hpp"
 #include "PdfObject.hpp"
+#include "OpenableContent.hpp"
 
 namespace pdf {
     class Destination;
@@ -14,7 +15,7 @@ namespace pdf {
      * @author Nicolas Almerge
      * @date   2023-05-16
     */
-    class Outline final: public ContentStream {
+    class Outline final: public ContentStream, public OpenableContent {
         explicit Outline(const HPDF_Outline outline);
         friend class PdfDocument;
 
@@ -24,7 +25,7 @@ namespace pdf {
          * @brief Sets the outline initial open / close state.
          * @param open Whether the outline should be open (`true`) or closed (`false`) initially.
         */
-        void setOpen(bool opened);
+        void setOpen(bool opened) override;
 
         /**
          * @brief Sets the destination of the outline.

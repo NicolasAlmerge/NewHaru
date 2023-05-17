@@ -20,7 +20,7 @@ namespace pdf {
         friend class TextAnnotation;
 
     public:
-        virtual ~Annotation() = 0;
+        virtual ~Annotation() noexcept = 0;
 
         /**
          * @brief Sets the border style.

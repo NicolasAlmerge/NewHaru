@@ -1,6 +1,7 @@
 #ifndef __HARUPP_TEXTANNOTATION_HPP__
 #define __HARUPP_TEXTANNOTATION_HPP__
 #include "Annotation.hpp"
+#include "OpenableContent.hpp"
 
 namespace pdf {
 
@@ -12,7 +13,7 @@ namespace pdf {
      * @author Nicolas Almerge
      * @date   2023-05-16
     */
-    class TextAnnotation final: public Annotation {
+    class TextAnnotation final: public Annotation, public OpenableContent {
         explicit TextAnnotation(const HPDF_Annotation destination);
         friend class PdfPage;
 
@@ -28,7 +29,7 @@ namespace pdf {
          * @brief Sets the annotation initial open / close state.
          * @param open Whether the annotation should be open (`true`) or closed (`false`) initially.
         */
-        void setOpen(bool open);
+        void setOpen(bool open) override;
     };
 }
 

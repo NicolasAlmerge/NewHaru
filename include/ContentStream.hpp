@@ -22,10 +22,11 @@ namespace pdf {
         friend class PdfDocument;
         friend class Image;
         friend class Font;
+        friend class OpenableContent;
         friend class Outline;
 
     public:
-        virtual ~ContentStream() = 0;
+        virtual ~ContentStream() noexcept = 0;
 
         /**
          * @brief   Checks whether an object is empty.

@@ -4,7 +4,7 @@ using namespace pdf;
 
 ContentStream::ContentStream(const HPDF_Dict dict): innerContent(dict) {}
 
-ContentStream::~ContentStream() {}
+ContentStream::~ContentStream() noexcept {}
 
 bool ContentStream::isEmpty() const noexcept {
     return innerContent == nullptr;
