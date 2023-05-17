@@ -90,6 +90,11 @@ $(document).ready(function(){initNavTree('classpdf_1_1PdfPage.html',''); initRes
   <div class="headertitle"><div class="title">pdf::PdfPage Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents a pdf document page.  
+ <a href="classpdf_1_1PdfPage.html#details">More...</a></p>
+
+<p><code>#include &lt;PdfPage.hpp&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for pdf::PdfPage:</div>
 <div class="dyncontent">
@@ -131,7 +136,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>closePathStroke</b> (
 void&#160;</td><td class="memItemRight" valign="bottom"><b>concat</b> (const <a class="el" href="classpdf_1_1TransposeMatrix.html">TransposeMatrix</a> &amp;matrix)</td></tr>
 <tr class="separator:a64f6b841a62c885092aef503d946457d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb379bea5085f7303ba19ba76e0c8a8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpdf_1_1Destination.html">Destination</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1PdfPage.html#afb379bea5085f7303ba19ba76e0c8a8b">createDestination</a> ()</td></tr>
-<tr class="memdesc:afb379bea5085f7303ba19ba76e0c8a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a destination to this page.  <a href="classpdf_1_1PdfPage.html#afb379bea5085f7303ba19ba76e0c8a8b">More...</a><br /></td></tr>
+<tr class="memdesc:afb379bea5085f7303ba19ba76e0c8a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classpdf_1_1Destination.html" title="Represents a destination.">Destination</a> to this page.  <a href="classpdf_1_1PdfPage.html#afb379bea5085f7303ba19ba76e0c8a8b">More...</a><br /></td></tr>
 <tr class="separator:afb379bea5085f7303ba19ba76e0c8a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c360750bd1b76476d655d609c9096ca"><td class="memItemLeft" align="right" valign="top"><a id="a5c360750bd1b76476d655d609c9096ca" name="a5c360750bd1b76476d655d609c9096ca"></a>
 <a class="el" href="classpdf_1_1LinkAnnotation.html">LinkAnnotation</a>&#160;</td><td class="memItemRight" valign="bottom"><b>createLinkAnnotation</b> (const <a class="el" href="classpdf_1_1Destination.html">Destination</a> &amp;destination, const <a class="el" href="classpdf_1_1Box.html">Box</a> &amp;box)</td></tr>
@@ -193,8 +198,8 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>getCharSpace</b> () 
 <tr class="memitem:a697a589c6dafcab6f19362b2f50ace42"><td class="memItemLeft" align="right" valign="top"><a id="a697a589c6dafcab6f19362b2f50ace42" name="a697a589c6dafcab6f19362b2f50ace42"></a>
 <a class="el" href="classpdf_1_1CMYKColor.html">CMYKColor</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getCMYKStroke</b> () const</td></tr>
 <tr class="separator:a697a589c6dafcab6f19362b2f50ace42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa30c14207066a05388dcd1a435e0c03a"><td class="memItemLeft" align="right" valign="top"><a id="aa30c14207066a05388dcd1a435e0c03a" name="aa30c14207066a05388dcd1a435e0c03a"></a>
-<a class="el" href="classpdf_1_1Font.html">Font</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getCurrentFont</b> () const</td></tr>
+<tr class="memitem:aa30c14207066a05388dcd1a435e0c03a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpdf_1_1Font.html">Font</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1PdfPage.html#aa30c14207066a05388dcd1a435e0c03a">getCurrentFont</a> () const</td></tr>
+<tr class="memdesc:aa30c14207066a05388dcd1a435e0c03a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the currently used <a class="el" href="classpdf_1_1Font.html" title="Represents a font.">Font</a>.  <a href="classpdf_1_1PdfPage.html#aa30c14207066a05388dcd1a435e0c03a">More...</a><br /></td></tr>
 <tr class="separator:aa30c14207066a05388dcd1a435e0c03a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05f2610a78741d7c336c1988c70249fb"><td class="memItemLeft" align="right" valign="top"><a id="a05f2610a78741d7c336c1988c70249fb" name="a05f2610a78741d7c336c1988c70249fb"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>getCurrentFontSize</b> () const</td></tr>
@@ -430,7 +435,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>writeText</b> (const 
 <tr class="memdesc:a94c42c94a266fe631ed224f273efff51 inherit pub_methods_structpdf_1_1PdfObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether an object is not empty.  <a href="structpdf_1_1PdfObject.html#a94c42c94a266fe631ed224f273efff51">More...</a><br /></td></tr>
 <tr class="separator:a94c42c94a266fe631ed224f273efff51 inherit pub_methods_structpdf_1_1PdfObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Represents a pdf document page. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="afb379bea5085f7303ba19ba76e0c8a8b" name="afb379bea5085f7303ba19ba76e0c8a8b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afb379bea5085f7303ba19ba76e0c8a8b">&#9670;&nbsp;</a></span>createDestination()</h2>
 
@@ -446,8 +453,28 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>writeText</b> (const 
       </table>
 </div><div class="memdoc">
 
-<p>Creates a destination to this page. </p>
+<p>Creates a <a class="el" href="classpdf_1_1Destination.html" title="Represents a destination.">Destination</a> to this page. </p>
 <dl class="section return"><dt>Returns</dt><dd>Newly created <a class="el" href="classpdf_1_1Destination.html" title="Represents a destination.">Destination</a>. </dd></dl>
+
+</div>
+</div>
+<a id="aa30c14207066a05388dcd1a435e0c03a" name="aa30c14207066a05388dcd1a435e0c03a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa30c14207066a05388dcd1a435e0c03a">&#9670;&nbsp;</a></span>getCurrentFont()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpdf_1_1Font.html">Font</a> pdf::PdfPage::getCurrentFont </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the currently used <a class="el" href="classpdf_1_1Font.html" title="Represents a font.">Font</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>Currently used <a class="el" href="classpdf_1_1Font.html" title="Represents a font.">Font</a>. </dd></dl>
 
 </div>
 </div>

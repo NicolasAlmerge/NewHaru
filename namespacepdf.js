@@ -11,7 +11,7 @@ var namespacepdf =
     [ "DateTime", "classpdf_1_1DateTime.html", "classpdf_1_1DateTime" ],
     [ "Destination", "classpdf_1_1Destination.html", "classpdf_1_1Destination" ],
     [ "Encoder", "classpdf_1_1Encoder.html", "classpdf_1_1Encoder" ],
-    [ "Font", "classpdf_1_1Font.html", null ],
+    [ "Font", "classpdf_1_1Font.html", "classpdf_1_1Font" ],
     [ "Image", "classpdf_1_1Image.html", "classpdf_1_1Image" ],
     [ "LinkAnnotation", "classpdf_1_1LinkAnnotation.html", "classpdf_1_1LinkAnnotation" ],
     [ "Outline", "classpdf_1_1Outline.html", "classpdf_1_1Outline" ],

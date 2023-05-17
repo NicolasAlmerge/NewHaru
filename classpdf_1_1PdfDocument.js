@@ -8,6 +8,8 @@ var classpdf_1_1PdfDocument =
     [ "getCurrentEncoder", "classpdf_1_1PdfDocument.html#a5c6e9ec36a9c5ed732102c841f2da364", null ],
     [ "getEncoder", "classpdf_1_1PdfDocument.html#a06033d3cd9f06b3ecf325b3a9ff12fc2", null ],
     [ "getEncoder", "classpdf_1_1PdfDocument.html#acbec37be3b5511f9d072fcfe8e1d6f0e", null ],
+    [ "getFont", "classpdf_1_1PdfDocument.html#a102f2d10ad8ff252becf9608ff9ac8dc", null ],
+    [ "getFont", "classpdf_1_1PdfDocument.html#a74901efed3d041f70e9d250b9f01ceda", null ],
     [ "isEmpty", "classpdf_1_1PdfDocument.html#a98ee45b75300ce3f57647510bed8be73", null ],
     [ "isOpen", "classpdf_1_1PdfDocument.html#a385e0a5e6cacaaf8d21ab5c0bf94ea78", null ],
     [ "loadJPEGImageFromFile", "classpdf_1_1PdfDocument.html#afce500035bdfb91402d84a73af45267e", null ],

@@ -1,5 +1,24 @@
 var searchData=
 [
-  ['tocmyk_0',['toCMYK',['../classpdf_1_1CMYKColor.html#a4f88782e556284cfd932b1a72b760068',1,'pdf::CMYKColor::toCMYK()'],['../structpdf_1_1Color.html#a17d09e94ccd38b6a2808ccb2e6113555',1,'pdf::Color::toCMYK()'],['../classpdf_1_1RGBColor.html#a880f689b701f7dba6a8025b8af9f030c',1,'pdf::RGBColor::toCMYK()']]],
-  ['torgb_1',['toRGB',['../classpdf_1_1CMYKColor.html#a50d3b17747e3025fba2eb281f002d546',1,'pdf::CMYKColor::toRGB()'],['../structpdf_1_1Color.html#a954b465503533001768bde7b59459dd0',1,'pdf::Color::toRGB()'],['../classpdf_1_1RGBColor.html#a933bca65aaa1a42889637cadcef0e887',1,'pdf::RGBColor::toRGB()']]]
+  ['savetofile_0',['saveToFile',['../classpdf_1_1PdfDocument.html#a38c9e582c098de2a94447470011cbfe4',1,'pdf::PdfDocument']]],
+  ['setborderstyle_1',['setBorderStyle',['../classpdf_1_1Annotation.html#a65b5900f6330e2099411a7c1edec9de9',1,'pdf::Annotation::setBorderStyle()'],['../classpdf_1_1LinkAnnotation.html#a813dc1e2077c2376b33384be6737deac',1,'pdf::LinkAnnotation::setBorderStyle()']]],
+  ['setcolormask_2',['setColorMask',['../classpdf_1_1Image.html#a9d44df4527f323abad7c4ae67435483e',1,'pdf::Image']]],
+  ['setcompressionmode_3',['setCompressionMode',['../classpdf_1_1PdfDocument.html#a362733bcad9777c394a384d949b6bc8e',1,'pdf::PdfDocument']]],
+  ['setdestination_4',['setDestination',['../classpdf_1_1Outline.html#ab8570c3628b96dfda334b1aa7709bb07',1,'pdf::Outline']]],
+  ['setfit_5',['setFit',['../classpdf_1_1Destination.html#a53c9e92c2eacd5e39503cd89a6add032',1,'pdf::Destination']]],
+  ['setfitb_6',['setFitB',['../classpdf_1_1Destination.html#a05702fd97cb98b0cba6cbb6337423f5a',1,'pdf::Destination']]],
+  ['setfitbh_7',['setFitBH',['../classpdf_1_1Destination.html#ad3e24ddbf5a9b4865ee764fa76a39111',1,'pdf::Destination']]],
+  ['setfitbv_8',['setFitBV',['../classpdf_1_1Destination.html#a1d163c1e481ba9c1a7419e6b694f9411',1,'pdf::Destination']]],
+  ['setfith_9',['setFitH',['../classpdf_1_1Destination.html#ad841b8c558d2a444bd126ff3293b62fe',1,'pdf::Destination']]],
+  ['setfitr_10',['setFitR',['../classpdf_1_1Destination.html#af3f63c5ce7c95f9e58d5ae17f1bb6165',1,'pdf::Destination']]],
+  ['setfitv_11',['setFitV',['../classpdf_1_1Destination.html#aba2ca116a9de48e5072eef2b9a7786d4',1,'pdf::Destination']]],
+  ['sethighlightmode_12',['setHighlightMode',['../classpdf_1_1LinkAnnotation.html#a145120e389f1bce1cb6ab63d2abf636d',1,'pdf::LinkAnnotation']]],
+  ['seticon_13',['setIcon',['../classpdf_1_1TextAnnotation.html#a48993f3060fdccd1895a817efcee76b1',1,'pdf::TextAnnotation']]],
+  ['setmaskimage_14',['setMaskImage',['../classpdf_1_1Image.html#a9021036579d3d7f92da24b9e01198baf',1,'pdf::Image']]],
+  ['setopen_15',['setOpen',['../classpdf_1_1Outline.html#aee81aa73f0db6d58faec730bcda9acbd',1,'pdf::Outline::setOpen()'],['../classpdf_1_1TextAnnotation.html#ad78c96f742440160e0b53ecc1d4124c1',1,'pdf::TextAnnotation::setOpen()']]],
+  ['setpassword_16',['setPassword',['../classpdf_1_1PdfDocument.html#a0ba49c5e9cd827d61a13753392e8c099',1,'pdf::PdfDocument::setPassword(const std::string &amp;ownerPassword)'],['../classpdf_1_1PdfDocument.html#ac70f1fe6361bbc3e174d4880564bbb58',1,'pdf::PdfDocument::setPassword(const std::string &amp;ownerPassword, const std::string &amp;userPassword)']]],
+  ['setpermissions_17',['setPermissions',['../classpdf_1_1PdfDocument.html#a50c1444a8a6bad583c7354663b4ca6c5',1,'pdf::PdfDocument']]],
+  ['setr2encryptmode_18',['setR2EncryptMode',['../classpdf_1_1PdfDocument.html#aeaf058957afbc9f7d10566661bc3c031',1,'pdf::PdfDocument']]],
+  ['setr3encryptmode_19',['setR3EncryptMode',['../classpdf_1_1PdfDocument.html#ae5b587258cdf072301773d097dbb9d5e',1,'pdf::PdfDocument']]],
+  ['setxyz_20',['setXYZ',['../classpdf_1_1Destination.html#a74363ea7c813db1f6ecf095aa1e8d098',1,'pdf::Destination']]]
 ];
