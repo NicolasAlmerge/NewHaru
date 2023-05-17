@@ -19,11 +19,3 @@ float Coor2D::getX() const noexcept {
 float Coor2D::getY() const noexcept {
     return innerContent.y;
 }
-
-void Coor2D::setX(float value) noexcept {
-    innerContent.x = value;
-}
-
-void Coor2D::setY(float value) noexcept {
-    innerContent.y = value;
-}

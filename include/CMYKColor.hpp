@@ -20,12 +20,13 @@ namespace pdf {
     public:
 
         /**
-         * @brief Creates the white color. This is equivalent to `CMYKColor(0, 0, 0, 0)`.
+         * @brief   Creates the white CMYKColor.
+         * @details This is equivalent to `CMYKColor(0, 0, 0, 0)`.
         */
         CMYKColor() noexcept;
 
         /**
-         * @brief Creates a new CMYK color with the given attributes.
+         * @brief Creates a new CMYKColor with the given attributes.
          * @param c Cyan value.
          * @param m Magenta value.
          * @param y Yellow value.
@@ -35,7 +36,7 @@ namespace pdf {
 
         /**
          * @brief Always returns `false`.
-         * @return `false`.
+         * @return `false`
         */
         bool isEmpty() const noexcept override;
 

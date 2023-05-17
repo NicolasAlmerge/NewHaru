@@ -1,18 +1,15 @@
 #include "../include/DashMode.hpp"
-#include "../include/PdfException.hpp"
 using namespace pdf;
 
 
 DashMode::DashMode(HPDF_DashMode&& dashMode): innerContent(dashMode) {}
 
-DashMode::DashMode(const std::vector<float>& values, float phase) {
-    if (values.size() > MAX_DASH_MODE_LENGTH)
-        throw ArrayCountException("Given vector exceeds max array length of 8", 0x1001, 0UL);
+DashMode::DashMode(): DashMode(std::vector<float>()) {}
 
-    // Set attributes
+DashMode::DashMode(const std::vector<float>& values, float phase) {
     innerContent.num_ptn = values.size();
     for (unsigned int i = 0; i < values.size(); ++i) innerContent.ptn[i] = values[i];
-    innerContent.phase = phase;
+    innerContent.phase = values.empty()? 0.0: phase;
 }
 
 std::vector<float> DashMode::getPoints() const {

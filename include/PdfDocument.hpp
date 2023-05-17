@@ -33,6 +33,13 @@ namespace pdf {
     /// Represents the maximum G state.
     constexpr unsigned int MAX_GSTATE = HPDF_LIMIT_MAX_GSTATE;
 
+    /**
+     * \class  PdfDocument
+     * @brief  Represents a pdf document.
+     * @file   PdfDocument.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class PdfDocument: public PdfObject {
         mutable HPDF_Doc pdfDoc = nullptr;
         std::vector<bool> imports;
@@ -100,10 +107,27 @@ namespace pdf {
         void useCNTFonts();
 
         /******************** ENCODINGS ********************/
+
+        /**
+         * @brief  Gets the Encoder of a single byte encoding.
+         * @param  encoding Single byte encoding to use.
+         * @return Corresponding Encoder.
+        */
         Encoder getEncoder(SingleByteEncoding encoding);
+
+        /**
+         * @brief  Gets the Encoder of a multi byte encoding.
+         * @param  encoding Multi byte encoding to use.
+         * @return Corresponding Encoder.
+        */
         Encoder getEncoder(MultiByteEncoding encoding);
 
+        /**
+         * @brief  Gets the current Encoder.
+         * @return Current Encoder.
+        */
         Encoder getCurrentEncoder();
+
         void setCurrentEncoder(SingleByteEncoding encoding);
         void setCurrentEncoder(MultiByteEncoding encoding);
 

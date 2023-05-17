@@ -8,17 +8,49 @@ namespace pdf {
     /// Represents the maximum length of a dash mode.
     constexpr unsigned int MAX_DASH_MODE_LENGTH = 8UL;
 
+    /**
+     * \class  DashMode
+     * @brief  Represents a dash mode.
+     * @file   DashMode.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class DashMode final: public PdfObject {
         HPDF_DashMode innerContent;
         DashMode(HPDF_DashMode&& dashMode);
         friend class PdfPage;
 
     public:
-        DashMode(const std::vector<float>& values = {}, float phase = 0.0);
 
+        /**
+         * @brief   Creates a new default DashMode.
+         * @details This is equivalent to `DashMode({})`.
+        */
+        DashMode();
+
+        /**
+         * @brief Creates a new DashMode with corresponding values.
+         * @param values Point coordinates to use.
+         * @param phase  Phase to use. Will be set to `0.0` if no values are set.
+        */
+        DashMode(const std::vector<float>& values, float phase = 0.0);
+
+        /**
+         * @brief  Gets the vector of points.
+         * @return Vector of points.
+        */
         std::vector<float> getPoints() const;
+
+        /**
+         * @brief  Gets the phase.
+         * @return Mode phase.
+        */
         float getPhase() const noexcept;
 
+        /**
+         * @brief Always returns `false`.
+         * @return `false`
+        */
         bool isEmpty() const noexcept override;
     };
 }

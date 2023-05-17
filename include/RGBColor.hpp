@@ -19,12 +19,13 @@ namespace pdf {
 
     public:
         /**
-         * @brief Creates the black color. This is equivalent to `RGBColor(0, 0, 0)`.
+         * @brief   Creates the black RGBColor.
+         * @details This is equivalent to `RGBColor(0, 0, 0)`.
         */
         RGBColor() noexcept;
 
         /**
-         * @brief Creates a new RGB color with the given attributes.
+         * @brief Creates a new RGBColor with the given attributes.
          * @param r Red component.
          * @param g Green component.
          * @param b Blue component.
@@ -33,7 +34,7 @@ namespace pdf {
 
         /**
          * @brief Always returns `false`.
-         * @return `false`.
+         * @return `false`
         */
         bool isEmpty() const noexcept override;
 
