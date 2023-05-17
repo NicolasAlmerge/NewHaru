@@ -7,7 +7,7 @@ namespace pdf {
 
     /**
      * \class  CMYKColor
-     * @brief  Represents a CMYK Color.
+     * @brief  Represents a CMYK color.
      * @file   CMYKColor.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16

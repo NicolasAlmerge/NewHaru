@@ -131,8 +131,20 @@ namespace pdf {
         void addPageLabel(PageNumberStyle style = PageNumberStyle::DECIMAL, unsigned int pageNumber = 0U, unsigned int firstPage = 1U);
         void addPageLabel(const std::string& prefix, PageNumberStyle style = PageNumberStyle::DECIMAL, unsigned int pageNumber = 0U, unsigned int firstPage = 1U);
 
-        /******************** FONT HANDLING ********************/
+        /**
+         * @brief  Gets a Font from a name and single byte encoding.
+         * @param  fontName The font name.
+         * @param  encoding Single byte encoding.
+         * @return New Font object.
+        */
         Font getFont(const std::string& fontName, SingleByteEncoding encoding = SingleByteEncoding::StandardEncoding);
+
+        /**
+         * @brief  Gets a Font from a name and multi byte encoding.
+         * @param  fontName The font name.
+         * @param  encoding Multi byte encoding.
+         * @return New Font object.
+        */
         Font getFont(const std::string& fontName, MultiByteEncoding encoding);
 
         std::string loadType1FontFromFile(const std::string& AFMFileName);

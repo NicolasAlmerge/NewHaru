@@ -21,6 +21,13 @@ namespace pdf {
     class DashMode;
     class ContentStream;
 
+    /**
+     * \class  PdfPage
+     * @brief  Represents a pdf document page.
+     * @file   PdfPage.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class PdfPage final: public ContentStream {
         explicit PdfPage(const HPDF_Page content);
         friend class PdfDocument;
@@ -35,7 +42,7 @@ namespace pdf {
         float getHeight() const;
 
         /**
-         * @brief  Creates a destination to this page.
+         * @brief  Creates a Destination to this page.
          * @return Newly created Destination.
         */
         Destination createDestination();
@@ -55,7 +62,12 @@ namespace pdf {
         Coor2D getCurrentPos() const;
         Coor2D getCurrentTextPos() const;
 
+        /**
+         * @brief  Gets the currently used Font.
+         * @return Currently used Font.
+        */
         Font getCurrentFont() const;
+
         float getCurrentFontSize() const;
 
         TransposeMatrix getTransposeMatrix() const;

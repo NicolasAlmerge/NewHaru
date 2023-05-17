@@ -7,7 +7,7 @@ namespace pdf {
 
     /**
      * \class  RGBColor
-     * @brief  Represents a RGB Color.
+     * @brief  Represents a RGB color.
      * @file   RGBColor.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
