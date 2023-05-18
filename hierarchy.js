@@ -125,9 +125,9 @@ var hierarchy =
         [ "pdf::excepts::ZLIBException", "classpdf_1_1excepts_1_1ZLIBException.html", null ]
       ] ]
     ] ],
-    [ "pdf::PdfObject", "structpdf_1_1PdfObject.html", [
+    [ "pdf::PdfObject", "classpdf_1_1PdfObject.html", [
       [ "pdf::Box", "classpdf_1_1Box.html", null ],
-      [ "pdf::Color", "structpdf_1_1Color.html", [
+      [ "pdf::Color", "classpdf_1_1Color.html", [
         [ "pdf::CMYKColor", "classpdf_1_1CMYKColor.html", null ],
         [ "pdf::RGBColor", "classpdf_1_1RGBColor.html", null ]
       ] ],

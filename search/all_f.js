@@ -32,7 +32,7 @@ var searchData=
   ['pdf_29',['pdf',['../namespacepdf.html',1,'']]],
   ['pdfdocument_30',['PdfDocument',['../classpdf_1_1PdfDocument.html',1,'pdf::PdfDocument'],['../classpdf_1_1PdfDocument.html#aa23f938f09f05d31a92ddb9e0962c69b',1,'pdf::PdfDocument::PdfDocument()']]],
   ['pdfexception_31',['PdfException',['../classpdf_1_1excepts_1_1PdfException.html',1,'pdf::excepts::PdfException'],['../classpdf_1_1excepts_1_1PdfException.html#aaebe26d4d6cf5ebf70596a2c00adca0f',1,'pdf::excepts::PdfException::PdfException()']]],
-  ['pdfobject_32',['PdfObject',['../structpdf_1_1PdfObject.html',1,'pdf']]],
+  ['pdfobject_32',['PdfObject',['../classpdf_1_1PdfObject.html',1,'pdf']]],
   ['pdfpage_33',['PdfPage',['../classpdf_1_1PdfPage.html',1,'pdf']]],
   ['permissions_34',['Permissions',['../classpdf_1_1Permissions.html',1,'pdf::Permissions'],['../classpdf_1_1Permissions.html#a64d5402fd77c0db763db733e99294bd2',1,'pdf::Permissions::Permissions() noexcept'],['../classpdf_1_1Permissions.html#aecbf19c52f57fa2ea3f6d19e5efa046c',1,'pdf::Permissions::Permissions(bool canPrint, bool canEditContent, bool canCopy, bool canEditAnnotations) noexcept']]],
   ['plus_35',['PLUS',['../namespacepdf_1_1enums.html#aa104a4be7629a24b8e1fc51c4f1899d7a883acd43c77567e1c3baced84ccf6ed7',1,'pdf::enums']]],

@@ -20,7 +20,7 @@ var searchData=
   ['pagesmissingkidsentryexception_17',['PagesMissingKidsEntryException',['../classpdf_1_1excepts_1_1PagesMissingKidsEntryException.html',1,'pdf::excepts']]],
   ['pdfdocument_18',['PdfDocument',['../classpdf_1_1PdfDocument.html',1,'pdf']]],
   ['pdfexception_19',['PdfException',['../classpdf_1_1excepts_1_1PdfException.html',1,'pdf::excepts']]],
-  ['pdfobject_20',['PdfObject',['../structpdf_1_1PdfObject.html',1,'pdf']]],
+  ['pdfobject_20',['PdfObject',['../classpdf_1_1PdfObject.html',1,'pdf']]],
   ['pdfpage_21',['PdfPage',['../classpdf_1_1PdfPage.html',1,'pdf']]],
   ['permissions_22',['Permissions',['../classpdf_1_1Permissions.html',1,'pdf']]]
 ];

@@ -8,7 +8,7 @@ var searchData=
   ['close_5',['close',['../classpdf_1_1PdfDocument.html#a382fcfc13956ff0e2e04ed341d5c1047',1,'pdf::PdfDocument']]],
   ['cmyk_6',['CMYK',['../namespacepdf_1_1enums.html#a93433daea728d3acca7070908353a5baafaa655c7dee48c19cd0bfc8187af941a',1,'pdf::enums']]],
   ['cmykcolor_7',['CMYKColor',['../classpdf_1_1CMYKColor.html#a8932ed2e97bb4edcd2096050d5170279',1,'pdf::CMYKColor::CMYKColor() noexcept'],['../classpdf_1_1CMYKColor.html#ab0feb2d40f068e73cef7fa0b976514cf',1,'pdf::CMYKColor::CMYKColor(float c, float m, float y, float k) noexcept'],['../classpdf_1_1CMYKColor.html',1,'pdf::CMYKColor']]],
-  ['color_8',['Color',['../structpdf_1_1Color.html',1,'pdf']]],
+  ['color_8',['Color',['../classpdf_1_1Color.html',1,'pdf']]],
   ['colorspace_9',['ColorSpace',['../namespacepdf_1_1enums.html#a319b7405daf14f2340cc626d011e67cd',1,'pdf::enums']]],
   ['comm10_10',['COMM10',['../namespacepdf_1_1enums.html#a4d95b6ac7ea52cbf6012b032d69bb707a1882898c85fadcef56f3589a2835626a',1,'pdf::enums']]],
   ['comment_11',['COMMENT',['../namespacepdf_1_1enums.html#a94339d3fb8c424c7ca228a9eec37ad62af2cd320b55767434dd48d81b165ea956',1,'pdf::enums']]],
