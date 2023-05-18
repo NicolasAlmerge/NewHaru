@@ -127,7 +127,6 @@ var annotated_dup =
       [ "Font", "classpdf_1_1Font.html", "classpdf_1_1Font" ],
       [ "Image", "classpdf_1_1Image.html", "classpdf_1_1Image" ],
       [ "LinkAnnotation", "classpdf_1_1LinkAnnotation.html", "classpdf_1_1LinkAnnotation" ],
-      [ "OpenableContent", "structpdf_1_1OpenableContent.html", "structpdf_1_1OpenableContent" ],
       [ "Outline", "classpdf_1_1Outline.html", "classpdf_1_1Outline" ],
       [ "PdfDocument", "classpdf_1_1PdfDocument.html", "classpdf_1_1PdfDocument" ],
       [ "PdfObject", "structpdf_1_1PdfObject.html", "structpdf_1_1PdfObject" ],

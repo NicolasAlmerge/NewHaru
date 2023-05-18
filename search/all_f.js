@@ -33,7 +33,7 @@ var searchData=
   ['pdfobject_30',['PdfObject',['../structpdf_1_1PdfObject.html',1,'pdf']]],
   ['pdfpage_31',['PdfPage',['../classpdf_1_1PdfPage.html',1,'pdf']]],
   ['permissions_32',['Permissions',['../classpdf_1_1Permissions.html',1,'pdf::Permissions'],['../classpdf_1_1Permissions.html#aecbf19c52f57fa2ea3f6d19e5efa046c',1,'pdf::Permissions::Permissions(bool canPrint, bool canEditContent, bool canCopy, bool canEditAnnotations) noexcept'],['../classpdf_1_1Permissions.html#a64d5402fd77c0db763db733e99294bd2',1,'pdf::Permissions::Permissions() noexcept']]],
-  ['plus_33',['PLUS',['../namespacepdf.html#a1633355b91d465e3f5cf4baa1d32f227a883acd43c77567e1c3baced84ccf6ed7',1,'pdf']]],
+  ['plus_33',['PLUS',['../namespacepdf.html#a8d6ce2b664cd0db157eb8f2ff33f2078a883acd43c77567e1c3baced84ccf6ed7',1,'pdf']]],
   ['portrait_34',['PORTRAIT',['../namespacepdf.html#afe7888567561424f6d80bc3c4cc88beda7dbb530820039c270faf100d3f6ff027',1,'pdf']]],
   ['print_35',['PRINT',['../classpdf_1_1Permissions.html#a26cb493ba013ae043df421bf613c44a2',1,'pdf::Permissions']]],
   ['producer_36',['PRODUCER',['../namespacepdf.html#a6395471b755daf67dee1f416606f8469a523178c529429c02cbf9cce92eb47a14',1,'pdf']]],

@@ -14,7 +14,6 @@ var namespacepdf =
     [ "Font", "classpdf_1_1Font.html", "classpdf_1_1Font" ],
     [ "Image", "classpdf_1_1Image.html", "classpdf_1_1Image" ],
     [ "LinkAnnotation", "classpdf_1_1LinkAnnotation.html", "classpdf_1_1LinkAnnotation" ],
-    [ "OpenableContent", "structpdf_1_1OpenableContent.html", "structpdf_1_1OpenableContent" ],
     [ "Outline", "classpdf_1_1Outline.html", "classpdf_1_1Outline" ],
     [ "PdfDocument", "classpdf_1_1PdfDocument.html", "classpdf_1_1PdfDocument" ],
     [ "PdfObject", "structpdf_1_1PdfObject.html", "structpdf_1_1PdfObject" ],
@@ -265,20 +264,21 @@ var namespacepdf =
       [ "GLITTER_TOP_LEFT_TO_BOTTOM_RIGHT", "namespacepdf.html#a87d185ce927425e090cf2afba8d6289dacb2cbb76fd7f13b9226d9516042a1bd4", null ],
       [ "REPLACE", "namespacepdf.html#a87d185ce927425e090cf2afba8d6289da560a2dd6f6744646473b3b19e1fe96d7", null ]
     ] ],
-    [ "UTCIndicator", "namespacepdf.html#a1633355b91d465e3f5cf4baa1d32f227", [
-      [ "NONE", "namespacepdf.html#a1633355b91d465e3f5cf4baa1d32f227ab50339a10e1de285ac99d4c3990b8693", null ],
-      [ "PLUS", "namespacepdf.html#a1633355b91d465e3f5cf4baa1d32f227a883acd43c77567e1c3baced84ccf6ed7", null ],
-      [ "MINUS", "namespacepdf.html#a1633355b91d465e3f5cf4baa1d32f227affc0d9b54a1fe677c4c9e6b050e67c81", null ],
-      [ "Z", "namespacepdf.html#a1633355b91d465e3f5cf4baa1d32f227a21c2e59531c8710156d34a3c30ac81d5", null ]
+    [ "UTCIndicator", "namespacepdf.html#a8d6ce2b664cd0db157eb8f2ff33f2078", [
+      [ "NONE", "namespacepdf.html#a8d6ce2b664cd0db157eb8f2ff33f2078ab50339a10e1de285ac99d4c3990b8693", null ],
+      [ "PLUS", "namespacepdf.html#a8d6ce2b664cd0db157eb8f2ff33f2078a883acd43c77567e1c3baced84ccf6ed7", null ],
+      [ "MINUS", "namespacepdf.html#a8d6ce2b664cd0db157eb8f2ff33f2078affc0d9b54a1fe677c4c9e6b050e67c81", null ],
+      [ "Z", "namespacepdf.html#a8d6ce2b664cd0db157eb8f2ff33f2078a21c2e59531c8710156d34a3c30ac81d5", null ]
     ] ],
     [ "WritingMode", "namespacepdf.html#a185b62343554b9d4aa221ab1e4deb01d", [
       [ "HORIZONTAL", "namespacepdf.html#a185b62343554b9d4aa221ab1e4deb01da86e5d0d8407ce71f7e2004ef3949894e", null ],
       [ "VERTICAL", "namespacepdf.html#a185b62343554b9d4aa221ab1e4deb01da3e1b74251c07310c5f1b968145bf00dc", null ],
       [ "EOF_MODE", "namespacepdf.html#a185b62343554b9d4aa221ab1e4deb01da0e36b06d0fa0ca87456e68b63f5a8f33", null ]
     ] ],
+    [ "getLibHaruVersion", "namespacepdf.html#a595371a098074c7a0149be0cec48e457", null ],
     [ "MAX_DASH_MODE_LENGTH", "namespacepdf.html#ac092b0730e0b67be47adfeaceab63536", null ],
     [ "MAX_DASH_MODE_SIZE", "namespacepdf.html#a05432ec60648c9cca78bf7c7574c4589", null ],
-    [ "MAX_DICT_ELEMENT", "namespacepdf.html#ac1a8c2d21ea4169b1497e688d5687b4c", null ],
-    [ "MAX_GSTATE", "namespacepdf.html#a293f9fe3165727d711aa6ee692b9a793", null ],
-    [ "MAX_STRING_LEN", "namespacepdf.html#a0f45e9d2ddf6a248ba4d8635fdadb2a0", null ]
+    [ "MAX_DICT_ELEMENT", "namespacepdf.html#a55880d3e9df00210f1fc537db1c101df", null ],
+    [ "MAX_GSTATE", "namespacepdf.html#a528d536135bae6e90d596cc217feda80", null ],
+    [ "MAX_STRING_LEN", "namespacepdf.html#a7bb7b22b22c4e927273f76e3346a1649", null ]
 ];

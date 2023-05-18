@@ -16,7 +16,7 @@ var searchData=
   ['sethighlightmode_13',['setHighlightMode',['../classpdf_1_1LinkAnnotation.html#a145120e389f1bce1cb6ab63d2abf636d',1,'pdf::LinkAnnotation']]],
   ['seticon_14',['setIcon',['../classpdf_1_1TextAnnotation.html#a48993f3060fdccd1895a817efcee76b1',1,'pdf::TextAnnotation']]],
   ['setmaskimage_15',['setMaskImage',['../classpdf_1_1Image.html#a9021036579d3d7f92da24b9e01198baf',1,'pdf::Image']]],
-  ['setopen_16',['setOpen',['../structpdf_1_1OpenableContent.html#ac44db473fe7653cfbdfe273a0a057413',1,'pdf::OpenableContent::setOpen()'],['../classpdf_1_1Outline.html#a25d4e851a617f9b70858d3c31b044a6c',1,'pdf::Outline::setOpen()'],['../classpdf_1_1TextAnnotation.html#adfcb57d63f269c80f9c7b39d5e8bf313',1,'pdf::TextAnnotation::setOpen()']]],
+  ['setopen_16',['setOpen',['../classpdf_1_1Outline.html#aee81aa73f0db6d58faec730bcda9acbd',1,'pdf::Outline::setOpen()'],['../classpdf_1_1TextAnnotation.html#ad78c96f742440160e0b53ecc1d4124c1',1,'pdf::TextAnnotation::setOpen()']]],
   ['setpassword_17',['setPassword',['../classpdf_1_1PdfDocument.html#a0ba49c5e9cd827d61a13753392e8c099',1,'pdf::PdfDocument::setPassword(const std::string &amp;ownerPassword)'],['../classpdf_1_1PdfDocument.html#ac70f1fe6361bbc3e174d4880564bbb58',1,'pdf::PdfDocument::setPassword(const std::string &amp;ownerPassword, const std::string &amp;userPassword)']]],
   ['setpermissions_18',['setPermissions',['../classpdf_1_1PdfDocument.html#a50c1444a8a6bad583c7354663b4ca6c5',1,'pdf::PdfDocument']]],
   ['setr2encryptmode_19',['setR2EncryptMode',['../classpdf_1_1PdfDocument.html#aeaf058957afbc9f7d10566661bc3c031',1,'pdf::PdfDocument']]],

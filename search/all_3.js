@@ -1,7 +1,7 @@
 var searchData=
 [
   ['dashed_0',['DASHED',['../namespacepdf.html#a5d28a3bbb9a26d49d3222d3101f3fd0ea8e3a10cd3a9f7ba14e8229c287ad3c2c',1,'pdf']]],
-  ['dashmode_1',['DashMode',['../classpdf_1_1DashMode.html#a27c9cb5d2f0955c7d5d83b12a2e76d97',1,'pdf::DashMode::DashMode(const std::vector&lt; float &gt; &amp;values, float phase=0.0)'],['../classpdf_1_1DashMode.html#ac4eaed2bc71797f214dd477a39b1e229',1,'pdf::DashMode::DashMode()'],['../classpdf_1_1DashMode.html',1,'pdf::DashMode']]],
+  ['dashmode_1',['DashMode',['../classpdf_1_1DashMode.html#a27c9cb5d2f0955c7d5d83b12a2e76d97',1,'pdf::DashMode::DashMode(const std::vector&lt; float &gt; &amp;values, float phase=0.0)'],['../classpdf_1_1DashMode.html#aee084822798b14d349653355aea6762f',1,'pdf::DashMode::DashMode() noexcept'],['../classpdf_1_1DashMode.html',1,'pdf::DashMode']]],
   ['datetime_2',['DateTime',['../classpdf_1_1DateTime.html#ae267bf0ac8013f6f90e1933a2f529dd3',1,'pdf::DateTime::DateTime(int year, int month, int day, int hour, int minutes, int seconds, UTCIndicator ind=UTCIndicator::NONE, int offHour=0, int offMinutes=0) noexcept'],['../classpdf_1_1DateTime.html#a72739f379cb7e64e451e806d77a9c5ec',1,'pdf::DateTime::DateTime() noexcept'],['../classpdf_1_1DateTime.html',1,'pdf::DateTime']]],
   ['datetimeattribute_3',['DateTimeAttribute',['../namespacepdf.html#a3b00f99c42f3866b828407c8c3f7d3d2',1,'pdf']]],
   ['decimal_4',['DECIMAL',['../namespacepdf.html#a302e30614b41148a53284d28d33ace0ca13d992d671957e9a2b3e936ca0cf14a4',1,'pdf']]],
