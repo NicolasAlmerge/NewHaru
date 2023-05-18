@@ -11,7 +11,8 @@ namespace pdf {
      * @author Nicolas Almerge
      * @date   2023-05-16
     */
-    struct PdfObject {
+    class PdfObject {
+    public:
         virtual ~PdfObject() noexcept = 0;
 
         /**

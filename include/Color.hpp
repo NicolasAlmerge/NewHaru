@@ -13,7 +13,8 @@ namespace pdf {
      * @author Nicolas Almerge
      * @date   2023-05-16
     */
-    struct Color: public PdfObject {
+    class Color: public PdfObject {
+    public:
         virtual ~Color() = 0;
 
         /**
