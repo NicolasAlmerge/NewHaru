@@ -149,6 +149,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>enableAutoEncodingImp
 <tr class="memitem:aad910cbe4cfc1b8e18985cb39f945e9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1PdfDocument.html#aad910cbe4cfc1b8e18985cb39f945e9e">freeResources</a> ()</td></tr>
 <tr class="memdesc:aad910cbe4cfc1b8e18985cb39f945e9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Revokes the current document.  <a href="classpdf_1_1PdfDocument.html#aad910cbe4cfc1b8e18985cb39f945e9e">More...</a><br /></td></tr>
 <tr class="separator:aad910cbe4cfc1b8e18985cb39f945e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dbbeb0e1ee38a1a00d901eb6e2846d2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1PdfDocument.html#a0dbbeb0e1ee38a1a00d901eb6e2846d2">getContent</a> () const</td></tr>
+<tr class="memdesc:a0dbbeb0e1ee38a1a00d901eb6e2846d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the pdf content.  <a href="classpdf_1_1PdfDocument.html#a0dbbeb0e1ee38a1a00d901eb6e2846d2">More...</a><br /></td></tr>
+<tr class="separator:a0dbbeb0e1ee38a1a00d901eb6e2846d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ab789f75fc4c030fab63ecdf967a9d3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1PdfDocument.html#a4ab789f75fc4c030fab63ecdf967a9d3">getContent</a> (unsigned int size) const</td></tr>
+<tr class="memdesc:a4ab789f75fc4c030fab63ecdf967a9d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the pdf content up to a certain number of bytes.  <a href="classpdf_1_1PdfDocument.html#a4ab789f75fc4c030fab63ecdf967a9d3">More...</a><br /></td></tr>
+<tr class="separator:a4ab789f75fc4c030fab63ecdf967a9d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c6e9ec36a9c5ed732102c841f2da364"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpdf_1_1Encoder.html">Encoder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1PdfDocument.html#a5c6e9ec36a9c5ed732102c841f2da364">getCurrentEncoder</a> ()</td></tr>
 <tr class="memdesc:a5c6e9ec36a9c5ed732102c841f2da364"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current <a class="el" href="classpdf_1_1Encoder.html" title="Represents an encoder.">Encoder</a>.  <a href="classpdf_1_1PdfDocument.html#a5c6e9ec36a9c5ed732102c841f2da364">More...</a><br /></td></tr>
 <tr class="separator:a5c6e9ec36a9c5ed732102c841f2da364"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,8 +191,8 @@ unsigned long&#160;</td><td class="memItemRight" valign="bottom"><b>getLastError
 <tr class="memitem:a7233f33b3e8e926ee78385de2b3e2da2"><td class="memItemLeft" align="right" valign="top"><a id="a7233f33b3e8e926ee78385de2b3e2da2" name="a7233f33b3e8e926ee78385de2b3e2da2"></a>
 <a class="el" href="namespacepdf_1_1enums.html#a75c981042ee33b700241e43eebfc8e8a">enums::PageMode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getPageMode</b> () const</td></tr>
 <tr class="separator:a7233f33b3e8e926ee78385de2b3e2da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d30437565b58f964fdbe62ef767abb4"><td class="memItemLeft" align="right" valign="top"><a id="a4d30437565b58f964fdbe62ef767abb4" name="a4d30437565b58f964fdbe62ef767abb4"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>getStreamSize</b> () const</td></tr>
+<tr class="memitem:a4d30437565b58f964fdbe62ef767abb4"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1PdfDocument.html#a4d30437565b58f964fdbe62ef767abb4">getStreamSize</a> () const</td></tr>
+<tr class="memdesc:a4d30437565b58f964fdbe62ef767abb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the temporary stream size.  <a href="classpdf_1_1PdfDocument.html#a4d30437565b58f964fdbe62ef767abb4">More...</a><br /></td></tr>
 <tr class="separator:a4d30437565b58f964fdbe62ef767abb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc44078b9e42556d95b3d784380f7e70"><td class="memItemLeft" align="right" valign="top"><a id="abc44078b9e42556d95b3d784380f7e70" name="abc44078b9e42556d95b3d784380f7e70"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasDocument</b> () const</td></tr>
@@ -245,20 +251,23 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>loadType1FontF
 <tr class="memitem:ae41897d543c5a2d633ca12bf5a4a785a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1PdfDocument.html#ae41897d543c5a2d633ca12bf5a4a785a">operator=</a> (const <a class="el" href="classpdf_1_1PdfDocument.html">PdfDocument</a> &amp;newDoc)</td></tr>
 <tr class="memdesc:ae41897d543c5a2d633ca12bf5a4a785a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the current document, which will now point to a new document.  <a href="classpdf_1_1PdfDocument.html#ae41897d543c5a2d633ca12bf5a4a785a">More...</a><br /></td></tr>
 <tr class="separator:ae41897d543c5a2d633ca12bf5a4a785a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86e1d2fc46d0d144cefae546e3c6dfd6"><td class="memItemLeft" align="right" valign="top"><a id="a86e1d2fc46d0d144cefae546e3c6dfd6" name="a86e1d2fc46d0d144cefae546e3c6dfd6"></a>
-std::vector&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>readFromStream</b> (unsigned int size)</td></tr>
+<tr class="memitem:aad40c42f762641e21a74c807fb6cec78"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1PdfDocument.html#aad40c42f762641e21a74c807fb6cec78">readFromStream</a> ()</td></tr>
+<tr class="memdesc:aad40c42f762641e21a74c807fb6cec78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads from the stream.  <a href="classpdf_1_1PdfDocument.html#aad40c42f762641e21a74c807fb6cec78">More...</a><br /></td></tr>
+<tr class="separator:aad40c42f762641e21a74c807fb6cec78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86e1d2fc46d0d144cefae546e3c6dfd6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1PdfDocument.html#a86e1d2fc46d0d144cefae546e3c6dfd6">readFromStream</a> (unsigned int size)</td></tr>
+<tr class="memdesc:a86e1d2fc46d0d144cefae546e3c6dfd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads up to a certain number of bytes from the stream.  <a href="classpdf_1_1PdfDocument.html#a86e1d2fc46d0d144cefae546e3c6dfd6">More...</a><br /></td></tr>
 <tr class="separator:a86e1d2fc46d0d144cefae546e3c6dfd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82197391b9664b7189d6ffe62b20ac03"><td class="memItemLeft" align="right" valign="top"><a id="a82197391b9664b7189d6ffe62b20ac03" name="a82197391b9664b7189d6ffe62b20ac03"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>resetErrorCode</b> ()</td></tr>
 <tr class="separator:a82197391b9664b7189d6ffe62b20ac03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14789a3b118a02b66581fa49b87eb129"><td class="memItemLeft" align="right" valign="top"><a id="a14789a3b118a02b66581fa49b87eb129" name="a14789a3b118a02b66581fa49b87eb129"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>rewindStream</b> ()</td></tr>
+<tr class="memitem:a14789a3b118a02b66581fa49b87eb129"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1PdfDocument.html#a14789a3b118a02b66581fa49b87eb129">rewindStream</a> ()</td></tr>
+<tr class="memdesc:a14789a3b118a02b66581fa49b87eb129"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rewinds the stream to the beginning.  <a href="classpdf_1_1PdfDocument.html#a14789a3b118a02b66581fa49b87eb129">More...</a><br /></td></tr>
 <tr class="separator:a14789a3b118a02b66581fa49b87eb129"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38c9e582c098de2a94447470011cbfe4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1PdfDocument.html#a38c9e582c098de2a94447470011cbfe4">saveToFile</a> (const std::string &amp;fileName)</td></tr>
 <tr class="memdesc:a38c9e582c098de2a94447470011cbfe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the pdf document to a file.  <a href="classpdf_1_1PdfDocument.html#a38c9e582c098de2a94447470011cbfe4">More...</a><br /></td></tr>
 <tr class="separator:a38c9e582c098de2a94447470011cbfe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af46c20170a9ea68d4d35e7d377e7125d"><td class="memItemLeft" align="right" valign="top"><a id="af46c20170a9ea68d4d35e7d377e7125d" name="af46c20170a9ea68d4d35e7d377e7125d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>saveToStream</b> ()</td></tr>
+<tr class="memitem:af46c20170a9ea68d4d35e7d377e7125d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1PdfDocument.html#af46c20170a9ea68d4d35e7d377e7125d">saveToStream</a> ()</td></tr>
+<tr class="memdesc:af46c20170a9ea68d4d35e7d377e7125d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the document to a temporary stream.  <a href="classpdf_1_1PdfDocument.html#af46c20170a9ea68d4d35e7d377e7125d">More...</a><br /></td></tr>
 <tr class="separator:af46c20170a9ea68d4d35e7d377e7125d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24d62c0df2e29be43c977036c55834f3"><td class="memItemLeft" align="right" valign="top"><a id="a24d62c0df2e29be43c977036c55834f3" name="a24d62c0df2e29be43c977036c55834f3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setAttribute</b> (<a class="el" href="namespacepdf_1_1enums.html#a6a0564b6cba2523559f9f77768e540f6">enums::DateTimeAttribute</a> parameter, const <a class="el" href="classpdf_1_1DateTime.html">DateTime</a> &amp;value)</td></tr>
@@ -597,6 +606,55 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>useUTFEncodings</b> (
 
 </div>
 </div>
+<a id="a0dbbeb0e1ee38a1a00d901eb6e2846d2" name="a0dbbeb0e1ee38a1a00d901eb6e2846d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dbbeb0e1ee38a1a00d901eb6e2846d2">&#9670;&nbsp;</a></span>getContent() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; unsigned char &gt; pdf::PdfDocument::getContent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reads the pdf content. </p>
+<p >This is equivalent to <code>getContent(UINT_MAX)</code>. </p><dl class="section return"><dt>Returns</dt><dd>Vector of bytes read. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The vector size will be smaller or equal to <code>UINT_MAX</code>. </dd></dl>
+
+</div>
+</div>
+<a id="a4ab789f75fc4c030fab63ecdf967a9d3" name="a4ab789f75fc4c030fab63ecdf967a9d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ab789f75fc4c030fab63ecdf967a9d3">&#9670;&nbsp;</a></span>getContent() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; unsigned char &gt; pdf::PdfDocument::getContent </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reads the pdf content up to a certain number of bytes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>Size limit. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector of bytes read. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The vector size will be smaller or equal to <code>size</code>. </dd></dl>
+
+</div>
+</div>
 <a id="a5c6e9ec36a9c5ed732102c841f2da364" name="a5c6e9ec36a9c5ed732102c841f2da364"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5c6e9ec36a9c5ed732102c841f2da364">&#9670;&nbsp;</a></span>getCurrentEncoder()</h2>
 
@@ -744,6 +802,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>useUTFEncodings</b> (
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>New <a class="el" href="classpdf_1_1Font.html" title="Represents a font.">Font</a> object. </dd></dl>
+
+</div>
+</div>
+<a id="a4d30437565b58f964fdbe62ef767abb4" name="a4d30437565b58f964fdbe62ef767abb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d30437565b58f964fdbe62ef767abb4">&#9670;&nbsp;</a></span>getStreamSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int pdf::PdfDocument::getStreamSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the temporary stream size. </p>
+<dl class="section return"><dt>Returns</dt><dd>Stream size. </dd></dl>
 
 </div>
 </div>
@@ -1129,6 +1207,77 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>useUTFEncodings</b> (
 
 </div>
 </div>
+<a id="aad40c42f762641e21a74c807fb6cec78" name="aad40c42f762641e21a74c807fb6cec78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad40c42f762641e21a74c807fb6cec78">&#9670;&nbsp;</a></span>readFromStream() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; unsigned char &gt; pdf::PdfDocument::readFromStream </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reads from the stream. </p>
+<p >This is equivalent to <code>readFromStream(UINT_MAX)</code>. </p><dl class="section return"><dt>Returns</dt><dd>Vector of bytes read. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The vector size will be smaller or equal to <code>UINT_MAX</code>. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>The ::saveToStream function must be called before calling this function. </dd></dl>
+
+</div>
+</div>
+<a id="a86e1d2fc46d0d144cefae546e3c6dfd6" name="a86e1d2fc46d0d144cefae546e3c6dfd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86e1d2fc46d0d144cefae546e3c6dfd6">&#9670;&nbsp;</a></span>readFromStream() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; unsigned char &gt; pdf::PdfDocument::readFromStream </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reads up to a certain number of bytes from the stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>Size limit. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector of bytes read. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The vector size will be smaller or equal to <code>size</code>. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>The ::saveToStream function must be called before calling this function. </dd></dl>
+
+</div>
+</div>
+<a id="a14789a3b118a02b66581fa49b87eb129" name="a14789a3b118a02b66581fa49b87eb129"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14789a3b118a02b66581fa49b87eb129">&#9670;&nbsp;</a></span>rewindStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pdf::PdfDocument::rewindStream </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rewinds the stream to the beginning. </p>
+<p >The temporary stream will now be pointing at the start. </p>
+
+</div>
+</div>
 <a id="a38c9e582c098de2a94447470011cbfe4" name="a38c9e582c098de2a94447470011cbfe4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a38c9e582c098de2a94447470011cbfe4">&#9670;&nbsp;</a></span>saveToFile()</h2>
 
@@ -1152,6 +1301,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>useUTFEncodings</b> (
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="af46c20170a9ea68d4d35e7d377e7125d" name="af46c20170a9ea68d4d35e7d377e7125d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af46c20170a9ea68d4d35e7d377e7125d">&#9670;&nbsp;</a></span>saveToStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pdf::PdfDocument::saveToStream </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saves the document to a temporary stream. </p>
+<dl class="section note"><dt>Note</dt><dd>After saving to a stream, the ::readFromStream function can be called. </dd></dl>
 
 </div>
 </div>
