@@ -97,7 +97,7 @@ namespace pdf {
 
         /**
          * @brief Saves the document to the temporary stream.
-         * @note  This will overwrite the previous temporary stream with new data.
+         * @note  This will overwrite the temporary stream with new data.
         */
         void saveToStream();
 
