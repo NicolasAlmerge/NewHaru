@@ -97,7 +97,7 @@ namespace pdf {
 
         /**
          * @brief Saves the document to the temporary stream.
-         * @note  After saving to the stream, the ::readFromStream function can be called.
+         * @note  This will overwrite the previous temporary stream with new data.
         */
         void saveToStream();
 
@@ -117,7 +117,7 @@ namespace pdf {
 
         /**
          * @brief   Reads from the stream.
-         * @details This is equivalent to `::readFromStream(UINT_MAX)`.
+         * @details This is equivalent to `readFromStream(UINT_MAX)`.
          * @return  Vector of bytes read. The vector size will be smaller or equal to `UINT_MAX`.
          * @note    If ::saveToStream has never been called, this will return an empty vector.
         */
@@ -139,7 +139,7 @@ namespace pdf {
 
         /**
          * @brief   Reads the pdf content.
-         * @details This is equivalent to `::getContent(UINT_MAX)`.
+         * @details This is equivalent to `getContent(UINT_MAX)`.
          * @return  Vector of bytes read.
          * @note    The vector size will be smaller or equal to `UINT_MAX`.
         */
