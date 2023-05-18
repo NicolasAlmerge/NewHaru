@@ -4,15 +4,34 @@
 
 /// Represents the Haru++ constants.
 namespace pdf::consts {
-    /// Represents the maximum string length allowed.
+    /**
+     * @brief   Represents the maximum string length allowed.
+     * @details This is used internally by LibHaru.
+    */
     extern const unsigned int MAX_STRING_LEN;
-    /// Represents the maximum number of indirect objects in a pdf file.
+
+    /**
+     * @brief   Represents the maximum number of indirect objects in a pdf file.
+     * @details This is used internally by LibHaru.
+    */
     extern const unsigned int MAX_DICT_ELEMENT;
-    /// Represents the maximum G state.
+
+    /**
+     * @brief   Represents the maximum G state.
+     * @details This is used internally by LibHaru.
+    */
     extern const unsigned int MAX_GSTATE;
-    /// Represents the maximum length of a dash mode.
+
+    /**
+     * @brief   Represents the maximum length of a dash mode.
+     * @details This is used when creating a DashMode element.
+    */
     extern const unsigned int MAX_DASH_MODE_LENGTH;
-    /// Represents the maximum size of a dash element.
+
+    /**
+     * @brief   Represents the maximum size of a dash element.
+     * @details This is used when creating a DashMode element.
+    */
     extern const float MAX_DASH_MODE_SIZE;
 }
 
