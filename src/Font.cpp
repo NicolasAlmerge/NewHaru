@@ -1,23 +1,24 @@
 #include "../include/Font.hpp"
 #include "../include/Box.hpp"
 #include "../include/TextWidth.hpp"
+#include "hpdf.h"
 using namespace pdf;
 
 
-Font::Font(const HPDF_Font font): ContentStream(font) {}
+Font::Font(_HPDF_Dict_Rec* content) noexcept: ContentStream(content) {}
 
 std::string Font::getName() const {
-    const char* value = HPDF_Font_GetFontName(innerContent);
+    const char* value = HPDF_Font_GetFontName(__innerContent);
     return (value == nullptr)? std::string(): value;
 }
 
 std::string Font::getEncodingName() const {
-    const char* value = HPDF_Font_GetEncodingName(innerContent);
+    const char* value = HPDF_Font_GetEncodingName(__innerContent);
     return (value == nullptr)? std::string(): value;
 }
 
 int Font::getUnicodeWidth(unsigned short character) const {
-    return HPDF_Font_GetUnicodeWidth(innerContent, character);
+    return HPDF_Font_GetUnicodeWidth(__innerContent, character);
 }
 
 float Font::getActualWidth(unsigned short character, float fontSize) const {
@@ -25,27 +26,29 @@ float Font::getActualWidth(unsigned short character, float fontSize) const {
 }
 
 int Font::getVerticalAscent() const {
-    return HPDF_Font_GetAscent(innerContent);
+    return HPDF_Font_GetAscent(__innerContent);
 }
 
 int Font::getVerticalDescent() const {
-    return HPDF_Font_GetDescent(innerContent);
+    return HPDF_Font_GetDescent(__innerContent);
 }
 
 unsigned int Font::getDistanceToLower() const {
-    return HPDF_Font_GetXHeight(innerContent);
+    return HPDF_Font_GetXHeight(__innerContent);
 }
 
 unsigned int Font::getDistanceToUpper() const {
-    return HPDF_Font_GetCapHeight(innerContent);
+    return HPDF_Font_GetCapHeight(__innerContent);
 }
 
 Box Font::getBoundingBox() const {
-    return Box(HPDF_Font_GetBBox(innerContent));
+    HPDF_Box box = HPDF_Font_GetBBox(__innerContent);
+    return Box(box.left, box.bottom, box.right, box.top);
 }
 
 TextWidth Font::__getTextWidth(const unsigned char* bytes, unsigned int length) const {
-    return TextWidth(HPDF_Font_TextWidth(innerContent, bytes, length));
+    HPDF_TextWidth textWidth = HPDF_Font_TextWidth(__innerContent, bytes, length);
+    return TextWidth(textWidth.numchars, textWidth.width, textWidth.numspace);
 }
 
 TextWidth Font::getTextWidth(const std::vector<unsigned char>& bytes) const {
@@ -64,7 +67,7 @@ std::pair<unsigned int, float> Font::__measureText(
 ) const {
     float realWidth;
     unsigned int value = HPDF_Font_MeasureText(
-        innerContent,
+        __innerContent,
         text, len,
         width, fontSize,
         charSpace, wordSpace,

@@ -19,7 +19,7 @@ namespace pdf {
      * @date   2023-05-16
     */
     class Font final: public ContentStream {
-        explicit Font(const HPDF_Font font);
+        explicit Font(_HPDF_Dict_Rec* content) noexcept;
         friend class PdfDocument;
         friend class PdfPage;
 

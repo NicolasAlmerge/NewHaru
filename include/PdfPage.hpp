@@ -29,7 +29,7 @@ namespace pdf {
      * @date   2023-05-16
     */
     class PdfPage final: public ContentStream {
-        explicit PdfPage(const HPDF_Page content);
+        explicit PdfPage(_HPDF_Dict_Rec* content) noexcept;
         friend class PdfDocument;
 
     public:

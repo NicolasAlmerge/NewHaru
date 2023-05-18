@@ -1,2 +1,7 @@
 #include "../include/Constants.hpp"
-using namespace pdf;
+#include "hpdf.h"
+
+
+std::string pdf::getLibHaruVersion() {
+    return HPDF_GetVersion();
+}

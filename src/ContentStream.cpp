@@ -1,17 +1,18 @@
 #include "../include/ContentStream.hpp"
+#include "hpdf.h"
 using namespace pdf;
 
 
-ContentStream::ContentStream(const HPDF_Dict dict): innerContent(dict) {}
+ContentStream::ContentStream(_HPDF_Dict_Rec* content) noexcept: __innerContent(content) {}
 
 ContentStream::~ContentStream() noexcept {}
 
 bool ContentStream::isEmpty() const noexcept {
-    return innerContent == nullptr;
+    return __innerContent == nullptr;
 }
 
 bool ContentStream::operator ==(const ContentStream& other) const noexcept {
-    return innerContent == other.innerContent;
+    return __innerContent == other.__innerContent;
 }
 
 bool ContentStream::operator !=(const ContentStream& other) const noexcept {

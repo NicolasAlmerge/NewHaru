@@ -2,20 +2,18 @@
 using namespace pdf;
 
 
-Coor2D::Coor2D(HPDF_Point&& coors): innerContent(coors) {}
+Coor2D::Coor2D() noexcept {}
 
-Coor2D::Coor2D() noexcept: Coor2D(HPDF_Point({0.f, 0.f})) {}
-
-Coor2D::Coor2D(float x, float y) noexcept: Coor2D(HPDF_Point({x, y})) {}
+Coor2D::Coor2D(float x, float y) noexcept: x(x), y(y) {}
 
 bool Coor2D::isEmpty() const noexcept {
     return false;
 }
 
 float Coor2D::getX() const noexcept {
-    return innerContent.x;
+    return x;
 }
 
 float Coor2D::getY() const noexcept {
-    return innerContent.y;
+    return y;
 }

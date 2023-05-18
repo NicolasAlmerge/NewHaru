@@ -1,8 +1,15 @@
 #ifndef __HARUPP_CONSTANTS_HPP__
 #define __HARUPP_CONSTANTS_HPP__
+#include "string"
 
 /// Represents the Haru++ namespace.
 namespace pdf {
+
+    /**
+     * @brief Gets the LibHaru version.
+     * @return LibHaru version.
+    */
+    std::string getLibHaruVersion();
 
     /// Represents a compression mode.
     enum class CompressionMode: unsigned int {
@@ -143,7 +150,7 @@ namespace pdf {
     };
 
     /// Represents a UTC Indicator.
-    enum class UTCIndicator {
+    enum class UTCIndicator: char {
         /// No indicator.
         NONE = ' ',
         /// Positive indicator.

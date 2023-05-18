@@ -25,7 +25,7 @@ namespace pdf {
      * @date   2023-05-16
     */
     class Image final: public ContentStream {
-        explicit Image(const HPDF_Image content);
+        explicit Image(_HPDF_Dict_Rec* content) noexcept;
         friend class PdfDocument;
 
     public:

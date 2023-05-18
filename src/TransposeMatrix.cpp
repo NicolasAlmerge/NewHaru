@@ -2,43 +2,35 @@
 using namespace pdf;
 
 
-TransposeMatrix::TransposeMatrix(HPDF_TransMatrix&& matrix): innerContent(matrix) {}
+TransposeMatrix::TransposeMatrix() noexcept {}
 
-TransposeMatrix::TransposeMatrix() noexcept: TransposeMatrix(HPDF_TransMatrix({0.f, 0.f, 0.f, 0.f, 0.f, 0.f})) {}
-
-TransposeMatrix::TransposeMatrix(float a, float b, float c, float d, float x, float y) noexcept: TransposeMatrix(HPDF_TransMatrix({a, b, c, d, x, y})) {}
+TransposeMatrix::TransposeMatrix(float a, float b, float c, float d, float x, float y) noexcept:
+    a(a), b(b), c(c), d(d), x(x), y(y) {}
 
 bool TransposeMatrix::isEmpty() const noexcept {
-    return (
-        innerContent.a == 0.f &&
-        innerContent.b == 0.f &&
-        innerContent.c == 0.f &&
-        innerContent.d == 0.f &&
-        innerContent.x == 0.f &&
-        innerContent.y == 0.f
-    );
+    return a == 0.f && b == 0.f && c == 0.f && d == 0.f && x == 0.f && y == 0.f;
 }
 
 float TransposeMatrix::getA() const noexcept {
-    return innerContent.a;
+    return a;
 }
 
 float TransposeMatrix::getB() const noexcept {
-    return innerContent.b;
+    return b;
 }
 
 float TransposeMatrix::getC() const noexcept {
-    return innerContent.c;
+    return c;
 }
 
 float TransposeMatrix::getD() const noexcept {
-    return innerContent.d;
+    return d;
 }
 
 float TransposeMatrix::getX() const noexcept {
-    return innerContent.x;
+    return x;
 }
 
 float TransposeMatrix::getY() const noexcept {
-    return innerContent.y;
+    return y;
 }

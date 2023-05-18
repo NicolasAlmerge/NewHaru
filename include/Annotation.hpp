@@ -1,9 +1,9 @@
 #ifndef __HARUPP_ANNOTATION_HPP__
 #define __HARUPP_ANNOTATION_HPP__
-#include "PdfObject.hpp"
-#include "Constants.hpp"
 #include "ContentStream.hpp"
-#include "hpdf.h"
+#include "Constants.hpp"
+#include "PdfObject.hpp"
+
 
 namespace pdf {
 
@@ -15,7 +15,7 @@ namespace pdf {
      * @date   2023-05-16
     */
     class Annotation: public ContentStream {
-        explicit Annotation(const HPDF_Annotation destination);
+        explicit Annotation(_HPDF_Dict_Rec* content) noexcept;
         friend class LinkAnnotation;
         friend class TextAnnotation;
 

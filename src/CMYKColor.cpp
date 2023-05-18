@@ -3,30 +3,28 @@
 using namespace pdf;
 
 
-CMYKColor::CMYKColor(HPDF_CMYKColor&& cmykColor): innerContent(cmykColor) {}
+CMYKColor::CMYKColor() noexcept {}
 
-CMYKColor::CMYKColor() noexcept: CMYKColor(HPDF_CMYKColor({0.f, 0.f, 0.f, 0.f})) {}
-
-CMYKColor::CMYKColor(float c, float m, float y, float k) noexcept: CMYKColor(HPDF_CMYKColor({c, m, y, k})) {}
+CMYKColor::CMYKColor(float c, float m, float y, float k) noexcept: c(c), m(m), y(y), k(k) {}
 
 bool CMYKColor::isEmpty() const noexcept {
     return false;
 }
 
 float CMYKColor::getC() const noexcept {
-    return innerContent.c;
+    return c;
 }
 
 float CMYKColor::getM() const noexcept {
-    return innerContent.m;
+    return m;
 }
 
 float CMYKColor::getY() const noexcept {
-    return innerContent.y;
+    return y;
 }
 
 float CMYKColor::getK() const noexcept {
-    return innerContent.k;
+    return k;
 }
 
 RGBColor CMYKColor::toRGB() const noexcept {
@@ -35,16 +33,16 @@ RGBColor CMYKColor::toRGB() const noexcept {
 }
 
 CMYKColor CMYKColor::toCMYK() const noexcept {
-    return CMYKColor(innerContent.c, innerContent.m, innerContent.y, innerContent.k);
+    return *this;
 }
 
 bool CMYKColor::operator==(const Color& other) const noexcept {
     CMYKColor otherColor = other.toCMYK();
     return (
-        innerContent.c == otherColor.innerContent.c &&
-        innerContent.m == otherColor.innerContent.m &&
-        innerContent.y == otherColor.innerContent.y &&
-        innerContent.k == otherColor.innerContent.k
+        c == otherColor.c &&
+        m == otherColor.m &&
+        y == otherColor.y &&
+        k == otherColor.k
     );
 }
 

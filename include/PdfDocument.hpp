@@ -1,11 +1,8 @@
 #ifndef __HARUPP_PDFDOCUMENT_HPP__
 #define __HARUPP_PDFDOCUMENT_HPP__
-#include "Annotation.hpp"
 #include "Box.hpp"
 #include "CMYKColor.hpp"
-#include "Color.hpp"
 #include "Constants.hpp"
-#include "ContentStream.hpp"
 #include "Coor2D.hpp"
 #include "DashMode.hpp"
 #include "DateTime.hpp"
@@ -16,7 +13,6 @@
 #include "LinkAnnotation.hpp"
 #include "Outline.hpp"
 #include "PdfException.hpp"
-#include "PdfObject.hpp"
 #include "PdfPage.hpp"
 #include "Permissions.hpp"
 #include "RGBColor.hpp"
@@ -25,13 +21,15 @@
 #include "TransposeMatrix.hpp"
 #include "vector"
 
+struct _HPDF_Doc_Rec;
+
 namespace pdf {
     /// Represents the maximum string length allowed.
-    constexpr unsigned int MAX_STRING_LEN = HPDF_LIMIT_MAX_STRING_LEN;
+    extern const unsigned int MAX_STRING_LEN;
     /// Represents the maximum number of indirect objects in a pdf file.
-    constexpr unsigned int MAX_DICT_ELEMENT = HPDF_LIMIT_MAX_DICT_ELEMENT;
+    extern const unsigned int MAX_DICT_ELEMENT;
     /// Represents the maximum G state.
-    constexpr unsigned int MAX_GSTATE = HPDF_LIMIT_MAX_GSTATE;
+    extern const unsigned int MAX_GSTATE;
 
     /**
      * \class  PdfDocument
@@ -41,7 +39,7 @@ namespace pdf {
      * @date   2023-05-16
     */
     class PdfDocument: public PdfObject {
-        mutable HPDF_Doc pdfDoc = nullptr;
+        mutable _HPDF_Doc_Rec* pdfDoc = nullptr;
         std::vector<bool> imports;
 
     public:

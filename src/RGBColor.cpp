@@ -7,48 +7,43 @@ static constexpr float __haruppMax(float a, float b) {
     return (a >= b)? a: b;
 }
 
-RGBColor::RGBColor(HPDF_RGBColor&& rgbColor): innerContent(rgbColor) {}
+RGBColor::RGBColor() noexcept {}
 
-RGBColor::RGBColor() noexcept: RGBColor(HPDF_RGBColor({0.f, 0.f, 0.f})) {}
-
-RGBColor::RGBColor(float r, float g, float b) noexcept: RGBColor(HPDF_RGBColor({r, g, b})) {}
+RGBColor::RGBColor(float r, float g, float b) noexcept: r(r), g(g), b(b) {}
 
 bool RGBColor::isEmpty() const noexcept {
     return false;
 }
 
 float RGBColor::getR() const noexcept {
-    return innerContent.r;
+    return r;
 }
 
 float RGBColor::getG() const noexcept {
-    return innerContent.g;
+    return g;
 }
 
 float RGBColor::getB() const noexcept {
-    return innerContent.b;
+    return b;
 }
 
 RGBColor RGBColor::toRGB() const noexcept {
-    return RGBColor(innerContent.r, innerContent.g, innerContent.b);
+    return *this;
 }
 
 CMYKColor RGBColor::toCMYK() const noexcept {
-    const float R = innerContent.r;
-    const float G = innerContent.g;
-    const float B = innerContent.b;
-    const float _maxGB = __haruppMax(G, B);
-    const float K = 1.f - __haruppMax(R, _maxGB);
+    const float _maxGB = __haruppMax(g, b);
+    const float K = 1.f - __haruppMax(r, _maxGB);
     const float invK = 1.f - K;
-    return CMYKColor((1-R-K)/invK, (1-G-K)/invK, (1-B-K)/invK, K);
+    return CMYKColor((1-r-K)/invK, (1-b-K)/invK, (1-b-K)/invK, K);
 }
 
 bool RGBColor::operator==(const Color& other) const noexcept {
     RGBColor otherColor = other.toRGB();
     return (
-        innerContent.r == otherColor.innerContent.r &&
-        innerContent.g == otherColor.innerContent.g &&
-        innerContent.b == otherColor.innerContent.b
+        r == otherColor.r &&
+        g == otherColor.g &&
+        b == otherColor.b
     );
 }
 

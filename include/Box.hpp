@@ -1,7 +1,6 @@
 #ifndef __HARUPP_BOX_HPP__
 #define __HARUPP_BOX_HPP__
 #include "PdfObject.hpp"
-#include "hpdf.h"
 
 namespace pdf {
 
@@ -13,10 +12,10 @@ namespace pdf {
      * @date   2023-05-16
     */
     class Box final: public PdfObject {
-        HPDF_Box innerContent;
-        explicit Box(HPDF_Box&& box);
-        friend class Font;
-        friend class PdfPage;
+        float left = 0.f;
+        float bottom = 0.f;
+        float right = 0.f;
+        float top = 0.f;
 
     public:
         /**

@@ -1,7 +1,6 @@
 #ifndef __HARUPP_CMYKCOLOR_HPP__
 #define __HARUPP_CMYKCOLOR_HPP__
 #include "Color.hpp"
-#include "hpdf.h"
 
 namespace pdf {
 
@@ -13,9 +12,10 @@ namespace pdf {
      * @date   2023-05-16
     */
     class CMYKColor final: public Color {
-        HPDF_CMYKColor innerContent;
-        explicit CMYKColor(HPDF_CMYKColor&& rgbColor);
-        friend class PdfPage;
+        float c = 0.f;
+        float m = 0.f;
+        float y = 0.f;
+        float k = 0.f;
 
     public:
 
@@ -35,50 +35,50 @@ namespace pdf {
         CMYKColor(float c, float m, float y, float k) noexcept;
 
         /**
-         * @brief Always returns `false`.
+         * @brief  Always returns `false`.
          * @return `false`
         */
         bool isEmpty() const noexcept override;
 
         /**
-         * @brief Gets the cyan component.
+         * @brief  Gets the cyan component.
          * @return Cyan component.
         */
         float getC() const noexcept;
 
         /**
-         * @brief Gets the magenta component.
+         * @brief  Gets the magenta component.
          * @return Magenta component.
         */
         float getM() const noexcept;
 
         /**
-         * @brief Gets the yellow component.
+         * @brief  Gets the yellow component.
          * @return Yellow component.
         */
         float getY() const noexcept;
 
         /**
-         * @brief Gets the black component.
+         * @brief  Gets the black component.
          * @return Black component.
         */
         float getK() const noexcept;
 
         /**
-         * @brief Converts the color to an RGBColor.
-         * @see RGBColor
+         * @brief  Converts the color to an RGBColor.
+         * @see    RGBColor
          * @return RGBColor representation of the color.
         */
         RGBColor toRGB() const noexcept override;
 
         /**
-         * @brief Creates a copy of the CMYKColor.
-         * @return Copy of the color.
+         * @brief  Returns the same CMYKColor object.
+         * @return Current object.
         */
         CMYKColor toCMYK() const noexcept override;
 
         /**
-         * @brief Checks whether two colors are equal.
+         * @brief  Checks whether two colors are equal.
          * @return `true` if the colors are equal, `false` otherwise.
         */
         bool operator==(const Color& other) const noexcept override;

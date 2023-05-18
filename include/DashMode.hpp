@@ -1,14 +1,13 @@
 #ifndef __HARUPP_DASHMODE_HPP__
 #define __HARUPP_DASHMODE_HPP__
 #include "PdfObject.hpp"
-#include "hpdf.h"
 #include "vector"
 
 namespace pdf {
     /// Represents the maximum length of a dash mode.
     constexpr unsigned int MAX_DASH_MODE_LENGTH = 8UL;
     /// Represents the maximum size of a dash element.
-    constexpr float MAX_DASH_MODE_SIZE = 100.0;
+    constexpr float MAX_DASH_MODE_SIZE = 100.f;
 
     /**
      * \class  DashMode
@@ -18,8 +17,8 @@ namespace pdf {
      * @date   2023-05-16
     */
     class DashMode final: public PdfObject {
-        HPDF_DashMode innerContent;
-        static DashMode __from(HPDF_DashMode&& value);
+        std::vector<float> points;
+        float phase = 0.f;
         friend class PdfPage;
 
     public:
@@ -28,7 +27,7 @@ namespace pdf {
          * @brief   Creates a new default DashMode.
          * @details This is equivalent to `DashMode({})`.
         */
-        DashMode();
+        DashMode() noexcept;
 
         /**
          * @brief Creates a new DashMode with corresponding values.
@@ -43,7 +42,7 @@ namespace pdf {
          * @brief  Gets the vector of points.
          * @return Vector of points.
         */
-        std::vector<float> getPoints() const;
+        std::vector<float> getPoints() const noexcept;
 
         /**
          * @brief  Gets the phase.

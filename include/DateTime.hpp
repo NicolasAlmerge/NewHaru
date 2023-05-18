@@ -2,7 +2,6 @@
 #define __HARUPP_DATETIME_HPP__
 #include "Constants.hpp"
 #include "PdfObject.hpp"
-#include "hpdf.h"
 
 namespace pdf {
 
@@ -14,8 +13,15 @@ namespace pdf {
      * @date   2023-05-16
     */
     class DateTime final: public PdfObject {
-        HPDF_Date innerContent;
-        friend class PdfDocument;
+        int year = 0;
+        int month = 0;
+        int day = 0;
+        int hour = 0;
+        int minutes = 0;
+        int seconds = 0;
+        UTCIndicator ind = UTCIndicator::NONE;
+        int offHour = 0;
+        int offMinutes = 0;
 
     public:
 

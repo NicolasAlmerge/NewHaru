@@ -2,29 +2,21 @@
 using namespace pdf;
 
 
-TextWidth::TextWidth(HPDF_TextWidth&& textWidth): innerContent(textWidth) {}
+TextWidth::TextWidth(unsigned int numchars, unsigned int width, unsigned int numspace) noexcept:
+    numchars(numchars), width(width), numspace(numspace) {}
 
 unsigned int TextWidth::getNumberOfChars() const noexcept {
-    return innerContent.numchars;
-}
-
-unsigned int TextWidth::getNumberOfWords() const noexcept {
-    return innerContent.numwords;
+    return numchars;
 }
 
 unsigned int TextWidth::getWidth() const noexcept {
-    return innerContent.width;
+    return width;
 }
 
 unsigned int TextWidth::getNumberOfSpaces() const noexcept {
-    return innerContent.numspace;
+    return numspace;
 }
 
 bool TextWidth::isEmpty() const noexcept {
-    return (
-        innerContent.numchars == 0U &&
-        innerContent.numwords == 0U &&
-        innerContent.width == 0U &&
-        innerContent.numspace == 0U
-    );
+    return numchars == 0U && width == 0U && numspace == 0U;
 }

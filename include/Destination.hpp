@@ -1,7 +1,8 @@
 #ifndef __HARUPP_DESTINATION_HPP__
 #define __HARUPP_DESTINATION_HPP__
 #include "PdfObject.hpp"
-#include "hpdf.h"
+
+struct _HPDF_Array_Rec;
 
 namespace pdf {
 
@@ -14,8 +15,8 @@ namespace pdf {
      * @date   2023-05-16
     */
     class Destination final: public PdfObject {
-        HPDF_Destination innerContent = nullptr;
-        explicit Destination(const HPDF_Destination destination);
+        _HPDF_Array_Rec* __innerContent = nullptr;
+        explicit Destination(_HPDF_Array_Rec* content) noexcept;
         friend class Outline;
         friend class PdfDocument;
         friend class PdfPage;

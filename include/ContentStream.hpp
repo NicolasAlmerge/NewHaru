@@ -1,7 +1,8 @@
 #ifndef __HARUPP_CONTENTSTREAM_HPP__
 #define __HARUPP_CONTENTSTREAM_HPP__
 #include "PdfObject.hpp"
-#include "hpdf.h"
+
+struct _HPDF_Dict_Rec;
 
 namespace pdf {
 
@@ -13,8 +14,8 @@ namespace pdf {
      * @date   2023-05-16
     */
     class ContentStream: public PdfObject {
-        mutable HPDF_Dict innerContent = nullptr;
-        explicit ContentStream(const HPDF_Dict dict);
+        mutable _HPDF_Dict_Rec* __innerContent = nullptr;
+        explicit ContentStream(_HPDF_Dict_Rec* content) noexcept;
         friend class PdfPage;
         friend class Annotation;
         friend class LinkAnnotation;

@@ -1,7 +1,6 @@
 #ifndef __HARUPP_TEXTWIDTH_HPP__
 #define __HARUPP_TEXTWIDTH_HPP__
 #include "PdfObject.hpp"
-#include "hpdf.h"
 
 namespace pdf {
 
@@ -14,8 +13,10 @@ namespace pdf {
      * @date   2023-05-16
     */
     class TextWidth final: public PdfObject {
-        const HPDF_TextWidth innerContent;
-        explicit TextWidth(HPDF_TextWidth&& textWidth);
+        unsigned int numchars = 0U;
+        unsigned int width = 0U;
+        unsigned int numspace = 0U;
+        explicit TextWidth(unsigned int numchars, unsigned int width, unsigned int numspace) noexcept;
         friend class Font;
 
     public:
@@ -25,12 +26,6 @@ namespace pdf {
          * @return Number of characters.
         */
         unsigned int getNumberOfChars() const noexcept;
-
-        /**
-         * @brief  Gets the number of words present.
-         * @return Number of words.
-        */
-        unsigned int getNumberOfWords() const noexcept;
 
         /**
          * @brief  Gets the text width.

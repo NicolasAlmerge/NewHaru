@@ -14,7 +14,7 @@ namespace pdf {
      * @date   2023-05-16
     */
     class LinkAnnotation final: public Annotation {
-        explicit LinkAnnotation(const HPDF_Annotation destination);
+        explicit LinkAnnotation(_HPDF_Dict_Rec* content) noexcept;
         friend class PdfPage;
 
     public:

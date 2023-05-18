@@ -1,8 +1,10 @@
 #include "../include/PdfDocument.hpp"
+#include "hpdf.h"
 using namespace pdf;
 using namespace pdf::except;
 
 
+/****************************** MACROS ******************************/
 #define __HARUPP_AUTO_ENCODING_IMPORT_INDEX 0
 #define __HARUPP_CNS_ENCODING_INDEX         1
 #define __HARUPP_CNT_ENCODING_INDEX         2
@@ -14,6 +16,13 @@ using namespace pdf::except;
 #define __HARUPP_ENCODING_IMPORTS_LENGTH    5
 
 
+/****************************** CONSTANTS ******************************/
+const unsigned int pdf::MAX_STRING_LEN = HPDF_LIMIT_MAX_STRING_LEN;
+const unsigned int pdf::MAX_DICT_ELEMENT = HPDF_LIMIT_MAX_DICT_ELEMENT;
+const unsigned int pdf::MAX_GSTATE = HPDF_LIMIT_MAX_GSTATE;
+
+
+/****************************** HELPERS ******************************/
 static void __haruppErrorHandler(unsigned long errorNo, unsigned long detailNo, void* userData) {
     switch (errorNo) {
         case 0x1001: throw ArrayCountException("Internal error. Data consistency was lost.", errorNo, detailNo);
@@ -187,7 +196,6 @@ static void __haruppErrorHandler(unsigned long errorNo, unsigned long detailNo, 
     }
 }
 
-
 static const char* singleByteEncodingToString(SingleByteEncoding encoding) {
     switch (encoding) {
         case SingleByteEncoding::StandardEncoding: return "StandardEncoding";
@@ -222,7 +230,6 @@ static const char* singleByteEncodingToString(SingleByteEncoding encoding) {
     }
 }
 
-
 static const char* multiByteEncodingToString(MultiByteEncoding encoding) {
     switch (encoding) {
         case MultiByteEncoding::GB_EUC_H: return "GB-EUC-H";
@@ -244,7 +251,6 @@ static const char* multiByteEncodingToString(MultiByteEncoding encoding) {
         default: return "";
     }
 }
-
 
 bool PdfDocument::__getImportValue(int index) const {
     return imports[index];
@@ -381,7 +387,7 @@ PageMode PdfDocument::getPageMode() const {
 }
 
 void PdfDocument::setOpenDestination(const Destination& destination) {
-    HPDF_SetOpenAction(pdfDoc, destination.innerContent);
+    HPDF_SetOpenAction(pdfDoc, destination.__innerContent);
 }
 
 PdfPage PdfDocument::getCurrentPage() const {
@@ -393,7 +399,7 @@ PdfPage PdfDocument::addPage() {
 }
 
 PdfPage PdfDocument::insertPageBefore(const PdfPage& page) {
-    return PdfPage(HPDF_InsertPage(pdfDoc, page.innerContent));
+    return PdfPage(HPDF_InsertPage(pdfDoc, page.__innerContent));
 }
 
 void __addPageLabel(HPDF_Doc pdfDoc, PageNumberStyle style, unsigned int pageNumber, unsigned int firstPage, const char* prefix) {
@@ -557,7 +563,7 @@ void PdfDocument::disableAutoEncodingImports() {
 /******************** OUTLINE CREATION ********************/
 
 Outline PdfDocument::__createOutline(const std::string& title, const Outline* parent, const Encoder* encoder) const {
-    return Outline(HPDF_CreateOutline(pdfDoc, parent? parent->innerContent: nullptr, title.c_str(), encoder? encoder->innerContent: nullptr));
+    return Outline(HPDF_CreateOutline(pdfDoc, parent? parent->__innerContent: nullptr, title.c_str(), encoder? encoder->__innerContent: nullptr));
 }
 
 Outline PdfDocument::createOutline(const std::string& title) const {
@@ -622,7 +628,17 @@ void PdfDocument::setAttribute(StringAttribute parameter, const std::string& val
 }
 
 void PdfDocument::setAttribute(DateTimeAttribute parameter, const DateTime& value) {
-    HPDF_SetInfoDateAttr(pdfDoc, (HPDF_InfoType) parameter, value.innerContent);
+    HPDF_Date date;
+    date.year = value.getYear();
+    date.month = value.getMonth();
+    date.day = value.getDay();
+    date.hour = value.getHour();
+    date.minutes = value.getMinutes();
+    date.seconds = value.getSeconds();
+    date.ind = (char) value.getUTCIndicator();
+    date.off_hour = value.getOffHour();
+    date.off_minutes = value.getOffMinutes();
+    HPDF_SetInfoDateAttr(pdfDoc, (HPDF_InfoType) parameter, date);
 }
 
 std::optional<std::string> __getInfoAttribute(HPDF_Doc pdfDoc, int parameter) {

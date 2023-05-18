@@ -1,7 +1,6 @@
 #ifndef __HARUPP_RGBCOLOR_HPP__
 #define __HARUPP_RGBCOLOR_HPP__
 #include "Color.hpp"
-#include "hpdf.h"
 
 namespace pdf {
 
@@ -13,9 +12,9 @@ namespace pdf {
      * @date   2023-05-16
     */
     class RGBColor final: public Color {
-        HPDF_RGBColor innerContent;
-        explicit RGBColor(HPDF_RGBColor&& rgbColor);
-        friend class PdfPage;
+        float r = 0.f;
+        float g = 0.f;
+        float b = 0.f;
 
     public:
         /**
@@ -33,44 +32,44 @@ namespace pdf {
         RGBColor(float r, float g, float b) noexcept;
 
         /**
-         * @brief Always returns `false`.
+         * @brief  Always returns `false`.
          * @return `false`
         */
         bool isEmpty() const noexcept override;
 
         /**
-         * @brief Gets the red component.
+         * @brief  Gets the red component.
          * @return Red component.
         */
         float getR() const noexcept;
 
         /**
-         * @brief Gets the green component.
+         * @brief  Gets the green component.
          * @return Green component.
         */
         float getG() const noexcept;
 
         /**
-         * @brief Gets the Blue component.
+         * @brief  Gets the blue component.
          * @return Blue component.
         */
         float getB() const noexcept;
 
         /**
-         * @brief Creates a copy of the RGBColor.
-         * @return Copy of the color.
+         * @brief  Returns the same RGBColor object.
+         * @return Current object.
         */
         RGBColor toRGB() const noexcept override;
 
         /**
-         * @brief Converts the color to an CMYKColor.
-         * @see CMYKColor
+         * @brief  Converts the color to an CMYKColor.
+         * @see    CMYKColor
          * @return CMYKColor representation of the color.
         */
         CMYKColor toCMYK() const noexcept override;
 
         /**
-         * @brief Checks whether two colors are equal.
+         * @brief  Checks whether two colors are equal.
          * @return `true` if the colors are equal, `false` otherwise.
         */
         bool operator==(const Color& other) const noexcept override;

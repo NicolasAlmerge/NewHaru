@@ -2,8 +2,9 @@
 #define __HARUPP_ENCODER_HPP__
 #include "Constants.hpp"
 #include "PdfObject.hpp"
-#include "hpdf.h"
 #include "string"
+
+struct _HPDF_Encoder_Rec;
 
 namespace pdf {
 
@@ -16,8 +17,8 @@ namespace pdf {
      * @date   2023-05-16
     */
     class Encoder final: public PdfObject {
-        mutable HPDF_Encoder innerContent = nullptr;
-        explicit Encoder(const HPDF_Encoder coors);
+        mutable _HPDF_Encoder_Rec* __innerContent = nullptr;
+        explicit Encoder(_HPDF_Encoder_Rec* content) noexcept;
         friend class PdfDocument;
         friend class PdfPage;
 
