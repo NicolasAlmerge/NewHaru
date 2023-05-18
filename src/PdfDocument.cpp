@@ -247,6 +247,23 @@ static const char* multiByteEncodingToString(MultiByteEncoding encoding) {
     }
 }
 
+static std::vector<unsigned char> __execAndGetVector(unsigned long (&fn)(HPDF_Doc, unsigned char*, unsigned int*), HPDF_Doc pdfDoc, unsigned int size) {
+    if (size == 0U || pdfDoc == nullptr) return std::vector<unsigned char>();
+
+    // Allocate data
+    unsigned char* data = new unsigned char[size];
+
+    // Call the function
+    fn(pdfDoc, data, &size);
+
+    // Put everything into a vector
+    std::vector<unsigned char> result(data, data + size);
+
+    // Deallocate old data and return result
+    delete[] data;
+    return result;
+}
+
 bool PdfDocument::__getImportValue(int index) const {
     return imports[index];
 }
@@ -314,11 +331,8 @@ unsigned int PdfDocument::getStreamSize() const {
 }
 
 std::vector<unsigned char> PdfDocument::readFromStream(unsigned int size) {
-    unsigned char* data = new unsigned char[size];
-    HPDF_ReadFromStream(pdfDoc, data, &size);
-    std::vector<unsigned char> result(data, data + size);
-    delete[] data;
-    return result;
+    if (getStreamSize() == 0U) return std::vector<unsigned char>();
+    return __execAndGetVector(HPDF_ReadFromStream, pdfDoc, size);
 }
 
 std::vector<unsigned char> PdfDocument::readFromStream() {
@@ -326,7 +340,7 @@ std::vector<unsigned char> PdfDocument::readFromStream() {
 }
 
 void PdfDocument::rewindStream() {
-    HPDF_ResetStream(pdfDoc);
+    if (getStreamSize() > 0U) HPDF_ResetStream(pdfDoc);
 }
 
 bool PdfDocument::hasDocument() const {
@@ -350,11 +364,7 @@ void PdfDocument::resetErrorCode() {
 }
 
 std::vector<unsigned char> PdfDocument::getContent(unsigned int size) const {
-    unsigned char* data = new unsigned char[size];
-    HPDF_GetContents(pdfDoc, data, &size);
-    std::vector<unsigned char> result(data, data + size);
-    delete[] data;
-    return result;
+    return __execAndGetVector(HPDF_GetContents, pdfDoc, size);
 }
 
 std::vector<unsigned char> PdfDocument::getContent() const {

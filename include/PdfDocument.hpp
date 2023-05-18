@@ -108,26 +108,24 @@ namespace pdf {
         unsigned int getStreamSize() const;
 
         /**
-         * @brief   Reads up to a certain number of bytes from the stream.
-         * @param   size Size limit.
-         * @return  Vector of bytes read.
-         * @note    The vector size will be smaller or equal to `size`.
-         * @warning The ::saveToStream function must be called before calling this function.
+         * @brief  Reads up to a certain number of bytes from the stream.
+         * @param  size Size limit.
+         * @return Vector of bytes read. The vector size will be smaller or equal to `size`.
+         * @note   If ::saveToStream has never been called, this will return an empty vector.
         */
         std::vector<unsigned char> readFromStream(unsigned int size);
 
         /**
          * @brief   Reads from the stream.
          * @details This is equivalent to `::readFromStream(UINT_MAX)`.
-         * @return  Vector of bytes read.
-         * @note    The vector size will be smaller or equal to `UINT_MAX`.
-         * @warning The ::saveToStream function must be called before calling this function.
+         * @return  Vector of bytes read. The vector size will be smaller or equal to `UINT_MAX`.
+         * @note    If ::saveToStream has never been called, this will return an empty vector.
         */
         std::vector<unsigned char> readFromStream();
 
         /**
-         * @brief   Rewinds the stream to the beginning.
-         * @details The temporary stream will now be pointing at the start.
+         * @brief Rewinds the temporary stream to the beginning.
+         * @note  This has no effect if no stream has been saved.
         */
         void rewindStream();
 
