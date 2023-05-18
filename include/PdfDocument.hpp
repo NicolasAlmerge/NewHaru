@@ -96,8 +96,8 @@ namespace pdf {
         void saveToFile(const std::string& fileName);
 
         /**
-         * @brief Saves the document to a temporary stream.
-         * @note  After saving to a stream, the ::readFromStream function can be called.
+         * @brief Saves the document to the temporary stream.
+         * @note  After saving to the stream, the ::readFromStream function can be called.
         */
         void saveToStream();
 
@@ -118,7 +118,7 @@ namespace pdf {
 
         /**
          * @brief   Reads from the stream.
-         * @details This is equivalent to `readFromStream(UINT_MAX)`.
+         * @details This is equivalent to `::readFromStream(UINT_MAX)`.
          * @return  Vector of bytes read.
          * @note    The vector size will be smaller or equal to `UINT_MAX`.
          * @warning The ::saveToStream function must be called before calling this function.
@@ -141,7 +141,7 @@ namespace pdf {
 
         /**
          * @brief   Reads the pdf content.
-         * @details This is equivalent to `getContent(UINT_MAX)`.
+         * @details This is equivalent to `::getContent(UINT_MAX)`.
          * @return  Vector of bytes read.
          * @note    The vector size will be smaller or equal to `UINT_MAX`.
         */
