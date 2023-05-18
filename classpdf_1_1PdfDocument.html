@@ -268,7 +268,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>loadType1FontF
 void&#160;</td><td class="memItemRight" valign="bottom"><b>resetErrorCode</b> ()</td></tr>
 <tr class="separator:a82197391b9664b7189d6ffe62b20ac03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14789a3b118a02b66581fa49b87eb129"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1PdfDocument.html#a14789a3b118a02b66581fa49b87eb129">rewindStream</a> ()</td></tr>
-<tr class="memdesc:a14789a3b118a02b66581fa49b87eb129"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rewinds the stream to the beginning.  <a href="classpdf_1_1PdfDocument.html#a14789a3b118a02b66581fa49b87eb129">More...</a><br /></td></tr>
+<tr class="memdesc:a14789a3b118a02b66581fa49b87eb129"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rewinds the temporary stream to the beginning.  <a href="classpdf_1_1PdfDocument.html#a14789a3b118a02b66581fa49b87eb129">More...</a><br /></td></tr>
 <tr class="separator:a14789a3b118a02b66581fa49b87eb129"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38c9e582c098de2a94447470011cbfe4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1PdfDocument.html#a38c9e582c098de2a94447470011cbfe4">saveToFile</a> (const std::string &amp;fileName)</td></tr>
 <tr class="memdesc:a38c9e582c098de2a94447470011cbfe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the pdf document to a file.  <a href="classpdf_1_1PdfDocument.html#a38c9e582c098de2a94447470011cbfe4">More...</a><br /></td></tr>
@@ -1230,9 +1230,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>useUTFEncodings</b> (
 </div><div class="memdoc">
 
 <p>Reads from the stream. </p>
-<p >This is equivalent to <code>::readFromStream(UINT_MAX)</code>. </p><dl class="section return"><dt>Returns</dt><dd>Vector of bytes read. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The vector size will be smaller or equal to <code>UINT_MAX</code>. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>The <a class="el" href="classpdf_1_1PdfDocument.html#af46c20170a9ea68d4d35e7d377e7125d" title="Saves the document to the temporary stream.">saveToStream</a> function must be called before calling this function. </dd></dl>
+<p >This is equivalent to <code>::readFromStream(UINT_MAX)</code>. </p><dl class="section return"><dt>Returns</dt><dd>Vector of bytes read. The vector size will be smaller or equal to <code>UINT_MAX</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If <a class="el" href="classpdf_1_1PdfDocument.html#af46c20170a9ea68d4d35e7d377e7125d" title="Saves the document to the temporary stream.">saveToStream</a> has never been called, this will return an empty vector. </dd></dl>
 
 </div>
 </div>
@@ -1259,9 +1258,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>useUTFEncodings</b> (
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Vector of bytes read. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The vector size will be smaller or equal to <code>size</code>. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>The <a class="el" href="classpdf_1_1PdfDocument.html#af46c20170a9ea68d4d35e7d377e7125d" title="Saves the document to the temporary stream.">saveToStream</a> function must be called before calling this function. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector of bytes read. The vector size will be smaller or equal to <code>size</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If <a class="el" href="classpdf_1_1PdfDocument.html#af46c20170a9ea68d4d35e7d377e7125d" title="Saves the document to the temporary stream.">saveToStream</a> has never been called, this will return an empty vector. </dd></dl>
 
 </div>
 </div>
@@ -1280,8 +1278,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>useUTFEncodings</b> (
       </table>
 </div><div class="memdoc">
 
-<p>Rewinds the stream to the beginning. </p>
-<p >The temporary stream will now be pointing at the start. </p>
+<p>Rewinds the temporary stream to the beginning. </p>
+<dl class="section note"><dt>Note</dt><dd>This has no effect if no stream has been saved. </dd></dl>
 
 </div>
 </div>
