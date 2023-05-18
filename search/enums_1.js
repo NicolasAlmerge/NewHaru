@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['bitspercomponent_0',['BitsPerComponent',['../namespacepdf.html#a2d157239c877ac13030d8e971e151857',1,'pdf']]],
-  ['borderstyle_1',['BorderStyle',['../namespacepdf.html#a5d28a3bbb9a26d49d3222d3101f3fd0e',1,'pdf']]],
-  ['bytetype_2',['ByteType',['../namespacepdf.html#a0aa2132b461e2c2249ee24f6e920c1ce',1,'pdf']]]
+  ['bitspercomponent_0',['BitsPerComponent',['../namespacepdf_1_1enums.html#a24a457cd8bed4f5ae64be8bdf8371d7e',1,'pdf::enums']]],
+  ['borderstyle_1',['BorderStyle',['../namespacepdf_1_1enums.html#a6b07527b037835ccf11f555b21acb7ac',1,'pdf::enums']]],
+  ['bytetype_2',['ByteType',['../namespacepdf_1_1enums.html#ae9092004f1540bbde28a3f9f1de8b1d2',1,'pdf::enums']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['z_0',['Z',['../namespacepdf.html#a8d6ce2b664cd0db157eb8f2ff33f2078a21c2e59531c8710156d34a3c30ac81d5',1,'pdf']]],
-  ['zlibexception_1',['ZLIBException',['../classpdf_1_1except_1_1ZLIBException.html',1,'pdf::except']]]
+  ['z_0',['Z',['../namespacepdf_1_1enums.html#aa104a4be7629a24b8e1fc51c4f1899d7a21c2e59531c8710156d34a3c30ac81d5',1,'pdf::enums']]],
+  ['zlibexception_1',['ZLIBException',['../classpdf_1_1excepts_1_1ZLIBException.html',1,'pdf::excepts']]]
 ];

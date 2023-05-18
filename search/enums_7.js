@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['multibyteencoding_0',['MultiByteEncoding',['../namespacepdf.html#a1c2d53c24a8f8bc1a27930ad36b7a385',1,'pdf']]]
+  ['multibyteencoding_0',['MultiByteEncoding',['../namespacepdf_1_1enums.html#afe6d4591e9edde24765a428feac125c5',1,'pdf::enums']]]
 ];

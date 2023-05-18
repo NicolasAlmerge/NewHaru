@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['what_0',['what',['../classpdf_1_1except_1_1PdfException.html#a22938ac4d49e3cb2fb31be93f5d2e1f9',1,'pdf::except::PdfException']]]
+  ['what_0',['what',['../classpdf_1_1excepts_1_1PdfException.html#a6ec4f9f95bf759846385a21689b64b25',1,'pdf::excepts::PdfException']]]
 ];
