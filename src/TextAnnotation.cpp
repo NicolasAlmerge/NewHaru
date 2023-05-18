@@ -5,7 +5,7 @@ using namespace pdf;
 
 TextAnnotation::TextAnnotation(_HPDF_Dict_Rec* content) noexcept: Annotation(content) {}
 
-void TextAnnotation::setIcon(AnnotationIcon icon) {
+void TextAnnotation::setIcon(enums::AnnotationIcon icon) {
     HPDF_TextAnnot_SetIcon(__innerContent, (HPDF_AnnotIcon) icon);
 }
 

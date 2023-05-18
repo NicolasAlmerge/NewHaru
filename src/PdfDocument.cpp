@@ -1,7 +1,8 @@
 #include "../include/PdfDocument.hpp"
 #include "hpdf.h"
 using namespace pdf;
-using namespace pdf::except;
+using namespace pdf::excepts;
+using namespace pdf::enums;
 
 
 /****************************** MACROS ******************************/
@@ -14,12 +15,6 @@ using namespace pdf::except;
 
 #define __HARUPP_ENCODING_INDEX_START       1
 #define __HARUPP_ENCODING_IMPORTS_LENGTH    5
-
-
-/****************************** CONSTANTS ******************************/
-const unsigned int pdf::MAX_STRING_LEN = HPDF_LIMIT_MAX_STRING_LEN;
-const unsigned int pdf::MAX_DICT_ELEMENT = HPDF_LIMIT_MAX_DICT_ELEMENT;
-const unsigned int pdf::MAX_GSTATE = HPDF_LIMIT_MAX_GSTATE;
 
 
 /****************************** HELPERS ******************************/

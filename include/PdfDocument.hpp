@@ -8,6 +8,7 @@
 #include "DateTime.hpp"
 #include "Destination.hpp"
 #include "Encoder.hpp"
+#include "Enums.hpp"
 #include "Font.hpp"
 #include "Image.hpp"
 #include "LinkAnnotation.hpp"
@@ -19,17 +20,12 @@
 #include "TextAnnotation.hpp"
 #include "TextWidth.hpp"
 #include "TransposeMatrix.hpp"
+#include "Utils.hpp"
 #include "vector"
 
 struct _HPDF_Doc_Rec;
 
 namespace pdf {
-    /// Represents the maximum string length allowed.
-    extern const unsigned int MAX_STRING_LEN;
-    /// Represents the maximum number of indirect objects in a pdf file.
-    extern const unsigned int MAX_DICT_ELEMENT;
-    /// Represents the maximum G state.
-    extern const unsigned int MAX_GSTATE;
 
     /**
      * \class  PdfDocument
@@ -114,11 +110,11 @@ namespace pdf {
         /******************** PAGES HANDLING ********************/
         void setPageConfiguration(unsigned int pagePerPages);
 
-        void setPageLayout(PageLayout layout);
-        PageLayout getPageLayout() const;
+        void setPageLayout(enums::PageLayout layout);
+        enums::PageLayout getPageLayout() const;
 
-        void setPageMode(PageMode mode);
-        PageMode getPageMode() const;
+        void setPageMode(enums::PageMode mode);
+        enums::PageMode getPageMode() const;
 
         void setOpenDestination(const Destination& destination);
 
@@ -126,8 +122,8 @@ namespace pdf {
         PdfPage addPage();
         PdfPage insertPageBefore(const PdfPage& page);
 
-        void addPageLabel(PageNumberStyle style = PageNumberStyle::DECIMAL, unsigned int pageNumber = 0U, unsigned int firstPage = 1U);
-        void addPageLabel(const std::string& prefix, PageNumberStyle style = PageNumberStyle::DECIMAL, unsigned int pageNumber = 0U, unsigned int firstPage = 1U);
+        void addPageLabel(enums::PageNumberStyle style = enums::PageNumberStyle::DECIMAL, unsigned int pageNumber = 0U, unsigned int firstPage = 1U);
+        void addPageLabel(const std::string& prefix, enums::PageNumberStyle style = enums::PageNumberStyle::DECIMAL, unsigned int pageNumber = 0U, unsigned int firstPage = 1U);
 
         /**
          * @brief  Gets a Font from a name and single byte encoding.
@@ -135,7 +131,7 @@ namespace pdf {
          * @param  encoding Single byte encoding.
          * @return New Font object.
         */
-        Font getFont(const std::string& fontName, SingleByteEncoding encoding = SingleByteEncoding::StandardEncoding);
+        Font getFont(const std::string& fontName, enums::SingleByteEncoding encoding = enums::SingleByteEncoding::StandardEncoding);
 
         /**
          * @brief  Gets a Font from a name and multi byte encoding.
@@ -143,7 +139,7 @@ namespace pdf {
          * @param  encoding Multi byte encoding.
          * @return New Font object.
         */
-        Font getFont(const std::string& fontName, MultiByteEncoding encoding);
+        Font getFont(const std::string& fontName, enums::MultiByteEncoding encoding);
 
         std::string loadType1FontFromFile(const std::string& AFMFileName);
         std::string loadType1FontFromFile(const std::string& AFMFileName, const std::string& dataFileName);
@@ -163,14 +159,14 @@ namespace pdf {
          * @param  encoding Single byte encoding to use.
          * @return Corresponding Encoder.
         */
-        Encoder getEncoder(SingleByteEncoding encoding);
+        Encoder getEncoder(enums::SingleByteEncoding encoding);
 
         /**
          * @brief  Gets the Encoder of a multi byte encoding.
          * @param  encoding Multi byte encoding to use.
          * @return Corresponding Encoder.
         */
-        Encoder getEncoder(MultiByteEncoding encoding);
+        Encoder getEncoder(enums::MultiByteEncoding encoding);
 
         /**
          * @brief  Gets the current Encoder.
@@ -178,8 +174,8 @@ namespace pdf {
         */
         Encoder getCurrentEncoder();
 
-        void setCurrentEncoder(SingleByteEncoding encoding);
-        void setCurrentEncoder(MultiByteEncoding encoding);
+        void setCurrentEncoder(enums::SingleByteEncoding encoding);
+        void setCurrentEncoder(enums::MultiByteEncoding encoding);
 
         void useJPEncodings();
         void useKREncodings();
@@ -256,7 +252,7 @@ namespace pdf {
         */
         Image loadRawImageFromFile(
             const std::string& fileName, unsigned int width,
-            unsigned int height, ImageColorSpaceDevice colorSpace
+            unsigned int height, enums::ImageColorSpaceDevice colorSpace
         );
 
         /**
@@ -270,8 +266,8 @@ namespace pdf {
         */
         Image loadRawImageFromMemory(
             const std::vector<unsigned char>& bytes, unsigned int width,
-            unsigned int height, ImageColorSpaceDevice colorSpace,
-            BitsPerComponent bitsPerComponent
+            unsigned int height, enums::ImageColorSpaceDevice colorSpace,
+            enums::BitsPerComponent bitsPerComponent
         );
 
         /**
@@ -289,11 +285,11 @@ namespace pdf {
         Image loadJPEGImageFromFile(const std::string& fileName);
 
         /******************** OTHER FUNCTIONS ********************/
-        void setAttribute(StringAttribute parameter, const std::string& value);
-        void setAttribute(DateTimeAttribute parameter, const DateTime& value);
+        void setAttribute(enums::StringAttribute parameter, const std::string& value);
+        void setAttribute(enums::DateTimeAttribute parameter, const DateTime& value);
 
-        std::optional<std::string> getInfoAttribute(StringAttribute parameter);
-        std::optional<std::string> getInfoAttribute(DateTimeAttribute parameter);
+        std::optional<std::string> getInfoAttribute(enums::StringAttribute parameter);
+        std::optional<std::string> getInfoAttribute(enums::DateTimeAttribute parameter);
 
         /**
          * @brief Sets the owner password for a pdf document (with no user password).
@@ -331,13 +327,13 @@ namespace pdf {
          * @warning A ::setPassword function must be called before calling this function.
          * @throws  except::EncryptionNotSetException if no password has been set.
         */
-        void setR3EncryptMode(R3EncryptKeyLength keyLength = R3EncryptKeyLength::SIXTEEN);
+        void setR3EncryptMode(enums::R3EncryptKeyLength keyLength = enums::R3EncryptKeyLength::SIXTEEN);
 
         /**
          * @brief Sets the document compression.
          * @param mode Compression mode to use.
         */
-        void setCompressionMode(CompressionMode mode);
+        void setCompressionMode(enums::CompressionMode mode);
 
         /**
          * @brief Closes the current document, which will now point to a new document.
@@ -353,7 +349,7 @@ namespace pdf {
         Encoder __getEncoder(const char* name);
         void __setCurrentEncoder(const char* name);
         Outline __createOutline(const std::string& title, const Outline* parent, const Encoder* encoder) const;
-        void __autoImportEncoding(MultiByteEncoding encoding);
+        void __autoImportEncoding(enums::MultiByteEncoding encoding);
     };
 }
 

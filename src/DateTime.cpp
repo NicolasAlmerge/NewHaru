@@ -6,7 +6,7 @@ DateTime::DateTime() noexcept {}
 
 DateTime::DateTime(
     int year, int month, int day,
-    int hour, int minutes, int seconds, UTCIndicator ind,
+    int hour, int minutes, int seconds, enums::UTCIndicator ind,
     int offHour, int offMinutes
 ) noexcept: year(year), month(month), day(day), hour(hour), minutes(minutes),
     seconds(seconds), ind(ind), offHour(offHour), offMinutes(offMinutes) {}
@@ -35,7 +35,7 @@ int DateTime::getSeconds() const noexcept {
     return seconds;
 }
 
-UTCIndicator DateTime::getUTCIndicator() const noexcept {
+enums::UTCIndicator DateTime::getUTCIndicator() const noexcept {
     return ind;
 }
 

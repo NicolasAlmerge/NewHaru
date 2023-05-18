@@ -1,16 +1,11 @@
 #pragma once
 #include "Coor2D.hpp"
 #include "ContentStream.hpp"
-#include "Constants.hpp"
+#include "Enums.hpp"
 #include "PdfObject.hpp"
+#include "Typedefs.hpp"
 
 namespace pdf {
-
-    /**
-     * @brief   Represents a 1-byte unsigned integer.
-     * @details This can hold values from `0` to `255` included.
-    */
-    typedef unsigned char uint8;
 
     /**
      * \class  Image
@@ -58,7 +53,7 @@ namespace pdf {
          * @brief  Gets the image color space.
          * @return The image color space.
         */
-        ColorSpace getColorSpace() const;
+        enums::ColorSpace getColorSpace() const;
 
         /**
          * @brief Sets the image color mask.
@@ -69,7 +64,11 @@ namespace pdf {
          * @param bmin Lower limit of blue.
          * @param bmax Upper limit of blue.
         */
-        void setColorMask(uint8 rmin, uint8 rmax, uint8 gmin, uint8 gmax, uint8 bmin, uint8 bmax);
+        void setColorMask(
+            types::uint8 rmin, types::uint8 rmax,
+            types::uint8 gmin, types::uint8 gmax,
+            types::uint8 bmin, types::uint8 bmax
+        );
 
         /**
          * @brief Sets a mask from an Image.

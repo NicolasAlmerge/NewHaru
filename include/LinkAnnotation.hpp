@@ -23,7 +23,7 @@ namespace pdf {
          * @brief Sets the highlight mode.
          * @param mode Highlight mode to use.
         */
-        void setHighlightMode(AnnotationHighlightMode mode);
+        void setHighlightMode(enums::AnnotationHighlightMode mode);
 
         /**
          * @brief Sets the border style.

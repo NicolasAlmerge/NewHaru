@@ -1,5 +1,5 @@
 #include "../include/PdfException.hpp"
-using namespace pdf::except;
+using namespace pdf::excepts;
 
 
 PdfException::PdfException(const std::string& data, unsigned long errorCode, unsigned long detailCode) noexcept:

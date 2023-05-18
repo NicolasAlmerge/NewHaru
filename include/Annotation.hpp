@@ -1,9 +1,8 @@
 #ifndef __HARUPP_ANNOTATION_HPP__
 #define __HARUPP_ANNOTATION_HPP__
 #include "ContentStream.hpp"
-#include "Constants.hpp"
+#include "Enums.hpp"
 #include "PdfObject.hpp"
-
 
 namespace pdf {
 
@@ -30,7 +29,7 @@ namespace pdf {
          * @param dashOff   Dash off size.
          * @param dashPhase Dash phase size.
         */
-        virtual void setBorderStyle(BorderStyle style, float width, unsigned short dashOn, unsigned short dashOff, unsigned short dashPhase) final;
+        virtual void setBorderStyle(enums::BorderStyle style, float width, unsigned short dashOn, unsigned short dashOff, unsigned short dashPhase) final;
     };
 }
 

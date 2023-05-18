@@ -1,6 +1,6 @@
 #ifndef __HARUPP_ENCODER_HPP__
 #define __HARUPP_ENCODER_HPP__
-#include "Constants.hpp"
+#include "Enums.hpp"
 #include "PdfObject.hpp"
 #include "string"
 
@@ -34,7 +34,7 @@ namespace pdf {
          * @brief  Gets the encoder type.
          * @return Encoder type.
         */
-        EncoderType getType() const;
+        enums::EncoderType getType() const;
 
         /**
          * @brief  Gets the byte type.
@@ -42,7 +42,7 @@ namespace pdf {
          * @param  index Index to use.
          * @return Byte type.
         */
-        ByteType getByteType(const std::string& text, unsigned int index) const;
+        enums::ByteType getByteType(const std::string& text, unsigned int index) const;
 
         /**
          * @brief  Gets the unicode of a code.
@@ -55,7 +55,7 @@ namespace pdf {
          * @brief  Gets the writing mode.
          * @return Writing mode.
         */
-        WritingMode getWritingMode() const;
+        enums::WritingMode getWritingMode() const;
     };
 }
 

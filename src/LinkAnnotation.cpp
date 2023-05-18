@@ -5,7 +5,7 @@ using namespace pdf;
 
 LinkAnnotation::LinkAnnotation(_HPDF_Dict_Rec* content) noexcept: Annotation(content) {}
 
-void LinkAnnotation::setHighlightMode(AnnotationHighlightMode mode) {
+void LinkAnnotation::setHighlightMode(enums::AnnotationHighlightMode mode) {
     HPDF_LinkAnnot_SetHighlightMode(__innerContent, (HPDF_AnnotHighlightMode) mode);
 }
 

@@ -22,7 +22,7 @@ namespace pdf {
          * @brief Sets the annotation icon.
          * @param icon Icon to use.
         */
-        void setIcon(AnnotationIcon icon);
+        void setIcon(enums::AnnotationIcon icon);
 
         /**
          * @brief Sets the annotation initial open / close state.

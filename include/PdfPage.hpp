@@ -1,7 +1,7 @@
 #ifndef __HARUPP_PDFPAGE_HPP__
 #define __HARUPP_PDFPAGE_HPP__
 #include "ContentStream.hpp"
-#include "Constants.hpp"
+#include "Enums.hpp"
 #include "PdfObject.hpp"
 #include "string"
 #include "utility"
@@ -35,8 +35,8 @@ namespace pdf {
     public:
         void setWidth(float value);
         void setHeight(float value);
-        void setSize(PageSize size, PageOrientation orientation = PageOrientation::PORTRAIT);
-        void setRotation(PageRotation rotation);
+        void setSize(enums::PageSize size, enums::PageOrientation orientation = enums::PageOrientation::PORTRAIT);
+        void setRotation(enums::PageRotation rotation);
 
         float getWidth() const;
         float getHeight() const;
@@ -102,8 +102,8 @@ namespace pdf {
         TransposeMatrix getTransposeMatrix() const;
 
         float getLineWidth() const;
-        LineCap getLineCap() const;
-        LineJoin getLineJoin() const;
+        enums::LineCap getLineCap() const;
+        enums::LineJoin getLineJoin() const;
         float getMiterLimit() const;
 
         DashMode getDash() const;
@@ -112,7 +112,7 @@ namespace pdf {
         float getWordSpace() const;
         float getHorizontalScalling() const;
         float getTextLeading() const;
-        TextRenderingMode getTextRenderingMode() const;
+        enums::TextRenderingMode getTextRenderingMode() const;
         float getTextRise() const;
 
         RGBColor getRGBFill() const;
@@ -123,12 +123,12 @@ namespace pdf {
         float getGrayFill() const;
         float getGrayStroke() const;
 
-        ColorSpace getStrokingColorSpace() const;
-        ColorSpace getFillingColorSpace() const;
+        enums::ColorSpace getStrokingColorSpace() const;
+        enums::ColorSpace getFillingColorSpace() const;
 
         TransposeMatrix getTextMatrix() const;
         unsigned int getGStateDepth() const;
-        void setSlideShow(TransitionStyle type, float dispTime, float transTime);
+        void setSlideShow(enums::TransitionStyle type, float dispTime, float transTime);
 
         void newContentStream(const ContentStream& newStream);
         void insertSharedContentStream(const ContentStream& sharedStream);
@@ -191,8 +191,8 @@ namespace pdf {
         void setGrayStroke(float gray);
 
         void setHorizontalScalling(float value);
-        void setLineCap(LineCap lineCap);
-        void setLineJoin(LineJoin lineJoin);
+        void setLineCap(enums::LineCap lineCap);
+        void setLineJoin(enums::LineJoin lineJoin);
         void setLineWidth(float lineWidth);
         void setMiterLimit(float miterLimit);
 
@@ -203,7 +203,7 @@ namespace pdf {
 
         void setTextMatrix(const TransposeMatrix& matrix);
 
-        void setTextRenderingMode(TextRenderingMode mode);
+        void setTextRenderingMode(enums::TextRenderingMode mode);
 
         void setTextRise(float value);
         void setWordSpace(float value);
@@ -216,7 +216,7 @@ namespace pdf {
         void textOut(const std::string& text, const Coor2D& position);
         void textOut(const std::string& text);
 
-        unsigned int textRect(const Box& box, const std::string& text, TextAlignment alignment = TextAlignment::LEFT);
+        unsigned int textRect(const Box& box, const std::string& text, enums::TextAlignment alignment = enums::TextAlignment::LEFT);
 
         void writeText(const std::string& text);
         void writeText(const std::string& text, const Coor2D& position);

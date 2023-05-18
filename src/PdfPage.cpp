@@ -11,8 +11,10 @@
 #include "../include/RGBColor.hpp"
 #include "../include/CMYKColor.hpp"
 #include "../include/Image.hpp"
+#include "../include/Constants.hpp"
 #include "hpdf.h"
 using namespace pdf;
+using namespace pdf::enums;
 
 
 static constexpr unsigned int __haruppMin(unsigned int a, unsigned int b) {
@@ -21,7 +23,7 @@ static constexpr unsigned int __haruppMin(unsigned int a, unsigned int b) {
 
 
 static std::vector<float> __vectorFromValues(unsigned int numPtn, float* ptn) {
-    unsigned int minValue = __haruppMin(numPtn, MAX_DASH_MODE_LENGTH);
+    unsigned int minValue = __haruppMin(numPtn, consts::MAX_DASH_MODE_LENGTH);
     std::vector<float> points;
     points.reserve(minValue);
     for (unsigned int i = 0U; i < minValue; ++i) points.push_back(ptn[i]);

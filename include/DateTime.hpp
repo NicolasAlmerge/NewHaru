@@ -1,6 +1,6 @@
 #ifndef __HARUPP_DATETIME_HPP__
 #define __HARUPP_DATETIME_HPP__
-#include "Constants.hpp"
+#include "Enums.hpp"
 #include "PdfObject.hpp"
 
 namespace pdf {
@@ -19,7 +19,7 @@ namespace pdf {
         int hour = 0;
         int minutes = 0;
         int seconds = 0;
-        UTCIndicator ind = UTCIndicator::NONE;
+        enums::UTCIndicator ind = enums::UTCIndicator::NONE;
         int offHour = 0;
         int offMinutes = 0;
 
@@ -45,7 +45,7 @@ namespace pdf {
         */
         DateTime(
             int year, int month, int day,
-            int hour, int minutes, int seconds, UTCIndicator ind = UTCIndicator::NONE,
+            int hour, int minutes, int seconds, enums::UTCIndicator ind = enums::UTCIndicator::NONE,
             int offHour = 0, int offMinutes = 0
         ) noexcept;
 
@@ -89,7 +89,7 @@ namespace pdf {
          * @brief  Gets the UTC indicator value.
          * @return UTC indicator value.
         */
-        UTCIndicator getUTCIndicator() const noexcept;
+        enums::UTCIndicator getUTCIndicator() const noexcept;
 
         /**
          * @brief  Gets the offset hour value.

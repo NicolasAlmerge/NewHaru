@@ -1,6 +1,7 @@
 #ifndef __HARUPP_PDFOBJECT_HPP__
 #define __HARUPP_PDFOBJECT_HPP__
 
+/// Represents the Haru++ namespace.
 namespace pdf {
 
     /**
