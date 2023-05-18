@@ -314,10 +314,15 @@ unsigned int PdfDocument::getStreamSize() const {
 }
 
 std::vector<unsigned char> PdfDocument::readFromStream(unsigned int size) {
-    std::vector<unsigned char> result;
-    result.reserve(size);
-    HPDF_ReadFromStream(pdfDoc, result.data(), &size);
+    unsigned char* data = new unsigned char[size];
+    HPDF_ReadFromStream(pdfDoc, data, &size);
+    std::vector<unsigned char> result(data, data + size);
+    delete[] data;
     return result;
+}
+
+std::vector<unsigned char> PdfDocument::readFromStream() {
+    return readFromStream(UINT_MAX);
 }
 
 void PdfDocument::rewindStream() {
@@ -342,6 +347,18 @@ unsigned long PdfDocument::getLastErrorDetail() const {
 
 void PdfDocument::resetErrorCode() {
     HPDF_ResetError(pdfDoc);
+}
+
+std::vector<unsigned char> PdfDocument::getContent(unsigned int size) const {
+    unsigned char* data = new unsigned char[size];
+    HPDF_GetContents(pdfDoc, data, &size);
+    std::vector<unsigned char> result(data, data + size);
+    delete[] data;
+    return result;
+}
+
+std::vector<unsigned char> PdfDocument::getContent() const {
+    return getContent(UINT_MAX);
 }
 
 

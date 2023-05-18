@@ -95,10 +95,57 @@ namespace pdf {
         */
         void saveToFile(const std::string& fileName);
 
+        /**
+         * @brief Saves the document to a temporary stream.
+         * @note  After saving to a stream, the ::readFromStream function can be called.
+        */
         void saveToStream();
+
+        /**
+         * @brief  Gets the temporary stream size.
+         * @return Stream size.
+        */
         unsigned int getStreamSize() const;
+
+        /**
+         * @brief   Reads up to a certain number of bytes from the stream.
+         * @param   size Size limit.
+         * @return  Vector of bytes read.
+         * @note    The vector size will be smaller or equal to `size`.
+         * @warning The ::saveToStream function must be called before calling this function.
+        */
         std::vector<unsigned char> readFromStream(unsigned int size);
+
+        /**
+         * @brief   Reads from the stream.
+         * @details This is equivalent to `readFromStream(UINT_MAX)`.
+         * @return  Vector of bytes read.
+         * @note    The vector size will be smaller or equal to `UINT_MAX`.
+         * @warning The ::saveToStream function must be called before calling this function.
+        */
+        std::vector<unsigned char> readFromStream();
+
+        /**
+         * @brief   Rewinds the stream to the beginning.
+         * @details The temporary stream will now be pointing at the start.
+        */
         void rewindStream();
+
+        /**
+         * @brief  Reads the pdf content up to a certain number of bytes.
+         * @param  size Size limit.
+         * @return Vector of bytes read.
+         * @note   The vector size will be smaller or equal to `size`.
+        */
+        std::vector<unsigned char> getContent(unsigned int size) const;
+
+        /**
+         * @brief   Reads the pdf content.
+         * @details This is equivalent to `getContent(UINT_MAX)`.
+         * @return  Vector of bytes read.
+         * @note    The vector size will be smaller or equal to `UINT_MAX`.
+        */
+        std::vector<unsigned char> getContent() const;
 
         bool hasDocument() const;
         bool isEmpty() const noexcept final override;
