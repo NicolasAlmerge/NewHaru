@@ -423,6 +423,14 @@ PageMode Document::getPageMode() const {
     }
 }
 
+void Document::setViewerPreferences(const ViewerPreferences& preferences) {
+    HPDF_SetViewerPreference(pdfDoc, preferences.value);
+}
+
+ViewerPreferences Document::getViewerPreferences() const {
+    return ViewerPreferences(HPDF_GetViewerPreference(pdfDoc));
+}
+
 void Document::setOpenDestination(const Destination& destination) {
     HPDF_SetOpenAction(pdfDoc, destination.__innerContent);
 }

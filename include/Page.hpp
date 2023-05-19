@@ -98,6 +98,13 @@ namespace pdf {
 
         float getCurrentFontSize() const;
 
+        /**
+         * @brief Sets the page zoom.
+         * @param zoom Zoom to use (between 0.08 and 32.0)
+         * @throw excepts::InvalidParameterException if `zoom < 0.08 || zoom > 32.0`
+        */
+        void setZoom(float zoom);
+
         TransposeMatrix getTransposeMatrix() const;
 
         float getLineWidth() const;

@@ -65,7 +65,7 @@ namespace pdf {
         bool operator !=(const Permissions& other) const noexcept;
 
         /**
-         * @brief Checks whether the Permissions only contain the read permission.
+         * @brief  Checks whether the Permissions only contain the read permission.
          * @return `true` if only the read permission is included, `false` otherwise.
         */
         bool isEmpty() const noexcept override;

@@ -196,6 +196,10 @@ float Page::getTextLeading() const {
     return HPDF_Page_GetTextLeading(__innerContent);
 }
 
+void Page::setZoom(float zoom) {
+    HPDF_Page_SetZoom(__innerContent, zoom);
+}
+
 TextRenderingMode Page::getTextRenderingMode() const {
     switch (HPDF_Page_GetTextRenderingMode(__innerContent)) {
         case HPDF_FILL: return TextRenderingMode::FILL;

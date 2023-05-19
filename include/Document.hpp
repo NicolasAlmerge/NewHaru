@@ -21,6 +21,7 @@
 #include "TextWidth.hpp"
 #include "TransposeMatrix.hpp"
 #include "Utils.hpp"
+#include "ViewerPreferences.hpp"
 #include "vector"
 
 struct _HPDF_Doc_Rec;
@@ -146,7 +147,16 @@ namespace pdf {
         */
         std::vector<unsigned char> getContent() const;
 
+        /**
+         * @brief  Checks whether a document is present.
+         * @return `true` if a document is present, `false` otherwise.
+        */
         bool hasDocument() const;
+
+        /**
+         * @brief  Checks whether a document has been opened.
+         * @return `true` if a document has been opened, `false` otherwise.
+        */
         bool isEmpty() const noexcept final override;
 
         unsigned long getLastErrorCode() const;
@@ -162,6 +172,9 @@ namespace pdf {
 
         void setPageMode(enums::PageMode mode);
         enums::PageMode getPageMode() const;
+
+        void setViewerPreferences(const ViewerPreferences& preferences);
+        ViewerPreferences getViewerPreferences() const;
 
         void setOpenDestination(const Destination& destination);
 
