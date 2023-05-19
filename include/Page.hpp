@@ -6,7 +6,6 @@
 #include "utility"
 
 namespace pdf {
-    class Annotation3D;
     class Destination;
     class TextAnnotation;
     class LinkAnnotation;
