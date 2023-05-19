@@ -6,6 +6,7 @@
 #include "utility"
 
 namespace pdf {
+    class Annotation3D;
     class Destination;
     class TextAnnotation;
     class LinkAnnotation;
@@ -167,8 +168,6 @@ namespace pdf {
         void eoClip();
         void eoFill();
         void eoFillStroke();
-
-        void executeContentStream(const ContentStream& stream);
 
         void fill();
         void fillStroke();

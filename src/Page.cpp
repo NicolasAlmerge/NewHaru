@@ -351,10 +351,6 @@ void Page::eoFillStroke() {
     HPDF_Page_EofillStroke(__innerContent);
 }
 
-void Page::executeContentStream(const ContentStream& stream) {
-    HPDF_Page_ExecuteXObject(__innerContent, stream.__innerContent);
-}
-
 void Page::fill() {
     HPDF_Page_Fill(__innerContent);
 }
