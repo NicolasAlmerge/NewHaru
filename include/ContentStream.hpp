@@ -29,8 +29,8 @@ namespace pdf {
         virtual ~ContentStream() noexcept = 0;
 
         /**
-         * @brief   Checks whether an object is empty.
-         * @return `true` if object is empty, `false` otherwise.
+         * @brief   Checks whether the content stream is empty.
+         * @return `true` if content stream is empty, `false` otherwise.
         */
         bool isEmpty() const noexcept final override;
 

@@ -24,8 +24,8 @@ namespace pdf {
     public:
 
         /**
-         * @brief   Checks whether an object is empty.
-         * @return `true` if object is empty, `false` otherwise.
+         * @brief   Checks whether a destination has been set.
+         * @return `true` if destination is not set, `false` otherwise.
         */
         bool isEmpty() const noexcept override;
 

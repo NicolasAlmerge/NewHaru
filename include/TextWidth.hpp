@@ -40,8 +40,8 @@ namespace pdf {
         unsigned int getNumberOfSpaces() const noexcept;
 
         /**
-         * @brief Checks whether the text width is empty.
-         * @return `true` if all values are 0, `false` otherwise.
+         * @brief  Checks whether the text width is empty.
+         * @return `true` if all values are `0`, `false` otherwise.
         */
         bool isEmpty() const noexcept override;
     };

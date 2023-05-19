@@ -24,7 +24,7 @@ namespace pdf {
         virtual ~ValueSet() noexcept = 0;
 
         /**
-         * @brief  Checks whether the value set contain no elements.
+         * @brief  Checks whether the value set contains no elements.
          * @return `true` if no elements are present, `false` otherwise.
         */
         bool isEmpty() const noexcept override final;

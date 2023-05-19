@@ -40,7 +40,7 @@ namespace pdf {
 
         /**
          * @brief Checks whether the matrix is empty.
-         * @return `true` if all coordinates are 0, `false` otherwise.
+         * @return `true` if all coordinates are `0.0`, `false` otherwise.
         */
         bool isEmpty() const noexcept override;
 

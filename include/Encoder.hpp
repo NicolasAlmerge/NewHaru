@@ -26,7 +26,7 @@ namespace pdf {
 
         /**
          * @brief  Checks whether an encoder has been set.
-         * @return `true` if an encoder is set, `false` otherwise.
+         * @return `true` if an encoder is not set, `false` otherwise.
         */
         bool isEmpty() const noexcept override;
 
