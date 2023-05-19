@@ -378,10 +378,6 @@ std::vector<unsigned char> Document::getContent(unsigned int size) const {
     return __execAndGetVector(HPDF_GetContents, pdfDoc, size);
 }
 
-std::vector<unsigned char> Document::getContent() const {
-    return getContent(UINT_MAX);
-}
-
 
 /******************** PAGES HANDLING ********************/
 

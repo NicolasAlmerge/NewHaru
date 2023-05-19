@@ -138,15 +138,7 @@ namespace pdf {
          * @return Vector of bytes read.
          * @note   The vector size will be smaller or equal to `size`.
         */
-        std::vector<unsigned char> getContent(unsigned int size) const;
-
-        /**
-         * @brief   Reads the pdf content.
-         * @details This is equivalent to `getContent(UINT_MAX)`.
-         * @return  Vector of bytes read.
-         * @note    The vector size will be smaller or equal to `UINT_MAX`.
-        */
-        std::vector<unsigned char> getContent() const;
+        std::vector<unsigned char> getContent(unsigned int size = UINT_MAX) const;
 
         /**
          * @brief  Checks whether a document is present.
