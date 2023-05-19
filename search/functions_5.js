@@ -9,7 +9,7 @@ var searchData=
   ['getbytetype_6',['getByteType',['../classpdf_1_1Encoder.html#a7f12a90ccdcb700fb5851a958c4ee8d3',1,'pdf::Encoder']]],
   ['getc_7',['getC',['../classpdf_1_1CMYKColor.html#ab893dd06744f3166f5f5d0cf2f229d34',1,'pdf::CMYKColor::getC()'],['../classpdf_1_1TransposeMatrix.html#ad62d906079a6332ec927b720e82d57ea',1,'pdf::TransposeMatrix::getC()']]],
   ['getcolorspace_8',['getColorSpace',['../classpdf_1_1Image.html#a32083c5618cd73d0490a53a7709e491a',1,'pdf::Image']]],
-  ['getcontent_9',['getContent',['../classpdf_1_1Document.html#a03d649c71a66666b85d48131f726221a',1,'pdf::Document::getContent(unsigned int size) const'],['../classpdf_1_1Document.html#a6253bd1a8faf4e6305236dc0e47cb972',1,'pdf::Document::getContent() const']]],
+  ['getcontent_9',['getContent',['../classpdf_1_1Document.html#a4795de6c755b3eee93fb709e5cb53468',1,'pdf::Document']]],
   ['getcurrentencoder_10',['getCurrentEncoder',['../classpdf_1_1Document.html#a965cd4de7180b5b95f424462ec962ed9',1,'pdf::Document']]],
   ['getcurrentfont_11',['getCurrentFont',['../classpdf_1_1Page.html#a13d5427d557da680dd3b88ad16f9380f',1,'pdf::Page']]],
   ['getd_12',['getD',['../classpdf_1_1TransposeMatrix.html#aeac7a8953d2de9f24eea0fc663b184e8',1,'pdf::TransposeMatrix']]],

@@ -156,12 +156,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>enableAutoEncodingImp
 <tr class="memitem:ab5f602f5fef3a98c91435b90a42cec04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Document.html#ab5f602f5fef3a98c91435b90a42cec04">freeResources</a> ()</td></tr>
 <tr class="memdesc:ab5f602f5fef3a98c91435b90a42cec04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Revokes the current document.  <a href="classpdf_1_1Document.html#ab5f602f5fef3a98c91435b90a42cec04">More...</a><br /></td></tr>
 <tr class="separator:ab5f602f5fef3a98c91435b90a42cec04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6253bd1a8faf4e6305236dc0e47cb972"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Document.html#a6253bd1a8faf4e6305236dc0e47cb972">getContent</a> () const</td></tr>
-<tr class="memdesc:a6253bd1a8faf4e6305236dc0e47cb972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the pdf content.  <a href="classpdf_1_1Document.html#a6253bd1a8faf4e6305236dc0e47cb972">More...</a><br /></td></tr>
-<tr class="separator:a6253bd1a8faf4e6305236dc0e47cb972"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03d649c71a66666b85d48131f726221a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Document.html#a03d649c71a66666b85d48131f726221a">getContent</a> (unsigned int size) const</td></tr>
-<tr class="memdesc:a03d649c71a66666b85d48131f726221a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the pdf content up to a certain number of bytes.  <a href="classpdf_1_1Document.html#a03d649c71a66666b85d48131f726221a">More...</a><br /></td></tr>
-<tr class="separator:a03d649c71a66666b85d48131f726221a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4795de6c755b3eee93fb709e5cb53468"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Document.html#a4795de6c755b3eee93fb709e5cb53468">getContent</a> (unsigned int size=UINT_MAX) const</td></tr>
+<tr class="memdesc:a4795de6c755b3eee93fb709e5cb53468"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the pdf content up to a certain number of bytes.  <a href="classpdf_1_1Document.html#a4795de6c755b3eee93fb709e5cb53468">More...</a><br /></td></tr>
+<tr class="separator:a4795de6c755b3eee93fb709e5cb53468"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a965cd4de7180b5b95f424462ec962ed9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpdf_1_1Encoder.html">Encoder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Document.html#a965cd4de7180b5b95f424462ec962ed9">getCurrentEncoder</a> ()</td></tr>
 <tr class="memdesc:a965cd4de7180b5b95f424462ec962ed9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current <a class="el" href="classpdf_1_1Encoder.html" title="Represents an encoder.">Encoder</a>.  <a href="classpdf_1_1Document.html#a965cd4de7180b5b95f424462ec962ed9">More...</a><br /></td></tr>
 <tr class="separator:a965cd4de7180b5b95f424462ec962ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -625,29 +622,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>useUTFEncodings</b> (
 
 </div>
 </div>
-<a id="a6253bd1a8faf4e6305236dc0e47cb972" name="a6253bd1a8faf4e6305236dc0e47cb972"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6253bd1a8faf4e6305236dc0e47cb972">&#9670;&#160;</a></span>getContent() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; unsigned char &gt; pdf::Document::getContent </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Reads the pdf content. </p>
-<p >This is equivalent to <code>getContent(UINT_MAX)</code>. </p><dl class="section return"><dt>Returns</dt><dd>Vector of bytes read. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The vector size will be smaller or equal to <code>UINT_MAX</code>. </dd></dl>
-
-</div>
-</div>
-<a id="a03d649c71a66666b85d48131f726221a" name="a03d649c71a66666b85d48131f726221a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03d649c71a66666b85d48131f726221a">&#9670;&#160;</a></span>getContent() <span class="overload">[2/2]</span></h2>
+<a id="a4795de6c755b3eee93fb709e5cb53468" name="a4795de6c755b3eee93fb709e5cb53468"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4795de6c755b3eee93fb709e5cb53468">&#9670;&#160;</a></span>getContent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -656,7 +632,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>useUTFEncodings</b> (
           <td class="memname">std::vector&lt; unsigned char &gt; pdf::Document::getContent </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
+          <td class="paramname"><em>size</em> = <code>UINT_MAX</code></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
