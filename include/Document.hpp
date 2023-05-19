@@ -355,19 +355,71 @@ namespace pdf {
          * @brief  Gets the current Encoder.
          * @return Current Encoder.
         */
-        Encoder getCurrentEncoder();
+        Encoder getCurrentEncoder() const;
 
+        /**
+         * @brief Sets the current Encoder for the document.
+         * @param encoding Encoding to use.
+        */
         void setCurrentEncoder(enums::SingleByteEncoding encoding);
+
+        /**
+         * @brief Sets the current Encoder for the document.
+         * @param encoding Encoding to use.
+        */
         void setCurrentEncoder(enums::MultiByteEncoding encoding);
 
+        /**
+         * @brief Enables Japanese encodings.
+         * @note  This has no effect if already loaded.
+        */
         void useJPEncodings();
+
+        /**
+         * @brief Enables Korean encodings.
+         * @note  This has no effect if already loaded.
+        */
         void useKREncodings();
+
+        /**
+         * @brief Enables simplified Chinese encodings.
+         * @note  This has no effect if already loaded.
+        */
         void useCNSEncodings();
+
+        /**
+         * @brief Enables traditional Chinese encodings.
+         * @note  This has no effect if already loaded.
+        */
         void useCNTEncodings();
+
+        /**
+         * @brief   Enables UTF-8 encodings.
+         * @details After this function call, it is possible to include UTF-8 encoded Unicode text
+         *          (up to 3-byte UTF-8 sequences only) and use the UTF-8 Unicode encoding with TrueType fonts.
+         * @note    This has no effect if already loaded.
+        */
         void useUTFEncodings();
 
+        /**
+         * @brief  Checks whether auto encoding import is enabled.
+         * @note   Note that this is set to `false` by default.
+         * @return `true` if auto encoding import is enabled, `false` otherwise.
+        */
         bool isAutoEncodingImportsEnabled() const;
+
+        /**
+         * @brief Enables auto encoding imports.
+         * @note  After this function call, ::getEncoder(enums::MultiByteEncoding) will
+         *        automatically import the encoding if not already loaded.
+        */
         void enableAutoEncodingImports();
+
+        /**
+         * @brief Disables auto encoding imports.
+         * @note  After this function call, ::getEncoder(enums::MultiByteEncoding) will
+         *        no longer import the encoding if not already loaded.
+        */
         void disableAutoEncodingImports();
 
         /**

@@ -539,7 +539,7 @@ Encoder Document::getEncoder(MultiByteEncoding encoding) {
     return __getEncoder(multiByteEncodingToString(encoding));
 }
 
-Encoder Document::getCurrentEncoder() {
+Encoder Document::getCurrentEncoder() const {
     return Encoder(HPDF_GetCurrentEncoder(pdfDoc));
 }
 
