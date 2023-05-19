@@ -1,6 +1,6 @@
 #ifndef __HARUPP_VIEWERPREFERENCES_HPP__
 #define __HARUPP_VIEWERPREFERENCES_HPP__
-#include "Object.hpp"
+#include "ValueSet.hpp"
 
 namespace pdf {
 
@@ -11,8 +11,7 @@ namespace pdf {
      * @author  Nicolas Almerge
      * @date    2023-05-16
     */
-    class ViewerPreferences final: public Object {
-        unsigned int value = 0UL;
+    class ViewerPreferences final: public ValueSet {
         explicit ViewerPreferences(unsigned int v);
         friend class Document;
 
@@ -66,12 +65,6 @@ namespace pdf {
          * @return `true` if the ViewerPreferences are not equal, `false` otherwise.
         */
         bool operator !=(const ViewerPreferences& other) const noexcept;
-
-        /**
-         * @brief  Checks whether the ViewerPreferences contain no preferences.
-         * @return `true` if no preferences are present, `false` otherwise.
-        */
-        bool isEmpty() const noexcept override;
 
         /// No preference.
         const static ViewerPreferences NONE;

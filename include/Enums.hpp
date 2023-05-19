@@ -4,26 +4,6 @@
 /// Represents the Haru++ enumerations.
 namespace pdf::enums {
 
-    /// Represents a compression mode.
-    enum class CompressionMode: unsigned int {
-        /// No compression.
-        NONE = 0x00,
-        /// Only compress text.
-        TEXT = 0x01,
-        /// Only compress images.
-        IMAGE = 0x02,
-        /// Only compress metadata.
-        METADATA = 0x04,
-        /// Compress text and images.
-        TEXT_IMAGE = TEXT | IMAGE,
-        /// Compress text and metadata.
-        TEXT_METADATA = TEXT | METADATA,
-        /// Compress images and metadata.
-        IMAGE_METADATA = IMAGE | METADATA,
-        /// Compress everything.
-        ALL = 0x0F
-    };
-
     /// Represents a page mode.
     enum class PageMode {
         /// No mode.

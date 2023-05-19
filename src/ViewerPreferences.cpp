@@ -2,15 +2,15 @@
 using namespace pdf;
 
 
-ViewerPreferences::ViewerPreferences() noexcept {}
+ViewerPreferences::ViewerPreferences() noexcept: ValueSet() {}
 
-ViewerPreferences::ViewerPreferences(unsigned int v): value(v) {}
+ViewerPreferences::ViewerPreferences(unsigned int v): ValueSet(v) {}
 
 ViewerPreferences::ViewerPreferences(
     bool hideToolBar, bool hideMenuBar, bool hideWindowUI,
     bool fitWindow, bool centerWindow, bool noPrintScaling
 ) noexcept:
-    value(
+    ValueSet(
         (hideToolBar << 0) | (hideMenuBar << 1) | (hideWindowUI << 2)
         | (fitWindow << 3) | (centerWindow << 4) | (noPrintScaling << 5)
     ) {}
@@ -29,10 +29,6 @@ bool ViewerPreferences::operator ==(const ViewerPreferences& other) const noexce
 
 bool ViewerPreferences::operator !=(const ViewerPreferences& other) const noexcept {
     return !operator==(other);
-}
-
-bool ViewerPreferences::isEmpty() const noexcept {
-    return value != 0;
 }
 
 const ViewerPreferences ViewerPreferences::NONE = ViewerPreferences();

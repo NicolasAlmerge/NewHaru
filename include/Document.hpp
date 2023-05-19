@@ -2,6 +2,7 @@
 #define __HARUPP_DOCUMENT_HPP__
 #include "Box.hpp"
 #include "CMYKColor.hpp"
+#include "CompressionMode.hpp"
 #include "Constants.hpp"
 #include "Coor2D.hpp"
 #include "DashMode.hpp"
@@ -421,7 +422,7 @@ namespace pdf {
          * @brief Sets the document compression.
          * @param mode Compression mode to use.
         */
-        void setCompressionMode(enums::CompressionMode mode);
+        void setCompressionMode(const CompressionMode& mode);
 
         /**
          * @brief Closes the current document, which will now point to a new document.

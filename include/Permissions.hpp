@@ -1,6 +1,6 @@
 #ifndef __HARUPP_PERMISSIONS_HPP__
 #define __HARUPP_PERMISSIONS_HPP__
-#include "Object.hpp"
+#include "ValueSet.hpp"
 
 namespace pdf {
 
@@ -12,10 +12,8 @@ namespace pdf {
      * @author  Nicolas Almerge
      * @date    2023-05-16
     */
-    class Permissions final: public Object {
-        unsigned int value = 0UL;
+    class Permissions final: public ValueSet {
         explicit Permissions(unsigned int v);
-        friend class Document;
 
     public:
 
@@ -63,12 +61,6 @@ namespace pdf {
          * @return `true` if the Permissions are not equal, `false` otherwise.
         */
         bool operator !=(const Permissions& other) const noexcept;
-
-        /**
-         * @brief  Checks whether the Permissions only contain the read permission.
-         * @return `true` if only the read permission is included, `false` otherwise.
-        */
-        bool isEmpty() const noexcept override;
 
         /// Read-only permissions.
         const static Permissions READ_ONLY;

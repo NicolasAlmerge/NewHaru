@@ -745,8 +745,8 @@ void Document::setR3EncryptMode(R3EncryptKeyLength keyLength) {
     HPDF_SetEncryptionMode(pdfDoc, HPDF_ENCRYPT_R3, (unsigned int) keyLength);
 }
 
-void Document::setCompressionMode(CompressionMode mode) {
-    HPDF_SetCompressionMode(pdfDoc, (unsigned int) mode);
+void Document::setCompressionMode(const CompressionMode& mode) {
+    HPDF_SetCompressionMode(pdfDoc, mode.value);
 }
 
 void Document::operator=(const Document& newDoc) {
