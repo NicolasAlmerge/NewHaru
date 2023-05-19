@@ -9,7 +9,7 @@ var searchData=
   ['max_5fstring_5flen_6',['MAX_STRING_LEN',['../namespacepdf_1_1consts.html#a936f74fb71410a5275b03d006b25267a',1,'pdf::consts']]],
   ['measuretext_7',['measureText',['../classpdf_1_1Font.html#a61f76fdd53f4d787855b19f260a2637a',1,'pdf::Font::measureText(const std::vector&lt; unsigned char &gt; &amp;bytes, float width, float fontSize, float charSpace, float wordSpace, bool wordwrap) const'],['../classpdf_1_1Font.html#aa47f7a6c6fa87c2c9f41e617751e7452',1,'pdf::Font::measureText(const std::string &amp;text, float width, float fontSize, float charSpace, float wordSpace, bool wordwrap) const']]],
   ['memoryallocationfailedexception_8',['MemoryAllocationFailedException',['../classpdf_1_1excepts_1_1MemoryAllocationFailedException.html',1,'pdf::excepts']]],
-  ['metadata_9',['METADATA',['../namespacepdf_1_1enums.html#a36c12ee1fb5dcfaca992a83bacb73f14a8a9c0818e0622aadfcb2e59cfe5299b4',1,'pdf::enums']]],
+  ['metadata_9',['METADATA',['../classpdf_1_1CompressionMode.html#ac937f3b3ae62c7627e2bff0296ca4bc6',1,'pdf::CompressionMode']]],
   ['minus_10',['MINUS',['../namespacepdf_1_1enums.html#aa104a4be7629a24b8e1fc51c4f1899d7affc0d9b54a1fe677c4c9e6b050e67c81',1,'pdf::enums']]],
   ['missingfilenameentryexception_11',['MissingFileNameEntryException',['../classpdf_1_1excepts_1_1MissingFileNameEntryException.html',1,'pdf::excepts']]],
   ['miter_5fjoin_12',['MITER_JOIN',['../namespacepdf_1_1enums.html#afe974d14fdfdb8c78b967ef1f67665e7a65947f1194c0aa56e4260a2f26170e6c',1,'pdf::enums']]],

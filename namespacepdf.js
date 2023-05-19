@@ -56,16 +56,6 @@ var namespacepdf =
         [ "PATTERN", "namespacepdf_1_1enums.html#a319b7405daf14f2340cc626d011e67cda04ab50cd8ffc1031a09ac85aa6c5f76a", null ],
         [ "EOF_COLOR_SPACE", "namespacepdf_1_1enums.html#a319b7405daf14f2340cc626d011e67cda0cc992f788221d5f280652271bc78a8c", null ]
       ] ],
-      [ "CompressionMode", "namespacepdf_1_1enums.html#a36c12ee1fb5dcfaca992a83bacb73f14", [
-        [ "NONE", "namespacepdf_1_1enums.html#a36c12ee1fb5dcfaca992a83bacb73f14ab50339a10e1de285ac99d4c3990b8693", null ],
-        [ "TEXT", "namespacepdf_1_1enums.html#a36c12ee1fb5dcfaca992a83bacb73f14a61a96ffcb251bb9bf0abf8fec19d0ea8", null ],
-        [ "IMAGE", "namespacepdf_1_1enums.html#a36c12ee1fb5dcfaca992a83bacb73f14a23a12f67f614b5518c7f1c2465bf95e3", null ],
-        [ "METADATA", "namespacepdf_1_1enums.html#a36c12ee1fb5dcfaca992a83bacb73f14a8a9c0818e0622aadfcb2e59cfe5299b4", null ],
-        [ "TEXT_IMAGE", "namespacepdf_1_1enums.html#a36c12ee1fb5dcfaca992a83bacb73f14af9bf7572b6e7c97361ca288a378651a8", null ],
-        [ "TEXT_METADATA", "namespacepdf_1_1enums.html#a36c12ee1fb5dcfaca992a83bacb73f14af162f922f8fc92e2c30edeaa9e7be434", null ],
-        [ "IMAGE_METADATA", "namespacepdf_1_1enums.html#a36c12ee1fb5dcfaca992a83bacb73f14ad84e64716009f25cc35a7992f01c2a2c", null ],
-        [ "ALL", "namespacepdf_1_1enums.html#a36c12ee1fb5dcfaca992a83bacb73f14a5fb1f955b45e38e31789286a1790398d", null ]
-      ] ],
       [ "DateTimeAttribute", "namespacepdf_1_1enums.html#a6a0564b6cba2523559f9f77768e540f6", [
         [ "CREATION_DATE", "namespacepdf_1_1enums.html#a6a0564b6cba2523559f9f77768e540f6a1b56fd59b75da24a245e635aa5d460d1", null ],
         [ "MODIFICATION_DATE", "namespacepdf_1_1enums.html#a6a0564b6cba2523559f9f77768e540f6a09563c3f3d20d5741cc69bc0eedfb974", null ]
@@ -271,6 +261,7 @@ var namespacepdf =
     [ "Box", "classpdf_1_1Box.html", "classpdf_1_1Box" ],
     [ "CMYKColor", "classpdf_1_1CMYKColor.html", "classpdf_1_1CMYKColor" ],
     [ "Color", "classpdf_1_1Color.html", "classpdf_1_1Color" ],
+    [ "CompressionMode", "classpdf_1_1CompressionMode.html", "classpdf_1_1CompressionMode" ],
     [ "ContentStream", "classpdf_1_1ContentStream.html", "classpdf_1_1ContentStream" ],
     [ "Coor2D", "classpdf_1_1Coor2D.html", "classpdf_1_1Coor2D" ],
     [ "DashMode", "classpdf_1_1DashMode.html", "classpdf_1_1DashMode" ],
@@ -289,5 +280,6 @@ var namespacepdf =
     [ "TextAnnotation", "classpdf_1_1TextAnnotation.html", "classpdf_1_1TextAnnotation" ],
     [ "TextWidth", "classpdf_1_1TextWidth.html", "classpdf_1_1TextWidth" ],
     [ "TransposeMatrix", "classpdf_1_1TransposeMatrix.html", "classpdf_1_1TransposeMatrix" ],
+    [ "ValueSet", "classpdf_1_1ValueSet.html", "classpdf_1_1ValueSet" ],
     [ "ViewerPreferences", "classpdf_1_1ViewerPreferences.html", "classpdf_1_1ViewerPreferences" ]
 ];

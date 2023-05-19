@@ -147,9 +147,12 @@ var hierarchy =
       [ "pdf::Destination", "classpdf_1_1Destination.html", null ],
       [ "pdf::Document", "classpdf_1_1Document.html", null ],
       [ "pdf::Encoder", "classpdf_1_1Encoder.html", null ],
-      [ "pdf::Permissions", "classpdf_1_1Permissions.html", null ],
       [ "pdf::TextWidth", "classpdf_1_1TextWidth.html", null ],
       [ "pdf::TransposeMatrix", "classpdf_1_1TransposeMatrix.html", null ],
-      [ "pdf::ViewerPreferences", "classpdf_1_1ViewerPreferences.html", null ]
+      [ "pdf::ValueSet", "classpdf_1_1ValueSet.html", [
+        [ "pdf::CompressionMode", "classpdf_1_1CompressionMode.html", null ],
+        [ "pdf::Permissions", "classpdf_1_1Permissions.html", null ],
+        [ "pdf::ViewerPreferences", "classpdf_1_1ViewerPreferences.html", null ]
+      ] ]
     ] ]
 ];

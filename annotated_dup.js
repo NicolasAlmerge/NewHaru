@@ -118,6 +118,7 @@ var annotated_dup =
       [ "Box", "classpdf_1_1Box.html", "classpdf_1_1Box" ],
       [ "CMYKColor", "classpdf_1_1CMYKColor.html", "classpdf_1_1CMYKColor" ],
       [ "Color", "classpdf_1_1Color.html", "classpdf_1_1Color" ],
+      [ "CompressionMode", "classpdf_1_1CompressionMode.html", "classpdf_1_1CompressionMode" ],
       [ "ContentStream", "classpdf_1_1ContentStream.html", "classpdf_1_1ContentStream" ],
       [ "Coor2D", "classpdf_1_1Coor2D.html", "classpdf_1_1Coor2D" ],
       [ "DashMode", "classpdf_1_1DashMode.html", "classpdf_1_1DashMode" ],
@@ -136,6 +137,7 @@ var annotated_dup =
       [ "TextAnnotation", "classpdf_1_1TextAnnotation.html", "classpdf_1_1TextAnnotation" ],
       [ "TextWidth", "classpdf_1_1TextWidth.html", "classpdf_1_1TextWidth" ],
       [ "TransposeMatrix", "classpdf_1_1TransposeMatrix.html", "classpdf_1_1TransposeMatrix" ],
+      [ "ValueSet", "classpdf_1_1ValueSet.html", "classpdf_1_1ValueSet" ],
       [ "ViewerPreferences", "classpdf_1_1ViewerPreferences.html", "classpdf_1_1ViewerPreferences" ]
     ] ]
 ];

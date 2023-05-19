@@ -40,7 +40,7 @@ var classpdf_1_1Document =
     [ "saveToStream", "classpdf_1_1Document.html#abecc0c336c0002000c069d80447e581c", null ],
     [ "setAttribute", "classpdf_1_1Document.html#a1ace56947e67ea6f5532f027a83b94e4", null ],
     [ "setAttribute", "classpdf_1_1Document.html#ac6d7cb274015fd6374e85e8c5b6afb50", null ],
-    [ "setCompressionMode", "classpdf_1_1Document.html#a7a082266e4f2c5baf62a94248c96f566", null ],
+    [ "setCompressionMode", "classpdf_1_1Document.html#a941b1eb1e8d2f4e5a109fd7c1f6ea7df", null ],
     [ "setPassword", "classpdf_1_1Document.html#ae9ea8dccf36ba4ce406ff773c4f5db5f", null ],
     [ "setPassword", "classpdf_1_1Document.html#ad0478ebfa84c333b2839802da724850a", null ],
     [ "setPermissions", "classpdf_1_1Document.html#a6653532228ef683ce178584224d02fa4", null ],
