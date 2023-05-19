@@ -1,5 +1,11 @@
 var NAVTREEINDEX4 =
 {
+"namespacepdf_1_1enums.html#a4d95b6ac7ea52cbf6012b032d69bb707":[0,0,0,1,17],
+"namespacepdf_1_1enums.html#a4d95b6ac7ea52cbf6012b032d69bb707a0c2f3adf2a48bab3adb470f4da57f3d0":[0,0,0,1,17,3],
+"namespacepdf_1_1enums.html#a4d95b6ac7ea52cbf6012b032d69bb707a1882898c85fadcef56f3589a2835626a":[0,0,0,1,17,11],
+"namespacepdf_1_1enums.html#a4d95b6ac7ea52cbf6012b032d69bb707a21dc2ac692ef13fc764b4c8d69839f70":[0,0,0,1,17,8],
+"namespacepdf_1_1enums.html#a4d95b6ac7ea52cbf6012b032d69bb707a293c501027368f9a83d91179af6a4316":[0,0,0,1,17,0],
+"namespacepdf_1_1enums.html#a4d95b6ac7ea52cbf6012b032d69bb707a2a1ab298edf0162a3305e599b47cbeee":[0,0,0,1,17,6],
 "namespacepdf_1_1enums.html#a4d95b6ac7ea52cbf6012b032d69bb707a4350dda4933f2f32fff842b6e155eff8":[0,0,0,1,17,9],
 "namespacepdf_1_1enums.html#a4d95b6ac7ea52cbf6012b032d69bb707a6593d7b12fd418cdb35bbf438de72f66":[0,0,0,1,17,2],
 "namespacepdf_1_1enums.html#a4d95b6ac7ea52cbf6012b032d69bb707aaaa1069f3cf9b143946dac9517717fc6":[0,0,0,1,17,10],
