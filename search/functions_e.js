@@ -1,6 +1,26 @@
 var searchData=
 [
-  ['tocmyk_0',['toCMYK',['../classpdf_1_1CMYKColor.html#a4f88782e556284cfd932b1a72b760068',1,'pdf::CMYKColor::toCMYK()'],['../classpdf_1_1Color.html#a17d09e94ccd38b6a2808ccb2e6113555',1,'pdf::Color::toCMYK()'],['../classpdf_1_1RGBColor.html#a880f689b701f7dba6a8025b8af9f030c',1,'pdf::RGBColor::toCMYK()']]],
-  ['torgb_1',['toRGB',['../classpdf_1_1CMYKColor.html#a50d3b17747e3025fba2eb281f002d546',1,'pdf::CMYKColor::toRGB()'],['../classpdf_1_1Color.html#a954b465503533001768bde7b59459dd0',1,'pdf::Color::toRGB()'],['../classpdf_1_1RGBColor.html#a933bca65aaa1a42889637cadcef0e887',1,'pdf::RGBColor::toRGB()']]],
-  ['transposematrix_2',['TransposeMatrix',['../classpdf_1_1TransposeMatrix.html#a4fe19cc725e4dfd3db6d58f1a42e9835',1,'pdf::TransposeMatrix::TransposeMatrix() noexcept'],['../classpdf_1_1TransposeMatrix.html#ac4feeaa3a546913c9cbac1a877ad2c9c',1,'pdf::TransposeMatrix::TransposeMatrix(float a, float b, float c, float d, float x, float y) noexcept']]]
+  ['savetofile_0',['saveToFile',['../classpdf_1_1Document.html#ac35522dcb00778916f126f4430a0a7cf',1,'pdf::Document']]],
+  ['savetostream_1',['saveToStream',['../classpdf_1_1Document.html#abecc0c336c0002000c069d80447e581c',1,'pdf::Document']]],
+  ['setattribute_2',['setAttribute',['../classpdf_1_1Document.html#ac6d7cb274015fd6374e85e8c5b6afb50',1,'pdf::Document::setAttribute(enums::StringAttribute parameter, const std::string &amp;value)'],['../classpdf_1_1Document.html#a1ace56947e67ea6f5532f027a83b94e4',1,'pdf::Document::setAttribute(enums::DateTimeAttribute parameter, const DateTime &amp;value)']]],
+  ['setborderstyle_3',['setBorderStyle',['../classpdf_1_1Annotation.html#a8efe705b656a919e4e34e185f2013492',1,'pdf::Annotation::setBorderStyle()'],['../classpdf_1_1LinkAnnotation.html#a813dc1e2077c2376b33384be6737deac',1,'pdf::LinkAnnotation::setBorderStyle()']]],
+  ['setcolormask_4',['setColorMask',['../classpdf_1_1Image.html#a9940889ed3e23478e1abd586091fd7db',1,'pdf::Image']]],
+  ['setcompressionmode_5',['setCompressionMode',['../classpdf_1_1Document.html#a7a082266e4f2c5baf62a94248c96f566',1,'pdf::Document']]],
+  ['setdestination_6',['setDestination',['../classpdf_1_1Outline.html#ab8570c3628b96dfda334b1aa7709bb07',1,'pdf::Outline']]],
+  ['setfit_7',['setFit',['../classpdf_1_1Destination.html#a53c9e92c2eacd5e39503cd89a6add032',1,'pdf::Destination']]],
+  ['setfitb_8',['setFitB',['../classpdf_1_1Destination.html#a05702fd97cb98b0cba6cbb6337423f5a',1,'pdf::Destination']]],
+  ['setfitbh_9',['setFitBH',['../classpdf_1_1Destination.html#ad3e24ddbf5a9b4865ee764fa76a39111',1,'pdf::Destination']]],
+  ['setfitbv_10',['setFitBV',['../classpdf_1_1Destination.html#a1d163c1e481ba9c1a7419e6b694f9411',1,'pdf::Destination']]],
+  ['setfith_11',['setFitH',['../classpdf_1_1Destination.html#ad841b8c558d2a444bd126ff3293b62fe',1,'pdf::Destination']]],
+  ['setfitr_12',['setFitR',['../classpdf_1_1Destination.html#af3f63c5ce7c95f9e58d5ae17f1bb6165',1,'pdf::Destination']]],
+  ['setfitv_13',['setFitV',['../classpdf_1_1Destination.html#aba2ca116a9de48e5072eef2b9a7786d4',1,'pdf::Destination']]],
+  ['sethighlightmode_14',['setHighlightMode',['../classpdf_1_1LinkAnnotation.html#a44a465b5c4985f7440af99bee8b6a256',1,'pdf::LinkAnnotation']]],
+  ['seticon_15',['setIcon',['../classpdf_1_1TextAnnotation.html#a890824190ec0f268d82beed095a9ab65',1,'pdf::TextAnnotation']]],
+  ['setmaskimage_16',['setMaskImage',['../classpdf_1_1Image.html#a9021036579d3d7f92da24b9e01198baf',1,'pdf::Image']]],
+  ['setopen_17',['setOpen',['../classpdf_1_1Outline.html#aee81aa73f0db6d58faec730bcda9acbd',1,'pdf::Outline::setOpen()'],['../classpdf_1_1TextAnnotation.html#ad78c96f742440160e0b53ecc1d4124c1',1,'pdf::TextAnnotation::setOpen()']]],
+  ['setpassword_18',['setPassword',['../classpdf_1_1Document.html#ae9ea8dccf36ba4ce406ff773c4f5db5f',1,'pdf::Document::setPassword(const std::string &amp;ownerPassword)'],['../classpdf_1_1Document.html#ad0478ebfa84c333b2839802da724850a',1,'pdf::Document::setPassword(const std::string &amp;ownerPassword, const std::string &amp;userPassword)']]],
+  ['setpermissions_19',['setPermissions',['../classpdf_1_1Document.html#a6653532228ef683ce178584224d02fa4',1,'pdf::Document']]],
+  ['setr2encryptmode_20',['setR2EncryptMode',['../classpdf_1_1Document.html#ab1b39958179ba57aecbea341d9acd4d8',1,'pdf::Document']]],
+  ['setr3encryptmode_21',['setR3EncryptMode',['../classpdf_1_1Document.html#a45d29ee225c5992053ddf3c01fe07c27',1,'pdf::Document']]],
+  ['setxyz_22',['setXYZ',['../classpdf_1_1Destination.html#a74363ea7c813db1f6ecf095aa1e8d098',1,'pdf::Destination']]]
 ];

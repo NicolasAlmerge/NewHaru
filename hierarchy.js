@@ -1,7 +1,7 @@
 var hierarchy =
 [
     [ "std::exception", null, [
-      [ "pdf::excepts::PdfException", "classpdf_1_1excepts_1_1PdfException.html", [
+      [ "pdf::excepts::Exception", "classpdf_1_1excepts_1_1Exception.html", [
         [ "pdf::excepts::AnnotationException", "classpdf_1_1excepts_1_1AnnotationException.html", [
           [ "pdf::excepts::AnnotationInvalidBorderStyleException", "classpdf_1_1excepts_1_1AnnotationInvalidBorderStyleException.html", null ],
           [ "pdf::excepts::AnnotationInvalidIconException", "classpdf_1_1excepts_1_1AnnotationInvalidIconException.html", null ]
@@ -125,7 +125,7 @@ var hierarchy =
         [ "pdf::excepts::ZLIBException", "classpdf_1_1excepts_1_1ZLIBException.html", null ]
       ] ]
     ] ],
-    [ "pdf::PdfObject", "classpdf_1_1PdfObject.html", [
+    [ "pdf::Object", "classpdf_1_1Object.html", [
       [ "pdf::Box", "classpdf_1_1Box.html", null ],
       [ "pdf::Color", "classpdf_1_1Color.html", [
         [ "pdf::CMYKColor", "classpdf_1_1CMYKColor.html", null ],
@@ -139,14 +139,14 @@ var hierarchy =
         [ "pdf::Font", "classpdf_1_1Font.html", null ],
         [ "pdf::Image", "classpdf_1_1Image.html", null ],
         [ "pdf::Outline", "classpdf_1_1Outline.html", null ],
-        [ "pdf::PdfPage", "classpdf_1_1PdfPage.html", null ]
+        [ "pdf::Page", "classpdf_1_1Page.html", null ]
       ] ],
       [ "pdf::Coor2D", "classpdf_1_1Coor2D.html", null ],
       [ "pdf::DashMode", "classpdf_1_1DashMode.html", null ],
       [ "pdf::DateTime", "classpdf_1_1DateTime.html", null ],
       [ "pdf::Destination", "classpdf_1_1Destination.html", null ],
+      [ "pdf::Document", "classpdf_1_1Document.html", null ],
       [ "pdf::Encoder", "classpdf_1_1Encoder.html", null ],
-      [ "pdf::PdfDocument", "classpdf_1_1PdfDocument.html", null ],
       [ "pdf::Permissions", "classpdf_1_1Permissions.html", null ],
       [ "pdf::TextWidth", "classpdf_1_1TextWidth.html", null ],
       [ "pdf::TransposeMatrix", "classpdf_1_1TransposeMatrix.html", null ]

@@ -3,7 +3,7 @@ var searchData=
   ['edit_5fall_0',['EDIT_ALL',['../classpdf_1_1Permissions.html#ad895152bab454e4ee87f960eee048d4c',1,'pdf::Permissions']]],
   ['edit_5fannotations_1',['EDIT_ANNOTATIONS',['../classpdf_1_1Permissions.html#aca7ea6d7849a67898332e340be027837',1,'pdf::Permissions']]],
   ['edit_5fcontent_2',['EDIT_CONTENT',['../classpdf_1_1Permissions.html#a00ff682a456d2016264dd9eaab9ee034',1,'pdf::Permissions']]],
-  ['eight_3',['EIGHT',['../namespacepdf_1_1enums.html#ac86eb8a612d184839083c8863d286572a960df6d77e65cd185ca4f3501db634eb',1,'pdf::enums::EIGHT()'],['../namespacepdf_1_1enums.html#a24a457cd8bed4f5ae64be8bdf8371d7ea960df6d77e65cd185ca4f3501db634eb',1,'pdf::enums::EIGHT()']]],
+  ['eight_3',['EIGHT',['../namespacepdf_1_1enums.html#a24a457cd8bed4f5ae64be8bdf8371d7ea960df6d77e65cd185ca4f3501db634eb',1,'pdf::enums::EIGHT()'],['../namespacepdf_1_1enums.html#ac86eb8a612d184839083c8863d286572a960df6d77e65cd185ca4f3501db634eb',1,'pdf::enums::EIGHT()']]],
   ['eleven_4',['ELEVEN',['../namespacepdf_1_1enums.html#ac86eb8a612d184839083c8863d286572a99850be19e3568de2c3895b7eda0a712',1,'pdf::enums']]],
   ['encoder_5',['Encoder',['../classpdf_1_1Encoder.html',1,'pdf']]],
   ['encoderexception_6',['EncoderException',['../classpdf_1_1excepts_1_1EncoderException.html',1,'pdf::excepts']]],
@@ -17,5 +17,6 @@ var searchData=
   ['euc_5fh_14',['EUC_H',['../namespacepdf_1_1enums.html#afe6d4591e9edde24765a428feac125c5a238dd28f7b5cc5e46fb4031c5c5540c1',1,'pdf::enums']]],
   ['euc_5fv_15',['EUC_V',['../namespacepdf_1_1enums.html#afe6d4591e9edde24765a428feac125c5a3aea51a9b52c5b3020b92ae2f578b0ab',1,'pdf::enums']]],
   ['exceededjwwcodenumlimitexception_16',['ExceededJWWCodeNumLimitException',['../classpdf_1_1excepts_1_1ExceededJWWCodeNumLimitException.html',1,'pdf::excepts']]],
-  ['executive_17',['EXECUTIVE',['../namespacepdf_1_1enums.html#a4d95b6ac7ea52cbf6012b032d69bb707ae0c642c53b9e8d5aba401d729318669e',1,'pdf::enums']]]
+  ['exception_17',['Exception',['../classpdf_1_1excepts_1_1Exception.html#af70ef807f15a7c2d71fdfde352f466a8',1,'pdf::excepts::Exception::Exception()'],['../classpdf_1_1excepts_1_1Exception.html',1,'pdf::excepts::Exception']]],
+  ['executive_18',['EXECUTIVE',['../namespacepdf_1_1enums.html#a4d95b6ac7ea52cbf6012b032d69bb707ae0c642c53b9e8d5aba401d729318669e',1,'pdf::enums']]]
 ];

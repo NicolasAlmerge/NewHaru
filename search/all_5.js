@@ -18,8 +18,8 @@ var searchData=
   ['fontspecific_15',['FontSpecific',['../namespacepdf_1_1enums.html#a4149b191ba9bc827aece819959acfa0cae68ad164e2ee2d57120e0374586074ee',1,'pdf::enums']]],
   ['four_16',['FOUR',['../namespacepdf_1_1enums.html#a24a457cd8bed4f5ae64be8bdf8371d7ea341fee9692a2ed8f09906d40d23fb1f9',1,'pdf::enums']]],
   ['fourteen_17',['FOURTEEN',['../namespacepdf_1_1enums.html#ac86eb8a612d184839083c8863d286572afcdaf7b88ebdd80fdb27931f5919f190',1,'pdf::enums']]],
-  ['freeallresources_18',['freeAllResources',['../classpdf_1_1PdfDocument.html#a6d0e921c91d1bde2fe9af74ea26d0da3',1,'pdf::PdfDocument']]],
-  ['freeresources_19',['freeResources',['../classpdf_1_1PdfDocument.html#aad910cbe4cfc1b8e18985cb39f945e9e',1,'pdf::PdfDocument']]],
+  ['freeallresources_18',['freeAllResources',['../classpdf_1_1Document.html#a82cba9a51024f77b5445e793dc0cdae5',1,'pdf::Document']]],
+  ['freeresources_19',['freeResources',['../classpdf_1_1Document.html#ab5f602f5fef3a98c91435b90a42cec04',1,'pdf::Document']]],
   ['full_5fscreen_20',['FULL_SCREEN',['../namespacepdf_1_1enums.html#a75c981042ee33b700241e43eebfc8e8aae1a502139199d41bcd8f603a6d579b70',1,'pdf::enums']]],
   ['functionskippedexception_21',['FunctionSkippedException',['../classpdf_1_1excepts_1_1FunctionSkippedException.html',1,'pdf::excepts']]]
 ];

@@ -3,7 +3,7 @@ var searchData=
   ['nameinvalidvalueexception_0',['NameInvalidValueException',['../classpdf_1_1excepts_1_1NameInvalidValueException.html',1,'pdf::excepts']]],
   ['nameoutofrangeexception_1',['NameOutOfRangeException',['../classpdf_1_1excepts_1_1NameOutOfRangeException.html',1,'pdf::excepts']]],
   ['new_5fparagraph_2',['NEW_PARAGRAPH',['../namespacepdf_1_1enums.html#a94339d3fb8c424c7ca228a9eec37ad62a1a1fc6ccb84a3d5fcdf72d0ada1dd3dd',1,'pdf::enums']]],
-  ['newdocument_3',['newDocument',['../classpdf_1_1PdfDocument.html#aaad2066d1e4560200fc2f0eca3f195b1',1,'pdf::PdfDocument']]],
+  ['newdocument_3',['newDocument',['../classpdf_1_1Document.html#aad92825aaa46c50cb5cdc55651ee4b7d',1,'pdf::Document']]],
   ['newpdfcreationfailedexception_4',['NewPdfCreationFailedException',['../classpdf_1_1excepts_1_1NewPdfCreationFailedException.html',1,'pdf::excepts']]],
   ['nine_5',['NINE',['../namespacepdf_1_1enums.html#ac86eb8a612d184839083c8863d286572a73995fb90f0ebefe78b90731e67789cd',1,'pdf::enums']]],
   ['ninetyms_5frksj_5fh_6',['NINETYms_RKSJ_H',['../namespacepdf_1_1enums.html#afe6d4591e9edde24765a428feac125c5a33bd8e69d96ef78378e59b2117e5feac',1,'pdf::enums']]],

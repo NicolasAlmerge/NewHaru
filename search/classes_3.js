@@ -9,5 +9,6 @@ var searchData=
   ['dictitemunexpectedtypeexception_6',['DictItemUnexpectedTypeException',['../classpdf_1_1excepts_1_1DictItemUnexpectedTypeException.html',1,'pdf::excepts']]],
   ['dictstreamlengthnotfoundexception_7',['DictStreamLengthNotFoundException',['../classpdf_1_1excepts_1_1DictStreamLengthNotFoundException.html',1,'pdf::excepts']]],
   ['docinvalidobjectexception_8',['DocInvalidObjectException',['../classpdf_1_1excepts_1_1DocInvalidObjectException.html',1,'pdf::excepts']]],
-  ['documentexception_9',['DocumentException',['../classpdf_1_1excepts_1_1DocumentException.html',1,'pdf::excepts']]]
+  ['document_9',['Document',['../classpdf_1_1Document.html',1,'pdf']]],
+  ['documentexception_10',['DocumentException',['../classpdf_1_1excepts_1_1DocumentException.html',1,'pdf::excepts']]]
 ];

@@ -17,7 +17,8 @@ var searchData=
   ['dictstreamlengthnotfoundexception_14',['DictStreamLengthNotFoundException',['../classpdf_1_1excepts_1_1DictStreamLengthNotFoundException.html',1,'pdf::excepts']]],
   ['dissolve_15',['DISSOLVE',['../namespacepdf_1_1enums.html#a2cb400bab33a8940c2d2725d781b59eca5d6f5c7a1164c6cb5b32c170d1884d7d',1,'pdf::enums']]],
   ['docinvalidobjectexception_16',['DocInvalidObjectException',['../classpdf_1_1excepts_1_1DocInvalidObjectException.html',1,'pdf::excepts']]],
-  ['documentexception_17',['DocumentException',['../classpdf_1_1excepts_1_1DocumentException.html',1,'pdf::excepts']]],
-  ['double_5fbyte_18',['DOUBLE_BYTE',['../namespacepdf_1_1enums.html#aa66fd976e0fa404461f0060679c3be85aff2bb61b7cd56e60a679676ba42280fc',1,'pdf::enums']]],
-  ['down_5fappearance_19',['DOWN_APPEARANCE',['../namespacepdf_1_1enums.html#a900ad02df790c838ebde295f25723a66aac3d0726241691422e2b1c506730eb46',1,'pdf::enums']]]
+  ['document_17',['Document',['../classpdf_1_1Document.html#afd7f780cb5912c14d39f62f1db0084ea',1,'pdf::Document::Document()'],['../classpdf_1_1Document.html',1,'pdf::Document']]],
+  ['documentexception_18',['DocumentException',['../classpdf_1_1excepts_1_1DocumentException.html',1,'pdf::excepts']]],
+  ['double_5fbyte_19',['DOUBLE_BYTE',['../namespacepdf_1_1enums.html#aa66fd976e0fa404461f0060679c3be85aff2bb61b7cd56e60a679676ba42280fc',1,'pdf::enums']]],
+  ['down_5fappearance_20',['DOWN_APPEARANCE',['../namespacepdf_1_1enums.html#a900ad02df790c838ebde295f25723a66aac3d0726241691422e2b1c506730eb46',1,'pdf::enums']]]
 ];

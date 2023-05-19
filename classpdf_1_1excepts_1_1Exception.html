@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Haru++: pdf::excepts::PdfException Class Reference</title>
+<title>Haru++: pdf::excepts::Exception Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,7 +65,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classpdf_1_1excepts_1_1PdfException.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('classpdf_1_1excepts_1_1Exception.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -93,21 +93,21 @@ $(document).ready(function(){initNavTree('classpdf_1_1excepts_1_1PdfException.ht
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classpdf_1_1excepts_1_1PdfException-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">pdf::excepts::PdfException Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+<a href="classpdf_1_1excepts_1_1Exception-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">pdf::excepts::Exception Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Represents the base exception class.  
- <a href="classpdf_1_1excepts_1_1PdfException.html#details">More...</a></p>
+ <a href="classpdf_1_1excepts_1_1Exception.html#details">More...</a></p>
 
-<p><code>#include &lt;PdfException.hpp&gt;</code></p>
+<p><code>#include &lt;Exception.hpp&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for pdf::excepts::PdfException:</div>
+Inheritance diagram for pdf::excepts::Exception:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classpdf_1_1excepts_1_1PdfException.png" usemap="#pdf::excepts::PdfException_map" alt=""/>
-  <map id="pdf::excepts::PdfException_map" name="pdf::excepts::PdfException_map">
+  <img src="classpdf_1_1excepts_1_1Exception.png" usemap="#pdf::excepts::Exception_map" alt=""/>
+  <map id="pdf::excepts::Exception_map" name="pdf::excepts::Exception_map">
 <area href="classpdf_1_1excepts_1_1AnnotationException.html" alt="pdf::excepts::AnnotationException" shape="rect" coords="315,112,620,136"/>
 <area href="classpdf_1_1excepts_1_1ArrayException.html" alt="pdf::excepts::ArrayException" shape="rect" coords="315,168,620,192"/>
 <area href="classpdf_1_1excepts_1_1BinaryLengthException.html" alt="pdf::excepts::BinaryLengthException" shape="rect" coords="315,224,620,248"/>
@@ -157,33 +157,33 @@ Inheritance diagram for pdf::excepts::PdfException:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aaebe26d4d6cf5ebf70596a2c00adca0f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1excepts_1_1PdfException.html#aaebe26d4d6cf5ebf70596a2c00adca0f">PdfException</a> (const std::string &amp;data, unsigned long errorCode, unsigned long detailCode=0U) noexcept</td></tr>
-<tr class="memdesc:aaebe26d4d6cf5ebf70596a2c00adca0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="classpdf_1_1excepts_1_1PdfException.html" title="Represents the base exception class.">PdfException</a> with parameters.  <a href="classpdf_1_1excepts_1_1PdfException.html#aaebe26d4d6cf5ebf70596a2c00adca0f">More...</a><br /></td></tr>
-<tr class="separator:aaebe26d4d6cf5ebf70596a2c00adca0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a783962ee0f5f9c3aed84ce901fe434ff"><td class="memItemLeft" align="right" valign="top">virtual unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1excepts_1_1PdfException.html#a783962ee0f5f9c3aed84ce901fe434ff">getDetailCode</a> () const noexcept final</td></tr>
-<tr class="memdesc:a783962ee0f5f9c3aed84ce901fe434ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the error detail code.  <a href="classpdf_1_1excepts_1_1PdfException.html#a783962ee0f5f9c3aed84ce901fe434ff">More...</a><br /></td></tr>
-<tr class="separator:a783962ee0f5f9c3aed84ce901fe434ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0674de5d5c1a1bc6e8ea55aaeb657b0b"><td class="memItemLeft" align="right" valign="top">virtual unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1excepts_1_1PdfException.html#a0674de5d5c1a1bc6e8ea55aaeb657b0b">getErrorCode</a> () const noexcept final</td></tr>
-<tr class="memdesc:a0674de5d5c1a1bc6e8ea55aaeb657b0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the error code.  <a href="classpdf_1_1excepts_1_1PdfException.html#a0674de5d5c1a1bc6e8ea55aaeb657b0b">More...</a><br /></td></tr>
-<tr class="separator:a0674de5d5c1a1bc6e8ea55aaeb657b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70b897abf61ee06ff7fcb99ce513b330"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1excepts_1_1PdfException.html#a70b897abf61ee06ff7fcb99ce513b330">getFullDescription</a> () const noexcept final</td></tr>
-<tr class="memdesc:a70b897abf61ee06ff7fcb99ce513b330"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string consisting of the error name and description.  <a href="classpdf_1_1excepts_1_1PdfException.html#a70b897abf61ee06ff7fcb99ce513b330">More...</a><br /></td></tr>
-<tr class="separator:a70b897abf61ee06ff7fcb99ce513b330"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1636a5d091b9d3ce0c683802721d5249"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1excepts_1_1PdfException.html#a1636a5d091b9d3ce0c683802721d5249">getName</a> () const noexcept=0</td></tr>
-<tr class="memdesc:a1636a5d091b9d3ce0c683802721d5249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the error name.  <a href="classpdf_1_1excepts_1_1PdfException.html#a1636a5d091b9d3ce0c683802721d5249">More...</a><br /></td></tr>
-<tr class="separator:a1636a5d091b9d3ce0c683802721d5249"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab96fdcd2839740b3ec3e7b300158bfc4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1excepts_1_1PdfException.html#ab96fdcd2839740b3ec3e7b300158bfc4">hasDetailCode</a> () const noexcept final</td></tr>
-<tr class="memdesc:ab96fdcd2839740b3ec3e7b300158bfc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a detail code has been set.  <a href="classpdf_1_1excepts_1_1PdfException.html#ab96fdcd2839740b3ec3e7b300158bfc4">More...</a><br /></td></tr>
-<tr class="separator:ab96fdcd2839740b3ec3e7b300158bfc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ec4f9f95bf759846385a21689b64b25"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1excepts_1_1PdfException.html#a6ec4f9f95bf759846385a21689b64b25">what</a> () const noexcept override final</td></tr>
-<tr class="memdesc:a6ec4f9f95bf759846385a21689b64b25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the error text.  <a href="classpdf_1_1excepts_1_1PdfException.html#a6ec4f9f95bf759846385a21689b64b25">More...</a><br /></td></tr>
-<tr class="separator:a6ec4f9f95bf759846385a21689b64b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af70ef807f15a7c2d71fdfde352f466a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1excepts_1_1Exception.html#af70ef807f15a7c2d71fdfde352f466a8">Exception</a> (const std::string &amp;data, unsigned long errorCode, unsigned long detailCode=0U) noexcept</td></tr>
+<tr class="memdesc:af70ef807f15a7c2d71fdfde352f466a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="classpdf_1_1excepts_1_1Exception.html" title="Represents the base exception class.">Exception</a> with parameters.  <a href="classpdf_1_1excepts_1_1Exception.html#af70ef807f15a7c2d71fdfde352f466a8">More...</a><br /></td></tr>
+<tr class="separator:af70ef807f15a7c2d71fdfde352f466a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30a11ec16134bcebacba236a1e8eb5cb"><td class="memItemLeft" align="right" valign="top">virtual unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1excepts_1_1Exception.html#a30a11ec16134bcebacba236a1e8eb5cb">getDetailCode</a> () const noexcept final</td></tr>
+<tr class="memdesc:a30a11ec16134bcebacba236a1e8eb5cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the error detail code.  <a href="classpdf_1_1excepts_1_1Exception.html#a30a11ec16134bcebacba236a1e8eb5cb">More...</a><br /></td></tr>
+<tr class="separator:a30a11ec16134bcebacba236a1e8eb5cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2da3e6bf8091930037cc20f4835e28d5"><td class="memItemLeft" align="right" valign="top">virtual unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1excepts_1_1Exception.html#a2da3e6bf8091930037cc20f4835e28d5">getErrorCode</a> () const noexcept final</td></tr>
+<tr class="memdesc:a2da3e6bf8091930037cc20f4835e28d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the error code.  <a href="classpdf_1_1excepts_1_1Exception.html#a2da3e6bf8091930037cc20f4835e28d5">More...</a><br /></td></tr>
+<tr class="separator:a2da3e6bf8091930037cc20f4835e28d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92f6cd2db2b3a10ae9010d510f02c8db"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1excepts_1_1Exception.html#a92f6cd2db2b3a10ae9010d510f02c8db">getFullDescription</a> () const noexcept final</td></tr>
+<tr class="memdesc:a92f6cd2db2b3a10ae9010d510f02c8db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string consisting of the error name and description.  <a href="classpdf_1_1excepts_1_1Exception.html#a92f6cd2db2b3a10ae9010d510f02c8db">More...</a><br /></td></tr>
+<tr class="separator:a92f6cd2db2b3a10ae9010d510f02c8db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c2ef0043b151e0efc9889de2c66e763"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1excepts_1_1Exception.html#a8c2ef0043b151e0efc9889de2c66e763">getName</a> () const noexcept=0</td></tr>
+<tr class="memdesc:a8c2ef0043b151e0efc9889de2c66e763"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the error name.  <a href="classpdf_1_1excepts_1_1Exception.html#a8c2ef0043b151e0efc9889de2c66e763">More...</a><br /></td></tr>
+<tr class="separator:a8c2ef0043b151e0efc9889de2c66e763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a681f99890ffe78e1f8b9c3b91c8c4198"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1excepts_1_1Exception.html#a681f99890ffe78e1f8b9c3b91c8c4198">hasDetailCode</a> () const noexcept final</td></tr>
+<tr class="memdesc:a681f99890ffe78e1f8b9c3b91c8c4198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a detail code has been set.  <a href="classpdf_1_1excepts_1_1Exception.html#a681f99890ffe78e1f8b9c3b91c8c4198">More...</a><br /></td></tr>
+<tr class="separator:a681f99890ffe78e1f8b9c3b91c8c4198"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa021a4d16cfc8a9d4a4710d609b2fa7c"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1excepts_1_1Exception.html#aa021a4d16cfc8a9d4a4710d609b2fa7c">what</a> () const noexcept override final</td></tr>
+<tr class="memdesc:aa021a4d16cfc8a9d4a4710d609b2fa7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the error text.  <a href="classpdf_1_1excepts_1_1Exception.html#aa021a4d16cfc8a9d4a4710d609b2fa7c">More...</a><br /></td></tr>
+<tr class="separator:aa021a4d16cfc8a9d4a4710d609b2fa7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Represents the base exception class. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aaebe26d4d6cf5ebf70596a2c00adca0f" name="aaebe26d4d6cf5ebf70596a2c00adca0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaebe26d4d6cf5ebf70596a2c00adca0f">&#9670;&#160;</a></span>PdfException()</h2>
+<a id="af70ef807f15a7c2d71fdfde352f466a8" name="af70ef807f15a7c2d71fdfde352f466a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af70ef807f15a7c2d71fdfde352f466a8">&#9670;&#160;</a></span>Exception()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -192,7 +192,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">pdf::excepts::PdfException::PdfException </td>
+          <td class="memname">pdf::excepts::Exception::Exception </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>data</em>, </td>
@@ -222,7 +222,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Creates a new <a class="el" href="classpdf_1_1excepts_1_1PdfException.html" title="Represents the base exception class.">PdfException</a> with parameters. </p>
+<p>Creates a new <a class="el" href="classpdf_1_1excepts_1_1Exception.html" title="Represents the base exception class.">Exception</a> with parameters. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>Error message. </td></tr>
@@ -235,8 +235,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a783962ee0f5f9c3aed84ce901fe434ff" name="a783962ee0f5f9c3aed84ce901fe434ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a783962ee0f5f9c3aed84ce901fe434ff">&#9670;&#160;</a></span>getDetailCode()</h2>
+<a id="a30a11ec16134bcebacba236a1e8eb5cb" name="a30a11ec16134bcebacba236a1e8eb5cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30a11ec16134bcebacba236a1e8eb5cb">&#9670;&#160;</a></span>getDetailCode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -245,7 +245,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual unsigned long pdf::excepts::PdfException::getDetailCode </td>
+          <td class="memname">virtual unsigned long pdf::excepts::Exception::getDetailCode </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -263,8 +263,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a0674de5d5c1a1bc6e8ea55aaeb657b0b" name="a0674de5d5c1a1bc6e8ea55aaeb657b0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0674de5d5c1a1bc6e8ea55aaeb657b0b">&#9670;&#160;</a></span>getErrorCode()</h2>
+<a id="a2da3e6bf8091930037cc20f4835e28d5" name="a2da3e6bf8091930037cc20f4835e28d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2da3e6bf8091930037cc20f4835e28d5">&#9670;&#160;</a></span>getErrorCode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -273,7 +273,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual unsigned long pdf::excepts::PdfException::getErrorCode </td>
+          <td class="memname">virtual unsigned long pdf::excepts::Exception::getErrorCode </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -291,8 +291,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a70b897abf61ee06ff7fcb99ce513b330" name="a70b897abf61ee06ff7fcb99ce513b330"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70b897abf61ee06ff7fcb99ce513b330">&#9670;&#160;</a></span>getFullDescription()</h2>
+<a id="a92f6cd2db2b3a10ae9010d510f02c8db" name="a92f6cd2db2b3a10ae9010d510f02c8db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92f6cd2db2b3a10ae9010d510f02c8db">&#9670;&#160;</a></span>getFullDescription()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -301,7 +301,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::string pdf::excepts::PdfException::getFullDescription </td>
+          <td class="memname">virtual std::string pdf::excepts::Exception::getFullDescription </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -319,8 +319,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a1636a5d091b9d3ce0c683802721d5249" name="a1636a5d091b9d3ce0c683802721d5249"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1636a5d091b9d3ce0c683802721d5249">&#9670;&#160;</a></span>getName()</h2>
+<a id="a8c2ef0043b151e0efc9889de2c66e763" name="a8c2ef0043b151e0efc9889de2c66e763"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c2ef0043b151e0efc9889de2c66e763">&#9670;&#160;</a></span>getName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -329,7 +329,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const char * pdf::excepts::PdfException::getName </td>
+          <td class="memname">virtual const char * pdf::excepts::Exception::getName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -349,8 +349,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab96fdcd2839740b3ec3e7b300158bfc4" name="ab96fdcd2839740b3ec3e7b300158bfc4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab96fdcd2839740b3ec3e7b300158bfc4">&#9670;&#160;</a></span>hasDetailCode()</h2>
+<a id="a681f99890ffe78e1f8b9c3b91c8c4198" name="a681f99890ffe78e1f8b9c3b91c8c4198"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a681f99890ffe78e1f8b9c3b91c8c4198">&#9670;&#160;</a></span>hasDetailCode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -359,7 +359,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool pdf::excepts::PdfException::hasDetailCode </td>
+          <td class="memname">virtual bool pdf::excepts::Exception::hasDetailCode </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -373,12 +373,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns whether a detail code has been set. </p>
-<p >This is equivalent to <code><a class="el" href="classpdf_1_1excepts_1_1PdfException.html#a783962ee0f5f9c3aed84ce901fe434ff" title="Returns the error detail code.">getDetailCode()</a> != 0U</code>. </p><dl class="section return"><dt>Returns</dt><dd><code>true</code> if a detail code has been set, <code>false</code> otherwise. </dd></dl>
+<p >This is equivalent to <code><a class="el" href="classpdf_1_1excepts_1_1Exception.html#a30a11ec16134bcebacba236a1e8eb5cb" title="Returns the error detail code.">getDetailCode()</a> != 0U</code>. </p><dl class="section return"><dt>Returns</dt><dd><code>true</code> if a detail code has been set, <code>false</code> otherwise. </dd></dl>
 
 </div>
 </div>
-<a id="a6ec4f9f95bf759846385a21689b64b25" name="a6ec4f9f95bf759846385a21689b64b25"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ec4f9f95bf759846385a21689b64b25">&#9670;&#160;</a></span>what()</h2>
+<a id="aa021a4d16cfc8a9d4a4710d609b2fa7c" name="aa021a4d16cfc8a9d4a4710d609b2fa7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa021a4d16cfc8a9d4a4710d609b2fa7c">&#9670;&#160;</a></span>what()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -387,7 +387,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const char * pdf::excepts::PdfException::what </td>
+          <td class="memname">virtual const char * pdf::excepts::Exception::what </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -410,7 +410,7 @@ Public Member Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacepdf.html">pdf</a></li><li class="navelem"><a class="el" href="namespacepdf_1_1excepts.html">excepts</a></li><li class="navelem"><a class="el" href="classpdf_1_1excepts_1_1PdfException.html">PdfException</a></li>
+    <li class="navelem"><a class="el" href="namespacepdf.html">pdf</a></li><li class="navelem"><a class="el" href="namespacepdf_1_1excepts.html">excepts</a></li><li class="navelem"><a class="el" href="classpdf_1_1excepts_1_1Exception.html">Exception</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
