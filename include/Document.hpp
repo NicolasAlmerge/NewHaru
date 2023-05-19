@@ -152,8 +152,24 @@ namespace pdf {
         */
         bool isEmpty() const noexcept final override;
 
+        /**
+         * @brief  Gets the last error code raised.
+         * @note   This will return `0` if no error has been raised.
+         * @return Last error code.
+        */
         unsigned long getLastErrorCode() const;
+
+        /**
+         * @brief  Gets the last error detail code.
+         * @note   This will return `0` if no error has been raised or no detail code has been set for the last error.
+         * @return Last error detail code.
+        */
         unsigned long getLastErrorDetail() const;
+
+        /**
+         * @brief Resets the error code and detail code.
+         * @note  The ::getLastErrorCode and ::getLastErrorDetail functions will not return `0` until another error has been raised.
+        */
         void resetErrorCode();
 
         /******************** PAGES HANDLING ********************/

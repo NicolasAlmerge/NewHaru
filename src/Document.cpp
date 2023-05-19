@@ -363,10 +363,12 @@ bool Document::isEmpty() const noexcept {
 }
 
 unsigned long Document::getLastErrorCode() const {
+    if (pdfDoc == nullptr) return 0U;
     return HPDF_GetError(pdfDoc);
 }
 
 unsigned long Document::getLastErrorDetail() const {
+    if (pdfDoc == nullptr) return 0U;
     return HPDF_GetErrorDetail(pdfDoc);
 }
 
