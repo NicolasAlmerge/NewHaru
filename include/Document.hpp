@@ -172,26 +172,95 @@ namespace pdf {
         */
         void resetErrorCode();
 
-        /******************** PAGES HANDLING ********************/
+        /**
+         * @brief Sets the number of page per pages.
+         * @param pagePerPages Value to use.
+        */
         void setPageConfiguration(unsigned int pagePerPages);
+
+        /**
+         * @brief  Gets the Page at a specified index.
+         * @param  index Index to use.
+         * @return Page at specified index `index`.
+        */
         Page getPageAtIndex(unsigned int index) const;
 
+        /**
+         * @brief Sets the page layout.
+         * @param layout Layout to set.
+        */
         void setPageLayout(enums::PageLayout layout);
+
+        /**
+         * @brief  Gets the page layout.
+         * @return Current page layout.
+        */
         enums::PageLayout getPageLayout() const;
 
+        /**
+         * @brief Sets the page mode.
+         * @param layout Mode to set.
+        */
         void setPageMode(enums::PageMode mode);
+
+        /**
+         * @brief  Gets the page mode.
+         * @return Current page mode.
+        */
         enums::PageMode getPageMode() const;
 
+        /**
+         * @brief Sets the viewer preferences.
+         * @param preferences Preferences to use.
+        */
         void setViewerPreferences(const ViewerPreferences& preferences);
+
+        /**
+         * @brief  Gets the ViewerPreferences.
+         * @return Current ViewerPreferences.
+        */
         ViewerPreferences getViewerPreferences() const;
 
+        /**
+         * @brief Sets the destination to go to upon opening.
+         * @param destination Destination to use.
+        */
         void setOpenDestination(const Destination& destination);
 
+        /**
+         * @brief  Gets the current Page.
+         * @return Current Page.
+        */
         Page getCurrentPage() const;
+
+        /**
+         * @brief  Appends a Page at the end of the document.
+         * @return Newly created Page.
+        */
         Page addPage();
+
+        /**
+         * @brief  Adds a Page before another one.
+         * @param  page Page that should follow.
+         * @return Newly created Page.
+        */
         Page insertPageBefore(const Page& page);
 
+        /**
+         * @brief Adds a page label.
+         * @param style Style to use.
+         * @param pageNumber The index of the first page that applies this labeling range.
+         * @param firstPage The first page number to use.
+        */
         void addPageLabel(enums::PageNumberStyle style = enums::PageNumberStyle::DECIMAL, unsigned int pageNumber = 0U, unsigned int firstPage = 1U);
+
+        /**
+         * @brief Adds a page label with a prefix.
+         * @param prefix Prefix to add before labels.
+         * @param style Style to use.
+         * @param pageNumber The index of the first page that applies this labeling range.
+         * @param firstPage The first page number to use.
+        */
         void addPageLabel(const std::string& prefix, enums::PageNumberStyle style = enums::PageNumberStyle::DECIMAL, unsigned int pageNumber = 0U, unsigned int firstPage = 1U);
 
         /**
@@ -210,18 +279,63 @@ namespace pdf {
         */
         Font getFont(const std::string& fontName, enums::MultiByteEncoding encoding);
 
+        /**
+         * @brief  Loads a Type1 font from an external file and registers it in the document.
+         * @note   Unlike ::loadType1FontFromFile(const std::string&, const std::string&), the glyph data of font file won't be embedded to the PDF file.
+         * @param  AFMFileName Path of the AFM file to use.
+         * @return Name of the loaded font.
+        */
         std::string loadType1FontFromFile(const std::string& AFMFileName);
+
+        /**
+         * @brief  Loads a Type1 font from an external file and registers it in the document.
+         * @note   Unlike ::loadType1FontFromFile(const std::string&), the glyph data of font file will be embedded to the PDF file.
+         * @param  AFMFileName Path of the AFM file to use.
+         * @param  dataFileName Path of a PFA/PFB file.
+         * @return Name of the loaded font.
+        */
         std::string loadType1FontFromFile(const std::string& AFMFileName, const std::string& dataFileName);
 
+        /**
+         * @brief  Loads a TrueType font from an external file and registers it in the document.
+         * @param  fileName Path of a TrueType font file (`.ttf`).
+         * @param  embedding If set to `true`, the glyph data of the font is embedded, otherwise only the matrix data is included.
+         * @return Name of the loaded font.
+        */
         std::string loadTrueTypeFontFromFile(const std::string& fileName, bool embedding);
+
+        /**
+         * @brief  Loads a TrueType font from an TrueType collection file and registers it in the document.
+         * @param  fileName Path of a TrueType font collection file (`.ttc`).
+         * @param  index Index of the font to be loaded.
+         * @param  embedding If set to `true`, the glyph data of the font is embedded, otherwise only the matrix data is included.
+         * @return Name of the loaded font.
+        */
         std::string loadTrueTypeFontFromFile(const std::string& fileName, unsigned int index, bool embedding);
 
+        /**
+         * @brief Loads Japanese fonts.
+         * @throw excepts::MemoryAllocationFailedException if not enough memory is available.
+        */
         void useJPFonts();
-        void useKRFonts();
-        void useCNSFonts();
-        void useCNTFonts();
 
-        /******************** ENCODINGS ********************/
+        /**
+         * @brief Loads Korean fonts.
+         * @throw excepts::MemoryAllocationFailedException if not enough memory is available.
+        */
+        void useKRFonts();
+
+        /**
+         * @brief Loads simplified Chinese fonts.
+         * @throw excepts::MemoryAllocationFailedException if not enough memory is available.
+        */
+        void useCNSFonts();
+
+        /**
+         * @brief Loads traditional Chinese fonts.
+         * @throw excepts::MemoryAllocationFailedException if not enough memory is available.
+        */
+        void useCNTFonts();
 
         /**
          * @brief  Gets the Encoder of a single byte encoding.
