@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['freeallresources_0',['freeAllResources',['../classpdf_1_1Document.html#a82cba9a51024f77b5445e793dc0cdae5',1,'pdf::Document']]],
-  ['freeresources_1',['freeResources',['../classpdf_1_1Document.html#ab5f602f5fef3a98c91435b90a42cec04',1,'pdf::Document']]]
+  ['exception_0',['Exception',['../classpdf_1_1excepts_1_1Exception.html#af70ef807f15a7c2d71fdfde352f466a8',1,'pdf::excepts::Exception']]]
 ];

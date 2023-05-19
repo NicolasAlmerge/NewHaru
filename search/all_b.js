@@ -19,6 +19,8 @@ var searchData=
   ['loadpngimagefrommemory_16',['loadPNGImageFromMemory',['../classpdf_1_1Document.html#af667c606ce6037fba87b22271f3d5af1',1,'pdf::Document']]],
   ['loadrawimagefromfile_17',['loadRawImageFromFile',['../classpdf_1_1Document.html#a051e53827745b7e166f08348c528b959',1,'pdf::Document']]],
   ['loadrawimagefrommemory_18',['loadRawImageFromMemory',['../classpdf_1_1Document.html#aa8e5c13039e2b913326dca8da2a194b6',1,'pdf::Document']]],
-  ['lower_5fletters_19',['LOWER_LETTERS',['../namespacepdf_1_1enums.html#a6d0b1565bc406e1cd01a88ca9fd45603aa9aa86104aa44b2215179eea33f5eabe',1,'pdf::enums']]],
-  ['lower_5froman_20',['LOWER_ROMAN',['../namespacepdf_1_1enums.html#a6d0b1565bc406e1cd01a88ca9fd45603ad316800c62f1bb90c114e6826bdbd565',1,'pdf::enums']]]
+  ['loadtruetypefontfromfile_19',['loadTrueTypeFontFromFile',['../classpdf_1_1Document.html#a5eebe991840447542101bc862fbf7652',1,'pdf::Document::loadTrueTypeFontFromFile(const std::string &amp;fileName, unsigned int index, bool embedding)'],['../classpdf_1_1Document.html#a794191899800824a43d4dea4d6c33423',1,'pdf::Document::loadTrueTypeFontFromFile(const std::string &amp;fileName, bool embedding)']]],
+  ['loadtype1fontfromfile_20',['loadType1FontFromFile',['../classpdf_1_1Document.html#a9c627e6ff87fbd10e7f39af082adc83b',1,'pdf::Document::loadType1FontFromFile(const std::string &amp;AFMFileName, const std::string &amp;dataFileName)'],['../classpdf_1_1Document.html#a267bb843da75ff76f24aa6dc70e735a7',1,'pdf::Document::loadType1FontFromFile(const std::string &amp;AFMFileName)']]],
+  ['lower_5fletters_21',['LOWER_LETTERS',['../namespacepdf_1_1enums.html#a6d0b1565bc406e1cd01a88ca9fd45603aa9aa86104aa44b2215179eea33f5eabe',1,'pdf::enums']]],
+  ['lower_5froman_22',['LOWER_ROMAN',['../namespacepdf_1_1enums.html#a6d0b1565bc406e1cd01a88ca9fd45603ad316800c62f1bb90c114e6826bdbd565',1,'pdf::enums']]]
 ];

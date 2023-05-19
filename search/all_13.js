@@ -17,5 +17,9 @@ var searchData=
   ['us5x7_14',['US5x7',['../namespacepdf_1_1enums.html#a4d95b6ac7ea52cbf6012b032d69bb707aaaa1069f3cf9b143946dac9517717fc6',1,'pdf::enums']]],
   ['use_5foutline_15',['USE_OUTLINE',['../namespacepdf_1_1enums.html#a75c981042ee33b700241e43eebfc8e8aad67894b6d314d6106eb0c1d1e9c58178',1,'pdf::enums']]],
   ['use_5fthumbs_16',['USE_THUMBS',['../namespacepdf_1_1enums.html#a75c981042ee33b700241e43eebfc8e8aa02489fd9b7ce97d1db19ac6429ad5fb1',1,'pdf::enums']]],
-  ['utcindicator_17',['UTCIndicator',['../namespacepdf_1_1enums.html#aa104a4be7629a24b8e1fc51c4f1899d7',1,'pdf::enums']]]
+  ['usecnsfonts_17',['useCNSFonts',['../classpdf_1_1Document.html#a0a2ea88ed06f9ac915b3bed212745537',1,'pdf::Document']]],
+  ['usecntfonts_18',['useCNTFonts',['../classpdf_1_1Document.html#ad2ad16c1687502030120ea83bfae4975',1,'pdf::Document']]],
+  ['usejpfonts_19',['useJPFonts',['../classpdf_1_1Document.html#adaa662333704ace8c6872fb6faf09f4d',1,'pdf::Document']]],
+  ['usekrfonts_20',['useKRFonts',['../classpdf_1_1Document.html#ab21c4a6e380c3ba3a5f6474041772ae8',1,'pdf::Document']]],
+  ['utcindicator_21',['UTCIndicator',['../namespacepdf_1_1enums.html#aa104a4be7629a24b8e1fc51c4f1899d7',1,'pdf::enums']]]
 ];

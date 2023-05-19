@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['box_0',['Box',['../classpdf_1_1Box.html#a7118dc9f5f163c6e50a7685713eb5c72',1,'pdf::Box::Box() noexcept'],['../classpdf_1_1Box.html#a6be08fb85cb5b23adf03b93b35fed603',1,'pdf::Box::Box(float left, float bottom, float right, float top) noexcept']]]
+  ['addpage_0',['addPage',['../classpdf_1_1Document.html#ab845280ded0a3d9b282f3fe3187df7a2',1,'pdf::Document']]],
+  ['addpagelabel_1',['addPageLabel',['../classpdf_1_1Document.html#af6ea94a2d02dbb733fc1c4380c8382ff',1,'pdf::Document::addPageLabel(enums::PageNumberStyle style=enums::PageNumberStyle::DECIMAL, unsigned int pageNumber=0U, unsigned int firstPage=1U)'],['../classpdf_1_1Document.html#a213e365ff82ef8ccc332f098fea74c8c',1,'pdf::Document::addPageLabel(const std::string &amp;prefix, enums::PageNumberStyle style=enums::PageNumberStyle::DECIMAL, unsigned int pageNumber=0U, unsigned int firstPage=1U)']]]
 ];
