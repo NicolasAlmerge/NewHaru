@@ -1,7 +1,6 @@
 #ifndef __HARUPP_OUTLINE_HPP__
 #define __HARUPP_OUTLINE_HPP__
 #include "ContentStream.hpp"
-#include "PdfObject.hpp"
 
 namespace pdf {
     class Destination;
@@ -9,14 +8,14 @@ namespace pdf {
     /**
      * \class  Outline
      * @brief  Represents an outline.
-     * @note   Note that this class cannot be instantiated manually. Rather, it is created when calling PdfDocument::createOutline.
+     * @note   Note that this class cannot be instantiated manually. Rather, it is created when calling Document::createOutline.
      * @file   Outline.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
     */
     class Outline final: public ContentStream {
         explicit Outline(_HPDF_Dict_Rec* content) noexcept;
-        friend class PdfDocument;
+        friend class Document;
 
     public:
 

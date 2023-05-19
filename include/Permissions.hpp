@@ -1,6 +1,6 @@
 #ifndef __HARUPP_PERMISSIONS_HPP__
 #define __HARUPP_PERMISSIONS_HPP__
-#include "PdfObject.hpp"
+#include "Object.hpp"
 
 namespace pdf {
 
@@ -12,10 +12,10 @@ namespace pdf {
      * @author  Nicolas Almerge
      * @date    2023-05-16
     */
-    class Permissions final: public PdfObject {
+    class Permissions final: public Object {
         unsigned int value = 0UL;
         explicit Permissions(unsigned int v);
-        friend class PdfDocument;
+        friend class Document;
 
     public:
 

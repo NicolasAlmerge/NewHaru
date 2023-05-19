@@ -1,19 +1,19 @@
-#ifndef __HARUPP_PDFOBJECT_HPP__
-#define __HARUPP_PDFOBJECT_HPP__
+#ifndef __HARUPP_OBJECT_HPP__
+#define __HARUPP_OBJECT_HPP__
 
 /// Represents the Haru++ namespace.
 namespace pdf {
 
     /**
-     * \class  PdfObject
+     * \class  Object
      * @brief  Represents a pdf object.
-     * @file   PdfObject.hpp
+     * @file   Object.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
     */
-    class PdfObject {
+    class Object {
     public:
-        virtual ~PdfObject() noexcept = 0;
+        virtual ~Object() noexcept = 0;
 
         /**
          * @brief  Checks whether an object is empty.
@@ -30,4 +30,4 @@ namespace pdf {
     };
 }
 
-#endif // __HARUPP_PDFOBJECT_HPP__
+#endif // __HARUPP_OBJECT_HPP__

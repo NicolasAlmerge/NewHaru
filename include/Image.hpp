@@ -2,7 +2,6 @@
 #include "Coor2D.hpp"
 #include "ContentStream.hpp"
 #include "Enums.hpp"
-#include "PdfObject.hpp"
 #include "Typedefs.hpp"
 
 namespace pdf {
@@ -11,17 +10,17 @@ namespace pdf {
      * \class  Image
      * @brief  Represents an image.
      * @note   Note that this class cannot be instantiated manually. Rather, it is created when calling
-     *         PdfDocument::loadJPEGImageFromFile, PdfDocument::loadJPEGImageFromMemory,
-     *         PdfDocument::loadPartialPNGImageFromFile,
-     *         PdfDocument::loadPNGImageFromFile, PdfDocument::loadPNGImageFromMemory,
-     *         PdfDocument::loadRawImageFromFile and PdfDocument::loadRawImageFromMemory.
+     *         Document::loadJPEGImageFromFile, Document::loadJPEGImageFromMemory,
+     *         Document::loadPartialPNGImageFromFile,
+     *         Document::loadPNGImageFromFile, Document::loadPNGImageFromMemory,
+     *         Document::loadRawImageFromFile and Document::loadRawImageFromMemory.
      * @file   Image.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
     */
     class Image final: public ContentStream {
         explicit Image(_HPDF_Dict_Rec* content) noexcept;
-        friend class PdfDocument;
+        friend class Document;
 
     public:
 

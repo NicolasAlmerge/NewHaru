@@ -1,5 +1,5 @@
-#ifndef __HARUPP_PDFEXCEPTION_HPP__
-#define __HARUPP_PDFEXCEPTION_HPP__
+#ifndef __HARUPP_EXCEPTION_HPP__
+#define __HARUPP_EXCEPTION_HPP__
 #include "exception"
 #include "string"
 
@@ -7,13 +7,13 @@
 namespace pdf::excepts {
 
     /**
-     * \class  PdfException
+     * \class  Exception
      * @brief  Represents the base exception class.
-     * @file   PdfException.hpp
+     * @file   Exception.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
     */
-    class PdfException: public std::exception {
+    class Exception: public std::exception {
         std::string errorMessage;
         unsigned long errorCode;
         unsigned long detailCode;
@@ -21,13 +21,13 @@ namespace pdf::excepts {
     public:
 
         /**
-         * @brief Creates a new PdfException with parameters.
+         * @brief Creates a new Exception with parameters.
          * @param data Error message.
          * @param errorCode Error code.
          * @param detailCode Detail code.
         */
-        PdfException(const std::string& data, unsigned long errorCode, unsigned long detailCode = 0U) noexcept;
-        virtual ~PdfException() noexcept = 0;
+        Exception(const std::string& data, unsigned long errorCode, unsigned long detailCode = 0U) noexcept;
+        virtual ~Exception() noexcept = 0;
 
         /**
          * @brief  Returns the error text.
@@ -71,26 +71,26 @@ namespace pdf::excepts {
     /**
      * \class  NewPdfCreationFailedException
      * @brief  Represents the exception that occurs when creating a new pdf failed.
-     * @file   PdfException.hpp
+     * @file   Exception.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
     */
-    class NewPdfCreationFailedException: public PdfException {
-        using PdfException::PdfException;
+    class NewPdfCreationFailedException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "NewPdfCreationFailedException";
         }
     };
 
     // Stream related exceptions
-    class StreamException: public PdfException {
-        using PdfException::PdfException;
+    class StreamException: public Exception {
+        using Exception::Exception;
         public: virtual ~StreamException() noexcept = 0;
     };
 
     // Array related exceptions
-    class ArrayException: public PdfException {
-        using PdfException::PdfException;
+    class ArrayException: public Exception {
+        using Exception::Exception;
         public: virtual ~ArrayException() noexcept = 0;
     };
 
@@ -119,8 +119,8 @@ namespace pdf::excepts {
     };
 
     // Error code 0x1004
-    class BinaryLengthException: public PdfException {
-        using PdfException::PdfException;
+    class BinaryLengthException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "BinaryLengthException";
         }
@@ -141,8 +141,8 @@ namespace pdf::excepts {
     };
 
     // Dictionary related exceptions
-    class DictException: public PdfException {
-        using PdfException::PdfException;
+    class DictException: public Exception {
+        using Exception::Exception;
         public: virtual ~DictException() noexcept = 0;
     };
 
@@ -179,16 +179,16 @@ namespace pdf::excepts {
     };
 
     // Error code 0x100B
-    class EncryptionNotSetException: public PdfException {
-        using PdfException::PdfException;
+    class EncryptionNotSetException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "EncryptionNotSetException";
         }
     };
 
     // File related exceptions
-    class DocumentException: public PdfException {
-        using PdfException::PdfException;
+    class DocumentException: public Exception {
+        using Exception::Exception;
         public: virtual ~DocumentException() noexcept = 0;
     };
 
@@ -215,48 +215,48 @@ namespace pdf::excepts {
     };
 
     // Error code 0x100F
-    class ExceededJWWCodeNumLimitException: public PdfException {
-        using PdfException::PdfException;
+    class ExceededJWWCodeNumLimitException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "ExceededJWWCodeNumLimitException";
         }
     };
 
     // Error code 0x1011
-    class InvalidPasswordException: public PdfException {
-        using PdfException::PdfException;
+    class InvalidPasswordException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "InvalidPasswordException";
         }
     };
 
     // Error code 0x1013
-    class UnknownClassException: public PdfException {
-        using PdfException::PdfException;
+    class UnknownClassException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "UnknownClassException";
         }
     };
 
     // Error code 0x1014
-    class GStateLimitExceededException: public PdfException {
-        using PdfException::PdfException;
+    class GStateLimitExceededException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "GStateLimitExceededException";
         }
     };
 
     // Error code 0x1015
-    class MemoryAllocationFailedException: public PdfException {
-        using PdfException::PdfException;
+    class MemoryAllocationFailedException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "MemoryAllocationFailedException";
         }
     };
 
     // File related exceptions
-    class FileException: public PdfException {
-        using PdfException::PdfException;
+    class FileException: public Exception {
+        using Exception::Exception;
         public: virtual ~FileException() noexcept = 0;
     };
 
@@ -293,64 +293,64 @@ namespace pdf::excepts {
     };
 
     // Error code 0x101B
-    class InvalidAFMHeaderException: public PdfException {
-        using PdfException::PdfException;
+    class InvalidAFMHeaderException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "InvalidAFMHeaderException";
         }
     };
 
     // Error code 0x101C
-    class InvalidAnnotationException: public PdfException {
-        using PdfException::PdfException;
+    class InvalidAnnotationException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "InvalidAnnotationException";
         }
     };
 
     // Error code 0x101E
-    class InvalidBitPerComponentException: public PdfException {
-        using PdfException::PdfException;
+    class InvalidBitPerComponentException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "InvalidBitPerComponentException";
         }
     };
 
     // Error code 0x101F
-    class InvalidCharMatricsDataException: public PdfException {
-        using PdfException::PdfException;
+    class InvalidCharMatricsDataException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "InvalidCharMatricsDataException";
         }
     };
 
     // Error code 0x1020
-    class InvalidColorSpaceException: public PdfException {
-        using PdfException::PdfException;
+    class InvalidColorSpaceException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "InvalidColorSpaceException";
         }
     };
 
     // Error code 0x1021
-    class InvalidCompressionModeException: public PdfException {
-        using PdfException::PdfException;
+    class InvalidCompressionModeException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "InvalidCompressionModeException";
         }
     };
 
     // Error code 0x1022
-    class InvalidDateTimeException: public PdfException {
-        using PdfException::PdfException;
+    class InvalidDateTimeException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "InvalidDateTimeException";
         }
     };
 
     // Error code 0x1023
-    class InvalidDestinationException: public PdfException {
-        using PdfException::PdfException;
+    class InvalidDestinationException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "InvalidDestinationException";
         }
@@ -373,8 +373,8 @@ namespace pdf::excepts {
     };
 
     // Encoder related exceptions
-    class EncoderException: public PdfException {
-        using PdfException::PdfException;
+    class EncoderException: public Exception {
+        using Exception::Exception;
         public: virtual ~EncoderException() noexcept = 0;
     };
 
@@ -403,8 +403,8 @@ namespace pdf::excepts {
     };
 
     // Error code 0x102C
-    class InvalidEncryptionKeyLengthException: public PdfException {
-        using PdfException::PdfException;
+    class InvalidEncryptionKeyLengthException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "InvalidEncryptionKeyLengthException";
         }
@@ -451,24 +451,24 @@ namespace pdf::excepts {
     };
 
     // Error code 0x1032
-    class InvalidNDataException: public PdfException {
-        using PdfException::PdfException;
+    class InvalidNDataException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "InvalidNDataException";
         }
     };
 
     // Error code 0x1033
-    class InvalidObjectException: public PdfException {
-        using PdfException::PdfException;
+    class InvalidObjectException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "InvalidObjectException";
         }
     };
 
     // Error code 0x1034
-    class InvalidObjectIDException: public PdfException {
-        using PdfException::PdfException;
+    class InvalidObjectIDException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "InvalidObjectIDException";
         }
@@ -483,8 +483,8 @@ namespace pdf::excepts {
     };
 
     // Error code 0x1036
-    class InvalidOutlineException: public PdfException {
-        using PdfException::PdfException;
+    class InvalidOutlineException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "InvalidOutlineException";
         }
@@ -513,8 +513,8 @@ namespace pdf::excepts {
     };
 
     // Error code 0x1039
-    class InvalidParameterException: public PdfException {
-        using PdfException::PdfException;
+    class InvalidParameterException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "InvalidParameterException";
         }
@@ -553,48 +553,48 @@ namespace pdf::excepts {
     };
 
     // Error code 0x1040
-    class InvalidTTCIndexException: public PdfException {
-        using PdfException::PdfException;
+    class InvalidTTCIndexException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "InvalidTTCIndexException";
         }
     };
 
     // Error code 0x1041
-    class InvalidWXDataException: public PdfException {
-        using PdfException::PdfException;
+    class InvalidWXDataException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "InvalidWXDataException";
         }
     };
 
     // Error code 0x1042
-    class ItemNotFoundException: public PdfException {
-        using PdfException::PdfException;
+    class ItemNotFoundException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "ItemNotFoundException";
         }
     };
 
     // Error code 0x1043
-    class LibPNGException: public PdfException {
-        using PdfException::PdfException;
+    class LibPNGException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "LibPNGException";
         }
     };
 
     // Error code 0x1044
-    class NameInvalidValueException: public PdfException {
-        using PdfException::PdfException;
+    class NameInvalidValueException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "NameInvalidValueException";
         }
     };
 
     // Error code 0x1045
-    class NameOutOfRangeException: public PdfException {
-        using PdfException::PdfException;
+    class NameOutOfRangeException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "NameOutOfRangeException";
         }
@@ -713,8 +713,8 @@ namespace pdf::excepts {
     };
 
     // Error code 0x1057
-    class FloatOutOfRangeException: public PdfException {
-        using PdfException::PdfException;
+    class FloatOutOfRangeException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "FloatOutOfRangeException";
         }
@@ -737,16 +737,16 @@ namespace pdf::excepts {
     };
 
     // Error code 0x105B
-    class StringOutOfRangeException: public PdfException {
-        using PdfException::PdfException;
+    class StringOutOfRangeException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "StringOutOfRangeException";
         }
     };
 
     // Error code 0x105C
-    class FunctionSkippedException: public PdfException {
-        using PdfException::PdfException;
+    class FunctionSkippedException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "FunctionSkippedException";
         }
@@ -793,8 +793,8 @@ namespace pdf::excepts {
     };
 
     // Error code 0x1062
-    class UnsupportedFunctionException: public PdfException {
-        using PdfException::PdfException;
+    class UnsupportedFunctionException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "UnsupportedFunctionException";
         }
@@ -817,16 +817,16 @@ namespace pdf::excepts {
     };
 
     // Error code 0x1065
-    class XRefCountException: public PdfException {
-        using PdfException::PdfException;
+    class XRefCountException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "XRefCountException";
         }
     };
 
     // Error code 0x1066
-    class ZLIBException: public PdfException {
-        using PdfException::PdfException;
+    class ZLIBException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "ZLIBException";
         }
@@ -841,16 +841,16 @@ namespace pdf::excepts {
     };
 
     // Error code 0x1068
-    class InvalidURIException: public PdfException {
-        using PdfException::PdfException;
+    class InvalidURIException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "InvalidURIException";
         }
     };
 
     // Error code 0x1069
-    class PageLayoutOutOfRangeException: public PdfException {
-        using PdfException::PdfException;
+    class PageLayoutOutOfRangeException: public Exception {
+        using Exception::Exception;
         public: const char* getName() const noexcept override {
             return "PageLayoutOutOfRangeException";
         }
@@ -873,8 +873,8 @@ namespace pdf::excepts {
     };
 
     // Annotation related exceptions
-    class AnnotationException: public PdfException {
-        using PdfException::PdfException;
+    class AnnotationException: public Exception {
+        using Exception::Exception;
         public: virtual ~AnnotationException() noexcept = 0;
     };
 
@@ -911,8 +911,8 @@ namespace pdf::excepts {
     };
 
     // Other exceptions
-    class OtherException: public PdfException {
-        using PdfException::PdfException;
+    class OtherException: public Exception {
+        using Exception::Exception;
         public: virtual ~OtherException() noexcept = 0;
     };
 
@@ -933,4 +933,4 @@ namespace pdf::excepts {
     };
 }
 
-#endif // __HARUPP_PDFEXCEPTION_HPP__
+#endif // __HARUPP_EXCEPTION_HPP__

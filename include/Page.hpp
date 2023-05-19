@@ -1,8 +1,7 @@
-#ifndef __HARUPP_PDFPAGE_HPP__
-#define __HARUPP_PDFPAGE_HPP__
+#ifndef __HARUPP_PAGE_HPP__
+#define __HARUPP_PAGE_HPP__
 #include "ContentStream.hpp"
 #include "Enums.hpp"
-#include "PdfObject.hpp"
 #include "string"
 #include "utility"
 
@@ -22,15 +21,15 @@ namespace pdf {
     class ContentStream;
 
     /**
-     * \class  PdfPage
+     * \class  Page
      * @brief  Represents a pdf document page.
-     * @file   PdfPage.hpp
+     * @file   Page.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
     */
-    class PdfPage final: public ContentStream {
-        explicit PdfPage(_HPDF_Dict_Rec* content) noexcept;
-        friend class PdfDocument;
+    class Page final: public ContentStream {
+        explicit Page(_HPDF_Dict_Rec* content) noexcept;
+        friend class Document;
 
     public:
         void setWidth(float value);
@@ -223,4 +222,4 @@ namespace pdf {
     };
 }
 
-#endif // __HARUPP_PDFPAGE_HPP__
+#endif // __HARUPP_PAGE_HPP__

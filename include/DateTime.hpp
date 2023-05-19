@@ -1,7 +1,7 @@
 #ifndef __HARUPP_DATETIME_HPP__
 #define __HARUPP_DATETIME_HPP__
 #include "Enums.hpp"
-#include "PdfObject.hpp"
+#include "Object.hpp"
 
 namespace pdf {
 
@@ -12,7 +12,7 @@ namespace pdf {
      * @author Nicolas Almerge
      * @date   2023-05-16
     */
-    class DateTime final: public PdfObject {
+    class DateTime final: public Object {
         int year = 0;
         int month = 0;
         int day = 0;

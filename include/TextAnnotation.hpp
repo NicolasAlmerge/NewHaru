@@ -7,14 +7,14 @@ namespace pdf {
     /**
      * \class  TextAnnotation
      * @brief  Represents a pdf text annotation.
-     * @note   Note that this class cannot be instantiated manually. Rather, it is created when calling PdfPage::createTextAnnotation.
+     * @note   Note that this class cannot be instantiated manually. Rather, it is created when calling Page::createTextAnnotation.
      * @file   TextAnnotation.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
     */
     class TextAnnotation final: public Annotation {
         explicit TextAnnotation(_HPDF_Dict_Rec* content) noexcept;
-        friend class PdfPage;
+        friend class Page;
 
     public:
 

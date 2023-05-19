@@ -1,6 +1,6 @@
 #ifndef __HARUPP_COLOR_HPP__
 #define __HARUPP_COLOR_HPP__
-#include "PdfObject.hpp"
+#include "Object.hpp"
 
 namespace pdf {
     class RGBColor;
@@ -13,7 +13,7 @@ namespace pdf {
      * @author Nicolas Almerge
      * @date   2023-05-16
     */
-    class Color: public PdfObject {
+    class Color: public Object {
     public:
         virtual ~Color() = 0;
 

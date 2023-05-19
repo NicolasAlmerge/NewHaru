@@ -1,6 +1,6 @@
 #ifndef __HARUPP_TEXTWIDTH_HPP__
 #define __HARUPP_TEXTWIDTH_HPP__
-#include "PdfObject.hpp"
+#include "Object.hpp"
 
 namespace pdf {
 
@@ -12,7 +12,7 @@ namespace pdf {
      * @author Nicolas Almerge
      * @date   2023-05-16
     */
-    class TextWidth final: public PdfObject {
+    class TextWidth final: public Object {
         unsigned int numchars = 0U;
         unsigned int width = 0U;
         unsigned int numspace = 0U;

@@ -1,29 +1,29 @@
-#include "../include/PdfException.hpp"
+#include "../include/Exception.hpp"
 using namespace pdf::excepts;
 
 
-PdfException::PdfException(const std::string& data, unsigned long errorCode, unsigned long detailCode) noexcept:
+Exception::Exception(const std::string& data, unsigned long errorCode, unsigned long detailCode) noexcept:
     errorMessage(data), errorCode(errorCode), detailCode(detailCode) {}
 
-PdfException::~PdfException() noexcept {}
+Exception::~Exception() noexcept {}
 
-unsigned long PdfException::getErrorCode() const noexcept {
+unsigned long Exception::getErrorCode() const noexcept {
     return errorCode;
 }
 
-unsigned long PdfException::getDetailCode() const noexcept {
+unsigned long Exception::getDetailCode() const noexcept {
     return detailCode;
 }
 
-const char* PdfException::what() const noexcept {
+const char* Exception::what() const noexcept {
     return errorMessage.c_str();
 }
 
-bool PdfException::hasDetailCode() const noexcept {
+bool Exception::hasDetailCode() const noexcept {
     return detailCode != 0U;
 }
 
-std::string PdfException::getFullDescription() const noexcept {
+std::string Exception::getFullDescription() const noexcept {
     return std::string(getName()) + std::string(": ") + errorMessage;
 }
 

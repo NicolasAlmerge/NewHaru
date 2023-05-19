@@ -1,6 +1,6 @@
 #ifndef __HARUPP_DASHMODE_HPP__
 #define __HARUPP_DASHMODE_HPP__
-#include "PdfObject.hpp"
+#include "Object.hpp"
 #include "vector"
 
 namespace pdf {
@@ -12,10 +12,10 @@ namespace pdf {
      * @author Nicolas Almerge
      * @date   2023-05-16
     */
-    class DashMode final: public PdfObject {
+    class DashMode final: public Object {
         std::vector<float> points;
         float phase = 0.f;
-        friend class PdfPage;
+        friend class Page;
 
     public:
 

@@ -1,6 +1,6 @@
 #ifndef __HARUPP_BOX_HPP__
 #define __HARUPP_BOX_HPP__
-#include "PdfObject.hpp"
+#include "Object.hpp"
 
 namespace pdf {
 
@@ -11,7 +11,7 @@ namespace pdf {
      * @author Nicolas Almerge
      * @date   2023-05-16
     */
-    class Box final: public PdfObject {
+    class Box final: public Object {
         float left = 0.f;
         float bottom = 0.f;
         float right = 0.f;

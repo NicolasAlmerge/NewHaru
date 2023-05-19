@@ -1,5 +1,5 @@
 #include "../include/DashMode.hpp"
-#include "../include/PdfException.hpp"
+#include "../include/Exception.hpp"
 #include "../include/Constants.hpp"
 using namespace pdf;
 

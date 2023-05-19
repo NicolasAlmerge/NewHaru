@@ -1,7 +1,6 @@
 #ifndef __HARUPP_FONT_HPP__
 #define __HARUPP_FONT_HPP__
 #include "ContentStream.hpp"
-#include "PdfObject.hpp"
 #include "string"
 #include "utility"
 #include "vector"
@@ -13,15 +12,15 @@ namespace pdf {
     /**
      * \class  Font
      * @brief  Represents a font.
-     * @note   Note that this class cannot be instantiated manually. Rather, it is created when calling PdfDocument::getFont and PdfPage::getCurrentFont.
+     * @note   Note that this class cannot be instantiated manually. Rather, it is created when calling Document::getFont and Page::getCurrentFont.
      * @file   Font.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
     */
     class Font final: public ContentStream {
         explicit Font(_HPDF_Dict_Rec* content) noexcept;
-        friend class PdfDocument;
-        friend class PdfPage;
+        friend class Document;
+        friend class Page;
 
     public:
 

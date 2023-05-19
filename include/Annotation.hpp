@@ -2,7 +2,6 @@
 #define __HARUPP_ANNOTATION_HPP__
 #include "ContentStream.hpp"
 #include "Enums.hpp"
-#include "PdfObject.hpp"
 
 namespace pdf {
 

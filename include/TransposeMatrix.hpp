@@ -1,6 +1,6 @@
 #ifndef __HARUPP_TRANSPOSEMATRIX_HPP__
 #define __HARUPP_TRANSPOSEMATRIX_HPP__
-#include "PdfObject.hpp"
+#include "Object.hpp"
 
 namespace pdf {
 
@@ -11,7 +11,7 @@ namespace pdf {
      * @author Nicolas Almerge
      * @date   2023-05-16
     */
-    class TransposeMatrix final: public PdfObject {
+    class TransposeMatrix final: public Object {
         float a = 0.f;
         float b = 0.f;
         float c = 0.f;

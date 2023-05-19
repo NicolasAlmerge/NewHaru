@@ -1,4 +1,4 @@
-#include "../include/PdfPage.hpp"
+#include "../include/Page.hpp"
 #include "../include/Destination.hpp"
 #include "../include/TextAnnotation.hpp"
 #include "../include/LinkAnnotation.hpp"
@@ -59,94 +59,94 @@ static ColorSpace convertToColorSpace(HPDF_ColorSpace colorSpace) {
 }
 
 
-PdfPage::PdfPage(_HPDF_Dict_Rec* content) noexcept: ContentStream(content) {}
+Page::Page(_HPDF_Dict_Rec* content) noexcept: ContentStream(content) {}
 
-void PdfPage::setWidth(float value) {
+void Page::setWidth(float value) {
     HPDF_Page_SetWidth(__innerContent, value);
 }
 
-void PdfPage::setHeight(float value) {
+void Page::setHeight(float value) {
     HPDF_Page_SetHeight(__innerContent, value);
 }
 
-void PdfPage::setSize(PageSize size, PageOrientation orientation) {
+void Page::setSize(PageSize size, PageOrientation orientation) {
     HPDF_Page_SetSize(__innerContent, (HPDF_PageSizes) size, (HPDF_PageDirection) orientation);
 }
 
-void PdfPage::setRotation(PageRotation rotation) {
+void Page::setRotation(PageRotation rotation) {
     HPDF_Page_SetRotate(__innerContent, (unsigned short) rotation);
 }
 
-float PdfPage::getWidth() const {
+float Page::getWidth() const {
     return HPDF_Page_GetWidth(__innerContent);
 }
 
-float PdfPage::getHeight() const {
+float Page::getHeight() const {
     return HPDF_Page_GetHeight(__innerContent);
 }
 
-Destination PdfPage::createDestination() {
+Destination Page::createDestination() {
     return Destination(HPDF_Page_CreateDestination(__innerContent));
 }
 
-TextAnnotation PdfPage::createTextAnnotation(const std::string& text, const Box& box, const Encoder& encoder) {
+TextAnnotation Page::createTextAnnotation(const std::string& text, const Box& box, const Encoder& encoder) {
     return TextAnnotation(HPDF_Page_CreateTextAnnot(__innerContent, __toRect(box), text.c_str(), encoder.__innerContent));
 }
 
-TextAnnotation PdfPage::createTextAnnotation(const std::string& text, const Box& box) {
+TextAnnotation Page::createTextAnnotation(const std::string& text, const Box& box) {
     return TextAnnotation(HPDF_Page_CreateTextAnnot(__innerContent, __toRect(box), text.c_str(), nullptr));
 }
 
-LinkAnnotation PdfPage::createLinkAnnotation(const Destination& destination, const Box& box) {
+LinkAnnotation Page::createLinkAnnotation(const Destination& destination, const Box& box) {
     return LinkAnnotation(HPDF_Page_CreateLinkAnnot(__innerContent, __toRect(box), destination.__innerContent));
 }
 
-LinkAnnotation PdfPage::createURILinkAnnotation(const std::string& uri, const Box& box) {
+LinkAnnotation Page::createURILinkAnnotation(const std::string& uri, const Box& box) {
     return LinkAnnotation(HPDF_Page_CreateURILinkAnnot(__innerContent, __toRect(box), uri.c_str()));
 }
 
-float PdfPage::getTextWidth(const std::string& text) const {
+float Page::getTextWidth(const std::string& text) const {
     return HPDF_Page_TextWidth(__innerContent, text.c_str());
 }
 
-std::pair<unsigned int, float> PdfPage::measureText(const std::string& text, float width, bool wordWrap) const {
+std::pair<unsigned int, float> Page::measureText(const std::string& text, float width, bool wordWrap) const {
     float realWidth;
     unsigned int val = HPDF_Page_MeasureText(__innerContent, text.c_str(), width, wordWrap, &realWidth);
     return {val, realWidth};
 }
 
-unsigned short PdfPage::getGMode() const {
+unsigned short Page::getGMode() const {
     return HPDF_Page_GetGMode(__innerContent);
 }
 
-Coor2D PdfPage::getCurrentPos() const {
+Coor2D Page::getCurrentPos() const {
     HPDF_Point point = HPDF_Page_GetCurrentPos(__innerContent);
     return Coor2D(point.x, point.y);
 }
 
-Coor2D PdfPage::getCurrentTextPos() const {
+Coor2D Page::getCurrentTextPos() const {
     HPDF_Point point = HPDF_Page_GetCurrentTextPos(__innerContent);
     return Coor2D(point.x, point.y);
 }
 
-Font PdfPage::getCurrentFont() const {
+Font Page::getCurrentFont() const {
     return Font(HPDF_Page_GetCurrentFont(__innerContent));
 }
 
-float PdfPage::getCurrentFontSize() const {
+float Page::getCurrentFontSize() const {
     return HPDF_Page_GetCurrentFontSize(__innerContent);
 }
 
-TransposeMatrix PdfPage::getTransposeMatrix() const {
+TransposeMatrix Page::getTransposeMatrix() const {
     HPDF_TransMatrix matrix = HPDF_Page_GetTransMatrix(__innerContent);
     return TransposeMatrix(matrix.a, matrix.b, matrix.c, matrix.d, matrix.x, matrix.y);
 }
 
-float PdfPage::getLineWidth() const {
+float Page::getLineWidth() const {
     return HPDF_Page_GetLineWidth(__innerContent);
 }
 
-LineCap PdfPage::getLineCap() const {
+LineCap Page::getLineCap() const {
     switch (HPDF_Page_GetLineCap(__innerContent)) {
         case HPDF_BUTT_END: return LineCap::BUTT_END;
         case HPDF_ROUND_END: return LineCap::ROUND_END;
@@ -155,7 +155,7 @@ LineCap PdfPage::getLineCap() const {
     }
 }
 
-LineJoin PdfPage::getLineJoin() const {
+LineJoin Page::getLineJoin() const {
     switch (HPDF_Page_GetLineJoin(__innerContent)) {
         case HPDF_MITER_JOIN: return LineJoin::MITER_JOIN;
         case HPDF_ROUND_JOIN: return LineJoin::ROUND_JOIN;
@@ -164,11 +164,11 @@ LineJoin PdfPage::getLineJoin() const {
     }
 }
 
-float PdfPage::getMiterLimit() const {
+float Page::getMiterLimit() const {
     return HPDF_Page_GetMiterLimit(__innerContent);
 }
 
-DashMode PdfPage::getDash() const {
+DashMode Page::getDash() const {
     HPDF_DashMode mode = HPDF_Page_GetDash(__innerContent);
     DashMode dashMode;
     dashMode.points = __vectorFromValues(mode.num_ptn, mode.ptn);
@@ -176,27 +176,27 @@ DashMode PdfPage::getDash() const {
     return dashMode;
 }
 
-float PdfPage::getFlatness() const {
+float Page::getFlatness() const {
     return HPDF_Page_GetFlat(__innerContent);
 }
 
-float PdfPage::getCharSpace() const {
+float Page::getCharSpace() const {
     return HPDF_Page_GetCharSpace(__innerContent);
 }
 
-float PdfPage::getWordSpace() const {
+float Page::getWordSpace() const {
     return HPDF_Page_GetWordSpace(__innerContent);
 }
 
-float PdfPage::getHorizontalScalling() const {
+float Page::getHorizontalScalling() const {
     return HPDF_Page_GetHorizontalScalling(__innerContent);
 }
 
-float PdfPage::getTextLeading() const {
+float Page::getTextLeading() const {
     return HPDF_Page_GetTextLeading(__innerContent);
 }
 
-TextRenderingMode PdfPage::getTextRenderingMode() const {
+TextRenderingMode Page::getTextRenderingMode() const {
     switch (HPDF_Page_GetTextRenderingMode(__innerContent)) {
         case HPDF_FILL: return TextRenderingMode::FILL;
         case HPDF_STROKE: return TextRenderingMode::STROKE;
@@ -210,293 +210,293 @@ TextRenderingMode PdfPage::getTextRenderingMode() const {
     }
 }
 
-float PdfPage::getTextRise() const {
+float Page::getTextRise() const {
     return HPDF_Page_GetTextRise(__innerContent);
 }
 
-RGBColor PdfPage::getRGBFill() const {
+RGBColor Page::getRGBFill() const {
     HPDF_RGBColor color = HPDF_Page_GetRGBFill(__innerContent);
     return RGBColor(color.r, color.g, color.b);
 }
 
-RGBColor PdfPage::getRGBStroke() const {
+RGBColor Page::getRGBStroke() const {
     HPDF_RGBColor color = HPDF_Page_GetRGBStroke(__innerContent);
     return RGBColor(color.r, color.g, color.b);
 }
 
-CMYKColor PdfPage::getCMYKFill() const {
+CMYKColor Page::getCMYKFill() const {
     HPDF_CMYKColor color = HPDF_Page_GetCMYKFill(__innerContent);
     return CMYKColor(color.c, color.m, color.y, color.k);
 }
 
-CMYKColor PdfPage::getCMYKStroke() const {
+CMYKColor Page::getCMYKStroke() const {
     HPDF_CMYKColor color = HPDF_Page_GetCMYKStroke(__innerContent);
     return CMYKColor(color.c, color.m, color.y, color.k);
 }
 
-float PdfPage::getGrayFill() const {
+float Page::getGrayFill() const {
     return HPDF_Page_GetGrayFill(__innerContent);
 }
 
-float PdfPage::getGrayStroke() const {
+float Page::getGrayStroke() const {
     return HPDF_Page_GetGrayStroke(__innerContent);
 }
 
-ColorSpace PdfPage::getStrokingColorSpace() const {
+ColorSpace Page::getStrokingColorSpace() const {
     return convertToColorSpace(HPDF_Page_GetStrokingColorSpace(__innerContent));
 }
 
-ColorSpace PdfPage::getFillingColorSpace() const {
+ColorSpace Page::getFillingColorSpace() const {
     return convertToColorSpace(HPDF_Page_GetFillingColorSpace(__innerContent));
 }
 
-TransposeMatrix PdfPage::getTextMatrix() const {
+TransposeMatrix Page::getTextMatrix() const {
     HPDF_TransMatrix matrix = HPDF_Page_GetTextMatrix(__innerContent);
     return TransposeMatrix(matrix.a, matrix.b, matrix.c, matrix.d, matrix.x, matrix.y);
 }
 
-unsigned int PdfPage::getGStateDepth() const {
+unsigned int Page::getGStateDepth() const {
     return HPDF_Page_GetGStateDepth(__innerContent);
 }
 
-void PdfPage::setSlideShow(TransitionStyle type, float dispTime, float transTime) {
+void Page::setSlideShow(TransitionStyle type, float dispTime, float transTime) {
     HPDF_Page_SetSlideShow(__innerContent, (HPDF_TransitionStyle) type, dispTime, transTime);
 }
 
-void PdfPage::newContentStream(const ContentStream& newStream) {
+void Page::newContentStream(const ContentStream& newStream) {
     HPDF_Page_New_Content_Stream(__innerContent, &newStream.__innerContent);
 }
 
-void PdfPage::insertSharedContentStream(const ContentStream& sharedStream) {
+void Page::insertSharedContentStream(const ContentStream& sharedStream) {
     HPDF_Page_Insert_Shared_Content_Stream(__innerContent, sharedStream.__innerContent);
 }
 
-void PdfPage::arc(const Coor2D& coors, float radius, float ang1, float ang2) {
+void Page::arc(const Coor2D& coors, float radius, float ang1, float ang2) {
     HPDF_Page_Arc(__innerContent, coors.getX(), coors.getY(), radius, ang1, ang2);
 }
 
-void PdfPage::beginText() {
+void Page::beginText() {
     HPDF_Page_BeginText(__innerContent);
 }
 
-void PdfPage::circle(const Coor2D& coors, float radius) {
+void Page::circle(const Coor2D& coors, float radius) {
     HPDF_Page_Circle(__innerContent, coors.getX(), coors.getY(), radius);
 }
 
-void PdfPage::clip() {
+void Page::clip() {
     HPDF_Page_Clip(__innerContent);
 }
 
-void PdfPage::closePath() {
+void Page::closePath() {
     HPDF_Page_ClosePath(__innerContent);
 }
 
-void PdfPage::closePathStroke() {
+void Page::closePathStroke() {
     HPDF_Page_ClosePathStroke(__innerContent);
 }
 
-void PdfPage::closePathEofillStroke() {
+void Page::closePathEofillStroke() {
     HPDF_Page_ClosePathEofillStroke(__innerContent);
 }
 
-void PdfPage::closePathFillStroke() {
+void Page::closePathFillStroke() {
     HPDF_Page_ClosePathFillStroke(__innerContent);
 }
 
-void PdfPage::concat(const TransposeMatrix& matrix) {
+void Page::concat(const TransposeMatrix& matrix) {
     HPDF_Page_Concat(__innerContent, matrix.getA(), matrix.getB(), matrix.getC(), matrix.getD(), matrix.getX(), matrix.getY());
 }
 
-void PdfPage::curveTo(float x1, float y1, float x2, float y2, float x3, float y3) {
+void Page::curveTo(float x1, float y1, float x2, float y2, float x3, float y3) {
     HPDF_Page_CurveTo(__innerContent, x1, y1, x2, y2, x3, y3);
 }
 
-void PdfPage::curveTo2(float x2, float y2, float x3, float y3) {
+void Page::curveTo2(float x2, float y2, float x3, float y3) {
     HPDF_Page_CurveTo2(__innerContent, x2, y2, x3, y3);
 }
 
-void PdfPage::curveTo3(float x1, float y1, float x3, float y3) {
+void Page::curveTo3(float x1, float y1, float x3, float y3) {
     HPDF_Page_CurveTo3(__innerContent, x1, y1, x3, y3);
 }
 
-void PdfPage::drawImage(const Image& image, const Coor2D& coors, float width, float height) {
+void Page::drawImage(const Image& image, const Coor2D& coors, float width, float height) {
     HPDF_Page_DrawImage(__innerContent, image.__innerContent, coors.getX(), coors.getY(), width, height);
 }
 
-void PdfPage::ellipse(const Coor2D& coors, float xRadius, float yRadius) {
+void Page::ellipse(const Coor2D& coors, float xRadius, float yRadius) {
     HPDF_Page_Ellipse(__innerContent, coors.getX(), coors.getY(), xRadius, yRadius);
 }
 
-void PdfPage::endPath() {
+void Page::endPath() {
     HPDF_Page_EndPath(__innerContent);
 }
 
-void PdfPage::endText() {
+void Page::endText() {
     HPDF_Page_EndText(__innerContent);
 }
 
-void PdfPage::eoClip() {
+void Page::eoClip() {
     HPDF_Page_Eoclip(__innerContent);
 }
 
-void PdfPage::eoFill() {
+void Page::eoFill() {
     HPDF_Page_Eofill(__innerContent);
 }
 
-void PdfPage::eoFillStroke() {
+void Page::eoFillStroke() {
     HPDF_Page_EofillStroke(__innerContent);
 }
 
-void PdfPage::executeContentStream(const ContentStream& stream) {
+void Page::executeContentStream(const ContentStream& stream) {
     HPDF_Page_ExecuteXObject(__innerContent, stream.__innerContent);
 }
 
-void PdfPage::fill() {
+void Page::fill() {
     HPDF_Page_Fill(__innerContent);
 }
 
-void PdfPage::fillStroke() {
+void Page::fillStroke() {
     HPDF_Page_FillStroke(__innerContent);
 }
 
-void PdfPage::gRestore() {
+void Page::gRestore() {
     HPDF_Page_GRestore(__innerContent);
 }
 
-void PdfPage::gSave() {
+void Page::gSave() {
     HPDF_Page_GSave(__innerContent);
 }
 
-void PdfPage::lineTo(const Coor2D& coors) {
+void Page::lineTo(const Coor2D& coors) {
     HPDF_Page_LineTo(__innerContent, coors.getX(), coors.getY());
 }
 
-void PdfPage::moveTextPos(const Coor2D& coors) {
+void Page::moveTextPos(const Coor2D& coors) {
     HPDF_Page_MoveTextPos(__innerContent, coors.getX(), coors.getY());
 }
 
-void PdfPage::moveTextPos2(const Coor2D& coors) {
+void Page::moveTextPos2(const Coor2D& coors) {
     HPDF_Page_MoveTextPos2(__innerContent, coors.getX(), coors.getY());
 }
 
-void PdfPage::moveTo(const Coor2D& coors) {
+void Page::moveTo(const Coor2D& coors) {
     HPDF_Page_MoveTo(__innerContent, coors.getX(), coors.getY());
 }
 
-void PdfPage::moveToNextLine() {
+void Page::moveToNextLine() {
     HPDF_Page_MoveToNextLine(__innerContent);
 }
 
-void PdfPage::rectangle(float x, float y, float width, float height) {
+void Page::rectangle(float x, float y, float width, float height) {
     HPDF_Page_Rectangle(__innerContent, x, y, width, height);
 }
 
-void PdfPage::setCharSpace(float value) {
+void Page::setCharSpace(float value) {
     HPDF_Page_SetCharSpace(__innerContent, value);
 }
 
-void PdfPage::setCMYKFill(const CMYKColor& color) {
+void Page::setCMYKFill(const CMYKColor& color) {
     HPDF_Page_SetCMYKFill(__innerContent, color.getC(), color.getM(), color.getY(), color.getK());
 }
 
-void PdfPage::setCMYKStroke(const CMYKColor& color) {
+void Page::setCMYKStroke(const CMYKColor& color) {
     HPDF_Page_SetCMYKStroke(__innerContent, color.getC(), color.getM(), color.getY(), color.getK());
 }
 
-void PdfPage::setDash(const DashMode& mode) {
+void Page::setDash(const DashMode& mode) {
     std::vector<float> points = mode.getPoints();
     HPDF_Page_SetDash(__innerContent, points.data(), points.size(), mode.getPhase());
 }
 
-void PdfPage::setExternGState(const ContentStream& stream) {
+void Page::setExternGState(const ContentStream& stream) {
     HPDF_Page_SetExtGState(__innerContent, stream.__innerContent);
 }
 
-void PdfPage::setFontAndSize(const Font& font, float size) {
+void Page::setFontAndSize(const Font& font, float size) {
     HPDF_Page_SetFontAndSize(__innerContent, font.__innerContent, size);
 }
 
-void PdfPage::setGrayFill(float gray) {
+void Page::setGrayFill(float gray) {
     HPDF_Page_SetGrayFill(__innerContent, gray);
 }
 
-void PdfPage::setGrayStroke(float gray) {
+void Page::setGrayStroke(float gray) {
     HPDF_Page_SetGrayStroke(__innerContent, gray);
 }
 
-void PdfPage::setHorizontalScalling(float value) {
+void Page::setHorizontalScalling(float value) {
     HPDF_Page_SetHorizontalScalling(__innerContent, value);
 }
 
-void PdfPage::setLineCap(LineCap lineCap) {
+void Page::setLineCap(LineCap lineCap) {
     HPDF_Page_SetLineCap(__innerContent, (HPDF_LineCap) lineCap);
 }
 
-void PdfPage::setLineJoin(LineJoin lineJoin) {
+void Page::setLineJoin(LineJoin lineJoin) {
     HPDF_Page_SetLineJoin(__innerContent, (HPDF_LineJoin) lineJoin);
 }
 
-void PdfPage::setLineWidth(float lineWidth) {
+void Page::setLineWidth(float lineWidth) {
     HPDF_Page_SetLineWidth(__innerContent, lineWidth);
 }
 
-void PdfPage::setMiterLimit(float miterLimit) {
+void Page::setMiterLimit(float miterLimit) {
     HPDF_Page_SetMiterLimit(__innerContent, miterLimit);
 }
 
-void PdfPage::setRGBFill(const RGBColor& color) {
+void Page::setRGBFill(const RGBColor& color) {
     HPDF_Page_SetRGBFill(__innerContent, color.getR(), color.getG(), color.getB());
 }
 
-void PdfPage::setRGBStroke(const RGBColor& color) {
+void Page::setRGBStroke(const RGBColor& color) {
     HPDF_Page_SetRGBStroke(__innerContent, color.getR(), color.getG(), color.getB());
 }
 
-void PdfPage::setTextLeading(float value) {
+void Page::setTextLeading(float value) {
     HPDF_Page_SetTextLeading(__innerContent, value);
 }
 
-void PdfPage::setTextMatrix(const TransposeMatrix& matrix) {
+void Page::setTextMatrix(const TransposeMatrix& matrix) {
     HPDF_Page_SetTextMatrix(__innerContent, matrix.getA(), matrix.getB(), matrix.getC(), matrix.getD(), matrix.getX(), matrix.getY());
 }
 
-void PdfPage::setTextRenderingMode(TextRenderingMode mode) {
+void Page::setTextRenderingMode(TextRenderingMode mode) {
     HPDF_Page_SetTextRenderingMode(__innerContent, (HPDF_TextRenderingMode) mode);
 }
 
-void PdfPage::setTextRise(float value) {
+void Page::setTextRise(float value) {
     HPDF_Page_SetTextRise(__innerContent, value);
 }
 
-void PdfPage::setWordSpace(float value) {
+void Page::setWordSpace(float value) {
     HPDF_Page_SetWordSpace(__innerContent, value);
 }
 
-void PdfPage::showText(const std::string& text) {
+void Page::showText(const std::string& text) {
     HPDF_Page_ShowText(__innerContent, text.c_str());
 }
 
-void PdfPage::showTextNewLine(const std::string& text) {
+void Page::showTextNewLine(const std::string& text) {
     HPDF_Page_ShowTextNextLine(__innerContent, text.c_str());
 }
 
-void PdfPage::showTextNewLine(float wordSpace, float charSpace, const std::string& text) {
+void Page::showTextNewLine(float wordSpace, float charSpace, const std::string& text) {
     HPDF_Page_ShowTextNextLineEx(__innerContent, wordSpace, charSpace, text.c_str());
 }
 
-void PdfPage::stroke() {
+void Page::stroke() {
     HPDF_Page_Stroke(__innerContent);
 }
 
-void PdfPage::textOut(const std::string& text, const Coor2D& position) {
+void Page::textOut(const std::string& text, const Coor2D& position) {
     HPDF_Page_TextOut(__innerContent, position.getX(), position.getY(), text.c_str());
 }
 
-void PdfPage::textOut(const std::string& text) {
+void Page::textOut(const std::string& text) {
     textOut(text, getCurrentTextPos());
 }
 
-unsigned int PdfPage::textRect(const Box& box, const std::string& text, TextAlignment alignment) {
+unsigned int Page::textRect(const Box& box, const std::string& text, TextAlignment alignment) {
     unsigned int length;
     HPDF_Page_TextRect(
         __innerContent, box.getLeft(), box.getTop(), box.getRight(), box.getBottom(),
@@ -505,12 +505,12 @@ unsigned int PdfPage::textRect(const Box& box, const std::string& text, TextAlig
     return length;
 }
 
-void PdfPage::writeText(const std::string& text, const Coor2D& position) {
+void Page::writeText(const std::string& text, const Coor2D& position) {
     beginText();
     textOut(text, position);
     endText();
 }
 
-void PdfPage::writeText(const std::string& text) {
+void Page::writeText(const std::string& text) {
     writeText(text, getCurrentTextPos());
 }

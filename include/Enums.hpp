@@ -114,7 +114,7 @@ namespace pdf::enums {
         GTS_PDFX
     };
 
-    /// Represents all allowed values for the R3 encryption when calling PdfDocument::setR3EncryptMode.
+    /// Represents all allowed values for the R3 encryption when calling Document::setR3EncryptMode.
     enum class R3EncryptKeyLength: unsigned int {
         /// 5
         FIVE = 5,
@@ -194,7 +194,7 @@ namespace pdf::enums {
         CMYK
     };
 
-    /// Represents all allowed values for the number of bits per components used when calling PdfDocument::loadRawImageFromMemory.
+    /// Represents all allowed values for the number of bits per components used when calling Document::loadRawImageFromMemory.
     enum class BitsPerComponent: unsigned int {
         /// 1
         ONE = 1,

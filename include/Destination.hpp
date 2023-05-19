@@ -1,6 +1,6 @@
 #ifndef __HARUPP_DESTINATION_HPP__
 #define __HARUPP_DESTINATION_HPP__
-#include "PdfObject.hpp"
+#include "Object.hpp"
 
 struct _HPDF_Array_Rec;
 
@@ -9,17 +9,17 @@ namespace pdf {
     /**
      * \class  Destination
      * @brief  Represents a destination.
-     * @note   Note that this class cannot be instantiated manually. Rather, it is created when calling PdfPage::createDestination.
+     * @note   Note that this class cannot be instantiated manually. Rather, it is created when calling Page::createDestination.
      * @file   Destination.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
     */
-    class Destination final: public PdfObject {
+    class Destination final: public Object {
         _HPDF_Array_Rec* __innerContent = nullptr;
         explicit Destination(_HPDF_Array_Rec* content) noexcept;
         friend class Outline;
-        friend class PdfDocument;
-        friend class PdfPage;
+        friend class Document;
+        friend class Page;
 
     public:
 

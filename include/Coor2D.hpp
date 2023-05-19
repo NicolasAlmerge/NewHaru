@@ -1,6 +1,6 @@
 #ifndef __HARUPP_COOR2D_HPP__
 #define __HARUPP_COOR2D_HPP__
-#include "PdfObject.hpp"
+#include "Object.hpp"
 
 namespace pdf {
 
@@ -11,7 +11,7 @@ namespace pdf {
      * @author Nicolas Almerge
      * @date   2023-05-16
     */
-    class Coor2D final: public PdfObject {
+    class Coor2D final: public Object {
         float x = 0.f;
         float y = 0.f;
 

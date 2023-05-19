@@ -1,4 +1,4 @@
-#include "../include/PdfDocument.hpp"
+#include "../include/Document.hpp"
 #include "hpdf.h"
 using namespace pdf;
 using namespace pdf::excepts;
@@ -274,27 +274,27 @@ static UTCIndicator __toUTCInd(char c) {
     }
 }
 
-bool PdfDocument::__getImportValue(int index) const {
+bool Document::__getImportValue(int index) const {
     return imports[index];
 }
 
-void  PdfDocument::__setImportValue(int index, bool newValue) {
+void Document::__setImportValue(int index, bool newValue) {
     imports[index] = newValue;
 }
 
 
 /******************** CONSTRUCTORS & DESTRUCTOR ********************/
 
-PdfDocument::PdfDocument() noexcept {}
+Document::Document() noexcept {}
 
-PdfDocument::~PdfDocument() {
+Document::~Document() {
     close();
 }
 
 
 /******************** BASIC FUNCTIONS ********************/
 
-void PdfDocument::open() {
+void Document::open() {
     pdfDoc = HPDF_New(__haruppErrorHandler, nullptr);
     if (pdfDoc == nullptr) throw MemoryAllocationFailedException("Cannot create pdf object", 0x1015, 0);
 
@@ -303,97 +303,101 @@ void PdfDocument::open() {
     for (int _ = 0; _ < __HARUPP_ENCODING_IMPORTS_LENGTH; ++_) imports.push_back(false);
 }
 
-void PdfDocument::close() {
+void Document::close() {
     if (pdfDoc != nullptr) {
         HPDF_Free(pdfDoc);
         pdfDoc = nullptr;
     }
 }
 
-void PdfDocument::newDocument() {
+void Document::newDocument() {
     HPDF_NewDoc(pdfDoc);
 }
 
-bool PdfDocument::isOpen() const noexcept {
+bool Document::isOpen() const noexcept {
     return !isEmpty();
 }
 
-void PdfDocument::freeResources() {
+void Document::freeResources() {
     HPDF_FreeDoc(pdfDoc);
 }
 
-void PdfDocument::freeAllResources() {
+void Document::freeAllResources() {
     HPDF_FreeDocAll(pdfDoc);
     for (int i = __HARUPP_ENCODING_INDEX_START; i < __HARUPP_ENCODING_IMPORTS_LENGTH; ++i)
         imports[i] = false;
 }
 
-void PdfDocument::saveToFile(const std::string& fileName) {
+void Document::saveToFile(const std::string& fileName) {
     HPDF_SaveToFile(pdfDoc, fileName.c_str());
 }
 
-void PdfDocument::saveToStream() {
+void Document::saveToStream() {
     HPDF_SaveToStream(pdfDoc);
 }
 
-unsigned int PdfDocument::getStreamSize() const {
+unsigned int Document::getStreamSize() const {
     if (pdfDoc == nullptr) return 0U;
     return HPDF_GetStreamSize(pdfDoc);
 }
 
-std::vector<unsigned char> PdfDocument::readFromStream(unsigned int size) {
+std::vector<unsigned char> Document::readFromStream(unsigned int size) {
     if (getStreamSize() == 0U) return std::vector<unsigned char>();
     return __execAndGetVector(HPDF_ReadFromStream, pdfDoc, size);
 }
 
-std::vector<unsigned char> PdfDocument::readFromStream() {
+std::vector<unsigned char> Document::readFromStream() {
     return readFromStream(getStreamSize());
 }
 
-void PdfDocument::rewindStream() {
+void Document::rewindStream() {
     if (getStreamSize() > 0U) HPDF_ResetStream(pdfDoc);
 }
 
-bool PdfDocument::hasDocument() const {
+bool Document::hasDocument() const {
     return HPDF_HasDoc(pdfDoc);
 }
 
-bool PdfDocument::isEmpty() const noexcept {
+bool Document::isEmpty() const noexcept {
     return pdfDoc == nullptr;
 }
 
-unsigned long PdfDocument::getLastErrorCode() const {
+unsigned long Document::getLastErrorCode() const {
     return HPDF_GetError(pdfDoc);
 }
 
-unsigned long PdfDocument::getLastErrorDetail() const {
+unsigned long Document::getLastErrorDetail() const {
     return HPDF_GetErrorDetail(pdfDoc);
 }
 
-void PdfDocument::resetErrorCode() {
+void Document::resetErrorCode() {
     HPDF_ResetError(pdfDoc);
 }
 
-std::vector<unsigned char> PdfDocument::getContent(unsigned int size) const {
+std::vector<unsigned char> Document::getContent(unsigned int size) const {
     return __execAndGetVector(HPDF_GetContents, pdfDoc, size);
 }
 
-std::vector<unsigned char> PdfDocument::getContent() const {
+std::vector<unsigned char> Document::getContent() const {
     return getContent(UINT_MAX);
 }
 
 
 /******************** PAGES HANDLING ********************/
 
-void PdfDocument::setPageConfiguration(unsigned int pagePerPages) {
+void Document::setPageConfiguration(unsigned int pagePerPages) {
     HPDF_SetPagesConfiguration(pdfDoc, pagePerPages);
 }
 
-void PdfDocument::setPageLayout(PageLayout layout) {
+Page Document::getPageAtIndex(unsigned int index) const {
+    return Page(HPDF_GetPageByIndex(pdfDoc, index));
+}
+
+void Document::setPageLayout(PageLayout layout) {
     HPDF_SetPageLayout(pdfDoc, (HPDF_PageLayout) layout);
 }
 
-PageLayout PdfDocument::getPageLayout() const {
+PageLayout Document::getPageLayout() const {
     switch (HPDF_GetPageLayout(pdfDoc)) {
         case HPDF_PAGE_LAYOUT_SINGLE: return PageLayout::SINGLE_PAGE;
         case HPDF_PAGE_LAYOUT_ONE_COLUMN: return PageLayout::ONE_COLUMN;
@@ -405,11 +409,11 @@ PageLayout PdfDocument::getPageLayout() const {
     }
 }
 
-void PdfDocument::setPageMode(PageMode mode) {
+void Document::setPageMode(PageMode mode) {
     HPDF_SetPageMode(pdfDoc, (HPDF_PageMode) mode);
 }
 
-PageMode PdfDocument::getPageMode() const {
+PageMode Document::getPageMode() const {
     switch (HPDF_GetPageMode(pdfDoc)) {
         case HPDF_PAGE_MODE_USE_NONE: return PageMode::NONE;
         case HPDF_PAGE_MODE_USE_OUTLINE: return PageMode::USE_OUTLINE;
@@ -419,92 +423,92 @@ PageMode PdfDocument::getPageMode() const {
     }
 }
 
-void PdfDocument::setOpenDestination(const Destination& destination) {
+void Document::setOpenDestination(const Destination& destination) {
     HPDF_SetOpenAction(pdfDoc, destination.__innerContent);
 }
 
-PdfPage PdfDocument::getCurrentPage() const {
-    return PdfPage(HPDF_GetCurrentPage(pdfDoc));
+Page Document::getCurrentPage() const {
+    return Page(HPDF_GetCurrentPage(pdfDoc));
 }
 
-PdfPage PdfDocument::addPage() {
-    return PdfPage(HPDF_AddPage(pdfDoc));
+Page Document::addPage() {
+    return Page(HPDF_AddPage(pdfDoc));
 }
 
-PdfPage PdfDocument::insertPageBefore(const PdfPage& page) {
-    return PdfPage(HPDF_InsertPage(pdfDoc, page.__innerContent));
+Page Document::insertPageBefore(const Page& page) {
+    return Page(HPDF_InsertPage(pdfDoc, page.__innerContent));
 }
 
 void __addPageLabel(HPDF_Doc pdfDoc, PageNumberStyle style, unsigned int pageNumber, unsigned int firstPage, const char* prefix) {
     HPDF_AddPageLabel(pdfDoc, pageNumber, (HPDF_PageNumStyle) style, firstPage, prefix);
 }
 
-void PdfDocument::addPageLabel(PageNumberStyle style, unsigned int pageNumber, unsigned int firstPage) {
+void Document::addPageLabel(PageNumberStyle style, unsigned int pageNumber, unsigned int firstPage) {
     __addPageLabel(pdfDoc, style, pageNumber, firstPage, nullptr);
 }
 
-void PdfDocument::addPageLabel(const std::string& prefix, PageNumberStyle style, unsigned int pageNumber, unsigned int firstPage) {
+void Document::addPageLabel(const std::string& prefix, PageNumberStyle style, unsigned int pageNumber, unsigned int firstPage) {
     __addPageLabel(pdfDoc, style, pageNumber, firstPage, prefix.c_str());
 }
 
 
 /******************** FONT HANDLING ********************/
 
-Font PdfDocument::__getFont(const char* fontName, const char* encodingName) {
+Font Document::__getFont(const char* fontName, const char* encodingName) {
     return Font(HPDF_GetFont(pdfDoc, fontName, encodingName));
 }
 
-Font PdfDocument::getFont(const std::string& fontName, SingleByteEncoding encoding) {
+Font Document::getFont(const std::string& fontName, SingleByteEncoding encoding) {
     return __getFont(fontName.c_str(), singleByteEncodingToString(encoding));
 }
 
-Font PdfDocument::getFont(const std::string& fontName, MultiByteEncoding encoding) {
+Font Document::getFont(const std::string& fontName, MultiByteEncoding encoding) {
     return __getFont(fontName.c_str(), multiByteEncodingToString(encoding));
 }
 
-std::string PdfDocument::__loadType1FontFromFile(const char* AFMFileName, const char* dataFileName) {
+std::string Document::__loadType1FontFromFile(const char* AFMFileName, const char* dataFileName) {
     const char* res = HPDF_LoadType1FontFromFile(pdfDoc, AFMFileName, dataFileName);
     return (res == nullptr)? std::string(): res;
 }
 
-std::string PdfDocument::loadType1FontFromFile(const std::string& AFMFileName) {
+std::string Document::loadType1FontFromFile(const std::string& AFMFileName) {
     return __loadType1FontFromFile(AFMFileName.c_str(), nullptr);
 }
 
-std::string PdfDocument::loadType1FontFromFile(const std::string& AFMFileName, const std::string& dataFileName) {
+std::string Document::loadType1FontFromFile(const std::string& AFMFileName, const std::string& dataFileName) {
     return __loadType1FontFromFile(AFMFileName.c_str(), dataFileName.c_str());
 }
 
-std::string PdfDocument::loadTrueTypeFontFromFile(const std::string& fileName, bool embedding) {
+std::string Document::loadTrueTypeFontFromFile(const std::string& fileName, bool embedding) {
     const char* res = HPDF_LoadTTFontFromFile(pdfDoc, fileName.c_str(), embedding);
     return (res == nullptr)? std::string(): res;
 }
 
-std::string PdfDocument::loadTrueTypeFontFromFile(const std::string& fileName, unsigned int index, bool embedding) {
+std::string Document::loadTrueTypeFontFromFile(const std::string& fileName, unsigned int index, bool embedding) {
     const char* res = HPDF_LoadTTFontFromFile2(pdfDoc, fileName.c_str(), index, embedding);
     return (res == nullptr)? std::string(): res;
 }
 
-void PdfDocument::useJPFonts() {
+void Document::useJPFonts() {
     HPDF_UseJPFonts(pdfDoc);
 }
 
-void PdfDocument::useKRFonts() {
+void Document::useKRFonts() {
     HPDF_UseKRFonts(pdfDoc);
 }
 
-void PdfDocument::useCNSFonts() {
+void Document::useCNSFonts() {
     HPDF_UseCNSFonts(pdfDoc);
 }
 
-void PdfDocument::useCNTFonts() {
+void Document::useCNTFonts() {
     HPDF_UseCNTFonts(pdfDoc);
 }
 
 
 /******************** ENCODINGS ********************/
 
-void PdfDocument::__autoImportEncoding(MultiByteEncoding encoding) {
+void Document::__autoImportEncoding(MultiByteEncoding encoding) {
     if (encoding >= MultiByteEncoding::GB_EUC_H && encoding <= MultiByteEncoding::GBK_EUC_V) {
         useCNSEncodings();
     } else if (encoding >= MultiByteEncoding::ETen_B5_H && encoding <= MultiByteEncoding::ETen_B5_V) {
@@ -516,128 +520,128 @@ void PdfDocument::__autoImportEncoding(MultiByteEncoding encoding) {
     }
 }
 
-Encoder PdfDocument::__getEncoder(const char* name) {
+Encoder Document::__getEncoder(const char* name) {
     return Encoder(HPDF_GetEncoder(pdfDoc, name));
 }
 
-Encoder PdfDocument::getEncoder(SingleByteEncoding encoding) {
+Encoder Document::getEncoder(SingleByteEncoding encoding) {
     return __getEncoder(singleByteEncodingToString(encoding));
 }
 
-Encoder PdfDocument::getEncoder(MultiByteEncoding encoding) {
+Encoder Document::getEncoder(MultiByteEncoding encoding) {
     if (__getImportValue(__HARUPP_AUTO_ENCODING_IMPORT_INDEX)) __autoImportEncoding(encoding);
     return __getEncoder(multiByteEncodingToString(encoding));
 }
 
-Encoder PdfDocument::getCurrentEncoder() {
+Encoder Document::getCurrentEncoder() {
     return Encoder(HPDF_GetCurrentEncoder(pdfDoc));
 }
 
-void PdfDocument::__setCurrentEncoder(const char* name) {
+void Document::__setCurrentEncoder(const char* name) {
     HPDF_SetCurrentEncoder(pdfDoc, name);
 }
 
-void PdfDocument::setCurrentEncoder(SingleByteEncoding encoding) {
+void Document::setCurrentEncoder(SingleByteEncoding encoding) {
     __setCurrentEncoder(singleByteEncodingToString(encoding));
 }
 
-void PdfDocument::setCurrentEncoder(MultiByteEncoding encoding) {
+void Document::setCurrentEncoder(MultiByteEncoding encoding) {
     __setCurrentEncoder(multiByteEncodingToString(encoding));
 }
 
-void PdfDocument::useJPEncodings() {
+void Document::useJPEncodings() {
     if (!__getImportValue(__HARUPP_JP_ENCODING_INDEX)) {
         HPDF_UseJPEncodings(pdfDoc);
         __setImportValue(__HARUPP_JP_ENCODING_INDEX, true);
     }
 }
 
-void PdfDocument::useKREncodings() {
+void Document::useKREncodings() {
     if (!__getImportValue(__HARUPP_KR_ENCODING_INDEX)) {
         HPDF_UseKREncodings(pdfDoc);
         __setImportValue(__HARUPP_KR_ENCODING_INDEX, true);
     }
 }
 
-void PdfDocument::useCNSEncodings() {
+void Document::useCNSEncodings() {
     if (!__getImportValue(__HARUPP_CNS_ENCODING_INDEX)) {
         HPDF_UseCNSEncodings(pdfDoc);
         __setImportValue(__HARUPP_CNS_ENCODING_INDEX, true);
     }
 }
 
-void PdfDocument::useCNTEncodings() {
+void Document::useCNTEncodings() {
     if (!__getImportValue(__HARUPP_CNT_ENCODING_INDEX)) {
         HPDF_UseCNTEncodings(pdfDoc);
         __setImportValue(__HARUPP_CNT_ENCODING_INDEX, true);
     }
 }
 
-void PdfDocument::useUTFEncodings() {
+void Document::useUTFEncodings() {
     if (!__getImportValue(__HARUPP_UTF_ENCODING_INDEX)) {
         HPDF_UseUTFEncodings(pdfDoc);
         __setImportValue(__HARUPP_UTF_ENCODING_INDEX, true);
     }
 }
 
-bool PdfDocument::isAutoEncodingImportsEnabled() const {
+bool Document::isAutoEncodingImportsEnabled() const {
     return __getImportValue(__HARUPP_AUTO_ENCODING_IMPORT_INDEX);
 }
 
-void PdfDocument::enableAutoEncodingImports() {
+void Document::enableAutoEncodingImports() {
     __setImportValue(__HARUPP_AUTO_ENCODING_IMPORT_INDEX, true);
 }
 
-void PdfDocument::disableAutoEncodingImports() {
+void Document::disableAutoEncodingImports() {
     __setImportValue(__HARUPP_AUTO_ENCODING_IMPORT_INDEX, false);
 }
 
 
 /******************** OUTLINE CREATION ********************/
 
-Outline PdfDocument::__createOutline(const std::string& title, const Outline* parent, const Encoder* encoder) const {
+Outline Document::__createOutline(const std::string& title, const Outline* parent, const Encoder* encoder) const {
     return Outline(HPDF_CreateOutline(pdfDoc, parent? parent->__innerContent: nullptr, title.c_str(), encoder? encoder->__innerContent: nullptr));
 }
 
-Outline PdfDocument::createOutline(const std::string& title) const {
+Outline Document::createOutline(const std::string& title) const {
     return __createOutline(title.c_str(), nullptr, nullptr);
 }
 
-Outline PdfDocument::createOutline(const std::string& title, const Outline& parent) const {
+Outline Document::createOutline(const std::string& title, const Outline& parent) const {
     return __createOutline(title.c_str(), &parent, nullptr);
 }
 
-Outline PdfDocument::createOutline(const std::string& title, const Encoder& encoder) const {
+Outline Document::createOutline(const std::string& title, const Encoder& encoder) const {
     return __createOutline(title, nullptr, &encoder);
 }
 
-Outline PdfDocument::createOutline(const std::string& title, const Outline& parent, const Encoder& encoder) const {
+Outline Document::createOutline(const std::string& title, const Outline& parent, const Encoder& encoder) const {
     return __createOutline(title, &parent, &encoder);
 }
 
 
 /******************** IMAGES LOADING ********************/
 
-Image PdfDocument::loadPNGImageFromFile(const std::string& fileName) {
+Image Document::loadPNGImageFromFile(const std::string& fileName) {
     return Image(HPDF_LoadPngImageFromFile(pdfDoc, fileName.c_str()));
 }
 
-Image PdfDocument::loadPartialPNGImageFromFile(const std::string& fileName) {
+Image Document::loadPartialPNGImageFromFile(const std::string& fileName) {
     return Image(HPDF_LoadPngImageFromFile2(pdfDoc, fileName.c_str()));
 }
 
-Image PdfDocument::loadJPEGImageFromFile(const std::string& fileName) {
+Image Document::loadJPEGImageFromFile(const std::string& fileName) {
     return Image(HPDF_LoadJpegImageFromFile(pdfDoc, fileName.c_str()));
 }
 
-Image PdfDocument::loadRawImageFromFile(
+Image Document::loadRawImageFromFile(
     const std::string& fileName, unsigned int width,
     unsigned int height, ImageColorSpaceDevice colorSpace
 ) {
     return Image(HPDF_LoadRawImageFromFile(pdfDoc, fileName.c_str(), width, height, (HPDF_ColorSpace) colorSpace));
 }
 
-Image PdfDocument::loadRawImageFromMemory(
+Image Document::loadRawImageFromMemory(
     const std::vector<unsigned char>& bytes, unsigned int width,
     unsigned int height, ImageColorSpaceDevice colorSpace,
     BitsPerComponent bitsPerComponent
@@ -645,22 +649,22 @@ Image PdfDocument::loadRawImageFromMemory(
     return Image(HPDF_LoadRawImageFromMem(pdfDoc, bytes.data(), width, height, (HPDF_ColorSpace) colorSpace, (HPDF_UINT) bitsPerComponent));
 }
 
-Image PdfDocument::loadPNGImageFromMemory(const std::vector<unsigned char>& bytes) {
+Image Document::loadPNGImageFromMemory(const std::vector<unsigned char>& bytes) {
     return Image(HPDF_LoadPngImageFromMem(pdfDoc, bytes.data(), bytes.size()));
 }
 
-Image PdfDocument::loadJPEGImageFromMemory(const std::vector<unsigned char>& bytes) {
+Image Document::loadJPEGImageFromMemory(const std::vector<unsigned char>& bytes) {
     return Image(HPDF_LoadJpegImageFromMem(pdfDoc, bytes.data(), bytes.size()));
 }
 
 
 /******************** OTHER FUNCTIONS ********************/
 
-void PdfDocument::setAttribute(StringAttribute parameter, const std::string& value) {
+void Document::setAttribute(StringAttribute parameter, const std::string& value) {
     HPDF_SetInfoAttr(pdfDoc, (HPDF_InfoType) parameter, value.c_str());
 }
 
-void PdfDocument::setAttribute(DateTimeAttribute parameter, const DateTime& value) {
+void Document::setAttribute(DateTimeAttribute parameter, const DateTime& value) {
     HPDF_Date date;
     date.year = value.getYear();
     date.month = value.getMonth();
@@ -680,15 +684,15 @@ std::optional<std::string> __getInfoAttribute(HPDF_Doc pdfDoc, int parameter) {
     return value;
 }
 
-std::optional<std::string> PdfDocument::getInfoAttribute(StringAttribute parameter) {
+std::optional<std::string> Document::getInfoAttribute(StringAttribute parameter) {
     return __getInfoAttribute(pdfDoc, (HPDF_InfoType) parameter);
 }
 
-std::optional<std::string> PdfDocument::getInfoAttributeAsString(DateTimeAttribute parameter) {
+std::optional<std::string> Document::getInfoAttributeAsString(DateTimeAttribute parameter) {
     return __getInfoAttribute(pdfDoc, (HPDF_InfoType) parameter);
 }
 
-std::optional<DateTime> PdfDocument::getInfoAttribute(enums::DateTimeAttribute parameter) {
+std::optional<DateTime> Document::getInfoAttribute(enums::DateTimeAttribute parameter) {
     std::optional<std::string> optStringValue = getInfoAttributeAsString(parameter);
     if (!optStringValue) return {};
 
@@ -713,31 +717,31 @@ void __setPassword(HPDF_Doc pdfDoc, const char* ownerPassword, const char* userP
     HPDF_SetPassword(pdfDoc, ownerPassword, userPassword);
 }
 
-void PdfDocument::setPassword(const std::string& ownerPassword) {
+void Document::setPassword(const std::string& ownerPassword) {
     __setPassword(pdfDoc, ownerPassword.c_str(), nullptr);
 }
 
-void PdfDocument::setPassword(const std::string& ownerPassword, const std::string& userPassword) {
+void Document::setPassword(const std::string& ownerPassword, const std::string& userPassword) {
     __setPassword(pdfDoc, ownerPassword.c_str(), userPassword.c_str());
 }
 
-void PdfDocument::setPermissions(const Permissions& permissions) {
+void Document::setPermissions(const Permissions& permissions) {
     HPDF_SetPermission(pdfDoc, permissions.value);
 }
 
-void PdfDocument::setR2EncryptMode() {
+void Document::setR2EncryptMode() {
     HPDF_SetEncryptionMode(pdfDoc, HPDF_ENCRYPT_R2, 5U);
 }
 
-void PdfDocument::setR3EncryptMode(R3EncryptKeyLength keyLength) {
+void Document::setR3EncryptMode(R3EncryptKeyLength keyLength) {
     HPDF_SetEncryptionMode(pdfDoc, HPDF_ENCRYPT_R3, (unsigned int) keyLength);
 }
 
-void PdfDocument::setCompressionMode(CompressionMode mode) {
+void Document::setCompressionMode(CompressionMode mode) {
     HPDF_SetCompressionMode(pdfDoc, (unsigned int) mode);
 }
 
-void PdfDocument::operator=(const PdfDocument& newDoc) {
+void Document::operator=(const Document& newDoc) {
     close();
     pdfDoc = newDoc.pdfDoc;
 }

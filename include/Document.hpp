@@ -1,5 +1,5 @@
-#ifndef __HARUPP_PDFDOCUMENT_HPP__
-#define __HARUPP_PDFDOCUMENT_HPP__
+#ifndef __HARUPP_DOCUMENT_HPP__
+#define __HARUPP_DOCUMENT_HPP__
 #include "Box.hpp"
 #include "CMYKColor.hpp"
 #include "Constants.hpp"
@@ -13,8 +13,8 @@
 #include "Image.hpp"
 #include "LinkAnnotation.hpp"
 #include "Outline.hpp"
-#include "PdfException.hpp"
-#include "PdfPage.hpp"
+#include "Exception.hpp"
+#include "Page.hpp"
 #include "Permissions.hpp"
 #include "RGBColor.hpp"
 #include "TextAnnotation.hpp"
@@ -28,29 +28,29 @@ struct _HPDF_Doc_Rec;
 namespace pdf {
 
     /**
-     * \class  PdfDocument
+     * \class  Document
      * @brief  Represents a pdf document.
-     * @file   PdfDocument.hpp
+     * @file   Document.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
     */
-    class PdfDocument: public PdfObject {
+    class Document: public Object {
         mutable _HPDF_Doc_Rec* pdfDoc = nullptr;
         std::vector<bool> imports;
 
     public:
 
         /**
-         * @brief Creates a new PdfDocument.
+         * @brief Creates a new Document.
          * @note  The object is initially empty and a new document should be opened with ::open.
         */
-        PdfDocument() noexcept;
+        Document() noexcept;
 
         /**
          * @brief   Frees all the allocated resources.
          * @details This calls the ::close function.
         */
-        ~PdfDocument();
+        ~Document();
 
         /**
          * @brief Opens a new document.
@@ -60,7 +60,7 @@ namespace pdf {
 
         /**
          * @brief Closes the document and frees all allocated resources.
-         * @note  This is automatically called when ::~PdfDocument gets called and should be rarely used.
+         * @note  This is automatically called when ::~Document gets called and should be rarely used.
         */
         void close();
 
@@ -103,7 +103,8 @@ namespace pdf {
 
         /**
          * @brief  Gets the temporary stream size.
-         * @return Stream size.
+         * @note   This returns `0U` if data was never written to the stream, or if the document has been closed.
+         * @return Temporary stream size.
         */
         unsigned int getStreamSize() const;
 
@@ -154,6 +155,7 @@ namespace pdf {
 
         /******************** PAGES HANDLING ********************/
         void setPageConfiguration(unsigned int pagePerPages);
+        Page getPageAtIndex(unsigned int index) const;
 
         void setPageLayout(enums::PageLayout layout);
         enums::PageLayout getPageLayout() const;
@@ -163,9 +165,9 @@ namespace pdf {
 
         void setOpenDestination(const Destination& destination);
 
-        PdfPage getCurrentPage() const;
-        PdfPage addPage();
-        PdfPage insertPageBefore(const PdfPage& page);
+        Page getCurrentPage() const;
+        Page addPage();
+        Page insertPageBefore(const Page& page);
 
         void addPageLabel(enums::PageNumberStyle style = enums::PageNumberStyle::DECIMAL, unsigned int pageNumber = 0U, unsigned int firstPage = 1U);
         void addPageLabel(const std::string& prefix, enums::PageNumberStyle style = enums::PageNumberStyle::DECIMAL, unsigned int pageNumber = 0U, unsigned int firstPage = 1U);
@@ -412,7 +414,7 @@ namespace pdf {
          * @brief Closes the current document, which will now point to a new document.
          * @param newDoc New pdf document to use.
         */
-        void operator=(const PdfDocument& newDoc);
+        void operator=(const Document& newDoc);
 
     private:
         bool __getImportValue(int index) const;
@@ -426,4 +428,4 @@ namespace pdf {
     };
 }
 
-#endif // __HARUPP_PDFDOCUMENT_HPP__
+#endif // __HARUPP_DOCUMENT_HPP__
