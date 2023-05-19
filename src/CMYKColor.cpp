@@ -7,10 +7,6 @@ CMYKColor::CMYKColor() noexcept {}
 
 CMYKColor::CMYKColor(float c, float m, float y, float k) noexcept: c(c), m(m), y(y), k(k) {}
 
-bool CMYKColor::isEmpty() const noexcept {
-    return false;
-}
-
 float CMYKColor::getC() const noexcept {
     return c;
 }

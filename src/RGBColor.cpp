@@ -11,10 +11,6 @@ RGBColor::RGBColor() noexcept {}
 
 RGBColor::RGBColor(float r, float g, float b) noexcept: r(r), g(g), b(b) {}
 
-bool RGBColor::isEmpty() const noexcept {
-    return false;
-}
-
 float RGBColor::getR() const noexcept {
     return r;
 }

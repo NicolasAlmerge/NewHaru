@@ -32,12 +32,6 @@ namespace pdf {
         RGBColor(float r, float g, float b) noexcept;
 
         /**
-         * @brief  Always returns `false`.
-         * @return `false`
-        */
-        bool isEmpty() const noexcept override;
-
-        /**
          * @brief  Gets the red component.
          * @return Red component.
         */

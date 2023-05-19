@@ -18,6 +18,12 @@ namespace pdf {
         virtual ~Color() = 0;
 
         /**
+         * @brief  Always returns `false`.
+         * @return `false`
+        */
+        bool isEmpty() const noexcept override final;
+
+        /**
          * @brief  Converts the color to an RGBColor.
          * @see    RGBColor
          * @return RGBColor representation of the color.

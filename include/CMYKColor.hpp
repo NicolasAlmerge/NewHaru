@@ -35,12 +35,6 @@ namespace pdf {
         CMYKColor(float c, float m, float y, float k) noexcept;
 
         /**
-         * @brief  Always returns `false`.
-         * @return `false`
-        */
-        bool isEmpty() const noexcept override;
-
-        /**
          * @brief  Gets the cyan component.
          * @return Cyan component.
         */
