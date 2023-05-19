@@ -149,6 +149,7 @@ var hierarchy =
       [ "pdf::Encoder", "classpdf_1_1Encoder.html", null ],
       [ "pdf::Permissions", "classpdf_1_1Permissions.html", null ],
       [ "pdf::TextWidth", "classpdf_1_1TextWidth.html", null ],
-      [ "pdf::TransposeMatrix", "classpdf_1_1TransposeMatrix.html", null ]
+      [ "pdf::TransposeMatrix", "classpdf_1_1TransposeMatrix.html", null ],
+      [ "pdf::ViewerPreferences", "classpdf_1_1ViewerPreferences.html", null ]
     ] ]
 ];

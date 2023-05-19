@@ -20,6 +20,7 @@ var classpdf_1_1Document =
     [ "getInfoAttribute", "classpdf_1_1Document.html#aeb208ca79c06b4d25305df2c655ea007", null ],
     [ "getInfoAttributeAsString", "classpdf_1_1Document.html#ae2c8fb23f2fd6af7ac9e3d0a8d7f9955", null ],
     [ "getStreamSize", "classpdf_1_1Document.html#ae3f3c3af2b0c09bee6c5bb2c1f15a5d8", null ],
+    [ "hasDocument", "classpdf_1_1Document.html#a5ba1dfeeb7172f9757c5f11ecdfe8779", null ],
     [ "isEmpty", "classpdf_1_1Document.html#a9e6f475a9ef864277a72a5034e4a3919", null ],
     [ "isOpen", "classpdf_1_1Document.html#ae78e729315f14213fc3256a9720f00be", null ],
     [ "loadJPEGImageFromFile", "classpdf_1_1Document.html#a913e0cc8523f3f1d3e8ff3e8dad24b5b", null ],

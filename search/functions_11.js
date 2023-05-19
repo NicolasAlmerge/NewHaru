@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7edocument_0',['~Document',['../classpdf_1_1Document.html#ad71d09e6aff143995ea22e3f4b189d9e',1,'pdf::Document']]]
+  ['what_0',['what',['../classpdf_1_1excepts_1_1Exception.html#aa021a4d16cfc8a9d4a4710d609b2fa7c',1,'pdf::excepts::Exception']]]
 ];

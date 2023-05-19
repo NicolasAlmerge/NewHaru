@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['white_0',['WHITE',['../classpdf_1_1CMYKColor.html#a67714b5e2e6056afb8fc8fe50f1c32b9',1,'pdf::CMYKColor::WHITE()'],['../classpdf_1_1RGBColor.html#a8d97da99c9d553ef192d3ca85cc9ea40',1,'pdf::RGBColor::WHITE()']]]
+  ['no_5fprint_5fscaling_0',['NO_PRINT_SCALING',['../classpdf_1_1ViewerPreferences.html#a2722081a12b854fa45c6fb81df606546',1,'pdf::ViewerPreferences']]],
+  ['none_1',['NONE',['../classpdf_1_1ViewerPreferences.html#aa5853142397d6ab54e1b1880da5cae6c',1,'pdf::ViewerPreferences']]]
 ];

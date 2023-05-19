@@ -288,5 +288,6 @@ var namespacepdf =
     [ "RGBColor", "classpdf_1_1RGBColor.html", "classpdf_1_1RGBColor" ],
     [ "TextAnnotation", "classpdf_1_1TextAnnotation.html", "classpdf_1_1TextAnnotation" ],
     [ "TextWidth", "classpdf_1_1TextWidth.html", "classpdf_1_1TextWidth" ],
-    [ "TransposeMatrix", "classpdf_1_1TransposeMatrix.html", "classpdf_1_1TransposeMatrix" ]
+    [ "TransposeMatrix", "classpdf_1_1TransposeMatrix.html", "classpdf_1_1TransposeMatrix" ],
+    [ "ViewerPreferences", "classpdf_1_1ViewerPreferences.html", "classpdf_1_1ViewerPreferences" ]
 ];

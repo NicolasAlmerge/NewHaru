@@ -397,6 +397,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setWidth</b> (float v
 <tr class="memitem:a38a36d31db8ed21ad5811d43d053fbc9"><td class="memItemLeft" align="right" valign="top"><a id="a38a36d31db8ed21ad5811d43d053fbc9" name="a38a36d31db8ed21ad5811d43d053fbc9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setWordSpace</b> (float value)</td></tr>
 <tr class="separator:a38a36d31db8ed21ad5811d43d053fbc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9acc575fb3070c0504ef4b2cdb92cf1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#a9acc575fb3070c0504ef4b2cdb92cf1f">setZoom</a> (float zoom)</td></tr>
+<tr class="memdesc:a9acc575fb3070c0504ef4b2cdb92cf1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the page zoom.  <a href="classpdf_1_1Page.html#a9acc575fb3070c0504ef4b2cdb92cf1f">More...</a><br /></td></tr>
+<tr class="separator:a9acc575fb3070c0504ef4b2cdb92cf1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62adeca2564fff4cc781f5b43d6508de"><td class="memItemLeft" align="right" valign="top"><a id="a62adeca2564fff4cc781f5b43d6508de" name="a62adeca2564fff4cc781f5b43d6508de"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>showText</b> (const std::string &amp;text)</td></tr>
 <tr class="separator:a62adeca2564fff4cc781f5b43d6508de"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -641,6 +644,38 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>writeText</b> (const 
 
 <p>Gets the currently used <a class="el" href="classpdf_1_1Font.html" title="Represents a font.">Font</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>Currently used <a class="el" href="classpdf_1_1Font.html" title="Represents a font.">Font</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a9acc575fb3070c0504ef4b2cdb92cf1f" name="a9acc575fb3070c0504ef4b2cdb92cf1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9acc575fb3070c0504ef4b2cdb92cf1f">&#9670;&#160;</a></span>setZoom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pdf::Page::setZoom </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>zoom</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the page zoom. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zoom</td><td>Zoom to use (between 0.08 and 32.0) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classpdf_1_1excepts_1_1InvalidParameterException.html">excepts::InvalidParameterException</a></td><td>if <code>zoom &lt; 0.08 || zoom &gt; 32.0</code> </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -5,5 +5,6 @@ var classpdf_1_1Page =
     [ "createTextAnnotation", "classpdf_1_1Page.html#a167842467b9dbff8323cc2aac0fefb12", null ],
     [ "createTextAnnotation", "classpdf_1_1Page.html#a56b3d25aaadb37b0e997762898e12e61", null ],
     [ "createURILinkAnnotation", "classpdf_1_1Page.html#ac356cc5ff54260489c7cacebfc9b7a33", null ],
-    [ "getCurrentFont", "classpdf_1_1Page.html#a13d5427d557da680dd3b88ad16f9380f", null ]
+    [ "getCurrentFont", "classpdf_1_1Page.html#a13d5427d557da680dd3b88ad16f9380f", null ],
+    [ "setZoom", "classpdf_1_1Page.html#a9acc575fb3070c0504ef4b2cdb92cf1f", null ]
 ];

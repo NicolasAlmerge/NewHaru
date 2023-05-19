@@ -22,5 +22,6 @@ var searchData=
   ['setpermissions_19',['setPermissions',['../classpdf_1_1Document.html#a6653532228ef683ce178584224d02fa4',1,'pdf::Document']]],
   ['setr2encryptmode_20',['setR2EncryptMode',['../classpdf_1_1Document.html#ab1b39958179ba57aecbea341d9acd4d8',1,'pdf::Document']]],
   ['setr3encryptmode_21',['setR3EncryptMode',['../classpdf_1_1Document.html#a45d29ee225c5992053ddf3c01fe07c27',1,'pdf::Document']]],
-  ['setxyz_22',['setXYZ',['../classpdf_1_1Destination.html#a74363ea7c813db1f6ecf095aa1e8d098',1,'pdf::Destination']]]
+  ['setxyz_22',['setXYZ',['../classpdf_1_1Destination.html#a74363ea7c813db1f6ecf095aa1e8d098',1,'pdf::Destination']]],
+  ['setzoom_23',['setZoom',['../classpdf_1_1Page.html#a9acc575fb3070c0504ef4b2cdb92cf1f',1,'pdf::Page']]]
 ];
