@@ -316,7 +316,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setPageMode</b> (<a c
 <tr class="memdesc:ad0478ebfa84c333b2839802da724850a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the owner and user passwords for a pdf document.  <a href="classpdf_1_1Document.html#ad0478ebfa84c333b2839802da724850a">More...</a><br /></td></tr>
 <tr class="separator:ad0478ebfa84c333b2839802da724850a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6653532228ef683ce178584224d02fa4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Document.html#a6653532228ef683ce178584224d02fa4">setPermissions</a> (const <a class="el" href="classpdf_1_1Permissions.html">Permissions</a> &amp;permissions)</td></tr>
-<tr class="memdesc:a6653532228ef683ce178584224d02fa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the pdf document permissions.  <a href="classpdf_1_1Document.html#a6653532228ef683ce178584224d02fa4">More...</a><br /></td></tr>
+<tr class="memdesc:a6653532228ef683ce178584224d02fa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the user permissions for the document.  <a href="classpdf_1_1Document.html#a6653532228ef683ce178584224d02fa4">More...</a><br /></td></tr>
 <tr class="separator:a6653532228ef683ce178584224d02fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1b39958179ba57aecbea341d9acd4d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Document.html#ab1b39958179ba57aecbea341d9acd4d8">setR2EncryptMode</a> ()</td></tr>
 <tr class="memdesc:ab1b39958179ba57aecbea341d9acd4d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the R2 encryption mode.  <a href="classpdf_1_1Document.html#ab1b39958179ba57aecbea341d9acd4d8">More...</a><br /></td></tr>
@@ -1585,7 +1585,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>useUTFEncodings</b> (
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">except::InvalidPasswordException</td><td>if <code>ownerPassword</code> is empty or <code>ownerPassword</code> equals <code>userPassword</code>. </td></tr>
+    <tr><td class="paramname">except::InvalidPasswordException</td><td>if <code>ownerPassword</code> is empty or <code>ownerPassword == userPassword</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1608,7 +1608,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>useUTFEncodings</b> (
       </table>
 </div><div class="memdoc">
 
-<p>Sets the pdf document permissions. </p>
+<p>Sets the user permissions for the document. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">permissions</td><td>The permissions to use. </td></tr>
