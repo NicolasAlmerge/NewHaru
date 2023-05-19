@@ -9,7 +9,9 @@ DateTime::DateTime(
     int hour, int minutes, int seconds, enums::UTCIndicator ind,
     int offHour, int offMinutes
 ) noexcept: year(year), month(month), day(day), hour(hour), minutes(minutes),
-    seconds(seconds), ind(ind), offHour(offHour), offMinutes(offMinutes) {}
+    seconds(seconds), ind(ind),
+    offHour((ind == enums::UTCIndicator::NONE)? 0: offHour),
+    offMinutes((ind == enums::UTCIndicator::NONE)? 0: offMinutes) {}
 
 int DateTime::getYear() const noexcept {
     return year;

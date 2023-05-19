@@ -117,8 +117,8 @@ namespace pdf {
 
         /**
          * @brief   Reads from the stream.
-         * @details This is equivalent to `readFromStream(UINT_MAX)`.
-         * @return  Vector of bytes read. The vector size will be smaller or equal to `UINT_MAX`.
+         * @details This is equivalent to `readFromStream(getStreamSize())`.
+         * @return  Vector of bytes read. The vector size will be smaller or equal to ::getStreamSize().
          * @note    If ::saveToStream has never been called, this will return an empty vector.
         */
         std::vector<unsigned char> readFromStream();
@@ -329,12 +329,40 @@ namespace pdf {
         */
         Image loadJPEGImageFromFile(const std::string& fileName);
 
-        /******************** OTHER FUNCTIONS ********************/
+        /**
+         * @brief Sets a document metadata regular attribute.
+         * @param parameter Parameter to set.
+         * @param value String value to use.
+        */
         void setAttribute(enums::StringAttribute parameter, const std::string& value);
+
+        /**
+         * @brief Sets a document metadata datetime attribute.
+         * @param parameter Parameter to set.
+         * @param value The datetime to use.
+        */
         void setAttribute(enums::DateTimeAttribute parameter, const DateTime& value);
 
+        /**
+         * @brief  Gets a document metadata regular attribute, if any.
+         * @param  parameter Parameter to get the value from.
+         * @return The string value of the attribute, or empty if not set.
+        */
         std::optional<std::string> getInfoAttribute(enums::StringAttribute parameter);
-        std::optional<std::string> getInfoAttribute(enums::DateTimeAttribute parameter);
+
+        /**
+         * @brief  Gets a document metadata datetime attribute, if any.
+         * @param  parameter Parameter to get the value from.
+         * @return The string value of the attribute, or empty if not set.
+        */
+        std::optional<std::string> getInfoAttributeAsString(enums::DateTimeAttribute parameter);
+
+        /**
+         * @brief  Gets a document metadata datetime attribute, if any.
+         * @param  parameter Parameter to get the value from.
+         * @return The DateTime of the attribute, or empty if not set.
+        */
+        std::optional<DateTime> getInfoAttribute(enums::DateTimeAttribute parameter);
 
         /**
          * @brief Sets the owner password for a pdf document (with no user password).

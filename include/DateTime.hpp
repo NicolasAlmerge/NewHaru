@@ -40,8 +40,8 @@ namespace pdf {
          * @param minutes    Minutes to use.
          * @param seconds    Seconds to use.
          * @param ind        UTC indicator to use.
-         * @param offHour    Offset hour to use.
-         * @param offMinutes Offset minutes to use.
+         * @param offHour    Offset hour to use. This will be set to `0` if `ind` equals enums::UTCIndicator::NONE.
+         * @param offMinutes Offset minutes to use. This will be set to `0` if `ind` equals enums::UTCIndicator::NONE.
         */
         DateTime(
             int year, int month, int day,

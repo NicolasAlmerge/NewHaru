@@ -251,17 +251,27 @@ static std::vector<unsigned char> __execAndGetVector(unsigned long (&fn)(HPDF_Do
     if (size == 0U || pdfDoc == nullptr) return std::vector<unsigned char>();
 
     // Allocate data
-    unsigned char* data = new unsigned char[size];
+    std::vector<unsigned char> data;
+    data.reserve(size);
 
     // Call the function
-    fn(pdfDoc, data, &size);
+    unsigned int newSize = size;
+    fn(pdfDoc, data.data(), &newSize);
 
-    // Put everything into a vector
-    std::vector<unsigned char> result(data, data + size);
+    // Safety check
+    if (newSize > size) newSize = size;
 
-    // Deallocate old data and return result
-    delete[] data;
-    return result;
+    // Put everything into a vector and return
+    return std::vector<unsigned char>(data.begin(), data.begin() + newSize);
+}
+
+static UTCIndicator __toUTCInd(char c) {
+    switch (c) {
+        case (char) UTCIndicator::PLUS: return UTCIndicator::PLUS;
+        case (char) UTCIndicator::MINUS: return UTCIndicator::MINUS;
+        case (char) UTCIndicator::Z: return UTCIndicator::Z;
+        default: return UTCIndicator::NONE;
+    }
 }
 
 bool PdfDocument::__getImportValue(int index) const {
@@ -327,6 +337,7 @@ void PdfDocument::saveToStream() {
 }
 
 unsigned int PdfDocument::getStreamSize() const {
+    if (pdfDoc == nullptr) return 0U;
     return HPDF_GetStreamSize(pdfDoc);
 }
 
@@ -336,7 +347,7 @@ std::vector<unsigned char> PdfDocument::readFromStream(unsigned int size) {
 }
 
 std::vector<unsigned char> PdfDocument::readFromStream() {
-    return readFromStream(UINT_MAX);
+    return readFromStream(getStreamSize());
 }
 
 void PdfDocument::rewindStream() {
@@ -673,8 +684,29 @@ std::optional<std::string> PdfDocument::getInfoAttribute(StringAttribute paramet
     return __getInfoAttribute(pdfDoc, (HPDF_InfoType) parameter);
 }
 
-std::optional<std::string> PdfDocument::getInfoAttribute(DateTimeAttribute parameter) {
+std::optional<std::string> PdfDocument::getInfoAttributeAsString(DateTimeAttribute parameter) {
     return __getInfoAttribute(pdfDoc, (HPDF_InfoType) parameter);
+}
+
+std::optional<DateTime> PdfDocument::getInfoAttribute(enums::DateTimeAttribute parameter) {
+    std::optional<std::string> optStringValue = getInfoAttributeAsString(parameter);
+    if (!optStringValue) return {};
+
+    // Parse attributes one by one
+    std::string stringValue = *optStringValue;
+    int year = stoi(stringValue.substr(2, 4));
+    int month = stoi(stringValue.substr(6, 2));
+    int day = stoi(stringValue.substr(8, 2));
+    int hour = stoi(stringValue.substr(10, 2));
+    int minutes = stoi(stringValue.substr(12, 2));
+    int seconds = stoi(stringValue.substr(14, 2));
+    if (stringValue.size() <= 16) return DateTime(year, month, day, hour, minutes, seconds);
+
+    // More data to parse
+    UTCIndicator utc = __toUTCInd(stringValue[16]);
+    int offHours = stoi(stringValue.substr(17, 2));
+    int offMinutes = stoi(stringValue.substr(20, 2));
+    return DateTime(year, month, day, hour, minutes, seconds, utc, offHours, offMinutes);
 }
 
 void __setPassword(HPDF_Doc pdfDoc, const char* ownerPassword, const char* userPassword) {
