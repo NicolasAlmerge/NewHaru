@@ -1,5 +1,6 @@
 var classpdf_1_1Color =
 [
+    [ "isEmpty", "classpdf_1_1Color.html#ab274f9f632e41f41795400dd445aac19", null ],
     [ "operator!=", "classpdf_1_1Color.html#a955066382403ed42e8addf3bf9f5a838", null ],
     [ "operator==", "classpdf_1_1Color.html#ad8227b3dcc8cbeebd8bea44274e26804", null ],
     [ "toCMYK", "classpdf_1_1Color.html#a17d09e94ccd38b6a2808ccb2e6113555", null ],

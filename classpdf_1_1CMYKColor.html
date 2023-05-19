@@ -134,9 +134,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adbae575e8adebb281964ef2355d78c47"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1CMYKColor.html#adbae575e8adebb281964ef2355d78c47">getY</a> () const noexcept</td></tr>
 <tr class="memdesc:adbae575e8adebb281964ef2355d78c47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the yellow component.  <a href="classpdf_1_1CMYKColor.html#adbae575e8adebb281964ef2355d78c47">More...</a><br /></td></tr>
 <tr class="separator:adbae575e8adebb281964ef2355d78c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5338bfe1a1dd97eb2142529d8f282180"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1CMYKColor.html#a5338bfe1a1dd97eb2142529d8f282180">isEmpty</a> () const noexcept override</td></tr>
-<tr class="memdesc:a5338bfe1a1dd97eb2142529d8f282180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Always returns <code>false</code>.  <a href="classpdf_1_1CMYKColor.html#a5338bfe1a1dd97eb2142529d8f282180">More...</a><br /></td></tr>
-<tr class="separator:a5338bfe1a1dd97eb2142529d8f282180"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa008255464897ce17cf8d741bfa1b7c0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1CMYKColor.html#aa008255464897ce17cf8d741bfa1b7c0">operator==</a> (const <a class="el" href="classpdf_1_1Color.html">Color</a> &amp;other) const noexcept override</td></tr>
 <tr class="memdesc:aa008255464897ce17cf8d741bfa1b7c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether two colors are equal.  <a href="classpdf_1_1CMYKColor.html#aa008255464897ce17cf8d741bfa1b7c0">More...</a><br /></td></tr>
 <tr class="separator:aa008255464897ce17cf8d741bfa1b7c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,6 +144,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a50d3b17747e3025fba2eb281f002d546"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the color to an <a class="el" href="classpdf_1_1RGBColor.html" title="Represents a RGB color.">RGBColor</a>.  <a href="classpdf_1_1CMYKColor.html#a50d3b17747e3025fba2eb281f002d546">More...</a><br /></td></tr>
 <tr class="separator:a50d3b17747e3025fba2eb281f002d546"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classpdf_1_1Color"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classpdf_1_1Color')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classpdf_1_1Color.html">pdf::Color</a></td></tr>
+<tr class="memitem:ab274f9f632e41f41795400dd445aac19 inherit pub_methods_classpdf_1_1Color"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Color.html#ab274f9f632e41f41795400dd445aac19">isEmpty</a> () const noexcept override final</td></tr>
+<tr class="memdesc:ab274f9f632e41f41795400dd445aac19 inherit pub_methods_classpdf_1_1Color"><td class="mdescLeft">&#160;</td><td class="mdescRight">Always returns <code>false</code>.  <a href="classpdf_1_1Color.html#ab274f9f632e41f41795400dd445aac19">More...</a><br /></td></tr>
+<tr class="separator:ab274f9f632e41f41795400dd445aac19 inherit pub_methods_classpdf_1_1Color"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a955066382403ed42e8addf3bf9f5a838 inherit pub_methods_classpdf_1_1Color"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Color.html#a955066382403ed42e8addf3bf9f5a838">operator!=</a> (const <a class="el" href="classpdf_1_1Color.html">Color</a> &amp;other) const noexcept final</td></tr>
 <tr class="memdesc:a955066382403ed42e8addf3bf9f5a838 inherit pub_methods_classpdf_1_1Color"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether two colors are not equal.  <a href="classpdf_1_1Color.html#a955066382403ed42e8addf3bf9f5a838">More...</a><br /></td></tr>
 <tr class="separator:a955066382403ed42e8addf3bf9f5a838 inherit pub_methods_classpdf_1_1Color"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -406,36 +406,6 @@ static const <a class="el" href="classpdf_1_1CMYKColor.html">CMYKColor</a>&#160;
 
 <p>Gets the yellow component. </p>
 <dl class="section return"><dt>Returns</dt><dd>Yellow component. </dd></dl>
-
-</div>
-</div>
-<a id="a5338bfe1a1dd97eb2142529d8f282180" name="a5338bfe1a1dd97eb2142529d8f282180"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5338bfe1a1dd97eb2142529d8f282180">&#9670;&#160;</a></span>isEmpty()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool pdf::CMYKColor::isEmpty </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Always returns <code>false</code>. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>false</code> </dd></dl>
-
-<p>Implements <a class="el" href="classpdf_1_1Object.html#a70350dfca129ac1b12a09837daf6f503">pdf::Object</a>.</p>
 
 </div>
 </div>
