@@ -377,12 +377,12 @@ namespace pdf {
          * @brief Sets the owner and user passwords for a pdf document.
          * @param ownerPassword Owner password (cannot be empty).
          * @param userPassword  User password (can be empty, but cannot be equal to `ownerPassword`).
-         * @throw except::InvalidPasswordException if `ownerPassword` is empty or `ownerPassword` equals `userPassword`.
+         * @throw except::InvalidPasswordException if `ownerPassword` is empty or `ownerPassword == userPassword`.
         */
         void setPassword(const std::string& ownerPassword, const std::string& userPassword);
 
         /**
-         * @brief   Sets the pdf document permissions.
+         * @brief   Sets the user permissions for the document.
          * @param   permissions The permissions to use.
          * @warning A ::setPassword function must be called before calling this function.
          * @throws  except::EncryptionNotSetException if no password has been set.
