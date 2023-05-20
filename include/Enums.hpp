@@ -4,6 +4,24 @@
 /// Represents the Haru++ enumerations.
 namespace pdf::enums {
 
+    /// Represents a graphics mode.
+    enum class GraphicsMode: unsigned short {
+        /// Page description mode.
+        PAGE_DESCRIPTION = 0x0001,
+        /// Path object mode.
+        PATH_OBJECT = 0x0002,
+        /// Text object mode.
+        TEXT_OBJECT = 0x0004,
+        /// Clipping path mode.
+        CLIPPING_PATH = 0x0008,
+        /// Shading mode.
+        SHADING = 0x0010,
+        /// Inline image mode.
+        INLINE_IMAGE = 0x0020,
+        /// External object mode.
+        EXTERNAL_OBJECT = 0x0040
+    };
+
     /// Represents a page mode.
     enum class PageMode {
         /// No mode.

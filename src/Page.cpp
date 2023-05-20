@@ -1,4 +1,5 @@
 #include "../include/Page.hpp"
+#include "../include/Exception.hpp"
 #include "../include/Destination.hpp"
 #include "../include/TextAnnotation.hpp"
 #include "../include/LinkAnnotation.hpp"
@@ -115,8 +116,17 @@ std::pair<unsigned int, float> Page::measureText(const std::string& text, float 
     return {val, realWidth};
 }
 
-unsigned short Page::getGMode() const {
-    return HPDF_Page_GetGMode(__innerContent);
+GraphicsMode Page::getGraphicsMode() const {
+    switch (HPDF_Page_GetGMode(__innerContent)) {
+        case HPDF_GMODE_PAGE_DESCRIPTION: return GraphicsMode::PAGE_DESCRIPTION;
+        case HPDF_GMODE_PATH_OBJECT: return GraphicsMode::PATH_OBJECT;
+        case HPDF_GMODE_TEXT_OBJECT: return GraphicsMode::TEXT_OBJECT;
+        case HPDF_GMODE_CLIPPING_PATH: return GraphicsMode::CLIPPING_PATH;
+        case HPDF_GMODE_SHADING: return GraphicsMode::SHADING;
+        case HPDF_GMODE_INLINE_IMAGE: return GraphicsMode::INLINE_IMAGE;
+        case HPDF_GMODE_EXTERNAL_OBJECT: return GraphicsMode::EXTERNAL_OBJECT;
+        default: throw excepts::PageInvalidGModeException("Invalid graphics mode", 0x1051, 0);
+    }
 }
 
 Coor2D Page::getCurrentPos() const {
@@ -349,6 +359,10 @@ void Page::eoFill() {
 
 void Page::eoFillStroke() {
     HPDF_Page_EofillStroke(__innerContent);
+}
+
+void Page::executeContentStream(const ContentStream& stream) {
+    HPDF_Page_ExecuteXObject(__innerContent, stream.__innerContent);
 }
 
 void Page::fill() {

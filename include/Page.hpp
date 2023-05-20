@@ -85,9 +85,23 @@ namespace pdf {
 
         std::pair<unsigned int, float> measureText(const std::string& text, float width, bool wordWrap) const;
 
-        unsigned short getGMode() const;
+        /**
+         * @brief Gets the page's current graphics mode.
+         * @return Current graphics mode.
+         * @throw excepts::PageInvalidGModeException if the operation failed.
+        */
+        enums::GraphicsMode getGraphicsMode() const;
 
+        /**
+         * @brief  Gets the current position at the page.
+         * @return Current position as a Coor2D object.
+        */
         Coor2D getCurrentPos() const;
+
+        /**
+         * @brief  Gets the current text position at the page.
+         * @return Current text position as a Coor2D object.
+        */
         Coor2D getCurrentTextPos() const;
 
         /**
@@ -96,6 +110,10 @@ namespace pdf {
         */
         Font getCurrentFont() const;
 
+        /**
+         * @brief  Gets the current font size.
+         * @return Current font size.
+        */
         float getCurrentFontSize() const;
 
         /**
@@ -105,6 +123,10 @@ namespace pdf {
         */
         void setZoom(float zoom);
 
+        /**
+         * @brief  Gets the page's TransposeMatrix.
+         * @return The page's TransposeMatrix.
+        */
         TransposeMatrix getTransposeMatrix() const;
 
         float getLineWidth() const;
@@ -167,6 +189,8 @@ namespace pdf {
         void eoClip();
         void eoFill();
         void eoFillStroke();
+
+        void executeContentStream(const ContentStream& stream);
 
         void fill();
         void fillStroke();
