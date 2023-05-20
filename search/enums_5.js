@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['imagecolorspacedevice_0',['ImageColorSpaceDevice',['../namespacepdf_1_1enums.html#a93433daea728d3acca7070908353a5ba',1,'pdf::enums']]]
+  ['graphicsmode_0',['GraphicsMode',['../namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647',1,'pdf::enums']]]
 ];

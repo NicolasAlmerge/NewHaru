@@ -19,5 +19,6 @@ var searchData=
   ['euc_5fv_16',['EUC_V',['../namespacepdf_1_1enums.html#afe6d4591e9edde24765a428feac125c5a3aea51a9b52c5b3020b92ae2f578b0ab',1,'pdf::enums']]],
   ['exceededjwwcodenumlimitexception_17',['ExceededJWWCodeNumLimitException',['../classpdf_1_1excepts_1_1ExceededJWWCodeNumLimitException.html',1,'pdf::excepts']]],
   ['exception_18',['Exception',['../classpdf_1_1excepts_1_1Exception.html#af70ef807f15a7c2d71fdfde352f466a8',1,'pdf::excepts::Exception::Exception()'],['../classpdf_1_1excepts_1_1Exception.html',1,'pdf::excepts::Exception']]],
-  ['executive_19',['EXECUTIVE',['../namespacepdf_1_1enums.html#a4d95b6ac7ea52cbf6012b032d69bb707ae0c642c53b9e8d5aba401d729318669e',1,'pdf::enums']]]
+  ['executive_19',['EXECUTIVE',['../namespacepdf_1_1enums.html#a4d95b6ac7ea52cbf6012b032d69bb707ae0c642c53b9e8d5aba401d729318669e',1,'pdf::enums']]],
+  ['external_5fobject_20',['EXTERNAL_OBJECT',['../namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647a8d17e6eb3b790657c8cba9007fea08c6',1,'pdf::enums']]]
 ];

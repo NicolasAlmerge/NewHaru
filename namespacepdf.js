@@ -66,6 +66,15 @@ var namespacepdf =
         [ "UNINITIALIZED", "namespacepdf_1_1enums.html#aa66fd976e0fa404461f0060679c3be85add652546039b18970b8dcf2cff824268", null ],
         [ "UNKNOWN", "namespacepdf_1_1enums.html#aa66fd976e0fa404461f0060679c3be85a696b031073e74bf2cb98e5ef201d4aa3", null ]
       ] ],
+      [ "GraphicsMode", "namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647", [
+        [ "PAGE_DESCRIPTION", "namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647a3fce52a805db2655fe34e1329f015396", null ],
+        [ "PATH_OBJECT", "namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647afced3c2fc01d693be484bb0f762d8ba7", null ],
+        [ "TEXT_OBJECT", "namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647aa82d062f25bc13de83bfb6f50b5f5f0c", null ],
+        [ "CLIPPING_PATH", "namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647a80d284f2bc7db2fc4ba303ed19044ce1", null ],
+        [ "SHADING", "namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647a95af6fa21ea71e0af58237e8e72d026f", null ],
+        [ "INLINE_IMAGE", "namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647af8c038c6b40ec8568c8f4771593306f4", null ],
+        [ "EXTERNAL_OBJECT", "namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647a8d17e6eb3b790657c8cba9007fea08c6", null ]
+      ] ],
       [ "ImageColorSpaceDevice", "namespacepdf_1_1enums.html#a93433daea728d3acca7070908353a5ba", [
         [ "GRAY", "namespacepdf_1_1enums.html#a93433daea728d3acca7070908353a5baa48bf014c704c9eaae100a98006a37bf7", null ],
         [ "RGB", "namespacepdf_1_1enums.html#a93433daea728d3acca7070908353a5baa889574aebacda6bfd3e534e2b49b8028", null ],
