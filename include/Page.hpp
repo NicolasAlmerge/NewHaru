@@ -214,7 +214,13 @@ namespace pdf {
 
         void setExternGState(const ContentStream& stream);
 
+        /**
+         * @brief Sets the Font and size.
+         * @param font Font to use.
+         * @param size The font size to use (`0 < size <= consts::MAX_FONT_SIZE`).
+        */
         void setFontAndSize(const Font& font, float size);
+
         void setGrayFill(float gray);
         void setGrayStroke(float gray);
 

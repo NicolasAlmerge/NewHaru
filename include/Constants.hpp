@@ -33,6 +33,12 @@ namespace pdf::consts {
      * @details This is used when creating a DashMode element.
     */
     extern const float MAX_DASH_MODE_SIZE;
+
+    /**
+     * @brief   Represents the maximum size for a Font.
+     * @details This is used when calling Page::setFontAndSize.
+    */
+    extern const float MAX_FONT_SIZE;
 }
 
 #endif // __HARUPP_CONSTANTS_HPP__
