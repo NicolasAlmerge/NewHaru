@@ -25,9 +25,9 @@ var namespacepdf_1_1excepts =
     [ "InvalidAFMHeaderFileException", "classpdf_1_1excepts_1_1InvalidAFMHeaderFileException.html", null ],
     [ "InvalidAFMWidthException", "classpdf_1_1excepts_1_1InvalidAFMWidthException.html", null ],
     [ "InvalidColorSpaceException", "classpdf_1_1excepts_1_1InvalidColorSpaceException.html", null ],
-    [ "InvalidDateTimeException", "classpdf_1_1excepts_1_1InvalidDateTimeException.html", null ],
+    [ "InvalidDateTimeException", "classpdf_1_1excepts_1_1InvalidDateTimeException.html", "classpdf_1_1excepts_1_1InvalidDateTimeException" ],
     [ "InvalidEncoderTypeException", "classpdf_1_1excepts_1_1InvalidEncoderTypeException.html", null ],
-    [ "InvalidEncodingNameException", "classpdf_1_1excepts_1_1InvalidEncodingNameException.html", null ],
+    [ "InvalidEncodingNameException", "classpdf_1_1excepts_1_1InvalidEncodingNameException.html", "classpdf_1_1excepts_1_1InvalidEncodingNameException" ],
     [ "InvalidFontNameException", "classpdf_1_1excepts_1_1InvalidFontNameException.html", null ],
     [ "InvalidFontSizeException", "classpdf_1_1excepts_1_1InvalidFontSizeException.html", null ],
     [ "InvalidGModeException", "classpdf_1_1excepts_1_1InvalidGModeException.html", null ],
@@ -46,7 +46,7 @@ var namespacepdf_1_1excepts =
     [ "InvalidTTFCMapException", "classpdf_1_1excepts_1_1InvalidTTFCMapException.html", null ],
     [ "InvalidTTFFormatException", "classpdf_1_1excepts_1_1InvalidTTFFormatException.html", null ],
     [ "LibPNGException", "classpdf_1_1excepts_1_1LibPNGException.html", null ],
-    [ "MemoryAllocationFailedException", "classpdf_1_1excepts_1_1MemoryAllocationFailedException.html", null ],
+    [ "MemoryAllocationFailedException", "classpdf_1_1excepts_1_1MemoryAllocationFailedException.html", "classpdf_1_1excepts_1_1MemoryAllocationFailedException" ],
     [ "MissingTTFTableException", "classpdf_1_1excepts_1_1MissingTTFTableException.html", null ],
     [ "NoGStateException", "classpdf_1_1excepts_1_1NoGStateException.html", null ],
     [ "NonMatchingBitsPerComponentException", "classpdf_1_1excepts_1_1NonMatchingBitsPerComponentException.html", null ],
@@ -59,9 +59,9 @@ var namespacepdf_1_1excepts =
     [ "TooManyIndirectObjectsException", "classpdf_1_1excepts_1_1TooManyIndirectObjectsException.html", null ],
     [ "TTCException", "classpdf_1_1excepts_1_1TTCException.html", "classpdf_1_1excepts_1_1TTCException" ],
     [ "TTFException", "classpdf_1_1excepts_1_1TTFException.html", "classpdf_1_1excepts_1_1TTFException" ],
-    [ "UndefinedException", "classpdf_1_1excepts_1_1UndefinedException.html", null ],
+    [ "UndefinedException", "classpdf_1_1excepts_1_1UndefinedException.html", "classpdf_1_1excepts_1_1UndefinedException" ],
     [ "UnsupportedFunctionException", "classpdf_1_1excepts_1_1UnsupportedFunctionException.html", null ],
     [ "UnsupportedJPEGFormatException", "classpdf_1_1excepts_1_1UnsupportedJPEGFormatException.html", null ],
     [ "UnsupportedType1FontException", "classpdf_1_1excepts_1_1UnsupportedType1FontException.html", null ],
-    [ "ZLibException", "classpdf_1_1excepts_1_1ZLibException.html", null ]
+    [ "ZLibException", "classpdf_1_1excepts_1_1ZLibException.html", "classpdf_1_1excepts_1_1ZLibException" ]
 ];

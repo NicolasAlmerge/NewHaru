@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7edocument_0',['~Document',['../classpdf_1_1Document.html#ad71d09e6aff143995ea22e3f4b189d9e',1,'pdf::Document']]]
+  ['zlibexception_0',['ZLibException',['../classpdf_1_1excepts_1_1ZLibException.html#ad842cec2e214910641b9ea22dda21317',1,'pdf::excepts::ZLibException']]]
 ];

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['uint8_0',['uint8',['../namespacepdf_1_1types.html#a5b2490fc94f492935c5128263cb2f858',1,'pdf::types']]],
-  ['undefinedexception_1',['UndefinedException',['../classpdf_1_1excepts_1_1UndefinedException.html',1,'pdf::excepts']]],
+  ['undefinedexception_1',['UndefinedException',['../classpdf_1_1excepts_1_1UndefinedException.html',1,'pdf::excepts::UndefinedException'],['../classpdf_1_1excepts_1_1UndefinedException.html#a384e6dac5acff87de47002168fa03fa7',1,'pdf::excepts::UndefinedException::UndefinedException()']]],
   ['underlined_2',['UNDERLINED',['../namespacepdf_1_1enums.html#a6b07527b037835ccf11f555b21acb7acaabb51020114b64b40a49f6ed0e4da7c2',1,'pdf::enums']]],
   ['uninitialized_3',['UNINITIALIZED',['../namespacepdf_1_1enums.html#aa66fd976e0fa404461f0060679c3be85add652546039b18970b8dcf2cff824268',1,'pdf::enums']]],
   ['unknown_4',['UNKNOWN',['../namespacepdf_1_1enums.html#ae9092004f1540bbde28a3f9f1de8b1d2a696b031073e74bf2cb98e5ef201d4aa3',1,'pdf::enums::UNKNOWN()'],['../namespacepdf_1_1enums.html#aa66fd976e0fa404461f0060679c3be85a696b031073e74bf2cb98e5ef201d4aa3',1,'pdf::enums::UNKNOWN()']]],
