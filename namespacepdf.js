@@ -244,6 +244,7 @@ var namespacepdf =
       [ "uint8", "namespacepdf_1_1types.html#a5b2490fc94f492935c5128263cb2f858", null ]
     ] ],
     [ "utils", "namespacepdf_1_1utils.html", [
+      [ "getHaruPPVersion", "namespacepdf_1_1utils.html#a034a5203f4c6bf603ee8cb3718b95acf", null ],
       [ "getLibHaruVersion", "namespacepdf_1_1utils.html#a8848366cc974f2c2f81cfe2ad680411c", null ]
     ] ],
     [ "Annotation", "classpdf_1_1Annotation.html", "classpdf_1_1Annotation" ],

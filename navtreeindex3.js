@@ -186,7 +186,8 @@ var NAVTREEINDEX3 =
 "namespacepdf_1_1types.html":[0,0,0,3],
 "namespacepdf_1_1types.html#a5b2490fc94f492935c5128263cb2f858":[0,0,0,3,0],
 "namespacepdf_1_1utils.html":[0,0,0,4],
-"namespacepdf_1_1utils.html#a8848366cc974f2c2f81cfe2ad680411c":[0,0,0,4,0],
+"namespacepdf_1_1utils.html#a034a5203f4c6bf603ee8cb3718b95acf":[0,0,0,4,0],
+"namespacepdf_1_1utils.html#a8848366cc974f2c2f81cfe2ad680411c":[0,0,0,4,1],
 "namespaces.html":[0,0],
 "pages.html":[]
 };
