@@ -6,7 +6,7 @@ var searchData=
   ['setborderstyle_3',['setBorderStyle',['../classpdf_1_1Annotation.html#a8efe705b656a919e4e34e185f2013492',1,'pdf::Annotation::setBorderStyle()'],['../classpdf_1_1LinkAnnotation.html#a813dc1e2077c2376b33384be6737deac',1,'pdf::LinkAnnotation::setBorderStyle()']]],
   ['setcolormask_4',['setColorMask',['../classpdf_1_1Image.html#a9940889ed3e23478e1abd586091fd7db',1,'pdf::Image']]],
   ['setcompressionmode_5',['setCompressionMode',['../classpdf_1_1Document.html#a941b1eb1e8d2f4e5a109fd7c1f6ea7df',1,'pdf::Document']]],
-  ['setcurrentencoder_6',['setCurrentEncoder',['../classpdf_1_1Document.html#a384b63031e4456bf17ef01876507bf5c',1,'pdf::Document::setCurrentEncoder(enums::SingleByteEncoding encoding)'],['../classpdf_1_1Document.html#abb7f6dcfff2abca40b6da8eb85a5d183',1,'pdf::Document::setCurrentEncoder(enums::MultiByteEncoding encoding)']]],
+  ['setcurrentencoder_6',['setCurrentEncoder',['../classpdf_1_1Document.html#a805dfbcc812c58351b9d6f36596c8e57',1,'pdf::Document::setCurrentEncoder(const std::string &amp;encodingName)'],['../classpdf_1_1Document.html#abb7f6dcfff2abca40b6da8eb85a5d183',1,'pdf::Document::setCurrentEncoder(enums::MultiByteEncoding encoding)'],['../classpdf_1_1Document.html#a384b63031e4456bf17ef01876507bf5c',1,'pdf::Document::setCurrentEncoder(enums::SingleByteEncoding encoding)']]],
   ['setdestination_7',['setDestination',['../classpdf_1_1Outline.html#ab8570c3628b96dfda334b1aa7709bb07',1,'pdf::Outline']]],
   ['setfit_8',['setFit',['../classpdf_1_1Destination.html#a53c9e92c2eacd5e39503cd89a6add032',1,'pdf::Destination']]],
   ['setfitb_9',['setFitB',['../classpdf_1_1Destination.html#a05702fd97cb98b0cba6cbb6337423f5a',1,'pdf::Destination']]],
@@ -27,7 +27,7 @@ var searchData=
   ['setpassword_24',['setPassword',['../classpdf_1_1Document.html#ae9ea8dccf36ba4ce406ff773c4f5db5f',1,'pdf::Document::setPassword(const std::string &amp;ownerPassword)'],['../classpdf_1_1Document.html#ad0478ebfa84c333b2839802da724850a',1,'pdf::Document::setPassword(const std::string &amp;ownerPassword, const std::string &amp;userPassword)']]],
   ['setpermissions_25',['setPermissions',['../classpdf_1_1Document.html#a6653532228ef683ce178584224d02fa4',1,'pdf::Document']]],
   ['setr2encryptmode_26',['setR2EncryptMode',['../classpdf_1_1Document.html#ab1b39958179ba57aecbea341d9acd4d8',1,'pdf::Document']]],
-  ['setr3encryptmode_27',['setR3EncryptMode',['../classpdf_1_1Document.html#a45d29ee225c5992053ddf3c01fe07c27',1,'pdf::Document']]],
+  ['setr3encryptmode_27',['setR3EncryptMode',['../classpdf_1_1Document.html#a34eda6d301774756b3cba17f637eda15',1,'pdf::Document']]],
   ['setviewerpreferences_28',['setViewerPreferences',['../classpdf_1_1Document.html#ad8cbefda1433057cecdb486a76b27e03',1,'pdf::Document']]],
   ['setxyz_29',['setXYZ',['../classpdf_1_1Destination.html#a74363ea7c813db1f6ecf095aa1e8d098',1,'pdf::Destination']]],
   ['setzoom_30',['setZoom',['../classpdf_1_1Page.html#a9acc575fb3070c0504ef4b2cdb92cf1f',1,'pdf::Page']]]

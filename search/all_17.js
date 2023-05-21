@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['yellow_0',['YELLOW',['../classpdf_1_1CMYKColor.html#a519e220307457f65c914484d443fffde',1,'pdf::CMYKColor::YELLOW()'],['../classpdf_1_1RGBColor.html#afa8859291011d5b9b175db7e737f3ede',1,'pdf::RGBColor::YELLOW()']]]
+  ['z_0',['Z',['../namespacepdf_1_1enums.html#aa104a4be7629a24b8e1fc51c4f1899d7a21c2e59531c8710156d34a3c30ac81d5',1,'pdf::enums']]],
+  ['zlibexception_1',['ZLibException',['../classpdf_1_1excepts_1_1ZLibException.html',1,'pdf::excepts']]]
 ];

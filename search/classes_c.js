@@ -1,23 +1,8 @@
 var searchData=
 [
   ['page_0',['Page',['../classpdf_1_1Page.html',1,'pdf']]],
-  ['pagecannotfindobjectexception_1',['PageCannotFindObjectException',['../classpdf_1_1excepts_1_1PageCannotFindObjectException.html',1,'pdf::excepts']]],
-  ['pagecannotgetrootpagesexception_2',['PageCannotGetRootPagesException',['../classpdf_1_1excepts_1_1PageCannotGetRootPagesException.html',1,'pdf::excepts']]],
-  ['pagecannotrestoregstateexception_3',['PageCannotRestoreGStateException',['../classpdf_1_1excepts_1_1PageCannotRestoreGStateException.html',1,'pdf::excepts']]],
-  ['pagecannotsetparentexception_4',['PageCannotSetParentException',['../classpdf_1_1excepts_1_1PageCannotSetParentException.html',1,'pdf::excepts']]],
-  ['pageexception_5',['PageException',['../classpdf_1_1excepts_1_1PageException.html',1,'pdf::excepts']]],
-  ['pagefontnotfoundexception_6',['PageFontNotFoundException',['../classpdf_1_1excepts_1_1PageFontNotFoundException.html',1,'pdf::excepts']]],
-  ['pageinvalidfontexception_7',['PageInvalidFontException',['../classpdf_1_1excepts_1_1PageInvalidFontException.html',1,'pdf::excepts']]],
-  ['pageinvalidfontsizeexception_8',['PageInvalidFontSizeException',['../classpdf_1_1excepts_1_1PageInvalidFontSizeException.html',1,'pdf::excepts']]],
-  ['pageinvalidgmodeexception_9',['PageInvalidGModeException',['../classpdf_1_1excepts_1_1PageInvalidGModeException.html',1,'pdf::excepts']]],
-  ['pageinvalidindexexception_10',['PageInvalidIndexException',['../classpdf_1_1excepts_1_1PageInvalidIndexException.html',1,'pdf::excepts']]],
-  ['pageinvalidrotatevalueexception_11',['PageInvalidRotateValueException',['../classpdf_1_1excepts_1_1PageInvalidRotateValueException.html',1,'pdf::excepts']]],
-  ['pageinvalidsizeexception_12',['PageInvalidSizeException',['../classpdf_1_1excepts_1_1PageInvalidSizeException.html',1,'pdf::excepts']]],
-  ['pageinvalidxobjectexception_13',['PageInvalidXObjectException',['../classpdf_1_1excepts_1_1PageInvalidXObjectException.html',1,'pdf::excepts']]],
-  ['pagelayoutoutofrangeexception_14',['PageLayoutOutOfRangeException',['../classpdf_1_1excepts_1_1PageLayoutOutOfRangeException.html',1,'pdf::excepts']]],
-  ['pagemodeoutofrangeexception_15',['PageModeOutOfRangeException',['../classpdf_1_1excepts_1_1PageModeOutOfRangeException.html',1,'pdf::excepts']]],
-  ['pagenumstyleoutofrangeexception_16',['PageNumStyleOutOfRangeException',['../classpdf_1_1excepts_1_1PageNumStyleOutOfRangeException.html',1,'pdf::excepts']]],
-  ['pageoutofrangeexception_17',['PageOutOfRangeException',['../classpdf_1_1excepts_1_1PageOutOfRangeException.html',1,'pdf::excepts']]],
-  ['pagesmissingkidsentryexception_18',['PagesMissingKidsEntryException',['../classpdf_1_1excepts_1_1PagesMissingKidsEntryException.html',1,'pdf::excepts']]],
-  ['permissions_19',['Permissions',['../classpdf_1_1Permissions.html',1,'pdf']]]
+  ['pagealreadyexistsexception_1',['PageAlreadyExistsException',['../classpdf_1_1excepts_1_1PageAlreadyExistsException.html',1,'pdf::excepts']]],
+  ['pageexception_2',['PageException',['../classpdf_1_1excepts_1_1PageException.html',1,'pdf::excepts']]],
+  ['pagevalueoutofrangeexception_3',['PageValueOutOfRangeException',['../classpdf_1_1excepts_1_1PageValueOutOfRangeException.html',1,'pdf::excepts']]],
+  ['permissions_4',['Permissions',['../classpdf_1_1Permissions.html',1,'pdf']]]
 ];

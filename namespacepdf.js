@@ -76,11 +76,6 @@ var namespacepdf =
         [ "INLINE_IMAGE", "namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647af8c038c6b40ec8568c8f4771593306f4", null ],
         [ "EXTERNAL_OBJECT", "namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647a8d17e6eb3b790657c8cba9007fea08c6", null ]
       ] ],
-      [ "ImageColorSpaceDevice", "namespacepdf_1_1enums.html#a93433daea728d3acca7070908353a5ba", [
-        [ "GRAY", "namespacepdf_1_1enums.html#a93433daea728d3acca7070908353a5baa48bf014c704c9eaae100a98006a37bf7", null ],
-        [ "RGB", "namespacepdf_1_1enums.html#a93433daea728d3acca7070908353a5baa889574aebacda6bfd3e534e2b49b8028", null ],
-        [ "CMYK", "namespacepdf_1_1enums.html#a93433daea728d3acca7070908353a5baafaa655c7dee48c19cd0bfc8187af941a", null ]
-      ] ],
       [ "LineCap", "namespacepdf_1_1enums.html#a3d53cb176a17089d1b0bf47a165d543f", [
         [ "BUTT_END", "namespacepdf_1_1enums.html#a3d53cb176a17089d1b0bf47a165d543fa70912559aceda9e49670d2b84b701f34", null ],
         [ "ROUND_END", "namespacepdf_1_1enums.html#a3d53cb176a17089d1b0bf47a165d543fa7c67e8f63ba629fc684b9a0826afad29", null ],
@@ -117,15 +112,13 @@ var namespacepdf =
         [ "TWO_COLUMN_LEFT", "namespacepdf_1_1enums.html#aa62dcec4447a8ca3b4be9c8be820d25babc507fd0106673eaf2a098a043ec990c", null ],
         [ "TWO_COLUMN_RIGHT", "namespacepdf_1_1enums.html#aa62dcec4447a8ca3b4be9c8be820d25ba3335ec610b2a7706be628fd1f874016f", null ],
         [ "TWO_PAGE_LEFT", "namespacepdf_1_1enums.html#aa62dcec4447a8ca3b4be9c8be820d25ba999c66455508fd04c28535800d51e41f", null ],
-        [ "TWO_PAGE_RIGHT", "namespacepdf_1_1enums.html#aa62dcec4447a8ca3b4be9c8be820d25ba757758140013466461030f008de738aa", null ],
-        [ "EOF_LAYOUT", "namespacepdf_1_1enums.html#aa62dcec4447a8ca3b4be9c8be820d25ba399531240896ea29134f36ab0289a9d1", null ]
+        [ "TWO_PAGE_RIGHT", "namespacepdf_1_1enums.html#aa62dcec4447a8ca3b4be9c8be820d25ba757758140013466461030f008de738aa", null ]
       ] ],
       [ "PageMode", "namespacepdf_1_1enums.html#a75c981042ee33b700241e43eebfc8e8a", [
         [ "NONE", "namespacepdf_1_1enums.html#a75c981042ee33b700241e43eebfc8e8aab50339a10e1de285ac99d4c3990b8693", null ],
         [ "USE_OUTLINE", "namespacepdf_1_1enums.html#a75c981042ee33b700241e43eebfc8e8aad67894b6d314d6106eb0c1d1e9c58178", null ],
         [ "USE_THUMBS", "namespacepdf_1_1enums.html#a75c981042ee33b700241e43eebfc8e8aa02489fd9b7ce97d1db19ac6429ad5fb1", null ],
-        [ "FULL_SCREEN", "namespacepdf_1_1enums.html#a75c981042ee33b700241e43eebfc8e8aae1a502139199d41bcd8f603a6d579b70", null ],
-        [ "EOF_MODE", "namespacepdf_1_1enums.html#a75c981042ee33b700241e43eebfc8e8aa0e36b06d0fa0ca87456e68b63f5a8f33", null ]
+        [ "FULL_SCREEN", "namespacepdf_1_1enums.html#a75c981042ee33b700241e43eebfc8e8aae1a502139199d41bcd8f603a6d579b70", null ]
       ] ],
       [ "PageNumberStyle", "namespacepdf_1_1enums.html#a6d0b1565bc406e1cd01a88ca9fd45603", [
         [ "DECIMAL", "namespacepdf_1_1enums.html#a6d0b1565bc406e1cd01a88ca9fd45603a13d992d671957e9a2b3e936ca0cf14a4", null ],
@@ -157,20 +150,6 @@ var namespacepdf =
         [ "US4x8", "namespacepdf_1_1enums.html#a4d95b6ac7ea52cbf6012b032d69bb707a4350dda4933f2f32fff842b6e155eff8", null ],
         [ "US5x7", "namespacepdf_1_1enums.html#a4d95b6ac7ea52cbf6012b032d69bb707aaaa1069f3cf9b143946dac9517717fc6", null ],
         [ "COMM10", "namespacepdf_1_1enums.html#a4d95b6ac7ea52cbf6012b032d69bb707a1882898c85fadcef56f3589a2835626a", null ]
-      ] ],
-      [ "R3EncryptKeyLength", "namespacepdf_1_1enums.html#ac86eb8a612d184839083c8863d286572", [
-        [ "FIVE", "namespacepdf_1_1enums.html#ac86eb8a612d184839083c8863d286572a180bb5e381e316e2246b88c92770ee75", null ],
-        [ "SIX", "namespacepdf_1_1enums.html#ac86eb8a612d184839083c8863d286572a48041ef8474caedcbcf2fe8996056b7f", null ],
-        [ "SEVEN", "namespacepdf_1_1enums.html#ac86eb8a612d184839083c8863d286572aebcf71d9bbc715c43f24a10cce77dab4", null ],
-        [ "EIGHT", "namespacepdf_1_1enums.html#ac86eb8a612d184839083c8863d286572a960df6d77e65cd185ca4f3501db634eb", null ],
-        [ "NINE", "namespacepdf_1_1enums.html#ac86eb8a612d184839083c8863d286572a73995fb90f0ebefe78b90731e67789cd", null ],
-        [ "TEN", "namespacepdf_1_1enums.html#ac86eb8a612d184839083c8863d286572a25e822c5a6128d9e957062a9ec28a29d", null ],
-        [ "ELEVEN", "namespacepdf_1_1enums.html#ac86eb8a612d184839083c8863d286572a99850be19e3568de2c3895b7eda0a712", null ],
-        [ "TWELVE", "namespacepdf_1_1enums.html#ac86eb8a612d184839083c8863d286572aafa484dd1dde6e199432ed3535863d51", null ],
-        [ "THIRTEEN", "namespacepdf_1_1enums.html#ac86eb8a612d184839083c8863d286572acf990468f68b0e5ca1f76746d406f628", null ],
-        [ "FOURTEEN", "namespacepdf_1_1enums.html#ac86eb8a612d184839083c8863d286572afcdaf7b88ebdd80fdb27931f5919f190", null ],
-        [ "FIFTEEN", "namespacepdf_1_1enums.html#ac86eb8a612d184839083c8863d286572af5d480d3abc4bdfeff0430a7356fe0ab", null ],
-        [ "SIXTEEN", "namespacepdf_1_1enums.html#ac86eb8a612d184839083c8863d286572a193d1b71197814d03e23cc841decdf33", null ]
       ] ],
       [ "SingleByteEncoding", "namespacepdf_1_1enums.html#a4149b191ba9bc827aece819959acfa0c", [
         [ "StandardEncoding", "namespacepdf_1_1enums.html#a4149b191ba9bc827aece819959acfa0ca19e884321b2a1e1a80dd325664f3d8c4", null ],

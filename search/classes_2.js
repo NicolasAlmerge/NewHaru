@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['cannotgetpngimagepalletexception_0',['CannotGetPNGImagePalletException',['../classpdf_1_1excepts_1_1CannotGetPNGImagePalletException.html',1,'pdf::excepts']]],
+  ['cannotembedttffontexception_0',['CannotEmbedTTFFontException',['../classpdf_1_1excepts_1_1CannotEmbedTTFFontException.html',1,'pdf::excepts']]],
   ['cmykcolor_1',['CMYKColor',['../classpdf_1_1CMYKColor.html',1,'pdf']]],
   ['color_2',['Color',['../classpdf_1_1Color.html',1,'pdf']]],
   ['compressionmode_3',['CompressionMode',['../classpdf_1_1CompressionMode.html',1,'pdf']]],
