@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['fileexception_0',['FileException',['../classpdf_1_1excepts_1_1FileException.html',1,'pdf::excepts']]],
+  ['fileexception_0',['FileException',['../classpdf_1_1excepts_1_1FileException.html#a21007e069143888a04ad910830fb6b83',1,'pdf::excepts::FileException::FileException()'],['../classpdf_1_1excepts_1_1FileException.html',1,'pdf::excepts::FileException']]],
   ['fileioexception_1',['FileIOException',['../classpdf_1_1excepts_1_1FileIOException.html',1,'pdf::excepts']]],
   ['fileopeningexception_2',['FileOpeningException',['../classpdf_1_1excepts_1_1FileOpeningException.html',1,'pdf::excepts']]],
   ['fill_3',['FILL',['../namespacepdf_1_1enums.html#a1a1a39f584bb03b57bf0a27bbbf62367ae8225b11842409df543692aebed34fd1',1,'pdf::enums']]],
@@ -12,7 +12,7 @@ var searchData=
   ['font_9',['Font',['../classpdf_1_1Font.html',1,'pdf']]],
   ['fontalreadyexistsexception_10',['FontAlreadyExistsException',['../classpdf_1_1excepts_1_1FontAlreadyExistsException.html',1,'pdf::excepts']]],
   ['fontduplicateregistrationexception_11',['FontDuplicateRegistrationException',['../classpdf_1_1excepts_1_1FontDuplicateRegistrationException.html',1,'pdf::excepts']]],
-  ['fontexception_12',['FontException',['../classpdf_1_1excepts_1_1FontException.html',1,'pdf::excepts']]],
+  ['fontexception_12',['FontException',['../classpdf_1_1excepts_1_1FontException.html#a7dc182024e6ec6161ca09b60315d21ef',1,'pdf::excepts::FontException::FontException()'],['../classpdf_1_1excepts_1_1FontException.html',1,'pdf::excepts::FontException']]],
   ['fontinvalidwidthstableexception_13',['FontInvalidWidthsTableException',['../classpdf_1_1excepts_1_1FontInvalidWidthsTableException.html',1,'pdf::excepts']]],
   ['fontnotfoundexception_14',['FontNotFoundException',['../classpdf_1_1excepts_1_1FontNotFoundException.html',1,'pdf::excepts']]],
   ['fontspecific_15',['FontSpecific',['../namespacepdf_1_1enums.html#a4149b191ba9bc827aece819959acfa0cae68ad164e2ee2d57120e0374586074ee',1,'pdf::enums']]],

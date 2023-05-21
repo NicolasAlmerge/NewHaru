@@ -40,7 +40,7 @@ var searchData=
   ['getm_37',['getM',['../classpdf_1_1CMYKColor.html#a1c3268306e00003e030c118d31ae02f3',1,'pdf::CMYKColor']]],
   ['getminutes_38',['getMinutes',['../classpdf_1_1DateTime.html#a11220548d264d96c636a4b6ab3f51e3a',1,'pdf::DateTime']]],
   ['getmonth_39',['getMonth',['../classpdf_1_1DateTime.html#a30191ad2207ceb463a02eb2dec6f437e',1,'pdf::DateTime']]],
-  ['getname_40',['getName',['../classpdf_1_1excepts_1_1Exception.html#a934aa7214b6e1459da9725996cd74c15',1,'pdf::excepts::Exception::getName()'],['../classpdf_1_1Font.html#a924942a7aac8b9bf46ac9d38324e7481',1,'pdf::Font::getName()']]],
+  ['getname_40',['getName',['../classpdf_1_1Font.html#a924942a7aac8b9bf46ac9d38324e7481',1,'pdf::Font::getName()'],['../classpdf_1_1excepts_1_1Exception.html#a934aa7214b6e1459da9725996cd74c15',1,'pdf::excepts::Exception::getName()']]],
   ['getnumberofchars_41',['getNumberOfChars',['../classpdf_1_1TextWidth.html#a0bb5ec3e1d0ff638794b199b1fa81a24',1,'pdf::TextWidth']]],
   ['getnumberofspaces_42',['getNumberOfSpaces',['../classpdf_1_1TextWidth.html#ab32dc6f030c49db983c7eb9f1b73e8a1',1,'pdf::TextWidth']]],
   ['getoffhour_43',['getOffHour',['../classpdf_1_1DateTime.html#a64715dbccfbfa87f9681618d8f8380b0',1,'pdf::DateTime']]],
@@ -69,5 +69,6 @@ var searchData=
   ['getwritingmode_66',['getWritingMode',['../classpdf_1_1Encoder.html#af8cce260d2a99ca875166ad59af89c26',1,'pdf::Encoder']]],
   ['getx_67',['getX',['../classpdf_1_1Coor2D.html#ab89a5eb34bc420e535c5c787f53bba9a',1,'pdf::Coor2D::getX()'],['../classpdf_1_1TransposeMatrix.html#a2fff37aecbd63b2dd5ac014cc16509a5',1,'pdf::TransposeMatrix::getX()']]],
   ['gety_68',['getY',['../classpdf_1_1CMYKColor.html#adbae575e8adebb281964ef2355d78c47',1,'pdf::CMYKColor::getY()'],['../classpdf_1_1Coor2D.html#a0f7c04c7a6e203a91491a9d7e37f77ec',1,'pdf::Coor2D::getY()'],['../classpdf_1_1TransposeMatrix.html#ac342ff35cfb8393c6631d99bac0150a3',1,'pdf::TransposeMatrix::getY()']]],
-  ['getyear_69',['getYear',['../classpdf_1_1DateTime.html#a4285f968af4a19fa7a3f8faf06fc1bd7',1,'pdf::DateTime']]]
+  ['getyear_69',['getYear',['../classpdf_1_1DateTime.html#a4285f968af4a19fa7a3f8faf06fc1bd7',1,'pdf::DateTime']]],
+  ['graphicsexception_70',['GraphicsException',['../classpdf_1_1excepts_1_1GraphicsException.html#a1eb8a9687aeb897caa6d15627e3bf59f',1,'pdf::excepts::GraphicsException']]]
 ];

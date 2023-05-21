@@ -39,7 +39,7 @@ var searchData=
   ['singlebyteencoding_36',['SingleByteEncoding',['../namespacepdf_1_1enums.html#a4149b191ba9bc827aece819959acfa0c',1,'pdf::enums']]],
   ['solid_37',['SOLID',['../namespacepdf_1_1enums.html#a6b07527b037835ccf11f555b21acb7acad0dea69649a83749aa6bdf176092e8c9',1,'pdf::enums']]],
   ['standardencoding_38',['StandardEncoding',['../namespacepdf_1_1enums.html#a4149b191ba9bc827aece819959acfa0ca19e884321b2a1e1a80dd325664f3d8c4',1,'pdf::enums']]],
-  ['streamexception_39',['StreamException',['../classpdf_1_1excepts_1_1StreamException.html',1,'pdf::excepts']]],
+  ['streamexception_39',['StreamException',['../classpdf_1_1excepts_1_1StreamException.html',1,'pdf::excepts::StreamException'],['../classpdf_1_1excepts_1_1StreamException.html#a26a33324fc22f46fbe432d22f6c75b12',1,'pdf::excepts::StreamException::StreamException()']]],
   ['stringattribute_40',['StringAttribute',['../namespacepdf_1_1enums.html#a7a2ca2cdb45be529d47b6c7501d4daf8',1,'pdf::enums']]],
   ['stringoutofrangeexception_41',['StringOutOfRangeException',['../classpdf_1_1excepts_1_1StringOutOfRangeException.html',1,'pdf::excepts']]],
   ['stroke_42',['STROKE',['../namespacepdf_1_1enums.html#a1a1a39f584bb03b57bf0a27bbbf62367a3157895ac925120f0b65fef154d2037e',1,'pdf::enums']]],

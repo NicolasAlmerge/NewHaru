@@ -5,7 +5,7 @@ var searchData=
   ['a5_2',['A5',['../namespacepdf_1_1enums.html#a4d95b6ac7ea52cbf6012b032d69bb707ac6f2f93133905f75da4b02ccc19ab66a',1,'pdf::enums']]],
   ['addpage_3',['addPage',['../classpdf_1_1Document.html#ab845280ded0a3d9b282f3fe3187df7a2',1,'pdf::Document']]],
   ['addpagelabel_4',['addPageLabel',['../classpdf_1_1Document.html#af6ea94a2d02dbb733fc1c4380c8382ff',1,'pdf::Document::addPageLabel(enums::PageNumberStyle style=enums::PageNumberStyle::DECIMAL, unsigned int pageNumber=0U, unsigned int firstPage=1U)'],['../classpdf_1_1Document.html#a213e365ff82ef8ccc332f098fea74c8c',1,'pdf::Document::addPageLabel(const std::string &amp;prefix, enums::PageNumberStyle style=enums::PageNumberStyle::DECIMAL, unsigned int pageNumber=0U, unsigned int firstPage=1U)']]],
-  ['afmexception_5',['AFMException',['../classpdf_1_1excepts_1_1AFMException.html',1,'pdf::excepts']]],
+  ['afmexception_5',['AFMException',['../classpdf_1_1excepts_1_1AFMException.html#aa0434ff1648ce4d4fb556668b1c014d6',1,'pdf::excepts::AFMException::AFMException()'],['../classpdf_1_1excepts_1_1AFMException.html',1,'pdf::excepts::AFMException']]],
   ['all_6',['ALL',['../classpdf_1_1CompressionMode.html#af85f97ee9197ac6b58cca291d922ece7',1,'pdf::CompressionMode::ALL()'],['../classpdf_1_1Permissions.html#a4be345f0c34d4fb17fffd7d87f619e2d',1,'pdf::Permissions::ALL()'],['../classpdf_1_1ViewerPreferences.html#ac7e00166e2abde629a049df8a1766813',1,'pdf::ViewerPreferences::ALL()']]],
   ['annotation_7',['Annotation',['../classpdf_1_1Annotation.html',1,'pdf']]],
   ['annotationhighlightmode_8',['AnnotationHighlightMode',['../namespacepdf_1_1enums.html#a900ad02df790c838ebde295f25723a66',1,'pdf::enums']]],

@@ -6,7 +6,7 @@ var searchData=
   ['page_3',['Page',['../classpdf_1_1Page.html',1,'pdf']]],
   ['page_5fdescription_4',['PAGE_DESCRIPTION',['../namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647a3fce52a805db2655fe34e1329f015396',1,'pdf::enums']]],
   ['pagealreadyexistsexception_5',['PageAlreadyExistsException',['../classpdf_1_1excepts_1_1PageAlreadyExistsException.html',1,'pdf::excepts']]],
-  ['pageexception_6',['PageException',['../classpdf_1_1excepts_1_1PageException.html',1,'pdf::excepts']]],
+  ['pageexception_6',['PageException',['../classpdf_1_1excepts_1_1PageException.html#a55801833cfbb55c0ef4719e593842c1c',1,'pdf::excepts::PageException::PageException()'],['../classpdf_1_1excepts_1_1PageException.html',1,'pdf::excepts::PageException']]],
   ['pagelayout_7',['PageLayout',['../namespacepdf_1_1enums.html#aa62dcec4447a8ca3b4be9c8be820d25b',1,'pdf::enums']]],
   ['pagemode_8',['PageMode',['../namespacepdf_1_1enums.html#a75c981042ee33b700241e43eebfc8e8a',1,'pdf::enums']]],
   ['pagenumberstyle_9',['PageNumberStyle',['../namespacepdf_1_1enums.html#a6d0b1565bc406e1cd01a88ca9fd45603',1,'pdf::enums']]],
