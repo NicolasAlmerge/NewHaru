@@ -26,9 +26,9 @@ namespace pdf {
 
         /**
          * @brief Sets the annotation initial open / close state.
-         * @param open Whether the annotation should be open (`true`) or closed (`false`) initially.
+         * @param opened Whether the annotation should be open (`true`) or closed (`false`) initially.
         */
-        void setOpen(bool open);
+        void setOpen(bool opened);
     };
 }
 
