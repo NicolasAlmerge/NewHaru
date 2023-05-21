@@ -1,5 +1,8 @@
 var NAVTREEINDEX4 =
 {
+"namespacepdf_1_1enums.html#a1a1a39f584bb03b57bf0a27bbbf62367ae8225b11842409df543692aebed34fd1":[0,0,0,1,23,0],
+"namespacepdf_1_1enums.html#a1a1a39f584bb03b57bf0a27bbbf62367af229ea200f6fcf0fb66b5614f019566b":[0,0,0,1,23,6],
+"namespacepdf_1_1enums.html#a24a457cd8bed4f5ae64be8bdf8371d7e":[0,0,0,1,2],
 "namespacepdf_1_1enums.html#a24a457cd8bed4f5ae64be8bdf8371d7ea0f82d86afa0f5dc965c5c15aca58dcfb":[0,0,0,1,2,1],
 "namespacepdf_1_1enums.html#a24a457cd8bed4f5ae64be8bdf8371d7ea341fee9692a2ed8f09906d40d23fb1f9":[0,0,0,1,2,2],
 "namespacepdf_1_1enums.html#a24a457cd8bed4f5ae64be8bdf8371d7ea960df6d77e65cd185ca4f3501db634eb":[0,0,0,1,2,3],

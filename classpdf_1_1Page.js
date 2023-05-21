@@ -11,5 +11,6 @@ var classpdf_1_1Page =
     [ "getCurrentTextPos", "classpdf_1_1Page.html#ab669b27cfc0a1e22a635e634278ed306", null ],
     [ "getGraphicsMode", "classpdf_1_1Page.html#a44307c2a2af67cfedf7b10c1a20bcd08", null ],
     [ "getTransposeMatrix", "classpdf_1_1Page.html#a73f777004236fd335c9eb224c8850e55", null ],
+    [ "setFontAndSize", "classpdf_1_1Page.html#a8054a989edb5594eb9b9976d8a24c4a7", null ],
     [ "setZoom", "classpdf_1_1Page.html#a9acc575fb3070c0504ef4b2cdb92cf1f", null ]
 ];

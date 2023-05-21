@@ -4,6 +4,7 @@ var namespacepdf =
       [ "MAX_DASH_MODE_LENGTH", "namespacepdf_1_1consts.html#a16dde7702b8d9150fa3d4b81e12551d8", null ],
       [ "MAX_DASH_MODE_SIZE", "namespacepdf_1_1consts.html#aa498d25b04c9108be89de888ccfec8fe", null ],
       [ "MAX_DICT_ELEMENT", "namespacepdf_1_1consts.html#af23c1eab1fa0bd2c1c89fbdce378e7a0", null ],
+      [ "MAX_FONT_SIZE", "namespacepdf_1_1consts.html#a7607c3a2383a9a91b21f6d9967167826", null ],
       [ "MAX_GSTATE", "namespacepdf_1_1consts.html#a3ed7c3f9d2980d5765b60a48ad72899a", null ],
       [ "MAX_STRING_LEN", "namespacepdf_1_1consts.html#a936f74fb71410a5275b03d006b25267a", null ]
     ] ],
