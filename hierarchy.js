@@ -2,7 +2,6 @@ var hierarchy =
 [
     [ "std::exception", null, [
       [ "pdf::excepts::Exception", "classpdf_1_1excepts_1_1Exception.html", [
-        [ "pdf::excepts::BinaryLengthTooLongException", "classpdf_1_1excepts_1_1BinaryLengthTooLongException.html", null ],
         [ "pdf::excepts::DocumentException", "classpdf_1_1excepts_1_1DocumentException.html", [
           [ "pdf::excepts::EncryptionNotSetException", "classpdf_1_1excepts_1_1EncryptionNotSetException.html", null ],
           [ "pdf::excepts::InvalidPageIndexException", "classpdf_1_1excepts_1_1InvalidPageIndexException.html", null ],
@@ -31,7 +30,6 @@ var hierarchy =
           ] ],
           [ "pdf::excepts::UnsupportedType1FontException", "classpdf_1_1excepts_1_1UnsupportedType1FontException.html", null ]
         ] ],
-        [ "pdf::excepts::FloatValueOutOfRangeException", "classpdf_1_1excepts_1_1FloatValueOutOfRangeException.html", null ],
         [ "pdf::excepts::GraphicsException", "classpdf_1_1excepts_1_1GraphicsException.html", [
           [ "pdf::excepts::GStateLimitExceededException", "classpdf_1_1excepts_1_1GStateLimitExceededException.html", null ],
           [ "pdf::excepts::InvalidGModeException", "classpdf_1_1excepts_1_1InvalidGModeException.html", null ],
@@ -42,6 +40,12 @@ var hierarchy =
         [ "pdf::excepts::InvalidEncodingNameException", "classpdf_1_1excepts_1_1InvalidEncodingNameException.html", null ],
         [ "pdf::excepts::InvalidParameterException", "classpdf_1_1excepts_1_1InvalidParameterException.html", null ],
         [ "pdf::excepts::MemoryAllocationFailedException", "classpdf_1_1excepts_1_1MemoryAllocationFailedException.html", null ],
+        [ "pdf::excepts::OutOfRangeException", "classpdf_1_1excepts_1_1OutOfRangeException.html", [
+          [ "pdf::excepts::BinaryLengthTooLongException", "classpdf_1_1excepts_1_1BinaryLengthTooLongException.html", null ],
+          [ "pdf::excepts::FloatValueOutOfRangeException", "classpdf_1_1excepts_1_1FloatValueOutOfRangeException.html", null ],
+          [ "pdf::excepts::StringOutOfRangeException", "classpdf_1_1excepts_1_1StringOutOfRangeException.html", null ],
+          [ "pdf::excepts::TooManyIndirectObjectsException", "classpdf_1_1excepts_1_1TooManyIndirectObjectsException.html", null ]
+        ] ],
         [ "pdf::excepts::StreamException", "classpdf_1_1excepts_1_1StreamException.html", [
           [ "pdf::excepts::FontException", "classpdf_1_1excepts_1_1FontException.html", [
             [ "pdf::excepts::ExceededJWWCodeNumLimitException", "classpdf_1_1excepts_1_1ExceededJWWCodeNumLimitException.html", null ],
@@ -70,8 +74,6 @@ var hierarchy =
             [ "pdf::excepts::PageValueOutOfRangeException", "classpdf_1_1excepts_1_1PageValueOutOfRangeException.html", null ]
           ] ]
         ] ],
-        [ "pdf::excepts::StringOutOfRangeException", "classpdf_1_1excepts_1_1StringOutOfRangeException.html", null ],
-        [ "pdf::excepts::TooManyIndirectObjectsException", "classpdf_1_1excepts_1_1TooManyIndirectObjectsException.html", null ],
         [ "pdf::excepts::UndefinedException", "classpdf_1_1excepts_1_1UndefinedException.html", null ],
         [ "pdf::excepts::ZLibException", "classpdf_1_1excepts_1_1ZLibException.html", null ]
       ] ]

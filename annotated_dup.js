@@ -52,6 +52,7 @@ var annotated_dup =
         [ "MissingTTFTableException", "classpdf_1_1excepts_1_1MissingTTFTableException.html", null ],
         [ "NoGStateException", "classpdf_1_1excepts_1_1NoGStateException.html", null ],
         [ "NonMatchingBitsPerComponentException", "classpdf_1_1excepts_1_1NonMatchingBitsPerComponentException.html", null ],
+        [ "OutOfRangeException", "classpdf_1_1excepts_1_1OutOfRangeException.html", "classpdf_1_1excepts_1_1OutOfRangeException" ],
         [ "PageAlreadyExistsException", "classpdf_1_1excepts_1_1PageAlreadyExistsException.html", null ],
         [ "PageException", "classpdf_1_1excepts_1_1PageException.html", "classpdf_1_1excepts_1_1PageException" ],
         [ "PageValueOutOfRangeException", "classpdf_1_1excepts_1_1PageValueOutOfRangeException.html", null ],
