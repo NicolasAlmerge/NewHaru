@@ -19,7 +19,7 @@ var searchData=
   ['sethighlightmode_16',['setHighlightMode',['../classpdf_1_1LinkAnnotation.html#a44a465b5c4985f7440af99bee8b6a256',1,'pdf::LinkAnnotation']]],
   ['seticon_17',['setIcon',['../classpdf_1_1TextAnnotation.html#a890824190ec0f268d82beed095a9ab65',1,'pdf::TextAnnotation']]],
   ['setmaskimage_18',['setMaskImage',['../classpdf_1_1Image.html#a9021036579d3d7f92da24b9e01198baf',1,'pdf::Image']]],
-  ['setopen_19',['setOpen',['../classpdf_1_1Outline.html#aee81aa73f0db6d58faec730bcda9acbd',1,'pdf::Outline::setOpen()'],['../classpdf_1_1TextAnnotation.html#ad78c96f742440160e0b53ecc1d4124c1',1,'pdf::TextAnnotation::setOpen()']]],
+  ['setopen_19',['setOpen',['../classpdf_1_1Outline.html#aee81aa73f0db6d58faec730bcda9acbd',1,'pdf::Outline::setOpen()'],['../classpdf_1_1TextAnnotation.html#ad80d71c9bbc61ef34cb3f8d5952dcafe',1,'pdf::TextAnnotation::setOpen()']]],
   ['setopendestination_20',['setOpenDestination',['../classpdf_1_1Document.html#a8363d306807cb0b235299c7c878080d1',1,'pdf::Document']]],
   ['setpageconfiguration_21',['setPageConfiguration',['../classpdf_1_1Document.html#a5db9dc9897c2f4ee29ac9028f6aeb7e9',1,'pdf::Document']]],
   ['setpagelayout_22',['setPageLayout',['../classpdf_1_1Document.html#abed413a7f628141b261e56eda89e829b',1,'pdf::Document']]],
