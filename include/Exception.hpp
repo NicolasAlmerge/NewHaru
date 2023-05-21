@@ -384,7 +384,7 @@ namespace pdf::excepts {
         public: MissingTTFTableException() noexcept;
     };
 
-    /// 0x1062
+    // 0x1062
     class UnsupportedFunctionException final: public GraphicsException {
         public: UnsupportedFunctionException() noexcept;
     };
