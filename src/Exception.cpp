@@ -241,7 +241,7 @@ InvalidImageOperationException::InvalidImageOperationException() noexcept: Image
     0x1035
 ) {}
 
-InvalidParameterException::InvalidParameterException() noexcept: Exception(
+InvalidParameterException::InvalidParameterException() noexcept: OutOfRangeException(
     "InvalidParameterException",
     "An invalid value was set.",
     0x1039

@@ -463,7 +463,7 @@ namespace pdf::excepts {
     };
 
     // 0x1039
-    class InvalidParameterException final: public Exception {
+    class InvalidParameterException final: public OutOfRangeException {
         public: InvalidParameterException() noexcept;
     };
 
