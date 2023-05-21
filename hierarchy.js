@@ -38,11 +38,11 @@ var hierarchy =
         ] ],
         [ "pdf::excepts::InvalidDateTimeException", "classpdf_1_1excepts_1_1InvalidDateTimeException.html", null ],
         [ "pdf::excepts::InvalidEncodingNameException", "classpdf_1_1excepts_1_1InvalidEncodingNameException.html", null ],
-        [ "pdf::excepts::InvalidParameterException", "classpdf_1_1excepts_1_1InvalidParameterException.html", null ],
         [ "pdf::excepts::MemoryAllocationFailedException", "classpdf_1_1excepts_1_1MemoryAllocationFailedException.html", null ],
         [ "pdf::excepts::OutOfRangeException", "classpdf_1_1excepts_1_1OutOfRangeException.html", [
           [ "pdf::excepts::BinaryLengthTooLongException", "classpdf_1_1excepts_1_1BinaryLengthTooLongException.html", null ],
           [ "pdf::excepts::FloatValueOutOfRangeException", "classpdf_1_1excepts_1_1FloatValueOutOfRangeException.html", null ],
+          [ "pdf::excepts::InvalidParameterException", "classpdf_1_1excepts_1_1InvalidParameterException.html", null ],
           [ "pdf::excepts::StringOutOfRangeException", "classpdf_1_1excepts_1_1StringOutOfRangeException.html", null ],
           [ "pdf::excepts::TooManyIndirectObjectsException", "classpdf_1_1excepts_1_1TooManyIndirectObjectsException.html", null ]
         ] ],
