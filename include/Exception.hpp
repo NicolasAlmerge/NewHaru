@@ -24,7 +24,7 @@ namespace pdf::excepts {
 
         /**
          * @brief Creates a new Exception with parameters.
-         * @param errorName Error class name.
+         * @param className Error class name.
          * @param errorMessage Error message.
          * @param errorCode Error code.
          * @param detailCode Detail code.
@@ -86,7 +86,7 @@ namespace pdf::excepts {
 
             /**
              * @brief Creates a new DocumentException with parameters.
-             * @param errorName Error class name.
+             * @param className Error class name.
              * @param errorMessage Error message.
              * @param errorCode Error code.
              * @param detailCode Detail code.
@@ -110,7 +110,7 @@ namespace pdf::excepts {
 
             /**
              * @brief Creates a new FileException with parameters.
-             * @param errorName Error class name.
+             * @param className Error class name.
              * @param errorMessage Error message.
              * @param errorCode Error code.
              * @param detailCode Detail code.
@@ -134,7 +134,7 @@ namespace pdf::excepts {
 
             /**
              * @brief Creates a new AFMException with parameters.
-             * @param errorName Error class name.
+             * @param className Error class name.
              * @param errorMessage Error message.
              * @param errorCode Error code.
              * @param detailCode Detail code.
@@ -158,7 +158,7 @@ namespace pdf::excepts {
 
             /**
              * @brief Creates a new TTCException with parameters.
-             * @param errorName Error class name.
+             * @param className Error class name.
              * @param errorMessage Error message.
              * @param errorCode Error code.
              * @param detailCode Detail code.
@@ -182,7 +182,7 @@ namespace pdf::excepts {
 
             /**
              * @brief Creates a new TTFException with parameters.
-             * @param errorName Error class name.
+             * @param className Error class name.
              * @param errorMessage Error message.
              * @param errorCode Error code.
              * @param detailCode Detail code.
@@ -206,7 +206,7 @@ namespace pdf::excepts {
 
             /**
              * @brief Creates a new GraphicsException with parameters.
-             * @param errorName Error class name.
+             * @param className Error class name.
              * @param errorMessage Error message.
              * @param errorCode Error code.
              * @param detailCode Detail code.
@@ -230,7 +230,7 @@ namespace pdf::excepts {
 
             /**
              * @brief Creates a new StreamException with parameters.
-             * @param errorName Error class name.
+             * @param className Error class name.
              * @param errorMessage Error message.
              * @param errorCode Error code.
              * @param detailCode Detail code.
@@ -254,7 +254,7 @@ namespace pdf::excepts {
 
             /**
              * @brief Creates a new FontException with parameters.
-             * @param errorName Error class name.
+             * @param className Error class name.
              * @param errorMessage Error message.
              * @param errorCode Error code.
              * @param detailCode Detail code.
@@ -278,7 +278,7 @@ namespace pdf::excepts {
 
             /**
              * @brief Creates a new PageException with parameters.
-             * @param errorName Error class name.
+             * @param className Error class name.
              * @param errorMessage Error message.
              * @param errorCode Error code.
              * @param detailCode Detail code.
@@ -302,7 +302,7 @@ namespace pdf::excepts {
 
             /**
              * @brief Creates a new ImageException with parameters.
-             * @param errorName Error class name.
+             * @param className Error class name.
              * @param errorMessage Error message.
              * @param errorCode Error code.
              * @param detailCode Detail code.
@@ -326,7 +326,7 @@ namespace pdf::excepts {
 
             /**
              * @brief Creates a new OutOfRangeException with parameters.
-             * @param errorName Error class name.
+             * @param className Error class name.
              * @param errorMessage Error message.
              * @param errorCode Error code.
              * @param detailCode Detail code.

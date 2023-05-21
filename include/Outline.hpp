@@ -21,7 +21,7 @@ namespace pdf {
 
         /**
          * @brief Sets the outline initial open / close state.
-         * @param open Whether the outline should be open (`true`) or closed (`false`) initially.
+         * @param opened Whether the outline should be open (`true`) or closed (`false`) initially.
         */
         void setOpen(bool opened);
 

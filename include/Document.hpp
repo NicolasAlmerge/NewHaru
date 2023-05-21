@@ -199,7 +199,7 @@ namespace pdf {
 
         /**
          * @brief Sets the page mode.
-         * @param layout Mode to set.
+         * @param mode Mode to set.
         */
         void setPageMode(enums::PageMode mode);
 
