@@ -81,13 +81,18 @@ ImageException::ImageException(const char* className, const char* errorMessage, 
 
 ImageException::~ImageException() noexcept {}
 
-BinaryLengthTooLongException::BinaryLengthTooLongException() noexcept: Exception(
+OutOfRangeException::OutOfRangeException(const char* className, const char* errorMessage, unsigned long errorCode, unsigned long detailCode) noexcept:
+    Exception(className, errorMessage, errorCode, detailCode) {}
+
+OutOfRangeException::~OutOfRangeException() noexcept {}
+
+BinaryLengthTooLongException::BinaryLengthTooLongException() noexcept: OutOfRangeException(
     "BinaryLengthTooLongException",
     "Data length > pdf::consts::MAX_STRING_LEN.",
     0x1004
 ) {}
 
-TooManyIndirectObjectsException::TooManyIndirectObjectsException() noexcept: Exception(
+TooManyIndirectObjectsException::TooManyIndirectObjectsException() noexcept: OutOfRangeException(
     "TooManyIndirectObjectsException",
     "Dictionary elements > consts::MAX_DICT_ELEMENT",
     0x1007
@@ -315,14 +320,14 @@ FloatValueOutOfRangeException::FloatValueOutOfRangeException() noexcept: FloatVa
     0UL
 ) {}
 
-FloatValueOutOfRangeException::FloatValueOutOfRangeException(const char* message, unsigned long detailCode) noexcept: Exception(
+FloatValueOutOfRangeException::FloatValueOutOfRangeException(const char* message, unsigned long detailCode) noexcept: OutOfRangeException(
     "FloatValueOutOfRangeException",
     message,
     0x1057,
     detailCode
 ) {}
 
-StringOutOfRangeException::StringOutOfRangeException() noexcept: Exception(
+StringOutOfRangeException::StringOutOfRangeException() noexcept: OutOfRangeException(
     "StringOutOfRangeException",
     "The length of the text is too long.",
     0x105B

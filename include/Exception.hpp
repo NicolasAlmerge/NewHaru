@@ -313,13 +313,37 @@ namespace pdf::excepts {
             ) noexcept;
     };
 
+    /**
+     * \class  OutOfRangeException
+     * @brief  Represents exceptions linked with out of range values.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
+    class OutOfRangeException: public Exception {
+        public:
+            virtual ~OutOfRangeException() noexcept = 0;
+
+            /**
+             * @brief Creates a new OutOfRangeException with parameters.
+             * @param errorName Error class name.
+             * @param errorMessage Error message.
+             * @param errorCode Error code.
+             * @param detailCode Detail code.
+            */
+            OutOfRangeException(
+                const char* className, const char* errorMessage,
+                unsigned long errorCode, unsigned long detailCode = 0U
+            ) noexcept;
+    };
+
     // 0x1004
-    class BinaryLengthTooLongException final: public Exception {
+    class BinaryLengthTooLongException final: public OutOfRangeException {
         public: BinaryLengthTooLongException() noexcept;
     };
 
     // 0x1007
-    class TooManyIndirectObjectsException final: public Exception {
+    class TooManyIndirectObjectsException final: public OutOfRangeException {
         public: TooManyIndirectObjectsException() noexcept;
     };
 
@@ -499,14 +523,14 @@ namespace pdf::excepts {
     };
 
     // 0x1057
-    class FloatValueOutOfRangeException final: public Exception {
+    class FloatValueOutOfRangeException final: public OutOfRangeException {
         public:
             FloatValueOutOfRangeException() noexcept;
             FloatValueOutOfRangeException(const char* message, unsigned long detailCode) noexcept;
     };
 
     // 0x105B
-    class StringOutOfRangeException final: public Exception {
+    class StringOutOfRangeException final: public OutOfRangeException {
         public: StringOutOfRangeException() noexcept;
     };
 
