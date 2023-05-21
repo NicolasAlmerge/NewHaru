@@ -372,9 +372,20 @@ namespace pdf::excepts {
         public: GStateLimitExceededException() noexcept;
     };
 
-    // 0x1015
+    /**
+     * \class  MemoryAllocationFailedException
+     * @brief  Represents an exception linked with a memory allocation failure.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class MemoryAllocationFailedException final: public Exception {
-        public: MemoryAllocationFailedException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new MemoryAllocationFailedException.
+             * @details The error code will be set to `0x1015`.
+            */
+            MemoryAllocationFailedException() noexcept;
     };
 
     // 0x1016
@@ -417,9 +428,20 @@ namespace pdf::excepts {
         public: InvalidColorSpaceException() noexcept;
     };
 
-    // 0x1022
+    /**
+     * \class  InvalidDateTimeException
+     * @brief  Represents an exception linked with an invalid DateTime.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidDateTimeException final: public Exception {
-        public: InvalidDateTimeException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidDateTimeException.
+             * @details The error code will be set to `0x1022`.
+            */
+            InvalidDateTimeException() noexcept;
     };
 
     // 0x1026
@@ -432,9 +454,20 @@ namespace pdf::excepts {
         public: InvalidEncoderTypeException() noexcept;
     };
 
-    // 0x102B
+    /**
+     * \class  InvalidEncodingNameException
+     * @brief  Represents an exception linked with an invalid encoding name.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidEncodingNameException final: public Exception {
-        public: InvalidEncodingNameException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidEncodingNameException.
+             * @details The error code will be set to `0x102B`.
+            */
+            InvalidEncodingNameException() noexcept;
     };
 
     // 0x102C
@@ -569,9 +602,21 @@ namespace pdf::excepts {
         public: UnsupportedType1FontException() noexcept;
     };
 
-    // 0x1066
+    /**
+     * \class  ZLibException
+     * @brief  Represents an exception linked with a the ZLib library.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class ZLibException final: public Exception {
-        public: ZLibException(unsigned long detailCode) noexcept;
+        public:
+            /**
+             * @brief   Creates a new ZLibException with a detail code parameter.
+             * @details The error code will be set to `0x1066`.
+             * @param   detailCode Detail code.
+            */
+            ZLibException(unsigned long detailCode) noexcept;
     };
 
     // 0x1067
@@ -603,7 +648,13 @@ namespace pdf::excepts {
      * @date    2023-05-16
     */
     class UndefinedException final: public Exception {
-        public: UndefinedException(unsigned long errorCode, unsigned long detailCode) noexcept;
+        public:
+            /**
+             * @brief Creates a new UndefinedException with parameters.
+             * @param errorCode Error code.
+             * @param detailCode Detail code.
+            */
+            UndefinedException(unsigned long errorCode, unsigned long detailCode) noexcept;
     };
 }
 
