@@ -31,9 +31,7 @@ namespace pdf::enums {
         /// Thumbs mode.
         USE_THUMBS,
         /// Full screen mode.
-        FULL_SCREEN,
-        /// Mode could not be determined.
-        EOF_MODE
+        FULL_SCREEN
     };
 
     /// Represents a page size.
@@ -112,34 +110,6 @@ namespace pdf::enums {
         GTS_PDFX
     };
 
-    /// Represents all allowed values for the R3 encryption when calling Document::setR3EncryptMode.
-    enum class R3EncryptKeyLength: unsigned int {
-        /// 5
-        FIVE = 5,
-        /// 6
-        SIX,
-        /// 7
-        SEVEN,
-        /// 8
-        EIGHT,
-        /// 9
-        NINE,
-        /// 10
-        TEN,
-        /// 11
-        ELEVEN,
-        /// 12
-        TWELVE,
-        /// 13
-        THIRTEEN,
-        /// 14
-        FOURTEEN,
-        /// 15
-        FIFTEEN,
-        /// 16
-        SIXTEEN
-    };
-
     /// Represents a UTC Indicator.
     enum class UTCIndicator: char {
         /// No indicator.
@@ -177,19 +147,7 @@ namespace pdf::enums {
         /// Two pages on the left layout.
         TWO_PAGE_LEFT,
         /// Two pages on the right layout.
-        TWO_PAGE_RIGHT,
-        /// Page layout could not be determined.
-        EOF_LAYOUT
-    };
-
-    /// Represents the image color space device used when loading an image from memory.
-    enum class ImageColorSpaceDevice {
-        /// Gray color space.
-        GRAY = 0,
-        /// RGB color space.
-        RGB,
-        /// CMYK color space.
-        CMYK
+        TWO_PAGE_RIGHT
     };
 
     /// Represents all allowed values for the number of bits per components used when calling Document::loadRawImageFromMemory.

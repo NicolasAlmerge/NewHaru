@@ -18,176 +18,60 @@ using namespace pdf::enums;
 
 
 /****************************** HELPERS ******************************/
-static void __haruppErrorHandler(unsigned long errorNo, unsigned long detailNo, void* userData) {
+static void __haruppErrorHandler(unsigned long errorNo, unsigned long detailNo, void*) {
     switch (errorNo) {
-        case 0x1001: throw ArrayCountException("Internal error. Data consistency was lost.", errorNo, detailNo);
-        case 0x1002: throw ArrayItemNotFoundException("Internal error. Data consistency was lost.", errorNo, detailNo);
-        case 0x1003: throw ArrayItemUnexpectedTypeException("Internal error. Data consistency was lost.", errorNo, detailNo);
-
-        case 0x1004: throw BinaryLengthException("Data length exceeded (> MAX_STRING_LEN).", errorNo, detailNo);
-
-        case 0x1005: throw CannotGetPNGImagePalletException("Cannot get pallet data from PNG image.", errorNo, detailNo);
-
-        case 0x1007: throw DictCountException("Dictionary elements > MAX_DICT_ELEMENT", errorNo, detailNo);
-        case 0x1008: throw DictItemNotFoundException("Internal error. Data consistency was lost.", errorNo, detailNo);
-        case 0x1009: throw DictItemUnexpectedTypeException("Internal error. Data consistency was lost.", errorNo, detailNo);
-        case 0x100A: throw DictStreamLengthNotFoundException("Internal error. Data consistency was lost.", errorNo, detailNo);
-
-        case 0x100B: throw EncryptionNotSetException("setR2EncryptMode, setR3EncryptMode or setPermission called before calling setPassword.", errorNo, detailNo);
-
-        case 0x100C: throw DocInvalidObjectException("Internal error. Data consistency was lost.", errorNo, detailNo);
-
-        case 0x100E: throw FontDuplicateRegistrationException("Tried to re-register a registered font.", errorNo, detailNo);
-
-        case 0x100F: throw ExceededJWWCodeNumLimitException("Cannot register a character to the Japanese word wrap characters list.", errorNo, detailNo);
-
-        case 0x1011: throw InvalidPasswordException("Tried to set the owner password to NULL, or owner and user password are the same.", errorNo, detailNo);
-
-        case 0x1013: throw UnknownClassException("Internal error. Data consistency was lost.", errorNo, detailNo);
-
-        case 0x1014: throw GStateLimitExceededException("Stack depth > MAX_GSTATE.", errorNo, detailNo);
-
-        case 0x1015: throw MemoryAllocationFailedException("Memory allocation failed.", errorNo, detailNo);
-
-        case 0x1016: throw FileIOException("File processing failed. (Detailed code is set.)", errorNo, detailNo);
-        case 0x1017: throw FileOpenException("Cannot open a file. (Detailed code is set.)", errorNo, detailNo);
-
-        case 0x1019: throw FontExistsException("Tried to load a font that has been registered.", errorNo, detailNo);
-
-        case 0x101A: throw FontInvalidWidthTableException("Font-file format is invalid or Internal error. Data consistency was lost.", errorNo, detailNo);
-
-        case 0x101B: throw InvalidAFMHeaderException("Cannot recognize header of afm file.", errorNo, detailNo);
-
-        case 0x101C: throw InvalidAnnotationException("Specified annotation handle is invalid.", errorNo, detailNo);
-
-        case 0x101E: throw InvalidBitPerComponentException("Bit-per-component of a image which was set as mask-image is invalid.", errorNo, detailNo);
-
-        case 0x101F: throw InvalidCharMatricsDataException("Cannot recognize char-matrics-data of afm file.", errorNo, detailNo);
-
-        case 0x1020: throw InvalidColorSpaceException("Invalid colorSpace parameter of loadRawImage, or color-space of a image which was set as mask-image is invalid or invoked function invalid in present color-space.", errorNo, detailNo);
-
-        case 0x1021: throw InvalidCompressionModeException("Invalid value set when invoking setCommpressionMode.", errorNo, detailNo);
-
-        case 0x1022: throw InvalidDateTimeException("An invalid date-time value was set.", errorNo, detailNo);
-
-        case 0x1023: throw InvalidDestinationException("An invalid destination handle was set.", errorNo, detailNo);
-
-        case 0x1025: throw InvalidDocumentException("An invalid document handle was set.", errorNo, detailNo);
-
-        case 0x1026: throw InvalidDocumentStateException("Function invalid in the present state was invoked.", errorNo, detailNo);
-
-        case 0x1027: throw InvalidEncoderException("An invalid encoder handle was set.", errorNo, detailNo);
-        case 0x1028: throw InvalidEncoderTypeException("Combination between font and encoder is wrong.", errorNo, detailNo);
-        case 0x102B: throw InvalidEncoderNameException("An invalid encoding name is specified.", errorNo, detailNo);
-
-        case 0x102C: throw InvalidEncryptionKeyLengthException("Encryption key length is invalid.", errorNo, detailNo);
-
-        case 0x102D: throw InvalidFontDefDataException("An invalid font handle was set or unsupported font format.", errorNo, detailNo);
-        case 0x102E: throw InvalidFontDefTypeException("Internal error. Data consistency was lost.", errorNo, detailNo);
-        case 0x102F: throw InvalidFontNameException("Font with the specified name is not found.", errorNo, detailNo);
-
-        case 0x1030: throw InvalidImageException("Unsupported image format.", errorNo, detailNo);
-        case 0x1031: throw InvalidJPEGDataException("Unsupported image format.", errorNo, detailNo);
-
-        case 0x1032: throw InvalidNDataException("Cannot read a postscript-name from an afm file.", errorNo, detailNo);
-
-        case 0x1033: throw InvalidObjectException("An invalid object is set or internal error. Data consistency was lost.", errorNo, detailNo);
-
-        case 0x1034: throw InvalidObjectIDException("Internal error. Data consistency was lost.", errorNo, detailNo);
-
-        case 0x1035: throw InvalidImageOperationException("Invoked setColorMask() against the image-object which was set a mask-image.", errorNo, detailNo);
-
-        case 0x1036: throw InvalidOutlineException("An invalid outline-handle was specified.", errorNo, detailNo);
-
-        case 0x1037: throw InvalidPageException("An invalid page-handle was specified.", errorNo, detailNo);
-        case 0x1038: throw InvalidInternalPagesException("An invalid pages-handle was specified. (internal error)", errorNo, detailNo);
-
-        case 0x1039: throw InvalidParameterException("An invalid value is set.", errorNo, detailNo);
-
-        case 0x103B: throw InvalidPNGImageException("Invalid PNG image format.", errorNo, detailNo);
-
-        case 0x103C: throw InvalidStreamException("Internal error. Data consistency was lost.", errorNo, detailNo);
-
-        case 0x103D: throw MissingFileNameEntryException("Internal error. '_FILE_NAME' entry for delayed loading is missing.", errorNo, detailNo);
-        case 0x103F: throw InvalidTTCFileException("Invalid .TTC file format.", errorNo, detailNo);
-
-        case 0x1040: throw InvalidTTCIndexException("Index parameter > number of included fonts.", errorNo, detailNo);
-
-        case 0x1041: throw InvalidWXDataException("Cannot read a width-data from an afm file.", errorNo, detailNo);
-
-        case 0x1042: throw ItemNotFoundException("Internal error. Data consistency was lost.", errorNo, detailNo);
-
-        case 0x1043: throw LibPNGException("Error returned from PNGLIB while loading image.", errorNo, detailNo);
-
-        case 0x1044: throw NameInvalidValueException("Internal error. Data consistency was lost.", errorNo, detailNo);
-
-        case 0x1045: throw NameOutOfRangeException("Internal error. Data consistency was lost.", errorNo, detailNo);
-
-        case 0x1049: throw PagesMissingKidsEntryException("Internal error. Data consistency was lost.", errorNo, detailNo);
-        case 0x104A: throw PageCannotFindObjectException("Internal error. Data consistency was lost.", errorNo, detailNo);
-        case 0x104B: throw PageCannotGetRootPagesException("Internal error. Data consistency was lost.", errorNo, detailNo);
-        case 0x104C: throw PageCannotRestoreGStateException("There are no graphics-states to be restored.", errorNo, detailNo);
-        case 0x104D: throw PageCannotSetParentException("Internal error. Data consistency was lost.", errorNo, detailNo);
-        case 0x104E: throw PageFontNotFoundException("The current font is not set.", errorNo, detailNo);
-        case 0x104F: throw PageInvalidFontException("An invalid font-handle was specified.", errorNo, detailNo);
-        case 0x1050: throw PageInvalidFontSizeException("An invalid font-size was set.", errorNo, detailNo);
-        case 0x1051: throw PageInvalidGModeException("See Graphics mode.", errorNo, detailNo);
-        case 0x1052: throw PageInvalidIndexException("Internal error. Data consistency was lost.", errorNo, detailNo);
-        case 0x1053: throw PageInvalidRotateValueException("Specified value is not multiple of 90.", errorNo, detailNo);
-        case 0x1054: throw PageInvalidSizeException("An invalid page-size was set.", errorNo, detailNo);
-        case 0x1055: throw PageInvalidXObjectException("An invalid image-handle was set.", errorNo, detailNo);
-        case 0x1056: throw PageOutOfRangeException("The specified value is out of range.", errorNo, detailNo);
-
-        case 0x1057: throw FloatOutOfRangeException("The specified value is out of range.", errorNo, detailNo);
-
-        case 0x1058: throw StreamEOFException("Unexpected EOF marker was detected.", errorNo, detailNo);
-        case 0x1059: throw StreamReadLnContinue("Internal error. Data consistency was lost.", errorNo, detailNo);
-
-        case 0x105B: throw StringOutOfRangeException("The length of the text is too long.", errorNo, detailNo);
-
-        case 0x105C: throw FunctionSkippedException("Function not executed because of other errors.", errorNo, detailNo);
-
-        case 0x105D: throw TTFCannotEmbedFontException("Font cannot be embedded. (license restriction)", errorNo, detailNo);
-        case 0x105E: throw TTFInvalidCMAPException("Unsupported ttf format. (cannot find unicode cmap)", errorNo, detailNo);
-        case 0x105F: throw TTFInvalidFormatException("Unsupported ttf format.", errorNo, detailNo);
-        case 0x1060: throw TTFMissingTableException("Unsupported ttf format. (cannot find a necessary table)", errorNo, detailNo);
-
-        case 0x1061: throw UnsupportedFontTypeException("Internal error. Data consistency was lost.", errorNo, detailNo);
-
-        case 0x1062: throw UnsupportedFunctionException("Library not configured to use PNGLIB or Internal error. Data consistency was lost.", errorNo, detailNo);
-
-        case 0x1063: throw UnsupportedJPEGFormatException("Unsupported JPEG format.", errorNo, detailNo);
-
-        case 0x1064: throw UnsupportedType1FontException("Failed to parse .PFB file.", errorNo, detailNo);
-
-        case 0x1065: throw XRefCountException("Internal error. Data consistency was lost.", errorNo, detailNo);
-
-        case 0x1066: throw ZLIBException("Error while executing ZLIB function.", errorNo, detailNo);
-
-        case 0x1067: throw InvalidPageIndexException("An invalid page index was passed.", errorNo, detailNo);
-
-        case 0x1068: throw InvalidURIException("An invalid URI was set.", errorNo, detailNo);
-
-        case 0x1069: throw PageLayoutOutOfRangeException("An invalid page-layout was set.", errorNo, detailNo);
-
-        case 0x1070: throw PageModeOutOfRangeException("An invalid page-mode was set.", errorNo, detailNo);
-        case 0x1071: throw PageNumStyleOutOfRangeException("An invalid page-num-style was set.", errorNo, detailNo);
-
-        case 0x1072: throw AnnotationInvalidIconException("An invalid icon was set.", errorNo, detailNo);
-        case 0x1073: throw AnnotationInvalidBorderStyleException("An invalid border-style was set.", errorNo, detailNo);
-
-        case 0x1074: throw InvalidPageDirectionException("An invalid page-direction was set.", errorNo, detailNo);
-
-        case 0x1075: throw InvalidFontException("An invalid font-handle was specified.", errorNo, detailNo);
-
-        case 0x1006: case 0x100D: case 0x1010: case 0x1012:
-        case 0x1018: case 0x101D: case 0x1024: case 0x1029:
-        case 0x102A: case 0x103A: case 0x103E: case 0x1046:
-        case 0x1047: case 0x1048: case 0x105A: case 0x106A:
-        case 0x106B: case 0x106C: case 0x106D: case 0x106E:
-        case 0x106F: throw UndefinedException("Error code is not defined.", errorNo, detailNo);
-
-        default: throw InvalidException("Error code is not valid.", errorNo, detailNo);
+        case 0x1004: throw BinaryLengthTooLongException();
+        case 0x1007: throw TooManyIndirectObjectsException();
+        case 0x100B: throw EncryptionNotSetException();
+        case 0x100E: throw FontDuplicateRegistrationException();
+        case 0x100F: throw ExceededJWWCodeNumLimitException(detailNo);
+        case 0x1011: throw InvalidPasswordException();
+        case 0x1014: throw GStateLimitExceededException();
+        case 0x1015: throw MemoryAllocationFailedException();
+        case 0x1016: throw FileIOException(detailNo);
+        case 0x1017: throw FileOpeningException(detailNo);
+        case 0x1019: throw FontAlreadyExistsException();
+        case 0x101A: throw FontInvalidWidthsTableException();
+        case 0x101B: throw InvalidAFMHeaderFileException();
+        case 0x101E: throw NonMatchingBitsPerComponentException();
+        case 0x101F: throw InvalidAFMCharMatricsDataException();
+        case 0x1020: throw InvalidColorSpaceException();
+        case 0x1022: throw InvalidDateTimeException();
+        case 0x1026: throw PageAlreadyExistsException();
+        case 0x1028: throw InvalidEncoderTypeException();
+        case 0x102B: throw InvalidEncodingNameException();
+        case 0x102C: throw InvalidR3EncryptionKeyLengthException();
+        case 0x102F: throw InvalidFontNameException();
+        case 0x1030: throw InvalidImageException();
+        case 0x1032: throw InvalidAFMFileNDataException();
+        case 0x1035: throw InvalidImageOperationException();
+        case 0x1039: throw InvalidParameterException();
+        case 0x103B: throw InvalidPNGImageException();
+        case 0x103F: throw InvalidTTCFileException();
+        case 0x1040: throw InvalidTTCIndexException();
+        case 0x1041: throw InvalidAFMWidthException();
+        case 0x1043: throw LibPNGException(detailNo);
+        case 0x104C: throw NoGStateException();
+        case 0x104E: throw FontNotFoundException();
+        case 0x1050: throw InvalidFontSizeException(detailNo);
+        case 0x1051: throw InvalidGModeException();
+        case 0x1054: throw InvalidPageSizeException();
+        case 0x1056: throw PageValueOutOfRangeException();
+        case 0x1057: throw FloatValueOutOfRangeException();
+        case 0x105B: throw StringOutOfRangeException();
+        case 0x105D: throw CannotEmbedTTFFontException();
+        case 0x105E: throw InvalidTTFCMapException();
+        case 0x105F: throw InvalidTTFFormatException();
+        case 0x1060: throw MissingTTFTableException();
+        case 0x1062: throw UnsupportedFunctionException();
+        case 0x1063: throw UnsupportedJPEGFormatException();
+        case 0x1064: throw UnsupportedType1FontException();
+        case 0x1066: throw ZLibException(detailNo);
+        case 0x1067: throw InvalidPageIndexException();
+        case 0x1068: throw EmptyURIException();
+        case 0x1069: throw InvalidPageLayoutException();
+        case 0x1070: throw InvalidPageModeException();
+        default: throw UndefinedException(errorNo, detailNo);
     }
 }
 
@@ -296,7 +180,7 @@ Document::~Document() {
 
 void Document::open() {
     pdfDoc = HPDF_New(__haruppErrorHandler, nullptr);
-    if (pdfDoc == nullptr) throw MemoryAllocationFailedException("Cannot create pdf object", 0x1015, 0);
+    if (pdfDoc == nullptr) throw MemoryAllocationFailedException();
 
     // Initialise imports
     imports.reserve(__HARUPP_ENCODING_IMPORTS_LENGTH);
@@ -403,7 +287,7 @@ PageLayout Document::getPageLayout() const {
         case HPDF_PAGE_LAYOUT_TWO_COLUMN_RIGHT: return PageLayout::TWO_COLUMN_RIGHT;
         case HPDF_PAGE_LAYOUT_TWO_PAGE_LEFT: return PageLayout::TWO_PAGE_LEFT;
         case HPDF_PAGE_LAYOUT_TWO_PAGE_RIGHT: return PageLayout::TWO_PAGE_RIGHT;
-        default: return PageLayout::EOF_LAYOUT;
+        default: throw InvalidPageLayoutException();
     }
 }
 
@@ -417,7 +301,7 @@ PageMode Document::getPageMode() const {
         case HPDF_PAGE_MODE_USE_OUTLINE: return PageMode::USE_OUTLINE;
         case HPDF_PAGE_MODE_USE_THUMBS: return PageMode::USE_THUMBS;
         case HPDF_PAGE_MODE_FULL_SCREEN: return PageMode::FULL_SCREEN;
-        default: return PageMode::EOF_MODE;
+        default: throw InvalidPageModeException();
     }
 }
 
@@ -470,6 +354,10 @@ Font Document::getFont(const std::string& fontName, SingleByteEncoding encoding)
 
 Font Document::getFont(const std::string& fontName, MultiByteEncoding encoding) {
     return __getFont(fontName.c_str(), multiByteEncodingToString(encoding));
+}
+
+Font Document::getFont(const std::string& fontName, const std::string& encodingName) {
+    return __getFont(fontName.c_str(), encodingName.c_str());
 }
 
 std::string Document::__loadType1FontFromFile(const char* AFMFileName, const char* dataFileName) {
@@ -539,6 +427,10 @@ Encoder Document::getEncoder(MultiByteEncoding encoding) {
     return __getEncoder(multiByteEncodingToString(encoding));
 }
 
+Encoder Document::getEncoder(const std::string& encodingName) {
+    return __getEncoder(encodingName.c_str());
+}
+
 Encoder Document::getCurrentEncoder() const {
     return Encoder(HPDF_GetCurrentEncoder(pdfDoc));
 }
@@ -553,6 +445,10 @@ void Document::setCurrentEncoder(SingleByteEncoding encoding) {
 
 void Document::setCurrentEncoder(MultiByteEncoding encoding) {
     __setCurrentEncoder(multiByteEncodingToString(encoding));
+}
+
+void Document::setCurrentEncoder(const std::string& encodingName) {
+    __setCurrentEncoder(encodingName.c_str());
 }
 
 void Document::useJPEncodings() {
@@ -642,14 +538,14 @@ Image Document::loadJPEGImageFromFile(const std::string& fileName) {
 
 Image Document::loadRawImageFromFile(
     const std::string& fileName, unsigned int width,
-    unsigned int height, ImageColorSpaceDevice colorSpace
+    unsigned int height, ColorSpace colorSpace
 ) {
     return Image(HPDF_LoadRawImageFromFile(pdfDoc, fileName.c_str(), width, height, (HPDF_ColorSpace) colorSpace));
 }
 
 Image Document::loadRawImageFromMemory(
     const std::vector<unsigned char>& bytes, unsigned int width,
-    unsigned int height, ImageColorSpaceDevice colorSpace,
+    unsigned int height, ColorSpace colorSpace,
     BitsPerComponent bitsPerComponent
 ) {
     return Image(HPDF_LoadRawImageFromMem(pdfDoc, bytes.data(), width, height, (HPDF_ColorSpace) colorSpace, (HPDF_UINT) bitsPerComponent));
@@ -671,6 +567,8 @@ void Document::setAttribute(StringAttribute parameter, const std::string& value)
 }
 
 void Document::setAttribute(DateTimeAttribute parameter, const DateTime& value) {
+    if (value.getYear() > 9999) throw InvalidDateTimeException();
+
     HPDF_Date date;
     date.year = value.getYear();
     date.month = value.getMonth();
@@ -739,8 +637,9 @@ void Document::setR2EncryptMode() {
     HPDF_SetEncryptionMode(pdfDoc, HPDF_ENCRYPT_R2, 5U);
 }
 
-void Document::setR3EncryptMode(R3EncryptKeyLength keyLength) {
-    HPDF_SetEncryptionMode(pdfDoc, HPDF_ENCRYPT_R3, (unsigned int) keyLength);
+void Document::setR3EncryptMode(unsigned int keyLength) {
+    if (keyLength == 0U) throw InvalidR3EncryptionKeyLengthException(); // Disallow 0U value for clarity
+    HPDF_SetEncryptionMode(pdfDoc, HPDF_ENCRYPT_R3, keyLength);
 }
 
 void Document::setCompressionMode(const CompressionMode& mode) {

@@ -125,7 +125,7 @@ GraphicsMode Page::getGraphicsMode() const {
         case HPDF_GMODE_SHADING: return GraphicsMode::SHADING;
         case HPDF_GMODE_INLINE_IMAGE: return GraphicsMode::INLINE_IMAGE;
         case HPDF_GMODE_EXTERNAL_OBJECT: return GraphicsMode::EXTERNAL_OBJECT;
-        default: throw excepts::PageInvalidGModeException("Invalid graphics mode", 0x1051, 0);
+        default: throw excepts::InvalidGModeException();
     }
 }
 

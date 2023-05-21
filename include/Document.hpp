@@ -280,6 +280,14 @@ namespace pdf {
         Font getFont(const std::string& fontName, enums::MultiByteEncoding encoding);
 
         /**
+         * @brief  Gets a Font from a name and an encoding name.
+         * @param  fontName The font name.
+         * @param  encodingName Encoding name.
+         * @return New Font object.
+        */
+        Font getFont(const std::string& fontName, const std::string& encodingName);
+
+        /**
          * @brief  Loads a Type1 font from an external file and registers it in the document.
          * @note   Unlike ::loadType1FontFromFile(const std::string&, const std::string&), the glyph data of font file won't be embedded to the PDF file.
          * @param  AFMFileName Path of the AFM file to use.
@@ -352,6 +360,13 @@ namespace pdf {
         Encoder getEncoder(enums::MultiByteEncoding encoding);
 
         /**
+         * @brief  Gets the Encoder of an encoding.
+         * @param  encodingName Encoding name to use.
+         * @return Corresponding Encoder.
+        */
+        Encoder getEncoder(const std::string& encodingName);
+
+        /**
          * @brief  Gets the current Encoder.
          * @return Current Encoder.
         */
@@ -368,6 +383,12 @@ namespace pdf {
          * @param encoding Encoding to use.
         */
         void setCurrentEncoder(enums::MultiByteEncoding encoding);
+
+        /**
+         * @brief Sets the current Encoder for the document.
+         * @param encodingName Encoding name to use.
+        */
+        void setCurrentEncoder(const std::string& encodingName);
 
         /**
          * @brief Enables Japanese encodings.
@@ -483,11 +504,13 @@ namespace pdf {
          * @param  width The width of the image.
          * @param  height The height of the image.
          * @param  colorSpace Color space to use.
+         *         Only enums::ColorSpace::DEVICE_GRAY, enums::ColorSpace::DEVICE_RGB and
+         *         enums::ColorSpace::DEVICE_CMYK are allowed.
          * @return New Image object.
         */
         Image loadRawImageFromFile(
             const std::string& fileName, unsigned int width,
-            unsigned int height, enums::ImageColorSpaceDevice colorSpace
+            unsigned int height, enums::ColorSpace colorSpace
         );
 
         /**
@@ -496,12 +519,14 @@ namespace pdf {
          * @param  width The width of the image.
          * @param  height The height of the image.
          * @param  colorSpace The color space to use.
+         *         Only enums::ColorSpace::DEVICE_GRAY, enums::ColorSpace::DEVICE_RGB and
+         *         enums::ColorSpace::DEVICE_CMYK are allowed.
          * @param  bitsPerComponent Number of bits per component.
          * @return New Image object.
         */
         Image loadRawImageFromMemory(
             const std::vector<unsigned char>& bytes, unsigned int width,
-            unsigned int height, enums::ImageColorSpaceDevice colorSpace,
+            unsigned int height, enums::ColorSpace colorSpace,
             enums::BitsPerComponent bitsPerComponent
         );
 
@@ -586,11 +611,13 @@ namespace pdf {
 
         /**
          * @brief   Sets the R3 encryption mode.
-         * @param   keyLength Key length to use.
+         * @param   keyLength Key length to use (between `5` and `16` included).
+         * @note    As a side effect, this ups the version of PDF to `1.4`.
          * @warning A ::setPassword function must be called before calling this function.
          * @throws  except::EncryptionNotSetException if no password has been set.
+         * @throws  except::InvalidR3EncryptionKeyLengthException if key is not between `5` and `16` included.
         */
-        void setR3EncryptMode(enums::R3EncryptKeyLength keyLength = enums::R3EncryptKeyLength::SIXTEEN);
+        void setR3EncryptMode(unsigned int keyLength = 16U);
 
         /**
          * @brief Sets the document compression.

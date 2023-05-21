@@ -8,10 +8,10 @@ DashMode::DashMode() noexcept {}
 
 DashMode::DashMode(const std::vector<float>& values, float phase): phase(values.empty()? 0.f: phase) {
     if (values.size() > consts::MAX_DASH_MODE_LENGTH)
-        throw excepts::PageModeOutOfRangeException("Values length exceed MAX_DASH_MODE_LENGTH.", 0x1070, values.size());
+        throw excepts::FloatValueOutOfRangeException("Values length exceed MAX_DASH_MODE_LENGTH.", values.size());
     for (int i = 0; i < values.size(); ++i) {
         if (values[i] > consts::MAX_DASH_MODE_SIZE)
-            throw excepts::PageModeOutOfRangeException("Value exceed MAX_DASH_MODE_SIZE.", 0x1070, values[i]);
+            throw excepts::FloatValueOutOfRangeException("Value exceed MAX_DASH_MODE_SIZE.", values[i]);
     }
     points = values;
 }

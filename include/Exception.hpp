@@ -14,24 +14,29 @@ namespace pdf::excepts {
      * @date   2023-05-16
     */
     class Exception: public std::exception {
-        std::string errorMessage;
+        const char* className;
+        const char* errorMessage;
         unsigned long errorCode;
         unsigned long detailCode;
 
     public:
-
-        /**
-         * @brief Creates a new Exception with parameters.
-         * @param data Error message.
-         * @param errorCode Error code.
-         * @param detailCode Detail code.
-        */
-        Exception(const std::string& data, unsigned long errorCode, unsigned long detailCode = 0U) noexcept;
         virtual ~Exception() noexcept = 0;
 
         /**
-         * @brief  Returns the error text.
-         * @return Error text.
+         * @brief Creates a new Exception with parameters.
+         * @param errorName Error class name.
+         * @param errorMessage Error message.
+         * @param errorCode Error code.
+         * @param detailCode Detail code.
+        */
+        Exception(
+            const char* className, const char* errorMessage,
+            unsigned long errorCode, unsigned long detailCode = 0U
+        ) noexcept;
+
+        /**
+         * @brief  Returns the error message.
+         * @return Error message.
         */
         virtual const char* what() const noexcept override final;
 
@@ -59,7 +64,7 @@ namespace pdf::excepts {
          * @details This is simply a string representation of the class name.
          * @return  Error name.
         */
-        virtual const char* getName() const noexcept = 0;
+        virtual const char* getName() const noexcept final;
 
         /**
          * @brief  Returns a string consisting of the error name and description.
@@ -68,868 +73,367 @@ namespace pdf::excepts {
         virtual std::string getFullDescription() const noexcept final;
     };
 
-    /**
-     * \class  NewPdfCreationFailedException
-     * @brief  Represents the exception that occurs when creating a new pdf failed.
-     * @file   Exception.hpp
-     * @author Nicolas Almerge
-     * @date   2023-05-16
-    */
-    class NewPdfCreationFailedException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "NewPdfCreationFailedException";
-        }
+    // Document related exceptions
+    class DocumentException: public Exception {
+        public:
+            virtual ~DocumentException() noexcept = 0;
+            DocumentException(
+                const char* className, const char* errorMessage,
+                unsigned long errorCode, unsigned long detailCode = 0U
+            ) noexcept;
+    };
+
+    class FileException: public Exception {
+        public:
+            virtual ~FileException() noexcept = 0;
+            FileException(
+                const char* className, const char* errorMessage,
+                unsigned long errorCode, unsigned long detailCode = 0U
+            ) noexcept;
+    };
+
+    class AFMException: public FileException {
+        public:
+            virtual ~AFMException() noexcept = 0;
+            AFMException(
+                const char* className, const char* errorMessage,
+                unsigned long errorCode, unsigned long detailCode = 0U
+            ) noexcept;
+    };
+
+    class TTCException: public FileException {
+        public:
+            virtual ~TTCException() noexcept = 0;
+            TTCException(
+                const char* className, const char* errorMessage,
+                unsigned long errorCode, unsigned long detailCode = 0U
+            ) noexcept;
+    };
+
+    class TTFException: public FileException {
+        public:
+            virtual ~TTFException() noexcept = 0;
+            TTFException(
+                const char* className, const char* errorMessage,
+                unsigned long errorCode, unsigned long detailCode = 0U
+            ) noexcept;
+    };
+
+    class GraphicsException: public Exception {
+        public:
+            virtual ~GraphicsException() noexcept = 0;
+            GraphicsException(
+                const char* className, const char* errorMessage,
+                unsigned long errorCode, unsigned long detailCode = 0U
+            ) noexcept;
     };
 
     // Stream related exceptions
     class StreamException: public Exception {
-        using Exception::Exception;
-        public: virtual ~StreamException() noexcept = 0;
-    };
-
-    // Array related exceptions
-    class ArrayException: public Exception {
-        using Exception::Exception;
-        public: virtual ~ArrayException() noexcept = 0;
-    };
-
-    // Error code 0x1001
-    class ArrayCountException: public ArrayException {
-        using ArrayException::ArrayException;
-        public: const char* getName() const noexcept override {
-            return "ArrayCountException";
-        }
-    };
-
-    // Error code 0x1002
-    class ArrayItemNotFoundException: public ArrayException {
-        using ArrayException::ArrayException;
-        public: const char* getName() const noexcept override {
-            return "ArrayItemNotFoundException";
-        }
-    };
-
-    // Error code 0x1003
-    class ArrayItemUnexpectedTypeException: public ArrayException {
-        using ArrayException::ArrayException;
-        public: const char* getName() const noexcept override {
-            return "ArrayItemUnexpectedTypeException";
-        }
-    };
-
-    // Error code 0x1004
-    class BinaryLengthException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "BinaryLengthException";
-        }
-    };
-
-    // Image related exceptions
-    class ImageException: public StreamException {
-        using StreamException::StreamException;
-        public: virtual ~ImageException() noexcept = 0;
-    };
-
-    // Error code 0x1005
-    class CannotGetPNGImagePalletException: public ImageException {
-        using ImageException::ImageException;
-        public: const char* getName() const noexcept override {
-            return "CannotGetPNGImagePalletException";
-        }
-    };
-
-    // Dictionary related exceptions
-    class DictException: public Exception {
-        using Exception::Exception;
-        public: virtual ~DictException() noexcept = 0;
-    };
-
-    // Error code 0x1007
-    class DictCountException: public DictException {
-        using DictException::DictException;
-        public: const char* getName() const noexcept override {
-            return "DictCountException";
-        }
-    };
-
-    // Error code 0x1008
-    class DictItemNotFoundException: public DictException {
-        using DictException::DictException;
-        public: const char* getName() const noexcept override {
-            return "DictItemNotFoundException";
-        }
-    };
-
-    // Error code 0x1009
-    class DictItemUnexpectedTypeException: public DictException {
-        using DictException::DictException;
-        public: const char* getName() const noexcept override {
-            return "DictItemUnexpectedTypeException";
-        }
-    };
-
-    // Error code 0x100A
-    class DictStreamLengthNotFoundException: public DictException {
-        using DictException::DictException;
-        public: const char* getName() const noexcept override {
-            return "DictStreamLengthNotFoundException";
-        }
-    };
-
-    // Error code 0x100B
-    class EncryptionNotSetException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "EncryptionNotSetException";
-        }
-    };
-
-    // File related exceptions
-    class DocumentException: public Exception {
-        using Exception::Exception;
-        public: virtual ~DocumentException() noexcept = 0;
-    };
-
-    // Error code 0x100C
-    class DocInvalidObjectException: public DocumentException {
-        using DocumentException::DocumentException;
-        public: const char* getName() const noexcept override {
-            return "DocInvalidObjectException";
-        }
+        public:
+            virtual ~StreamException() noexcept = 0;
+            StreamException(
+                const char* className, const char* errorMessage,
+                unsigned long errorCode, unsigned long detailCode = 0U
+            ) noexcept;
     };
 
     // Font related exceptions
     class FontException: public StreamException {
-        using StreamException::StreamException;
-        public: virtual ~FontException() noexcept = 0;
-    };
-
-    // Error code 0x100E
-    class FontDuplicateRegistrationException: public FontException {
-        using FontException::FontException;
-        public: const char* getName() const noexcept override {
-            return "FontDuplicateRegistrationException";
-        }
-    };
-
-    // Error code 0x100F
-    class ExceededJWWCodeNumLimitException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "ExceededJWWCodeNumLimitException";
-        }
-    };
-
-    // Error code 0x1011
-    class InvalidPasswordException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "InvalidPasswordException";
-        }
-    };
-
-    // Error code 0x1013
-    class UnknownClassException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "UnknownClassException";
-        }
-    };
-
-    // Error code 0x1014
-    class GStateLimitExceededException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "GStateLimitExceededException";
-        }
-    };
-
-    // Error code 0x1015
-    class MemoryAllocationFailedException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "MemoryAllocationFailedException";
-        }
-    };
-
-    // File related exceptions
-    class FileException: public Exception {
-        using Exception::Exception;
-        public: virtual ~FileException() noexcept = 0;
-    };
-
-    // Error code 0x1016
-    class FileIOException: public FileException {
-        using FileException::FileException;
-        public: const char* getName() const noexcept override {
-            return "FileIOException";
-        }
-    };
-
-    // Error code 0x1017
-    class FileOpenException: public FileException {
-        using FileException::FileException;
-        public: const char* getName() const noexcept override {
-            return "FileOpenException";
-        }
-    };
-
-    // Error code 0x1019
-    class FontExistsException: public FontException {
-        using FontException::FontException;
-        public: const char* getName() const noexcept override {
-            return "FontExistsException";
-        }
-    };
-
-    // Error code 0x101A
-    class FontInvalidWidthTableException: public FontException {
-        using FontException::FontException;
-        public: const char* getName() const noexcept override {
-            return "FontInvalidWidthTableException";
-        }
-    };
-
-    // Error code 0x101B
-    class InvalidAFMHeaderException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "InvalidAFMHeaderException";
-        }
-    };
-
-    // Error code 0x101C
-    class InvalidAnnotationException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "InvalidAnnotationException";
-        }
-    };
-
-    // Error code 0x101E
-    class InvalidBitPerComponentException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "InvalidBitPerComponentException";
-        }
-    };
-
-    // Error code 0x101F
-    class InvalidCharMatricsDataException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "InvalidCharMatricsDataException";
-        }
-    };
-
-    // Error code 0x1020
-    class InvalidColorSpaceException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "InvalidColorSpaceException";
-        }
-    };
-
-    // Error code 0x1021
-    class InvalidCompressionModeException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "InvalidCompressionModeException";
-        }
-    };
-
-    // Error code 0x1022
-    class InvalidDateTimeException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "InvalidDateTimeException";
-        }
-    };
-
-    // Error code 0x1023
-    class InvalidDestinationException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "InvalidDestinationException";
-        }
-    };
-
-    // Error code 0x1025
-    class InvalidDocumentException: public DocumentException {
-        using DocumentException::DocumentException;
-        public: const char* getName() const noexcept override {
-            return "InvalidDocumentException";
-        }
-    };
-
-    // Error code 0x1026
-    class InvalidDocumentStateException: public DocumentException {
-        using DocumentException::DocumentException;
-        public: const char* getName() const noexcept override {
-            return "InvalidDocumentStateException";
-        }
-    };
-
-    // Encoder related exceptions
-    class EncoderException: public Exception {
-        using Exception::Exception;
-        public: virtual ~EncoderException() noexcept = 0;
-    };
-
-    // Error code 0x1027
-    class InvalidEncoderException: public EncoderException {
-        using EncoderException::EncoderException;
-        public: const char* getName() const noexcept override {
-            return "InvalidEncoderException";
-        }
-    };
-
-    // Error code 0x1028
-    class InvalidEncoderTypeException: public EncoderException {
-        using EncoderException::EncoderException;
-        public: const char* getName() const noexcept override {
-            return "InvalidEncoderTypeException";
-        }
-    };
-
-    // Error code 0x102B
-    class InvalidEncoderNameException: public EncoderException {
-        using EncoderException::EncoderException;
-        public: const char* getName() const noexcept override {
-            return "InvalidEncoderNameException";
-        }
-    };
-
-    // Error code 0x102C
-    class InvalidEncryptionKeyLengthException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "InvalidEncryptionKeyLengthException";
-        }
-    };
-
-    // Error code 0x102D
-    class InvalidFontDefDataException: public FontException {
-        using FontException::FontException;
-        public: const char* getName() const noexcept override {
-            return "InvalidFontDefDataException";
-        }
-    };
-
-    // Error code 0x102E
-    class InvalidFontDefTypeException: public FontException {
-        using FontException::FontException;
-        public: const char* getName() const noexcept override {
-            return "InvalidFontDefTypeException";
-        }
-    };
-
-    // Error code 0x102F
-    class InvalidFontNameException: public FontException {
-        using FontException::FontException;
-        public: const char* getName() const noexcept override {
-            return "InvalidFontNameException";
-        }
-    };
-
-    // Error code 0x1030
-    class InvalidImageException: public ImageException {
-        using ImageException::ImageException;
-        public: const char* getName() const noexcept override {
-            return "InvalidImageException";
-        }
-    };
-
-    // Error code 0x1031
-    class InvalidJPEGDataException: public ImageException {
-        using ImageException::ImageException;
-        public: const char* getName() const noexcept override {
-            return "InvalidJPEGDataException";
-        }
-    };
-
-    // Error code 0x1032
-    class InvalidNDataException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "InvalidNDataException";
-        }
-    };
-
-    // Error code 0x1033
-    class InvalidObjectException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "InvalidObjectException";
-        }
-    };
-
-    // Error code 0x1034
-    class InvalidObjectIDException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "InvalidObjectIDException";
-        }
-    };
-
-    // Error code 0x1035
-    class InvalidImageOperationException: public ImageException {
-        using ImageException::ImageException;
-        public: const char* getName() const noexcept override {
-            return "InvalidImageOperationException";
-        }
-    };
-
-    // Error code 0x1036
-    class InvalidOutlineException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "InvalidOutlineException";
-        }
+        public:
+            virtual ~FontException() noexcept = 0;
+            FontException(
+                const char* className, const char* errorMessage,
+                unsigned long errorCode, unsigned long detailCode = 0U
+            ) noexcept;
     };
 
     // Page related exceptions
     class PageException: public StreamException {
-        using StreamException::StreamException;
-        public: virtual ~PageException() noexcept = 0;
+        public:
+            virtual ~PageException() noexcept = 0;
+            PageException(
+                const char* className, const char* errorMessage,
+                unsigned long errorCode, unsigned long detailCode = 0U
+            ) noexcept;
     };
 
-    // Error code 0x1037
-    class InvalidPageException: public PageException {
-        using PageException::PageException;
-        public: const char* getName() const noexcept override {
-            return "InvalidPageException";
-        }
+    class ImageException: public StreamException {
+        public:
+            virtual ~ImageException() noexcept = 0;
+            ImageException(
+                const char* className, const char* errorMessage,
+                unsigned long errorCode, unsigned long detailCode = 0U
+            ) noexcept;
     };
 
-    // Error code 0x1038
-    class InvalidInternalPagesException: public PageException {
-        using PageException::PageException;
-        public: const char* getName() const noexcept override {
-            return "InvalidInternalPagesException";
-        }
+    // 0x1004
+    class BinaryLengthTooLongException final: public Exception {
+        public: BinaryLengthTooLongException() noexcept;
     };
 
-    // Error code 0x1039
-    class InvalidParameterException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "InvalidParameterException";
-        }
+    // 0x1007
+    class TooManyIndirectObjectsException final: public Exception {
+        public: TooManyIndirectObjectsException() noexcept;
     };
 
-    // Error code 0x103B
-    class InvalidPNGImageException: public ImageException {
-        using ImageException::ImageException;
-        public: const char* getName() const noexcept override {
-            return "InvalidPNGImageException";
-        }
+    // 0x100B
+    class EncryptionNotSetException final: public DocumentException {
+        public: EncryptionNotSetException() noexcept;
     };
 
-    // Error code 0x103C
-    class InvalidStreamException: public StreamException {
-        using StreamException::StreamException;
-        public: const char* getName() const noexcept override {
-            return "InvalidStreamException";
-        }
+    // 0x100E
+    class FontDuplicateRegistrationException final: public FontException {
+        public: FontDuplicateRegistrationException() noexcept;
     };
 
-    // Error code 0x103D
-    class MissingFileNameEntryException: public FileException {
-        using FileException::FileException;
-        public: const char* getName() const noexcept override {
-            return "MissingFileNameEntryException";
-        }
+    // 0x100F
+    class ExceededJWWCodeNumLimitException final: public FontException {
+        public: ExceededJWWCodeNumLimitException(unsigned long detailCode) noexcept;
     };
 
-    // Error code 0x103F
-    class InvalidTTCFileException: public FileException {
-        using FileException::FileException;
-        public: const char* getName() const noexcept override {
-            return "InvalidTTCFileException";
-        }
+    // 0x1011
+    class InvalidPasswordException final: public DocumentException {
+        public: InvalidPasswordException() noexcept;
     };
 
-    // Error code 0x1040
-    class InvalidTTCIndexException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "InvalidTTCIndexException";
-        }
+    // 0x1014
+    class GStateLimitExceededException final: public GraphicsException {
+        public: GStateLimitExceededException() noexcept;
     };
 
-    // Error code 0x1041
-    class InvalidWXDataException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "InvalidWXDataException";
-        }
+    // 0x1015
+    class MemoryAllocationFailedException final: public Exception {
+        public: MemoryAllocationFailedException() noexcept;
     };
 
-    // Error code 0x1042
-    class ItemNotFoundException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "ItemNotFoundException";
-        }
+    // 0x1016
+    class FileIOException final: public FileException {
+        public: FileIOException(unsigned long detailCode) noexcept;
     };
 
-    // Error code 0x1043
-    class LibPNGException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "LibPNGException";
-        }
+    // 0x1017
+    class FileOpeningException final: public FileException {
+        public: FileOpeningException(unsigned long detailCode) noexcept;
     };
 
-    // Error code 0x1044
-    class NameInvalidValueException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "NameInvalidValueException";
-        }
+    // 0x1019
+    class FontAlreadyExistsException final: public FontException {
+        public: FontAlreadyExistsException() noexcept;
+    }; 
+
+    // 0x101A
+    class FontInvalidWidthsTableException final: public FontException {
+        public: FontInvalidWidthsTableException() noexcept;
     };
 
-    // Error code 0x1045
-    class NameOutOfRangeException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "NameOutOfRangeException";
-        }
+    // 0x101B
+    class InvalidAFMHeaderFileException final: public AFMException {
+        public: InvalidAFMHeaderFileException() noexcept;
     };
 
-    // Error code 0x1049
-    class PagesMissingKidsEntryException: public PageException {
-        using PageException::PageException;
-        public: const char* getName() const noexcept override {
-            return "PagesMissingKidsEntryException";
-        }
+    // 0x101E
+    class NonMatchingBitsPerComponentException final: public ImageException {
+        public: NonMatchingBitsPerComponentException() noexcept;
     };
 
-    // Error code 0x104A
-    class PageCannotFindObjectException: public PageException {
-        using PageException::PageException;
-        public: const char* getName() const noexcept override {
-            return "PageCannotFindObjectException";
-        }
+    // 0x101F
+    class InvalidAFMCharMatricsDataException final: public AFMException {
+        public: InvalidAFMCharMatricsDataException() noexcept;
     };
 
-    // Error code 0x104B
-    class PageCannotGetRootPagesException: public PageException {
-        using PageException::PageException;
-        public: const char* getName() const noexcept override {
-            return "PageCannotGetRootPagesException";
-        }
+    // 0x1020
+    class InvalidColorSpaceException final: public ImageException {
+        public: InvalidColorSpaceException() noexcept;
     };
 
-    // Error code 0x104C
-    class PageCannotRestoreGStateException: public PageException {
-        using PageException::PageException;
-        public: const char* getName() const noexcept override {
-            return "PageCannotRestoreGStateException";
-        }
+    // 0x1022
+    class InvalidDateTimeException final: public Exception {
+        public: InvalidDateTimeException() noexcept;
     };
 
-    // Error code 0x104D
-    class PageCannotSetParentException: public PageException {
-        using PageException::PageException;
-        public: const char* getName() const noexcept override {
-            return "PageCannotSetParentException";
-        }
+    // 0x1026
+    class PageAlreadyExistsException final: public DocumentException {
+        public: PageAlreadyExistsException() noexcept;
     };
 
-    // Error code 0x104E
-    class PageFontNotFoundException: public PageException {
-        using PageException::PageException;
-        public: const char* getName() const noexcept override {
-            return "PageFontNotFoundException";
-        }
+    // 0x1028
+    class InvalidEncoderTypeException final: public FontException {
+        public: InvalidEncoderTypeException() noexcept;
     };
 
-    // Error code 0x104F
-    class PageInvalidFontException: public PageException {
-        using PageException::PageException;
-        public: const char* getName() const noexcept override {
-            return "PageInvalidFontException";
-        }
+    // 0x102B
+    class InvalidEncodingNameException final: public Exception {
+        public: InvalidEncodingNameException() noexcept;
     };
 
-    // Error code 0x1050
-    class PageInvalidFontSizeException: public PageException {
-        using PageException::PageException;
-        public: const char* getName() const noexcept override {
-            return "PageInvalidFontSizeException";
-        }
+    // 0x102C
+    class InvalidR3EncryptionKeyLengthException final: public DocumentException {
+        public: InvalidR3EncryptionKeyLengthException() noexcept;
     };
 
-    // Error code 0x1051
-    class PageInvalidGModeException: public PageException {
-        using PageException::PageException;
-        public: const char* getName() const noexcept override {
-            return "PageInvalidGModeException";
-        }
+    // 0x102F
+    class InvalidFontNameException final: public FontException {
+        public: InvalidFontNameException() noexcept;
     };
 
-    // Error code 0x1052
-    class PageInvalidIndexException: public PageException {
-        using PageException::PageException;
-        public: const char* getName() const noexcept override {
-            return "PageInvalidIndexException";
-        }
+    // 0x1030
+    class InvalidImageException final: public ImageException {
+        public: InvalidImageException() noexcept;
     };
 
-    // Error code 0x1053
-    class PageInvalidRotateValueException: public PageException {
-        using PageException::PageException;
-        public: const char* getName() const noexcept override {
-            return "PageInvalidRotateValueException";
-        }
+    // 0x1032
+    class InvalidAFMFileNDataException final: public AFMException {
+        public: InvalidAFMFileNDataException() noexcept;
     };
 
-    // Error code 0x1054
-    class PageInvalidSizeException: public PageException {
-        using PageException::PageException;
-        public: const char* getName() const noexcept override {
-            return "PageInvalidSizeException";
-        }
+    // 0x1035
+    class InvalidImageOperationException final: public ImageException {
+        public: InvalidImageOperationException() noexcept;
     };
 
-    // Error code 0x1055
-    class PageInvalidXObjectException: public PageException {
-        using PageException::PageException;
-        public: const char* getName() const noexcept override {
-            return "PageInvalidXObjectException";
-        }
+    // 0x1039
+    class InvalidParameterException final: public Exception {
+        public: InvalidParameterException() noexcept;
     };
 
-    // Error code 0x1056
-    class PageOutOfRangeException: public PageException {
-        using PageException::PageException;
-        public: const char* getName() const noexcept override {
-            return "PageOutOfRangeException";
-        }
+    // 0x103B
+    class InvalidPNGImageException final: public ImageException {
+        public: InvalidPNGImageException() noexcept;
     };
 
-    // Error code 0x1057
-    class FloatOutOfRangeException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "FloatOutOfRangeException";
-        }
+    // 0x103F
+    class InvalidTTCFileException final: public TTCException {
+        public: InvalidTTCFileException() noexcept;
     };
 
-    // Error code 0x1058
-    class StreamEOFException: public StreamException {
-        using StreamException::StreamException;
-        public: const char* getName() const noexcept override {
-            return "StreamEOFException";
-        }
+    // 0x1040
+    class InvalidTTCIndexException final: public TTCException {
+        public: InvalidTTCIndexException() noexcept;
     };
 
-    // Error code 0x1059
-    class StreamReadLnContinue: public StreamException {
-        using StreamException::StreamException;
-        public: const char* getName() const noexcept override {
-            return "StreamReadLnContinue";
-        }
+    // 0x1041
+    class InvalidAFMWidthException final: public AFMException {
+        public: InvalidAFMWidthException() noexcept;
     };
 
-    // Error code 0x105B
-    class StringOutOfRangeException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "StringOutOfRangeException";
-        }
+    // 0x1043
+    class LibPNGException final: public ImageException {
+        public: LibPNGException(unsigned long detailCode) noexcept;
     };
 
-    // Error code 0x105C
-    class FunctionSkippedException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "FunctionSkippedException";
-        }
+    // 0x104C
+    class NoGStateException final: public GraphicsException {
+        public: NoGStateException() noexcept;
     };
 
-    // Error code 0x105D
-    class TTFCannotEmbedFontException: public FontException {
-        using FontException::FontException;
-        public: const char* getName() const noexcept override {
-            return "TTFCannotEmbedFontException";
-        }
+    // 0x104E
+    class FontNotFoundException final: public FontException {
+        public: FontNotFoundException() noexcept;
     };
 
-    // Error code 0x105E
-    class TTFInvalidCMAPException: public FontException {
-        using FontException::FontException;
-        public: const char* getName() const noexcept override {
-            return "TTFInvalidCMAPException";
-        }
+    // 0x1050
+    class InvalidFontSizeException final: public FontException {
+        public: InvalidFontSizeException(unsigned long detailCode) noexcept;
     };
 
-    // Error code 0x105F
-    class TTFInvalidFormatException: public FontException {
-        using FontException::FontException;
-        public: const char* getName() const noexcept override {
-            return "TTFInvalidFormatException";
-        }
+    // 0x1051
+    class InvalidGModeException final: public GraphicsException {
+        public: InvalidGModeException() noexcept;
     };
 
-    // Error code 0x1060
-    class TTFMissingTableException: public FontException {
-        using FontException::FontException;
-        public: const char* getName() const noexcept override {
-            return "TTFMissingTableException";
-        }
+    // 0x1054
+    class InvalidPageSizeException final: public PageException {
+        public: InvalidPageSizeException() noexcept;
     };
 
-    // Error code 0x1061
-    class UnsupportedFontTypeException: public FontException {
-        using FontException::FontException;
-        public: const char* getName() const noexcept override {
-            return "UnsupportedFontTypeException";
-        }
+    // 0x1056
+    class PageValueOutOfRangeException final: public PageException {
+        public: PageValueOutOfRangeException() noexcept;
     };
 
-    // Error code 0x1062
-    class UnsupportedFunctionException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "UnsupportedFunctionException";
-        }
+    // 0x1057
+    class FloatValueOutOfRangeException final: public Exception {
+        public:
+            FloatValueOutOfRangeException() noexcept;
+            FloatValueOutOfRangeException(const char* message, unsigned long detailCode) noexcept;
     };
 
-    // Error code 0x1063
-    class UnsupportedJPEGFormatException: public ImageException {
-        using ImageException::ImageException;
-        public: const char* getName() const noexcept override {
-            return "UnsupportedJPEGFormatException";
-        }
+    // 0x105B
+    class StringOutOfRangeException final: public Exception {
+        public: StringOutOfRangeException() noexcept;
     };
 
-    // Error code 0x1064
-    class UnsupportedType1FontException: public FontException {
-        using FontException::FontException;
-        public: const char* getName() const noexcept override {
-            return "UnsupportedType1FontException";
-        }
+    // 0x105D
+    class CannotEmbedTTFFontException final: public TTFException {
+        public: CannotEmbedTTFFontException() noexcept;
     };
 
-    // Error code 0x1065
-    class XRefCountException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "XRefCountException";
-        }
+    // 0x105E
+    class InvalidTTFCMapException final: public TTFException {
+        public: InvalidTTFCMapException() noexcept;
     };
 
-    // Error code 0x1066
-    class ZLIBException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "ZLIBException";
-        }
+    // 0x105F
+    class InvalidTTFFormatException final: public TTFException {
+        public: InvalidTTFFormatException() noexcept;
     };
 
-    // Error code 0x1067
-    class InvalidPageIndexException: public PageException {
-        using PageException::PageException;
-        public: const char* getName() const noexcept override {
-            return "InvalidPageIndexException";
-        }
+    // 0x1060
+    class MissingTTFTableException final: public TTFException {
+        public: MissingTTFTableException() noexcept;
     };
 
-    // Error code 0x1068
-    class InvalidURIException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "InvalidURIException";
-        }
+    /// 0x1062
+    class UnsupportedFunctionException final: public GraphicsException {
+        public: UnsupportedFunctionException() noexcept;
     };
 
-    // Error code 0x1069
-    class PageLayoutOutOfRangeException: public Exception {
-        using Exception::Exception;
-        public: const char* getName() const noexcept override {
-            return "PageLayoutOutOfRangeException";
-        }
+    // 0x1063
+    class UnsupportedJPEGFormatException final: public ImageException {
+        public: UnsupportedJPEGFormatException() noexcept;
     };
 
-    // Error code 0x1070
-    class PageModeOutOfRangeException: public PageException {
-        using PageException::PageException;
-        public: const char* getName() const noexcept override {
-            return "PageModeOutOfRangeException";
-        }
+    // 0x1064
+    class UnsupportedType1FontException final: public FileException {
+        public: UnsupportedType1FontException() noexcept;
     };
 
-    // Error code 0x1071
-    class PageNumStyleOutOfRangeException: public PageException {
-        using PageException::PageException;
-        public: const char* getName() const noexcept override {
-            return "PageNumStyleOutOfRangeException";
-        }
+    // 0x1066
+    class ZLibException final: public Exception {
+        public: ZLibException(unsigned long detailCode) noexcept;
     };
 
-    // Annotation related exceptions
-    class AnnotationException: public Exception {
-        using Exception::Exception;
-        public: virtual ~AnnotationException() noexcept = 0;
+    // 0x1067
+    class InvalidPageIndexException final: public DocumentException {
+        public: InvalidPageIndexException() noexcept;
     };
 
-    // Error code 0x1072
-    class AnnotationInvalidIconException: public AnnotationException {
-        using AnnotationException::AnnotationException;
-        public: const char* getName() const noexcept override {
-            return "AnnotationInvalidIconException";
-        }
+    // 0x1068
+    class EmptyURIException final: public PageException {
+        public: EmptyURIException() noexcept;
     };
 
-    // Error code 0x1073
-    class AnnotationInvalidBorderStyleException: public AnnotationException {
-        using AnnotationException::AnnotationException;
-        public: const char* getName() const noexcept override {
-            return "AnnotationInvalidBorderStyleException";
-        }
+    // 0x1069
+    class InvalidPageLayoutException final: public PageException {
+        public: InvalidPageLayoutException() noexcept;
     };
 
-    // Error code 0x1074
-    class InvalidPageDirectionException: public PageException {
-        using PageException::PageException;
-        public: const char* getName() const noexcept override {
-            return "InvalidPageDirectionException";
-        }
+    // 0x1070
+    class InvalidPageModeException final: public PageException {
+        public: InvalidPageModeException() noexcept;
     };
 
-    // Error code 0x1075
-    class InvalidFontException: public FontException {
-        using FontException::FontException;
-        public: const char* getName() const noexcept override {
-            return "InvalidFontException";
-        }
-    };
-
-    // Other exceptions
-    class OtherException: public Exception {
-        using Exception::Exception;
-        public: virtual ~OtherException() noexcept = 0;
-    };
-
-    // Undefined error codes
-    class UndefinedException: public OtherException {
-        using OtherException::OtherException;
-        public: const char* getName() const noexcept override {
-            return "UndefinedException";
-        }
-    };
-
-    // Invalid error codes
-    class InvalidException: public OtherException {
-        using OtherException::OtherException;
-        public: const char* getName() const noexcept override {
-            return "InvalidException";
-        }
+    /**
+     * \class   UndefinedException
+     * @brief   Represents exceptions that should not be raised.
+     * @details This will only be raised by LibHaru internal errors.
+     * @file    Exception.hpp
+     * @author  Nicolas Almerge
+     * @date    2023-05-16
+    */
+    class UndefinedException final: public Exception {
+        public: UndefinedException(unsigned long errorCode, unsigned long detailCode) noexcept;
     };
 }
 
