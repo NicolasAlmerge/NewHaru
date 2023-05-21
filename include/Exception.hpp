@@ -73,94 +73,240 @@ namespace pdf::excepts {
         virtual std::string getFullDescription() const noexcept final;
     };
 
-    // Document related exceptions
+    /**
+     * \class  DocumentException
+     * @brief  Represents exceptions linked with Document.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class DocumentException: public Exception {
         public:
             virtual ~DocumentException() noexcept = 0;
+
+            /**
+             * @brief Creates a new DocumentException with parameters.
+             * @param errorName Error class name.
+             * @param errorMessage Error message.
+             * @param errorCode Error code.
+             * @param detailCode Detail code.
+            */
             DocumentException(
                 const char* className, const char* errorMessage,
                 unsigned long errorCode, unsigned long detailCode = 0U
             ) noexcept;
     };
 
+    /**
+     * \class  FileException
+     * @brief  Represents exceptions linked with files.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class FileException: public Exception {
         public:
             virtual ~FileException() noexcept = 0;
+
+            /**
+             * @brief Creates a new FileException with parameters.
+             * @param errorName Error class name.
+             * @param errorMessage Error message.
+             * @param errorCode Error code.
+             * @param detailCode Detail code.
+            */
             FileException(
                 const char* className, const char* errorMessage,
                 unsigned long errorCode, unsigned long detailCode = 0U
             ) noexcept;
     };
 
+    /**
+     * \class  AFMException
+     * @brief  Represents exceptions linked with AFM files.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class AFMException: public FileException {
         public:
             virtual ~AFMException() noexcept = 0;
+
+            /**
+             * @brief Creates a new AFMException with parameters.
+             * @param errorName Error class name.
+             * @param errorMessage Error message.
+             * @param errorCode Error code.
+             * @param detailCode Detail code.
+            */
             AFMException(
                 const char* className, const char* errorMessage,
                 unsigned long errorCode, unsigned long detailCode = 0U
             ) noexcept;
     };
 
+    /**
+     * \class  TTCException
+     * @brief  Represents exceptions linked with TTC files.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class TTCException: public FileException {
         public:
             virtual ~TTCException() noexcept = 0;
+
+            /**
+             * @brief Creates a new TTCException with parameters.
+             * @param errorName Error class name.
+             * @param errorMessage Error message.
+             * @param errorCode Error code.
+             * @param detailCode Detail code.
+            */
             TTCException(
                 const char* className, const char* errorMessage,
                 unsigned long errorCode, unsigned long detailCode = 0U
             ) noexcept;
     };
 
+    /**
+     * \class  TTFException
+     * @brief  Represents exceptions linked with TTF files.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class TTFException: public FileException {
         public:
             virtual ~TTFException() noexcept = 0;
+
+            /**
+             * @brief Creates a new TTFException with parameters.
+             * @param errorName Error class name.
+             * @param errorMessage Error message.
+             * @param errorCode Error code.
+             * @param detailCode Detail code.
+            */
             TTFException(
                 const char* className, const char* errorMessage,
                 unsigned long errorCode, unsigned long detailCode = 0U
             ) noexcept;
     };
 
+    /**
+     * \class  GraphicsException
+     * @brief  Represents exceptions linked with graphics.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class GraphicsException: public Exception {
         public:
             virtual ~GraphicsException() noexcept = 0;
+
+            /**
+             * @brief Creates a new GraphicsException with parameters.
+             * @param errorName Error class name.
+             * @param errorMessage Error message.
+             * @param errorCode Error code.
+             * @param detailCode Detail code.
+            */
             GraphicsException(
                 const char* className, const char* errorMessage,
                 unsigned long errorCode, unsigned long detailCode = 0U
             ) noexcept;
     };
 
-    // Stream related exceptions
+    /**
+     * \class  StreamException
+     * @brief  Represents exceptions linked with ContentStream.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class StreamException: public Exception {
         public:
             virtual ~StreamException() noexcept = 0;
+
+            /**
+             * @brief Creates a new StreamException with parameters.
+             * @param errorName Error class name.
+             * @param errorMessage Error message.
+             * @param errorCode Error code.
+             * @param detailCode Detail code.
+            */
             StreamException(
                 const char* className, const char* errorMessage,
                 unsigned long errorCode, unsigned long detailCode = 0U
             ) noexcept;
     };
 
-    // Font related exceptions
+    /**
+     * \class  FontException
+     * @brief  Represents exceptions linked with Font.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class FontException: public StreamException {
         public:
             virtual ~FontException() noexcept = 0;
+
+            /**
+             * @brief Creates a new FontException with parameters.
+             * @param errorName Error class name.
+             * @param errorMessage Error message.
+             * @param errorCode Error code.
+             * @param detailCode Detail code.
+            */
             FontException(
                 const char* className, const char* errorMessage,
                 unsigned long errorCode, unsigned long detailCode = 0U
             ) noexcept;
     };
 
-    // Page related exceptions
+    /**
+     * \class  PageException
+     * @brief  Represents exceptions linked with Page.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class PageException: public StreamException {
         public:
             virtual ~PageException() noexcept = 0;
+
+            /**
+             * @brief Creates a new PageException with parameters.
+             * @param errorName Error class name.
+             * @param errorMessage Error message.
+             * @param errorCode Error code.
+             * @param detailCode Detail code.
+            */
             PageException(
                 const char* className, const char* errorMessage,
                 unsigned long errorCode, unsigned long detailCode = 0U
             ) noexcept;
     };
 
+    /**
+     * \class  ImageException
+     * @brief  Represents exceptions linked with Image.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class ImageException: public StreamException {
         public:
             virtual ~ImageException() noexcept = 0;
+
+            /**
+             * @brief Creates a new ImageException with parameters.
+             * @param errorName Error class name.
+             * @param errorMessage Error message.
+             * @param errorCode Error code.
+             * @param detailCode Detail code.
+            */
             ImageException(
                 const char* className, const char* errorMessage,
                 unsigned long errorCode, unsigned long detailCode = 0U
