@@ -56,7 +56,7 @@ namespace pdf {
 
         /**
          * @brief Opens a new document.
-         * @throw except::MemoryAllocationFailedException if the opening failed.
+         * @throw excepts::MemoryAllocationFailedException if the opening failed.
         */
         void open();
 
@@ -69,7 +69,7 @@ namespace pdf {
         /**
          * @brief Closes the current document (if any) and creates a new document.
          * @note  The new document will not be opened. Call ::open after this function call to open it.
-         * @throw except::MemoryAllocationFailedException if the opening failed.
+         * @throw excepts::MemoryAllocationFailedException if the opening failed.
         */
         void newDocument();
 
@@ -582,7 +582,7 @@ namespace pdf {
         /**
          * @brief Sets the owner password for a pdf document (with no user password).
          * @param ownerPassword Owner password (cannot be empty).
-         * @throw except::InvalidPasswordException if `ownerPassword` is empty.
+         * @throw excepts::InvalidPasswordException if `ownerPassword` is empty.
         */
         void setPassword(const std::string& ownerPassword);
 
@@ -590,7 +590,7 @@ namespace pdf {
          * @brief Sets the owner and user passwords for a pdf document.
          * @param ownerPassword Owner password (cannot be empty).
          * @param userPassword  User password (can be empty, but cannot be equal to `ownerPassword`).
-         * @throw except::InvalidPasswordException if `ownerPassword` is empty or `ownerPassword == userPassword`.
+         * @throw excepts::InvalidPasswordException if `ownerPassword` is empty or `ownerPassword == userPassword`.
         */
         void setPassword(const std::string& ownerPassword, const std::string& userPassword);
 
@@ -598,14 +598,14 @@ namespace pdf {
          * @brief   Sets the user permissions for the document.
          * @param   permissions The permissions to use.
          * @warning A ::setPassword function must be called before calling this function.
-         * @throws  except::EncryptionNotSetException if no password has been set.
+         * @throw  excepts::EncryptionNotSetException if no password has been set.
         */
         void setPermissions(const Permissions& permissions);
 
         /**
          * @brief   Sets the R2 encryption mode.
          * @warning A ::setPassword function must be called before calling this function.
-         * @throws  except::EncryptionNotSetException if no password has been set.
+         * @throw  excepts::EncryptionNotSetException if no password has been set.
         */
         void setR2EncryptMode();
 
@@ -614,8 +614,8 @@ namespace pdf {
          * @param   keyLength Key length to use (between `5` and `16` included).
          * @note    As a side effect, this ups the version of PDF to `1.4`.
          * @warning A ::setPassword function must be called before calling this function.
-         * @throws  except::EncryptionNotSetException if no password has been set.
-         * @throws  except::InvalidR3EncryptionKeyLengthException if key is not between `5` and `16` included.
+         * @throw  excepts::EncryptionNotSetException if no password has been set.
+         * @throw  excepts::InvalidR3EncryptionKeyLengthException if key is not between `5` and `16` included.
         */
         void setR3EncryptMode(unsigned int keyLength = 16U);
 

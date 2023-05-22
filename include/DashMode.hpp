@@ -29,7 +29,7 @@ namespace pdf {
          * @brief Creates a new DashMode with corresponding values.
          * @param values Point coordinates to use.
          * @param phase  Phase to use. Will be set to `0.0` if no values are set.
-         * @throw except::FloatValueOutOfRangeException if `values.size() > consts::MAX_DASH_MODE_LENGTH`
+         * @throw excepts::FloatValueOutOfRangeException if `values.size() > consts::MAX_DASH_MODE_LENGTH`
          *        or if at least one element of `values` is greater than `consts::MAX_DASH_MODE_SIZE`.
         */
         DashMode(const std::vector<float>& values, float phase = 0.0);
