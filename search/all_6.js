@@ -6,7 +6,7 @@ var searchData=
   ['gbk_5feuc_5fv_3',['GBK_EUC_V',['../namespacepdf_1_1enums.html#afe6d4591e9edde24765a428feac125c5aa646cb51516a28860aed5409d01b9bc4',1,'pdf::enums']]],
   ['geta_4',['getA',['../classpdf_1_1TransposeMatrix.html#a03465c27180c1d87d115f9138904c241',1,'pdf::TransposeMatrix']]],
   ['getactualwidth_5',['getActualWidth',['../classpdf_1_1Font.html#a7527cf2a2ca68f0eb5f007504b5392fd',1,'pdf::Font']]],
-  ['getb_6',['getB',['../classpdf_1_1TransposeMatrix.html#ae3001286f7f216a3acc4698950aa8059',1,'pdf::TransposeMatrix::getB()'],['../classpdf_1_1RGBColor.html#a05c5ac9fe31855bac7611cf0403ee246',1,'pdf::RGBColor::getB()']]],
+  ['getb_6',['getB',['../classpdf_1_1RGBColor.html#a05c5ac9fe31855bac7611cf0403ee246',1,'pdf::RGBColor::getB()'],['../classpdf_1_1TransposeMatrix.html#ae3001286f7f216a3acc4698950aa8059',1,'pdf::TransposeMatrix::getB()']]],
   ['getbitspercomponent_7',['getBitsPerComponent',['../classpdf_1_1Image.html#a8bd95b6a6c5d8ac8c587479f096f07e4',1,'pdf::Image']]],
   ['getbottom_8',['getBottom',['../classpdf_1_1Box.html#abd43a228a7307764e93ddf396b861572',1,'pdf::Box']]],
   ['getboundingbox_9',['getBoundingBox',['../classpdf_1_1Font.html#a6be3e11b3c9cd52bd3aed7b9546cceca',1,'pdf::Font']]],
@@ -82,6 +82,6 @@ var searchData=
   ['graphicsmode_79',['GraphicsMode',['../namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647',1,'pdf::enums']]],
   ['gray_80',['GRAY',['../classpdf_1_1RGBColor.html#ab81b44f4c5bf7bf9efa00b1e73ce26b0',1,'pdf::RGBColor::GRAY()'],['../classpdf_1_1CMYKColor.html#ad04e4d922d857f59950f0a98dc25bef2',1,'pdf::CMYKColor::GRAY()']]],
   ['green_81',['GREEN',['../classpdf_1_1RGBColor.html#a90f2b402462c0d13212a6a22556b1064',1,'pdf::RGBColor::GREEN()'],['../classpdf_1_1CMYKColor.html#ac8ae18bdad39ccea8eaaa75c2f81a0c3',1,'pdf::CMYKColor::GREEN()']]],
-  ['gstatelimitexceededexception_82',['GStateLimitExceededException',['../classpdf_1_1excepts_1_1GStateLimitExceededException.html',1,'pdf::excepts']]],
+  ['gstatelimitexceededexception_82',['GStateLimitExceededException',['../classpdf_1_1excepts_1_1GStateLimitExceededException.html#a683b387de9c23fedb55f9e82f469c3a4',1,'pdf::excepts::GStateLimitExceededException::GStateLimitExceededException()'],['../classpdf_1_1excepts_1_1GStateLimitExceededException.html',1,'pdf::excepts::GStateLimitExceededException']]],
   ['gts_5fpdfx_83',['GTS_PDFX',['../namespacepdf_1_1enums.html#a7a2ca2cdb45be529d47b6c7501d4daf8a58e2c5f76f0d07c85be17500802bb283',1,'pdf::enums']]]
 ];

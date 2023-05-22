@@ -8,7 +8,7 @@ var searchData=
   ['barn_5fdoors_5fvertical_5fout_5',['BARN_DOORS_VERTICAL_OUT',['../namespacepdf_1_1enums.html#a2cb400bab33a8940c2d2725d781b59ecacc06f468fea919bf9b0e9592c3cd0c2c',1,'pdf::enums']]],
   ['bevel_5fjoin_6',['BEVEL_JOIN',['../namespacepdf_1_1enums.html#afe974d14fdfdb8c78b967ef1f67665e7ada0a37c461ffef62dec51c38170524fb',1,'pdf::enums']]],
   ['beveled_7',['BEVELED',['../namespacepdf_1_1enums.html#a6b07527b037835ccf11f555b21acb7acabadc5ff7d238b69083baddc098daa767',1,'pdf::enums']]],
-  ['binarylengthtoolongexception_8',['BinaryLengthTooLongException',['../classpdf_1_1excepts_1_1BinaryLengthTooLongException.html',1,'pdf::excepts']]],
+  ['binarylengthtoolongexception_8',['BinaryLengthTooLongException',['../classpdf_1_1excepts_1_1BinaryLengthTooLongException.html#a36e084da1bda05dcc51bdbbd82e373b1',1,'pdf::excepts::BinaryLengthTooLongException::BinaryLengthTooLongException()'],['../classpdf_1_1excepts_1_1BinaryLengthTooLongException.html',1,'pdf::excepts::BinaryLengthTooLongException']]],
   ['bitspercomponent_9',['BitsPerComponent',['../namespacepdf_1_1enums.html#a24a457cd8bed4f5ae64be8bdf8371d7e',1,'pdf::enums']]],
   ['black_10',['BLACK',['../classpdf_1_1RGBColor.html#a36e8e1dcf89b074728589fdeb42ff3e0',1,'pdf::RGBColor::BLACK()'],['../classpdf_1_1CMYKColor.html#a9c56a49f5554c2035668d5a75e350ed8',1,'pdf::CMYKColor::BLACK()']]],
   ['blinds_5fhorizontal_11',['BLINDS_HORIZONTAL',['../namespacepdf_1_1enums.html#a2cb400bab33a8940c2d2725d781b59eca815d8d7709021ba26de1d2730c6f1196',1,'pdf::enums']]],

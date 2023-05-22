@@ -71,5 +71,6 @@ var searchData=
   ['getx_68',['getX',['../classpdf_1_1Coor2D.html#ab89a5eb34bc420e535c5c787f53bba9a',1,'pdf::Coor2D::getX()'],['../classpdf_1_1TransposeMatrix.html#a2fff37aecbd63b2dd5ac014cc16509a5',1,'pdf::TransposeMatrix::getX()']]],
   ['gety_69',['getY',['../classpdf_1_1CMYKColor.html#adbae575e8adebb281964ef2355d78c47',1,'pdf::CMYKColor::getY()'],['../classpdf_1_1Coor2D.html#a0f7c04c7a6e203a91491a9d7e37f77ec',1,'pdf::Coor2D::getY()'],['../classpdf_1_1TransposeMatrix.html#ac342ff35cfb8393c6631d99bac0150a3',1,'pdf::TransposeMatrix::getY()']]],
   ['getyear_70',['getYear',['../classpdf_1_1DateTime.html#a4285f968af4a19fa7a3f8faf06fc1bd7',1,'pdf::DateTime']]],
-  ['graphicsexception_71',['GraphicsException',['../classpdf_1_1excepts_1_1GraphicsException.html#a1eb8a9687aeb897caa6d15627e3bf59f',1,'pdf::excepts::GraphicsException']]]
+  ['graphicsexception_71',['GraphicsException',['../classpdf_1_1excepts_1_1GraphicsException.html#a1eb8a9687aeb897caa6d15627e3bf59f',1,'pdf::excepts::GraphicsException']]],
+  ['gstatelimitexceededexception_72',['GStateLimitExceededException',['../classpdf_1_1excepts_1_1GStateLimitExceededException.html#a683b387de9c23fedb55f9e82f469c3a4',1,'pdf::excepts::GStateLimitExceededException']]]
 ];
