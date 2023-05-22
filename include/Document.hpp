@@ -598,14 +598,14 @@ namespace pdf {
          * @brief   Sets the user permissions for the document.
          * @param   permissions The permissions to use.
          * @warning A ::setPassword function must be called before calling this function.
-         * @throw  excepts::EncryptionNotSetException if no password has been set.
+         * @throw   excepts::EncryptionNotSetException if no password has been set.
         */
         void setPermissions(const Permissions& permissions);
 
         /**
          * @brief   Sets the R2 encryption mode.
          * @warning A ::setPassword function must be called before calling this function.
-         * @throw  excepts::EncryptionNotSetException if no password has been set.
+         * @throw   excepts::EncryptionNotSetException if no password has been set.
         */
         void setR2EncryptMode();
 
@@ -614,8 +614,8 @@ namespace pdf {
          * @param   keyLength Key length to use (between `5` and `16` included).
          * @note    As a side effect, this ups the version of PDF to `1.4`.
          * @warning A ::setPassword function must be called before calling this function.
-         * @throw  excepts::EncryptionNotSetException if no password has been set.
-         * @throw  excepts::InvalidR3EncryptionKeyLengthException if key is not between `5` and `16` included.
+         * @throw   excepts::EncryptionNotSetException if no password has been set.
+         * @throw   excepts::InvalidR3EncryptionKeyLengthException if key is not between `5` and `16` included.
         */
         void setR3EncryptMode(unsigned int keyLength = 16U);
 

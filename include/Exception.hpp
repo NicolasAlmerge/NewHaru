@@ -3,7 +3,10 @@
 #include "exception"
 #include "string"
 
-/// Represents the Haru++ exception namespace.
+/**
+ * @brief   Represents the Haru++ exception namespace.
+ * @details The base class for exceptions thrown by this library is excepts::Exception.
+*/
 namespace pdf::excepts {
 
     /**
