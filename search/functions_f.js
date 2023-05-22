@@ -31,5 +31,6 @@ var searchData=
   ['setviewerpreferences_28',['setViewerPreferences',['../classpdf_1_1Document.html#ad8cbefda1433057cecdb486a76b27e03',1,'pdf::Document']]],
   ['setxyz_29',['setXYZ',['../classpdf_1_1Destination.html#a74363ea7c813db1f6ecf095aa1e8d098',1,'pdf::Destination']]],
   ['setzoom_30',['setZoom',['../classpdf_1_1Page.html#a9acc575fb3070c0504ef4b2cdb92cf1f',1,'pdf::Page']]],
-  ['streamexception_31',['StreamException',['../classpdf_1_1excepts_1_1StreamException.html#a26a33324fc22f46fbe432d22f6c75b12',1,'pdf::excepts::StreamException']]]
+  ['streamexception_31',['StreamException',['../classpdf_1_1excepts_1_1StreamException.html#a26a33324fc22f46fbe432d22f6c75b12',1,'pdf::excepts::StreamException']]],
+  ['stringoutofrangeexception_32',['StringOutOfRangeException',['../classpdf_1_1excepts_1_1StringOutOfRangeException.html#a210b7682ed7c2183b6ff2453b25f671f',1,'pdf::excepts::StringOutOfRangeException']]]
 ];

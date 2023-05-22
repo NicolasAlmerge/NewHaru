@@ -6,7 +6,7 @@ var searchData=
   ['left_3',['LEFT',['../namespacepdf_1_1enums.html#a3569edaf87e3c835b3d2429d9a1bbadfa684d325a7303f52e64011467ff5c5758',1,'pdf::enums']]],
   ['legal_4',['LEGAL',['../namespacepdf_1_1enums.html#a4d95b6ac7ea52cbf6012b032d69bb707ac53151ffd180a17416e8f09b1ca4bfc3',1,'pdf::enums']]],
   ['letter_5',['LETTER',['../namespacepdf_1_1enums.html#a4d95b6ac7ea52cbf6012b032d69bb707a293c501027368f9a83d91179af6a4316',1,'pdf::enums']]],
-  ['libpngexception_6',['LibPNGException',['../classpdf_1_1excepts_1_1LibPNGException.html',1,'pdf::excepts']]],
+  ['libpngexception_6',['LibPNGException',['../classpdf_1_1excepts_1_1LibPNGException.html#a4a2034dfef47b9006c2139a35c2403ae',1,'pdf::excepts::LibPNGException::LibPNGException()'],['../classpdf_1_1excepts_1_1LibPNGException.html',1,'pdf::excepts::LibPNGException']]],
   ['linecap_7',['LineCap',['../namespacepdf_1_1enums.html#a3d53cb176a17089d1b0bf47a165d543f',1,'pdf::enums']]],
   ['linecap_5feof_8',['LINECAP_EOF',['../namespacepdf_1_1enums.html#a3d53cb176a17089d1b0bf47a165d543fad06567424077aa8659d116eb1b1d0a25',1,'pdf::enums']]],
   ['linejoin_9',['LineJoin',['../namespacepdf_1_1enums.html#afe974d14fdfdb8c78b967ef1f67665e7',1,'pdf::enums']]],

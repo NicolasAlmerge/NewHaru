@@ -41,7 +41,7 @@ var searchData=
   ['standardencoding_38',['StandardEncoding',['../namespacepdf_1_1enums.html#a4149b191ba9bc827aece819959acfa0ca19e884321b2a1e1a80dd325664f3d8c4',1,'pdf::enums']]],
   ['streamexception_39',['StreamException',['../classpdf_1_1excepts_1_1StreamException.html',1,'pdf::excepts::StreamException'],['../classpdf_1_1excepts_1_1StreamException.html#a26a33324fc22f46fbe432d22f6c75b12',1,'pdf::excepts::StreamException::StreamException()']]],
   ['stringattribute_40',['StringAttribute',['../namespacepdf_1_1enums.html#a7a2ca2cdb45be529d47b6c7501d4daf8',1,'pdf::enums']]],
-  ['stringoutofrangeexception_41',['StringOutOfRangeException',['../classpdf_1_1excepts_1_1StringOutOfRangeException.html',1,'pdf::excepts']]],
+  ['stringoutofrangeexception_41',['StringOutOfRangeException',['../classpdf_1_1excepts_1_1StringOutOfRangeException.html',1,'pdf::excepts::StringOutOfRangeException'],['../classpdf_1_1excepts_1_1StringOutOfRangeException.html#a210b7682ed7c2183b6ff2453b25f671f',1,'pdf::excepts::StringOutOfRangeException::StringOutOfRangeException()']]],
   ['stroke_42',['STROKE',['../namespacepdf_1_1enums.html#a1a1a39f584bb03b57bf0a27bbbf62367a3157895ac925120f0b65fef154d2037e',1,'pdf::enums']]],
   ['stroke_5fclipping_43',['STROKE_CLIPPING',['../namespacepdf_1_1enums.html#a1a1a39f584bb03b57bf0a27bbbf62367a5210d53af9556bb3d819eab7a4666dd2',1,'pdf::enums']]],
   ['subject_44',['SUBJECT',['../namespacepdf_1_1enums.html#a7a2ca2cdb45be529d47b6c7501d4daf8a171cb8f32b5bd0a653aec8cc647f17ae',1,'pdf::enums']]]

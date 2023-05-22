@@ -2,7 +2,7 @@ var searchData=
 [
   ['cal_5fgray_0',['CAL_GRAY',['../namespacepdf_1_1enums.html#a319b7405daf14f2340cc626d011e67cda157c604e0c889cb105d859f22f83043b',1,'pdf::enums']]],
   ['cal_5frgb_1',['CAL_RGB',['../namespacepdf_1_1enums.html#a319b7405daf14f2340cc626d011e67cdae593949135914f0c85e8006d591d2831',1,'pdf::enums']]],
-  ['cannotembedttffontexception_2',['CannotEmbedTTFFontException',['../classpdf_1_1excepts_1_1CannotEmbedTTFFontException.html',1,'pdf::excepts']]],
+  ['cannotembedttffontexception_2',['CannotEmbedTTFFontException',['../classpdf_1_1excepts_1_1CannotEmbedTTFFontException.html#a3f23636cc37df3a682801b339571d07a',1,'pdf::excepts::CannotEmbedTTFFontException::CannotEmbedTTFFontException()'],['../classpdf_1_1excepts_1_1CannotEmbedTTFFontException.html',1,'pdf::excepts::CannotEmbedTTFFontException']]],
   ['center_3',['CENTER',['../namespacepdf_1_1enums.html#a3569edaf87e3c835b3d2429d9a1bbadfac397289ee45877be0cd49811fe245b4e',1,'pdf::enums']]],
   ['center_5fwindow_4',['CENTER_WINDOW',['../classpdf_1_1ViewerPreferences.html#aef8195854c756265d82eee3f8b504c7a',1,'pdf::ViewerPreferences']]],
   ['clipping_5',['CLIPPING',['../namespacepdf_1_1enums.html#a1a1a39f584bb03b57bf0a27bbbf62367a10140b86ceeb330915bd2fdda1b1ef37',1,'pdf::enums']]],
