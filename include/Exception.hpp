@@ -337,44 +337,122 @@ namespace pdf::excepts {
             ) noexcept;
     };
 
-    // 0x1004
+    /**
+     * \class  BinaryLengthTooLongException
+     * @brief  An exception raised when a binary length exceeds consts::MAX_STRING_LEN.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class BinaryLengthTooLongException final: public OutOfRangeException {
-        public: BinaryLengthTooLongException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new BinaryLengthTooLongException.
+             * @details The error code will be set to `0x1004`.
+            */
+            BinaryLengthTooLongException() noexcept;
     };
 
-    // 0x1007
+    /**
+     * \class  TooManyIndirectObjectsException
+     * @brief  An exception raised when too many indirect objects in a Document were created.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class TooManyIndirectObjectsException final: public OutOfRangeException {
-        public: TooManyIndirectObjectsException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new TooManyIndirectObjectsException.
+             * @details The error code will be set to `0x1007`.
+            */
+            TooManyIndirectObjectsException() noexcept;
     };
 
-    // 0x100B
+    /**
+     * \class  EncryptionNotSetException
+     * @brief  An exception raised when calling Document::setR2EncryptMode, Document::setR3EncryptMode or Document::setPermission
+     *         has been called before calling Document::setPassword.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class EncryptionNotSetException final: public DocumentException {
-        public: EncryptionNotSetException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new EncryptionNotSetException.
+             * @details The error code will be set to `0x100B`.
+            */
+            EncryptionNotSetException() noexcept;
     };
 
-    // 0x100E
+    /**
+     * \class  FontDuplicateRegistrationException
+     * @brief  An exception raised when trying to register a Font that has already been registered.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class FontDuplicateRegistrationException final: public FontException {
-        public: FontDuplicateRegistrationException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new FontDuplicateRegistrationException.
+             * @details The error code will be set to `0x100E`.
+            */
+            FontDuplicateRegistrationException() noexcept;
     };
 
-    // 0x100F
+    /**
+     * \class  ExceededJWWCodeNumLimitException
+     * @brief  An exception raised when failure to register a character to the Japanese word wrap characters list occurred.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class ExceededJWWCodeNumLimitException final: public FontException {
-        public: ExceededJWWCodeNumLimitException(unsigned long detailCode) noexcept;
+        public:
+            /**
+             * @brief   Creates a new ExceededJWWCodeNumLimitException.
+             * @details The error code will be set to `0x100F`.
+            */
+            ExceededJWWCodeNumLimitException(unsigned long detailCode) noexcept;
     };
 
-    // 0x1011
+    /**
+     * \class  InvalidPasswordException
+     * @brief  An exception when tried to set a Document owner password to an empty string, or owner and user password are the same.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidPasswordException final: public DocumentException {
-        public: InvalidPasswordException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidPasswordException.
+             * @details The error code will be set to `0x1011`.
+            */
+            InvalidPasswordException() noexcept;
     };
 
-    // 0x1014
+    /**
+     * \class  GStateLimitExceededException
+     * @brief  An exception raised when the G stack depth exceeds consts::MAX_GSTATE.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class GStateLimitExceededException final: public GraphicsException {
-        public: GStateLimitExceededException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new GStateLimitExceededException.
+             * @details The error code will be set to `0x1014`.
+            */
+            GStateLimitExceededException() noexcept;
     };
 
     /**
      * \class  MemoryAllocationFailedException
-     * @brief  Represents an exception linked with a memory allocation failure.
+     * @brief  An exception raised when a memory allocation failure occurred.
      * @file   Exception.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
@@ -388,39 +466,116 @@ namespace pdf::excepts {
             MemoryAllocationFailedException() noexcept;
     };
 
-    // 0x1016
+    /**
+     * \class  FileIOException
+     * @brief  An exception raised when a file I/O error occurred.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class FileIOException final: public FileException {
-        public: FileIOException(unsigned long detailCode) noexcept;
+        public:
+            /**
+             * @brief   Creates a new FileIOException.
+             * @details The error code will be set to `0x1016`.
+            */
+            FileIOException(unsigned long detailCode) noexcept;
     };
 
-    // 0x1017
+    /**
+     * \class  FileOpeningException
+     * @brief  An exception raised when a file opening error occurred.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class FileOpeningException final: public FileException {
-        public: FileOpeningException(unsigned long detailCode) noexcept;
+        public:
+            /**
+             * @brief   Creates a new FileOpeningException.
+             * @details The error code will be set to `0x1017`.
+            */
+            FileOpeningException(unsigned long detailCode) noexcept;
     };
 
-    // 0x1019
+    /**
+     * \class  FontAlreadyExistsException
+     * @brief  An exception raised when trying to load a Font that has been registered.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class FontAlreadyExistsException final: public FontException {
-        public: FontAlreadyExistsException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new FontAlreadyExistsException.
+             * @details The error code will be set to `0x1019`.
+            */
+            FontAlreadyExistsException() noexcept;
     }; 
 
-    // 0x101A
+    /**
+     * \class  FontInvalidWidthsTableException
+     * @brief  An exception raised when a font file format is invalid.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class FontInvalidWidthsTableException final: public FontException {
-        public: FontInvalidWidthsTableException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new FontInvalidWidthsTableException.
+             * @details The error code will be set to `0x101A`.
+            */
+            FontInvalidWidthsTableException() noexcept;
     };
 
-    // 0x101B
+    /**
+     * \class  InvalidAFMHeaderFileException
+     * @brief  An exception raised when failure to recognize the header of an AFM file occurred.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidAFMHeaderFileException final: public AFMException {
-        public: InvalidAFMHeaderFileException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidAFMHeaderFileException.
+             * @details The error code will be set to `0x101B`.
+            */
+            InvalidAFMHeaderFileException() noexcept;
     };
 
-    // 0x101E
+    /**
+     * \class  NonMatchingBitsPerComponentException
+     * @brief  An exception raised when the number of bits per component of a pdf::Image which was set as mask image is invalid.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class NonMatchingBitsPerComponentException final: public ImageException {
-        public: NonMatchingBitsPerComponentException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new NonMatchingBitsPerComponentException.
+             * @details The error code will be set to `0x101E`.
+            */
+            NonMatchingBitsPerComponentException() noexcept;
     };
 
-    // 0x101F
+    /**
+     * \class  InvalidAFMCharMatricsDataException
+     * @brief  An exception raised when failure to recognize the char matrics data of an AFM file occurred.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidAFMCharMatricsDataException final: public AFMException {
-        public: InvalidAFMCharMatricsDataException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidAFMCharMatricsDataException.
+             * @details The error code will be set to `0x101F`.
+            */
+            InvalidAFMCharMatricsDataException() noexcept;
     };
 
     // 0x1020

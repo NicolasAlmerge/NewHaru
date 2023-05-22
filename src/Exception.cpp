@@ -158,7 +158,7 @@ FontAlreadyExistsException::FontAlreadyExistsException() noexcept: FontException
 
 FontInvalidWidthsTableException::FontInvalidWidthsTableException() noexcept: FontException(
     "FontInvalidWidthsTableException",
-    "Font-file format is invalid.",
+    "Font file format is invalid.",
     0x101A
 ) {}
 
