@@ -546,9 +546,11 @@ Image Document::loadRawImageFromFile(
 Image Document::loadRawImageFromMemory(
     const std::vector<unsigned char>& bytes, unsigned int width,
     unsigned int height, ColorSpace colorSpace,
-    BitsPerComponent bitsPerComponent
+    unsigned int bitsPerComponent
 ) {
-    return Image(HPDF_LoadRawImageFromMem(pdfDoc, bytes.data(), width, height, (HPDF_ColorSpace) colorSpace, (HPDF_UINT) bitsPerComponent));
+    if (bitsPerComponent != 1U && bitsPerComponent != 2U && bitsPerComponent != 4U && bitsPerComponent != 8U)
+        throw InvalidBitsPerComponentException();
+    return Image(HPDF_LoadRawImageFromMem(pdfDoc, bytes.data(), width, height, (HPDF_ColorSpace) colorSpace, bitsPerComponent));
 }
 
 Image Document::loadPNGImageFromMemory(const std::vector<unsigned char>& bytes) {

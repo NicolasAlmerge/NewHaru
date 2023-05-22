@@ -521,13 +521,14 @@ namespace pdf {
          * @param  colorSpace The color space to use.
          *         Only enums::ColorSpace::DEVICE_GRAY, enums::ColorSpace::DEVICE_RGB and
          *         enums::ColorSpace::DEVICE_CMYK are allowed.
-         * @param  bitsPerComponent Number of bits per component.
+         * @param  bitsPerComponent Number of bits per component (`1`, `2`, `4` or `8`).
          * @return New Image object.
+         * @throw  excepts::InvalidBitsPerComponentException if the number of bits per component is invalid.
         */
         Image loadRawImageFromMemory(
             const std::vector<unsigned char>& bytes, unsigned int width,
             unsigned int height, enums::ColorSpace colorSpace,
-            enums::BitsPerComponent bitsPerComponent
+            unsigned int bitsPerComponent
         );
 
         /**

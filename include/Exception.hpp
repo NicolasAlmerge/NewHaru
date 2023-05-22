@@ -357,6 +357,22 @@ namespace pdf::excepts {
     };
 
     /**
+     * \class  InvalidBitsPerComponentException
+     * @brief  An exception raised when using an invalid value for the number of bits per component when calling Document::loadRawImageFromMemory.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
+    class InvalidBitsPerComponentException final: public ImageException {
+        public:
+            /**
+             * @brief   Creates a new InvalidBitsPerComponentException.
+             * @details The error code will be set to `0x1006`.
+            */
+            InvalidBitsPerComponentException() noexcept;
+    };
+
+    /**
      * \class  TooManyIndirectObjectsException
      * @brief  An exception raised when too many indirect objects in a Document were created.
      * @file   Exception.hpp

@@ -150,18 +150,6 @@ namespace pdf::enums {
         TWO_PAGE_RIGHT
     };
 
-    /// Represents all allowed values for the number of bits per components used when calling Document::loadRawImageFromMemory.
-    enum class BitsPerComponent: unsigned int {
-        /// 1
-        ONE = 1,
-        /// 2
-        TWO = 2,
-        /// 4
-        FOUR = 4,
-        /// 8
-        EIGHT = 8
-    };
-
     /// Represents a page number style.
     enum class PageNumberStyle {
         /// Decimal style.

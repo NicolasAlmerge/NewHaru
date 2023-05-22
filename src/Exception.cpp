@@ -92,6 +92,12 @@ BinaryLengthTooLongException::BinaryLengthTooLongException() noexcept: OutOfRang
     0x1004
 ) {}
 
+InvalidBitsPerComponentException::InvalidBitsPerComponentException() noexcept: ImageException(
+    "InvalidBitsPerComponentException",
+    "Number of bits per component is invalid - it should be 1, 2, 4 or 8",
+    0x1006
+) {}
+
 TooManyIndirectObjectsException::TooManyIndirectObjectsException() noexcept: OutOfRangeException(
     "TooManyIndirectObjectsException",
     "Dictionary elements > consts::MAX_DICT_ELEMENT",
