@@ -1021,24 +1021,68 @@ namespace pdf::excepts {
             InvalidTTFFormatException() noexcept;
     };
 
-    // 0x1060
+    /**
+     * \class  MissingTTFTableException
+     * @brief  An exception raised when an unsupported TTF format where a necessary table could not be found was used.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class MissingTTFTableException final: public TTFException {
-        public: MissingTTFTableException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new MissingTTFTableException.
+             * @details The error code will be set to `0x1060`.
+            */
+            MissingTTFTableException() noexcept;
     };
 
-    // 0x1062
+    /**
+     * \class  UnsupportedFunctionException
+     * @brief  An exception raised when the library could not be configured to use PNGLib.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class UnsupportedFunctionException final: public GraphicsException {
-        public: UnsupportedFunctionException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new UnsupportedFunctionException.
+             * @details The error code will be set to `0x1062`.
+            */
+            UnsupportedFunctionException() noexcept;
     };
 
-    // 0x1063
+    /**
+     * \class  UnsupportedJPEGFormatException
+     * @brief  An exception raised when an unsupported JPEG format occurred.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class UnsupportedJPEGFormatException final: public ImageException {
-        public: UnsupportedJPEGFormatException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new UnsupportedJPEGFormatException.
+             * @details The error code will be set to `0x1063`.
+            */
+            UnsupportedJPEGFormatException() noexcept;
     };
 
-    // 0x1064
+    /**
+     * \class  UnsupportedType1FontException
+     * @brief  An exception raised when failure to parse a .PFB file occurred.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class UnsupportedType1FontException final: public FileException {
-        public: UnsupportedType1FontException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new UnsupportedType1FontException.
+             * @details The error code will be set to `0x1064`.
+            */
+            UnsupportedType1FontException() noexcept;
     };
 
     /**
@@ -1058,24 +1102,68 @@ namespace pdf::excepts {
             ZLibException(unsigned long detailCode) noexcept;
     };
 
-    // 0x1067
+    /**
+     * \class  InvalidPageIndexException
+     * @brief  An exception raised when an invalid page index was passed.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidPageIndexException final: public DocumentException {
-        public: InvalidPageIndexException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidPageIndexException.
+             * @details The error code will be set to `0x1067`.
+            */
+            InvalidPageIndexException() noexcept;
     };
 
-    // 0x1068
+    /**
+     * \class  EmptyURIException
+     * @brief  An exception raised when an invalid URI was set.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class EmptyURIException final: public PageException {
-        public: EmptyURIException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new EmptyURIException.
+             * @details The error code will be set to `0x1068`.
+            */
+            EmptyURIException() noexcept;
     };
 
-    // 0x1069
+    /**
+     * \class  InvalidPageLayoutException
+     * @brief  An exception raised when an invalid page layout was returned.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidPageLayoutException final: public PageException {
-        public: InvalidPageLayoutException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidPageLayoutException.
+             * @details The error code will be set to `0x1069`.
+            */
+            InvalidPageLayoutException() noexcept;
     };
 
-    // 0x1070
+    /**
+     * \class  InvalidPageModeException
+     * @brief  An exception raised when an invalid page mode was returned.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidPageModeException final: public PageException {
-        public: InvalidPageModeException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidPageModeException.
+             * @details The error code will be set to `0x1070`.
+            */
+            InvalidPageModeException() noexcept;
     };
 
     /**
