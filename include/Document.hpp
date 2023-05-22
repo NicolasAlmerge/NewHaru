@@ -105,7 +105,7 @@ namespace pdf {
 
         /**
          * @brief  Gets the temporary stream size.
-         * @note   This returns `0U` if data was never written to the stream, or if the document has been closed.
+         * @note   This returns `0` if data was never written to the stream, or if the document has been closed.
          * @return Temporary stream size.
         */
         unsigned int getStreamSize() const;
