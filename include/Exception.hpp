@@ -578,14 +578,25 @@ namespace pdf::excepts {
             InvalidAFMCharMatricsDataException() noexcept;
     };
 
-    // 0x1020
+    /**
+     * \class  InvalidColorSpaceException
+     * @brief  An exception raised when an invalid ColorSpace of a pdf::Image was returned or set.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidColorSpaceException final: public ImageException {
-        public: InvalidColorSpaceException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidColorSpaceException.
+             * @details The error code will be set to `0x1020`.
+            */
+            InvalidColorSpaceException() noexcept;
     };
 
     /**
      * \class  InvalidDateTimeException
-     * @brief  Represents an exception linked with an invalid DateTime.
+     * @brief  An exception raised when an invalid DateTime has been set.
      * @file   Exception.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
@@ -599,19 +610,41 @@ namespace pdf::excepts {
             InvalidDateTimeException() noexcept;
     };
 
-    // 0x1026
+    /**
+     * \class  PageAlreadyExistsException
+     * @brief  An exception raised when Document::setPageConfiguration was called and the document already contained pages.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class PageAlreadyExistsException final: public DocumentException {
-        public: PageAlreadyExistsException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new PageAlreadyExistsException.
+             * @details The error code will be set to `0x1026`.
+            */
+            PageAlreadyExistsException() noexcept;
     };
 
-    // 0x1028
+    /**
+     * \class  InvalidEncoderTypeException
+     * @brief  An exception raised when the combination between Font and Encoder is wrong.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidEncoderTypeException final: public FontException {
-        public: InvalidEncoderTypeException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidEncoderTypeException.
+             * @details The error code will be set to `0x1028`.
+            */
+            InvalidEncoderTypeException() noexcept;
     };
 
     /**
      * \class  InvalidEncodingNameException
-     * @brief  Represents an exception linked with an invalid encoding name.
+     * @brief  An exception raised when an invalid encoding name was given.
      * @file   Exception.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
@@ -625,116 +658,364 @@ namespace pdf::excepts {
             InvalidEncodingNameException() noexcept;
     };
 
-    // 0x102C
+    /**
+     * \class  InvalidR3EncryptionKeyLengthException
+     * @brief  An exception raised when calling Document::setR3EncryptMode with an invalid key length.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidR3EncryptionKeyLengthException final: public DocumentException {
-        public: InvalidR3EncryptionKeyLengthException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidR3EncryptionKeyLengthException.
+             * @details The error code will be set to `0x102C`.
+            */
+            InvalidR3EncryptionKeyLengthException() noexcept;
     };
 
-    // 0x102F
+    /**
+     * \class  InvalidFontNameException
+     * @brief  An exception raised when a Font with the specified name was not found.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidFontNameException final: public FontException {
-        public: InvalidFontNameException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidFontNameException.
+             * @details The error code will be set to `0x102F`.
+            */
+            InvalidFontNameException() noexcept;
     };
 
-    // 0x1030
+    /**
+     * \class  InvalidImageException
+     * @brief  An exception raised when an image format is unsupported.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidImageException final: public ImageException {
-        public: InvalidImageException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidImageException.
+             * @details The error code will be set to `0x1030`.
+            */
+            InvalidImageException() noexcept;
     };
 
-    // 0x1032
+    /**
+     * \class  InvalidAFMFileNDataException
+     * @brief  An exception raised when failure to read a postscript name from an AFM file occurred.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidAFMFileNDataException final: public AFMException {
-        public: InvalidAFMFileNDataException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidAFMFileNDataException.
+             * @details The error code will be set to `0x1032`.
+            */
+            InvalidAFMFileNDataException() noexcept;
     };
 
-    // 0x1035
+    /**
+     * \class  InvalidImageOperationException
+     * @brief  An exception raised when Image::setColorMask was invoked against the image object which was set a mask image.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidImageOperationException final: public ImageException {
-        public: InvalidImageOperationException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidImageOperationException.
+             * @details The error code will be set to `0x1035`.
+            */
+            InvalidImageOperationException() noexcept;
     };
 
-    // 0x1039
+    /**
+     * \class  InvalidParameterException
+     * @brief  An exception raised when an invalid parameter has been set.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidParameterException final: public OutOfRangeException {
-        public: InvalidParameterException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidParameterException.
+             * @details The error code will be set to `0x1039`.
+            */
+            InvalidParameterException() noexcept;
     };
 
-    // 0x103B
+    /**
+     * \class  InvalidPNGImageException
+     * @brief  An exception raised when an invalid PNG image format has been used.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidPNGImageException final: public ImageException {
-        public: InvalidPNGImageException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidPNGImageException.
+             * @details The error code will be set to `0x103B`.
+            */
+            InvalidPNGImageException() noexcept;
     };
 
-    // 0x103F
+    /**
+     * \class  InvalidTTCFileException
+     * @brief  An exception raised when an invalid .TTC file format was used.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidTTCFileException final: public TTCException {
-        public: InvalidTTCFileException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidTTCFileException.
+             * @details The error code will be set to `0x103F`.
+            */
+            InvalidTTCFileException() noexcept;
     };
 
-    // 0x1040
+    /**
+     * \class  InvalidTTCIndexException
+     * @brief  An exception raised when the index parameter exceeds the number of included fonts.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidTTCIndexException final: public TTCException {
-        public: InvalidTTCIndexException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidTTCIndexException.
+             * @details The error code will be set to `0x1040`.
+            */
+            InvalidTTCIndexException() noexcept;
     };
 
-    // 0x1041
+    /**
+     * \class  InvalidAFMWidthException
+     * @brief  An exception raised when failure to read a width data from an AFM file.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidAFMWidthException final: public AFMException {
-        public: InvalidAFMWidthException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidAFMWidthException.
+             * @details The error code will be set to `0x1041`.
+            */
+            InvalidAFMWidthException() noexcept;
     };
 
-    // 0x1043
+    /**
+     * \class  LibPNGException
+     * @brief  An exception raised when an error from the PNGLib library occurred while loading an image.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class LibPNGException final: public ImageException {
-        public: LibPNGException(unsigned long detailCode) noexcept;
+        public:
+            /**
+             * @brief   Creates a new LibPNGException.
+             * @details The error code will be set to `0x1043`.
+            */
+            LibPNGException(unsigned long detailCode) noexcept;
     };
 
-    // 0x104C
+    /**
+     * \class  NoGStateException
+     * @brief  An exception raised when there are no graphics states to be restored.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class NoGStateException final: public GraphicsException {
-        public: NoGStateException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new NoGStateException.
+             * @details The error code will be set to `0x104C`.
+            */
+            NoGStateException() noexcept;
     };
 
-    // 0x104E
+    /**
+     * \class  FontNotFoundException
+     * @brief  An exception raised when the current Font has not been set.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class FontNotFoundException final: public FontException {
-        public: FontNotFoundException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new FontNotFoundException.
+             * @details The error code will be set to `0x104E`.
+            */
+            FontNotFoundException() noexcept;
     };
 
-    // 0x1050
+    /**
+     * \class  InvalidFontSizeException
+     * @brief  An exception raised when an invalid font size has been set.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidFontSizeException final: public FontException {
-        public: InvalidFontSizeException(unsigned long detailCode) noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidFontSizeException.
+             * @details The error code will be set to `0x1050`.
+            */
+            InvalidFontSizeException(unsigned long detailCode) noexcept;
     };
 
-    // 0x1051
+    /**
+     * \class  InvalidGModeException
+     * @brief  An exception raised when an invalid graphics mode was used.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidGModeException final: public GraphicsException {
-        public: InvalidGModeException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidGModeException.
+             * @details The error code will be set to `0x1051`.
+            */
+            InvalidGModeException() noexcept;
     };
 
-    // 0x1054
+    /**
+     * \class  InvalidPageSizeException
+     * @brief  An exception raised when an invalid page size was set.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidPageSizeException final: public PageException {
-        public: InvalidPageSizeException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidPageSizeException.
+             * @details The error code will be set to `0x1054`.
+            */
+            InvalidPageSizeException() noexcept;
     };
 
-    // 0x1056
+    /**
+     * \class  PageValueOutOfRangeException
+     * @brief  An exception raised when the specified value was out of range.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class PageValueOutOfRangeException final: public PageException {
-        public: PageValueOutOfRangeException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new PageValueOutOfRangeException.
+             * @details The error code will be set to `0x1056`.
+            */
+            PageValueOutOfRangeException() noexcept;
     };
 
-    // 0x1057
+    /**
+     * \class  FloatValueOutOfRangeException
+     * @brief  An exception raised when the specified float value was out of range.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class FloatValueOutOfRangeException final: public OutOfRangeException {
         public:
+            /**
+             * @brief   Creates a new FloatValueOutOfRangeException.
+             * @details The error code will be set to `0x1057`.
+            */
             FloatValueOutOfRangeException() noexcept;
+
+            /**
+             * @brief   Creates a new FloatValueOutOfRangeException with parameters.
+             * @param   message Error message to use.
+             * @param   detailCode Detail code to use.
+             * @details The error code will be set to `0x1057`.
+            */
             FloatValueOutOfRangeException(const char* message, unsigned long detailCode) noexcept;
     };
 
-    // 0x105B
+    /**
+     * \class  StringOutOfRangeException
+     * @brief  An exception raised when the length of a text is too long.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class StringOutOfRangeException final: public OutOfRangeException {
-        public: StringOutOfRangeException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new StringOutOfRangeException.
+             * @details The error code will be set to `0x105B`.
+            */
+            StringOutOfRangeException() noexcept;
     };
 
-    // 0x105D
+    /**
+     * \class  CannotEmbedTTFFontException
+     * @brief  An exception raised when a TTF Font cannot be embedded due to license restrictions.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class CannotEmbedTTFFontException final: public TTFException {
-        public: CannotEmbedTTFFontException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new CannotEmbedTTFFontException.
+             * @details The error code will be set to `0x105D`.
+            */
+            CannotEmbedTTFFontException() noexcept;
     };
 
-    // 0x105E
+    /**
+     * \class  InvalidTTFCMapException
+     * @brief  An exception raised when an unsupported TTF format where the unicode cmap could not be found was used.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidTTFCMapException final: public TTFException {
-        public: InvalidTTFCMapException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidTTFCMapException.
+             * @details The error code will be set to `0x105E`.
+            */
+            InvalidTTFCMapException() noexcept;
     };
 
-    // 0x105F
+    /**
+     * \class  InvalidTTFFormatException
+     * @brief  An exception raised when an unsupported TTF format was used.
+     * @file   Exception.hpp
+     * @author Nicolas Almerge
+     * @date   2023-05-16
+    */
     class InvalidTTFFormatException final: public TTFException {
-        public: InvalidTTFFormatException() noexcept;
+        public:
+            /**
+             * @brief   Creates a new InvalidTTFFormatException.
+             * @details The error code will be set to `0x105F`.
+            */
+            InvalidTTFFormatException() noexcept;
     };
 
     // 0x1060
@@ -759,7 +1040,7 @@ namespace pdf::excepts {
 
     /**
      * \class  ZLibException
-     * @brief  Represents an exception linked with a the ZLib library.
+     * @brief  An exception raised when an error with the ZLib library occurred.
      * @file   Exception.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
