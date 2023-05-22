@@ -12,7 +12,7 @@ var searchData=
   ['memoryallocationfailedexception_9',['MemoryAllocationFailedException',['../classpdf_1_1excepts_1_1MemoryAllocationFailedException.html#a0e893f44c2bff778b01be2c6777ccdd9',1,'pdf::excepts::MemoryAllocationFailedException::MemoryAllocationFailedException()'],['../classpdf_1_1excepts_1_1MemoryAllocationFailedException.html',1,'pdf::excepts::MemoryAllocationFailedException']]],
   ['metadata_10',['METADATA',['../classpdf_1_1CompressionMode.html#ac937f3b3ae62c7627e2bff0296ca4bc6',1,'pdf::CompressionMode']]],
   ['minus_11',['MINUS',['../namespacepdf_1_1enums.html#aa104a4be7629a24b8e1fc51c4f1899d7affc0d9b54a1fe677c4c9e6b050e67c81',1,'pdf::enums']]],
-  ['missingttftableexception_12',['MissingTTFTableException',['../classpdf_1_1excepts_1_1MissingTTFTableException.html',1,'pdf::excepts']]],
+  ['missingttftableexception_12',['MissingTTFTableException',['../classpdf_1_1excepts_1_1MissingTTFTableException.html#a04345fca175a454d84508f503098cb87',1,'pdf::excepts::MissingTTFTableException::MissingTTFTableException()'],['../classpdf_1_1excepts_1_1MissingTTFTableException.html',1,'pdf::excepts::MissingTTFTableException']]],
   ['miter_5fjoin_13',['MITER_JOIN',['../namespacepdf_1_1enums.html#afe974d14fdfdb8c78b967ef1f67665e7a65947f1194c0aa56e4260a2f26170e6c',1,'pdf::enums']]],
   ['modification_5fdate_14',['MODIFICATION_DATE',['../namespacepdf_1_1enums.html#a6a0564b6cba2523559f9f77768e540f6a09563c3f3d20d5741cc69bc0eedfb974',1,'pdf::enums']]],
   ['multibyteencoding_15',['MultiByteEncoding',['../namespacepdf_1_1enums.html#afe6d4591e9edde24765a428feac125c5',1,'pdf::enums']]]
