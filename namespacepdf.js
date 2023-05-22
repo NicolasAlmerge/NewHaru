@@ -24,12 +24,6 @@ var namespacepdf =
         [ "PARAGRAPH", "namespacepdf_1_1enums.html#a94339d3fb8c424c7ca228a9eec37ad62a2043613b40978710bda1c46662af3f3c", null ],
         [ "INSERT", "namespacepdf_1_1enums.html#a94339d3fb8c424c7ca228a9eec37ad62a61ee777e7f71dc466c3b2c685d8d313b", null ]
       ] ],
-      [ "BitsPerComponent", "namespacepdf_1_1enums.html#a24a457cd8bed4f5ae64be8bdf8371d7e", [
-        [ "ONE", "namespacepdf_1_1enums.html#a24a457cd8bed4f5ae64be8bdf8371d7eabc21e6484530fc9d0313cb816b733396", null ],
-        [ "TWO", "namespacepdf_1_1enums.html#a24a457cd8bed4f5ae64be8bdf8371d7ea0f82d86afa0f5dc965c5c15aca58dcfb", null ],
-        [ "FOUR", "namespacepdf_1_1enums.html#a24a457cd8bed4f5ae64be8bdf8371d7ea341fee9692a2ed8f09906d40d23fb1f9", null ],
-        [ "EIGHT", "namespacepdf_1_1enums.html#a24a457cd8bed4f5ae64be8bdf8371d7ea960df6d77e65cd185ca4f3501db634eb", null ]
-      ] ],
       [ "BorderStyle", "namespacepdf_1_1enums.html#a6b07527b037835ccf11f555b21acb7ac", [
         [ "SOLID", "namespacepdf_1_1enums.html#a6b07527b037835ccf11f555b21acb7acad0dea69649a83749aa6bdf176092e8c9", null ],
         [ "DASHED", "namespacepdf_1_1enums.html#a6b07527b037835ccf11f555b21acb7aca8e3a10cd3a9f7ba14e8229c287ad3c2c", null ],

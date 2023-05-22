@@ -44,7 +44,7 @@ var classpdf_1_1Document =
     [ "loadPNGImageFromFile", "classpdf_1_1Document.html#a96b49426ba17c1dde599670b153273f8", null ],
     [ "loadPNGImageFromMemory", "classpdf_1_1Document.html#af667c606ce6037fba87b22271f3d5af1", null ],
     [ "loadRawImageFromFile", "classpdf_1_1Document.html#a4ecbec39a359e4f28c75176acfcee931", null ],
-    [ "loadRawImageFromMemory", "classpdf_1_1Document.html#ad1d4e26e872c46d878da3641b8d3196b", null ],
+    [ "loadRawImageFromMemory", "classpdf_1_1Document.html#a8a4f7a7423c69962f3b4244b99c739e0", null ],
     [ "loadTrueTypeFontFromFile", "classpdf_1_1Document.html#a794191899800824a43d4dea4d6c33423", null ],
     [ "loadTrueTypeFontFromFile", "classpdf_1_1Document.html#a5eebe991840447542101bc862fbf7652", null ],
     [ "loadType1FontFromFile", "classpdf_1_1Document.html#a267bb843da75ff76f24aa6dc70e735a7", null ],

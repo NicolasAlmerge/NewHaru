@@ -246,9 +246,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4ecbec39a359e4f28c75176acfcee931"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpdf_1_1Image.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Document.html#a4ecbec39a359e4f28c75176acfcee931">loadRawImageFromFile</a> (const std::string &amp;fileName, unsigned int width, unsigned int height, <a class="el" href="namespacepdf_1_1enums.html#a319b7405daf14f2340cc626d011e67cd">enums::ColorSpace</a> colorSpace)</td></tr>
 <tr class="memdesc:a4ecbec39a359e4f28c75176acfcee931"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a raw image from a file.  <a href="classpdf_1_1Document.html#a4ecbec39a359e4f28c75176acfcee931">More...</a><br /></td></tr>
 <tr class="separator:a4ecbec39a359e4f28c75176acfcee931"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1d4e26e872c46d878da3641b8d3196b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpdf_1_1Image.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Document.html#ad1d4e26e872c46d878da3641b8d3196b">loadRawImageFromMemory</a> (const std::vector&lt; unsigned char &gt; &amp;bytes, unsigned int width, unsigned int height, <a class="el" href="namespacepdf_1_1enums.html#a319b7405daf14f2340cc626d011e67cd">enums::ColorSpace</a> colorSpace, <a class="el" href="namespacepdf_1_1enums.html#a24a457cd8bed4f5ae64be8bdf8371d7e">enums::BitsPerComponent</a> bitsPerComponent)</td></tr>
-<tr class="memdesc:ad1d4e26e872c46d878da3641b8d3196b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a raw image from memory.  <a href="classpdf_1_1Document.html#ad1d4e26e872c46d878da3641b8d3196b">More...</a><br /></td></tr>
-<tr class="separator:ad1d4e26e872c46d878da3641b8d3196b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a4f7a7423c69962f3b4244b99c739e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpdf_1_1Image.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Document.html#a8a4f7a7423c69962f3b4244b99c739e0">loadRawImageFromMemory</a> (const std::vector&lt; unsigned char &gt; &amp;bytes, unsigned int width, unsigned int height, <a class="el" href="namespacepdf_1_1enums.html#a319b7405daf14f2340cc626d011e67cd">enums::ColorSpace</a> colorSpace, unsigned int bitsPerComponent)</td></tr>
+<tr class="memdesc:a8a4f7a7423c69962f3b4244b99c739e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a raw image from memory.  <a href="classpdf_1_1Document.html#a8a4f7a7423c69962f3b4244b99c739e0">More...</a><br /></td></tr>
+<tr class="separator:a8a4f7a7423c69962f3b4244b99c739e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a794191899800824a43d4dea4d6c33423"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Document.html#a794191899800824a43d4dea4d6c33423">loadTrueTypeFontFromFile</a> (const std::string &amp;fileName, bool embedding)</td></tr>
 <tr class="memdesc:a794191899800824a43d4dea4d6c33423"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a TrueType font from an external file and registers it in the document.  <a href="classpdf_1_1Document.html#a794191899800824a43d4dea4d6c33423">More...</a><br /></td></tr>
 <tr class="separator:a794191899800824a43d4dea4d6c33423"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1594,8 +1594,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad1d4e26e872c46d878da3641b8d3196b" name="ad1d4e26e872c46d878da3641b8d3196b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1d4e26e872c46d878da3641b8d3196b">&#9670;&#160;</a></span>loadRawImageFromMemory()</h2>
+<a id="a8a4f7a7423c69962f3b4244b99c739e0" name="a8a4f7a7423c69962f3b4244b99c739e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a4f7a7423c69962f3b4244b99c739e0">&#9670;&#160;</a></span>loadRawImageFromMemory()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1627,7 +1627,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacepdf_1_1enums.html#a24a457cd8bed4f5ae64be8bdf8371d7e">enums::BitsPerComponent</a>&#160;</td>
+          <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>bitsPerComponent</em>&#160;</td>
         </tr>
         <tr>
@@ -1645,11 +1645,17 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">width</td><td>The width of the image. </td></tr>
     <tr><td class="paramname">height</td><td>The height of the image. </td></tr>
     <tr><td class="paramname">colorSpace</td><td>The color space to use. Only <a class="el" href="namespacepdf_1_1enums.html#a319b7405daf14f2340cc626d011e67cdafec8ee7fb9552ccf7b9ae0eb834f2d10" title="Device gray.">enums::ColorSpace::DEVICE_GRAY</a>, <a class="el" href="namespacepdf_1_1enums.html#a319b7405daf14f2340cc626d011e67cda6b4195a9683a3fd7ab21ad97e57e07d7" title="Device RGB.">enums::ColorSpace::DEVICE_RGB</a> and <a class="el" href="namespacepdf_1_1enums.html#a319b7405daf14f2340cc626d011e67cda02d8eed9196251d9a24dd4d15b8bf759" title="Device CMYK.">enums::ColorSpace::DEVICE_CMYK</a> are allowed. </td></tr>
-    <tr><td class="paramname">bitsPerComponent</td><td>Number of bits per component. </td></tr>
+    <tr><td class="paramname">bitsPerComponent</td><td>Number of bits per component (<code>1</code>, <code>2</code>, <code>4</code> or <code>8</code>). </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>New <a class="el" href="classpdf_1_1Image.html" title="Represents an image.">Image</a> object. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classpdf_1_1excepts_1_1InvalidBitsPerComponentException.html" title="An exception raised when using an invalid value for the number of bits per component when calling Doc...">excepts::InvalidBitsPerComponentException</a></td><td>if the number of bits per component is invalid. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

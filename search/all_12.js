@@ -17,9 +17,8 @@ var searchData=
   ['trapped_14',['TRAPPED',['../namespacepdf_1_1enums.html#a7a2ca2cdb45be529d47b6c7501d4daf8a6a5fd454752dd15c416c1e198eb7e251',1,'pdf::enums']]],
   ['ttcexception_15',['TTCException',['../classpdf_1_1excepts_1_1TTCException.html',1,'pdf::excepts::TTCException'],['../classpdf_1_1excepts_1_1TTCException.html#ad8bcd98f3350dbe830f850770da97922',1,'pdf::excepts::TTCException::TTCException()']]],
   ['ttfexception_16',['TTFException',['../classpdf_1_1excepts_1_1TTFException.html',1,'pdf::excepts::TTFException'],['../classpdf_1_1excepts_1_1TTFException.html#a50af17f13a33f976ee24725ddf86d893',1,'pdf::excepts::TTFException::TTFException()']]],
-  ['two_17',['TWO',['../namespacepdf_1_1enums.html#a24a457cd8bed4f5ae64be8bdf8371d7ea0f82d86afa0f5dc965c5c15aca58dcfb',1,'pdf::enums']]],
-  ['two_5fcolumn_5fleft_18',['TWO_COLUMN_LEFT',['../namespacepdf_1_1enums.html#aa62dcec4447a8ca3b4be9c8be820d25babc507fd0106673eaf2a098a043ec990c',1,'pdf::enums']]],
-  ['two_5fcolumn_5fright_19',['TWO_COLUMN_RIGHT',['../namespacepdf_1_1enums.html#aa62dcec4447a8ca3b4be9c8be820d25ba3335ec610b2a7706be628fd1f874016f',1,'pdf::enums']]],
-  ['two_5fpage_5fleft_20',['TWO_PAGE_LEFT',['../namespacepdf_1_1enums.html#aa62dcec4447a8ca3b4be9c8be820d25ba999c66455508fd04c28535800d51e41f',1,'pdf::enums']]],
-  ['two_5fpage_5fright_21',['TWO_PAGE_RIGHT',['../namespacepdf_1_1enums.html#aa62dcec4447a8ca3b4be9c8be820d25ba757758140013466461030f008de738aa',1,'pdf::enums']]]
+  ['two_5fcolumn_5fleft_17',['TWO_COLUMN_LEFT',['../namespacepdf_1_1enums.html#aa62dcec4447a8ca3b4be9c8be820d25babc507fd0106673eaf2a098a043ec990c',1,'pdf::enums']]],
+  ['two_5fcolumn_5fright_18',['TWO_COLUMN_RIGHT',['../namespacepdf_1_1enums.html#aa62dcec4447a8ca3b4be9c8be820d25ba3335ec610b2a7706be628fd1f874016f',1,'pdf::enums']]],
+  ['two_5fpage_5fleft_19',['TWO_PAGE_LEFT',['../namespacepdf_1_1enums.html#aa62dcec4447a8ca3b4be9c8be820d25ba999c66455508fd04c28535800d51e41f',1,'pdf::enums']]],
+  ['two_5fpage_5fright_20',['TWO_PAGE_RIGHT',['../namespacepdf_1_1enums.html#aa62dcec4447a8ca3b4be9c8be820d25ba757758140013466461030f008de738aa',1,'pdf::enums']]]
 ];

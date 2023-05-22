@@ -24,6 +24,7 @@ var namespacepdf_1_1excepts =
     [ "InvalidAFMFileNDataException", "classpdf_1_1excepts_1_1InvalidAFMFileNDataException.html", "classpdf_1_1excepts_1_1InvalidAFMFileNDataException" ],
     [ "InvalidAFMHeaderFileException", "classpdf_1_1excepts_1_1InvalidAFMHeaderFileException.html", "classpdf_1_1excepts_1_1InvalidAFMHeaderFileException" ],
     [ "InvalidAFMWidthException", "classpdf_1_1excepts_1_1InvalidAFMWidthException.html", "classpdf_1_1excepts_1_1InvalidAFMWidthException" ],
+    [ "InvalidBitsPerComponentException", "classpdf_1_1excepts_1_1InvalidBitsPerComponentException.html", "classpdf_1_1excepts_1_1InvalidBitsPerComponentException" ],
     [ "InvalidColorSpaceException", "classpdf_1_1excepts_1_1InvalidColorSpaceException.html", "classpdf_1_1excepts_1_1InvalidColorSpaceException" ],
     [ "InvalidDateTimeException", "classpdf_1_1excepts_1_1InvalidDateTimeException.html", "classpdf_1_1excepts_1_1InvalidDateTimeException" ],
     [ "InvalidEncoderTypeException", "classpdf_1_1excepts_1_1InvalidEncoderTypeException.html", "classpdf_1_1excepts_1_1InvalidEncoderTypeException" ],

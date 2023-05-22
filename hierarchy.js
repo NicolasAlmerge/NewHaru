@@ -58,6 +58,7 @@ var hierarchy =
             [ "pdf::excepts::InvalidFontSizeException", "classpdf_1_1excepts_1_1InvalidFontSizeException.html", null ]
           ] ],
           [ "pdf::excepts::ImageException", "classpdf_1_1excepts_1_1ImageException.html", [
+            [ "pdf::excepts::InvalidBitsPerComponentException", "classpdf_1_1excepts_1_1InvalidBitsPerComponentException.html", null ],
             [ "pdf::excepts::InvalidColorSpaceException", "classpdf_1_1excepts_1_1InvalidColorSpaceException.html", null ],
             [ "pdf::excepts::InvalidImageException", "classpdf_1_1excepts_1_1InvalidImageException.html", null ],
             [ "pdf::excepts::InvalidImageOperationException", "classpdf_1_1excepts_1_1InvalidImageOperationException.html", null ],
