@@ -523,7 +523,7 @@ namespace pdf {
          *         enums::ColorSpace::DEVICE_CMYK are allowed.
          * @param  bitsPerComponent Number of bits per component (`1`, `2`, `4` or `8`).
          * @return New Image object.
-         * @throw  excepts::InvalidBitsPerComponentException if the number of bits per component is invalid.
+         * @throw  excepts::InvalidBitsPerComponentException if `bitsPerComponent` is not `1`, `2`, `4` or `8`.
         */
         Image loadRawImageFromMemory(
             const std::vector<unsigned char>& bytes, unsigned int width,
