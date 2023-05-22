@@ -1,13 +1,13 @@
 #ifndef __HARUPP_FONT_HPP__
 #define __HARUPP_FONT_HPP__
+#include "Box.hpp"
 #include "ContentStream.hpp"
+#include "TextWidth.hpp"
 #include "string"
 #include "utility"
 #include "vector"
 
 namespace pdf {
-    class Box;
-    class TextWidth;
 
     /**
      * \class  Font

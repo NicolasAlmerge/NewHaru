@@ -1,0 +1,33 @@
+#ifndef __NEWHARU_HPP__
+#define __NEWHARU_HPP__
+
+#include "Annotation.hpp"
+#include "Box.hpp"
+#include "Color.hpp"
+#include "CompressionMode.hpp"
+#include "Constants.hpp"
+#include "ContentStream.hpp"
+#include "Coor2D.hpp"
+#include "DashMode.hpp"
+#include "DateTime.hpp"
+#include "Destination.hpp"
+#include "Document.hpp"
+#include "Encoder.hpp"
+#include "Enums.hpp"
+#include "Exception.hpp"
+#include "Font.hpp"
+#include "Image.hpp"
+#include "LinkAnnotation.hpp"
+#include "Object.hpp"
+#include "Outline.hpp"
+#include "Page.hpp"
+#include "Permissions.hpp"
+#include "TextAnnotation.hpp"
+#include "TextWidth.hpp"
+#include "TransposeMatrix.hpp"
+#include "Typedefs.hpp"
+#include "Utils.hpp"
+#include "ValueSet.hpp"
+#include "ViewerPreferences.hpp"
+
+#endif // __NEWHARU_HPP__

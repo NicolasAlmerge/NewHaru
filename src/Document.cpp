@@ -1,4 +1,5 @@
 #include "../include/Document.hpp"
+#include "../include/Exception.hpp"
 #include "hpdf.h"
 using namespace pdf;
 using namespace pdf::excepts;

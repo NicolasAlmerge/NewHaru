@@ -1,24 +1,20 @@
 #ifndef __HARUPP_PAGE_HPP__
 #define __HARUPP_PAGE_HPP__
 #include "ContentStream.hpp"
+#include "Color.hpp"
+#include "DashMode.hpp"
+#include "Destination.hpp"
+#include "Font.hpp"
+#include "Encoder.hpp"
 #include "Enums.hpp"
+#include "Image.hpp"
+#include "LinkAnnotation.hpp"
+#include "TextAnnotation.hpp"
+#include "TransposeMatrix.hpp"
 #include "string"
 #include "utility"
 
 namespace pdf {
-    class Destination;
-    class TextAnnotation;
-    class LinkAnnotation;
-    class Box;
-    class Encoder;
-    class Coor2D;
-    class Font;
-    class Image;
-    class TransposeMatrix;
-    class RGBColor;
-    class CMYKColor;
-    class DashMode;
-    class ContentStream;
 
     /**
      * \class  Page

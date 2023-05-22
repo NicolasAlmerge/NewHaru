@@ -1,6 +1,4 @@
 #include "../include/Font.hpp"
-#include "../include/Box.hpp"
-#include "../include/TextWidth.hpp"
 #include "hpdf.h"
 using namespace pdf;
 
