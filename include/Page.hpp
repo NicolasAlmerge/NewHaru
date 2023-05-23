@@ -126,9 +126,10 @@ namespace pdf {
         std::pair<unsigned int, float> measureText(const std::string& text, float width, bool wordWrap) const;
 
         /**
-         * @brief  Gets the page's current graphics mode.
-         * @return Current graphics mode.
-         * @throw  excepts::InvalidGModeException if the operation failed.
+         * @brief   Gets the page's current graphics mode.
+         * @details The initial graphics mode is enums::GraphicsMode::PAGE_DESCRIPTION.
+         * @return  Current graphics mode.
+         * @throw   excepts::InvalidGModeException if the operation failed.
         */
         enums::GraphicsMode getGraphicsMode() const;
 
@@ -333,7 +334,7 @@ namespace pdf {
          * @param radius Radius of the circle.
          * @param ang1 The angle of the begining of the arc.
          * @param ang2 The angle of the end of the arc (must be greater than `ang1`).
-         * @note  Angles are given in degrees, with `0°` being vertical upward from `coors`.
+         * @note  Angles are given in degrees, with `0` being vertical upward from `coors`.
          * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION or enums::GraphicsMode::PATH_OBJECT before calling this function.
          * @post  The graphics mode will be set to enums::GraphicsMode::PATH_OBJECT after calling this function.
         */
@@ -465,13 +466,53 @@ namespace pdf {
         */
         void endText();
 
+        /**
+         * @brief   Modifies the current clipping path by intersecting it with the current path using the even-odd rule.
+         * @details The clipping path is only modified after the succeeding painting operator.
+         *          To avoid painting the current path, use the ::endPath.
+         * @warning Following painting operations will only affect the regions of the page contained by the clipping path.
+         *          Initially, the clipping path includes the entire page. There is no way to enlarge the current clipping path,
+         *          or to replace the clipping path with a new one. The functions ::gSave and ::gRestore may be used to save and restore
+         *          the current graphics state, including the clipping path.
+         * @pre     The graphics mode must be set to enums::GraphicsMode::PATH_OBJECT before calling this function.
+        */
         void eoClip();
+
+        /**
+         * @brief Fills the current path using the even-odd rule.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PATH_OBJECT before calling this function.
+         * @post  The graphics mode will be set to enums::GraphicsMode::PAGE_DESCRIPTION after calling this function.
+        */
         void eoFill();
+
+        /**
+         * @brief Fills the current path using the even-odd rule, then paints the path.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PATH_OBJECT before calling this function.
+         * @post  The graphics mode will be set to enums::GraphicsMode::PAGE_DESCRIPTION after calling this function.
+        */
         void eoFillStroke();
 
+        /**
+         * @brief   Draws a ContentStream using the current graphics context.
+         * @details This is used by ::drawImage to draw an Image by first calling ::gSave and ::concat, and then calling
+         *          ::gRestore after this function call. It could be used manually to rotate an Image.
+         * @param   stream The ContentStream to execute.
+         * @pre     The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION before calling this function.
+        */
         void executeContentStream(const ContentStream& stream);
 
+        /**
+         * @brief Fills the current path using the nonzero winding number rule.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PATH_OBJECT before calling this function.
+         * @post  The graphics mode will be set to enums::GraphicsMode::PAGE_DESCRIPTION after calling this function.
+        */
         void fill();
+
+        /**
+         * @brief Fills the current path using the nonzero winding number rule, then paints the path.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PATH_OBJECT before calling this function.
+         * @post  The graphics mode will be set to enums::GraphicsMode::PAGE_DESCRIPTION after calling this function.
+        */
         void fillStroke();
 
         /**

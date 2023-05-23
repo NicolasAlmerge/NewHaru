@@ -1,5 +1,5 @@
 #include "../include/Image.hpp"
-#include "Exception.hpp"
+#include "../include/Exception.hpp"
 #include "hpdf.h"
 #include "string.h"
 using namespace pdf;
