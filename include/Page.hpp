@@ -216,8 +216,9 @@ namespace pdf {
         float getCharSpace() const;
 
         /**
-         * @brief  Gets the current value of the page's word spacing.
-         * @return Word spacing.
+         * @brief   Gets the current value of the page's word spacing.
+         * @details The initial value is `0.0`.
+         * @return  Word spacing.
         */
         float getWordSpace() const;
 
@@ -229,14 +230,16 @@ namespace pdf {
         float getHorizontalScaling() const;
 
         /**
-         * @brief  Gets the current value of the page's line spacing.
-         * @return Line spacing of the page.
+         * @brief   Gets the current value of the page's line spacing.
+         * @details The initial value is `0.0`.
+         * @return  Line spacing of the page.
         */
         float getTextLeading() const;
 
         /**
-         * @brief  Gets the current value of the page's text rendering mode.
-         * @return Text rendering mode of the page.
+         * @brief   Gets the current value of the page's text rendering mode.
+         * @details The initial value is enums::TextRenderingMode::FILL.
+         * @return  Text rendering mode of the page.
         */
         enums::TextRenderingMode getTextRenderingMode() const;
 
@@ -328,7 +331,7 @@ namespace pdf {
 
         /**
          * @brief Insert a new ContentStream on the page.
-         * @param newStream ContentStream to use.
+         * @param sharedStream ContentStream to use.
         */
         void insertSharedContentStream(const ContentStream& sharedStream);
 
@@ -682,7 +685,7 @@ namespace pdf {
 
         /**
          * @brief Sets the new miter limit value.
-         * @param value New miter limit value.
+         * @param miterLimit New miter limit value.
         */
         void setMiterLimit(float miterLimit);
 
@@ -700,26 +703,111 @@ namespace pdf {
         */
         void setRGBStroke(const RGBColor& color);
 
+        /**
+         * @brief Sets the line spacing for text displaying.
+         * @param value New value to use for line spacing.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION or enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
         void setTextLeading(float value);
 
+        /**
+         * @brief   Sets the transformation matrix for text to be drawn when calling ::showText.
+         * @note    Text is typically output using the ::showText.
+         * @warning The ::textRect function does not use the active text matrix.
+         * @param   matrix New TransposeMatrix to use.
+         * @pre     The graphics mode must be set to enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
         void setTextMatrix(const TransposeMatrix& matrix);
 
+        /**
+         * @brief Sets the text rendering mode.
+         * @param mode New value to use for text rendering.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION or enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
         void setTextRenderingMode(enums::TextRenderingMode mode);
 
+        /**
+         * @brief   Moves the text position in vertical direction by a certain amount.
+         * @details This is useful for making subscripts or superscripts.
+         * @param   value New value to use for the text rise, in user space units.
+         * @pre     The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION or enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
         void setTextRise(float value);
+
+        /**
+         * @brief Sets the word spacing for text.
+         * @param value New value to use for the word spacing.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION or enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
         void setWordSpace(float value);
 
+        /**
+         * @brief Prints the text at the current position on the page.
+         * @param text Text to print.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
         void showText(const std::string& text);
+
+        /**
+         * @brief Moves the current text position to the start of the next line, then prints the text at the current position on the page.
+         * @param text Text to print.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
         void showTextNewLine(const std::string& text);
+
+        /**
+         * @brief Moves the current text position to the start of the next line, then sets word spacing and character spacing, finally prints the text at the current position on the page.
+         * @param wordSpace Word spacing to use.
+         * @param charSpace Character spacing to use.
+         * @param text Text to print.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
         void showTextNewLine(float wordSpace, float charSpace, const std::string& text);
 
+        /**
+         * @brief Paints the current path.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PATH_OBJECT before calling this function.
+         * @post  The graphics mode will be set to enums::GraphicsMode::PAGE_DESCRIPTION after calling this function.
+        */
         void stroke();
+
+        /**
+         * @brief Prints the text at the specified position.
+         * @param text Text to print.
+         * @param position Coordinates where to print the text.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
         void textOut(const std::string& text, const Coor2D& position);
+
+        /**
+         * @brief   Prints the text at the current text position.
+         * @details This is equivalent to `textOut(text, getCurrentTextPos())`.
+         * @param   text Text to print.
+         * @pre     The graphics mode must be set to enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
         void textOut(const std::string& text);
 
-        unsigned int textRect(const Box& box, const std::string& text, enums::TextAlignment alignment = enums::TextAlignment::LEFT);
+        /**
+         * @brief  Prints the text inside the specified region.
+         * @param  box Coordinates of the corners of the region to output text.
+         * @param  text Text to print.
+         * @param  alignment The text alignment to use.
+         * @return The number of characters printed in the area, and whether or not the whole text fits into the declared space.
+         * @pre    The graphics mode must be set to enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
+        std::pair<unsigned int, bool> textRect(const Box& box, const std::string& text, enums::TextAlignment alignment = enums::TextAlignment::LEFT);
 
-        void writeText(const std::string& text);
+        /**
+         * @brief   Begins a text object, prints the text at the specified text position and ends the text object.
+         * @details This is equivalent to:
+         * @code    beginText();
+         *          textOut(text, position);
+         *          endText();
+         * @endcode
+         * @param text Text to print.
+         * @param position Position at which to print the text.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION before calling this function.
+        */
         void writeText(const std::string& text, const Coor2D& position);
     };
 }

@@ -495,21 +495,18 @@ void Page::textOut(const std::string& text) {
     textOut(text, getCurrentTextPos());
 }
 
-unsigned int Page::textRect(const Box& box, const std::string& text, TextAlignment alignment) {
+std::pair<unsigned int, bool> Page::textRect(const Box& box, const std::string& text, TextAlignment alignment) {
     unsigned int length;
-    HPDF_Page_TextRect(
+    unsigned long status = HPDF_Page_TextRect(
         __innerContent, box.getLeft(), box.getTop(), box.getRight(), box.getBottom(),
         text.c_str(), (HPDF_TextAlignment) alignment, &length
     );
-    return length;
+
+    return {length, (status != HPDF_PAGE_INSUFFICIENT_SPACE)};
 }
 
 void Page::writeText(const std::string& text, const Coor2D& position) {
     beginText();
     textOut(text, position);
     endText();
-}
-
-void Page::writeText(const std::string& text) {
-    writeText(text, getCurrentTextPos());
 }

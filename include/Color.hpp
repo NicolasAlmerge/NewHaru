@@ -68,39 +68,39 @@ namespace pdf {
 
         /**
          * @brief   Creates the white CMYKColor.
-         * @details This is equivalent to `CMYKColor(0, 0, 0, 0)` and CMYKColor::WHITE.
+         * @details This is equivalent to `CMYKColor(0.0, 0.0, 0.0, 0.0)` and CMYKColor::WHITE.
         */
         CMYKColor() noexcept;
 
         /**
          * @brief Creates a new CMYKColor with the given attributes.
-         * @param c Cyan value.
-         * @param m Magenta value.
-         * @param y Yellow value.
-         * @param k Black value.
+         * @param c Cyan value (`0.0 <= c <= 1.0`).
+         * @param m Magenta value (`0.0 <= m <= 1.0`).
+         * @param y Yellow value (`0.0 <= y <= 1.0`).
+         * @param k Black value (`0.0 <= k <= 1.0`).
         */
         CMYKColor(float c, float m, float y, float k) noexcept;
 
         /**
-         * @brief  Gets the cyan component.
+         * @brief  Gets the cyan component, between `0.0` and `1.0`.
          * @return Cyan component.
         */
         float getC() const noexcept;
 
         /**
-         * @brief  Gets the magenta component.
+         * @brief  Gets the magenta component, between `0.0` and `1.0`.
          * @return Magenta component.
         */
         float getM() const noexcept;
 
         /**
-         * @brief  Gets the yellow component.
+         * @brief  Gets the yellow component, between `0.0` and `1.0`.
          * @return Yellow component.
         */
         float getY() const noexcept;
 
         /**
-         * @brief  Gets the black component.
+         * @brief  Gets the black component, between `0.0` and `1.0`.
          * @return Black component.
         */
         float getK() const noexcept;
@@ -159,32 +159,32 @@ namespace pdf {
     public:
         /**
          * @brief   Creates the black RGBColor.
-         * @details This is equivalent to `RGBColor(0, 0, 0)` and RGBColor::BLACK.
+         * @details This is equivalent to `RGBColor(0.0, 0.0, 0.0)` and RGBColor::BLACK.
         */
         RGBColor() noexcept;
 
         /**
          * @brief Creates a new RGBColor with the given attributes.
-         * @param r Red component.
-         * @param g Green component.
-         * @param b Blue component.
+         * @param r Red component (`0.0 <= r <= 1.0`).
+         * @param g Green component (`0.0 <= g <= 1.0`).
+         * @param b Blue component (`0.0 <= b <= 1.0`).
         */
         RGBColor(float r, float g, float b) noexcept;
 
         /**
-         * @brief  Gets the red component.
+         * @brief  Gets the red component, between `0.0` and `1.0`.
          * @return Red component.
         */
         float getR() const noexcept;
 
         /**
-         * @brief  Gets the green component.
+         * @brief  Gets the green component, between `0.0` and `1.0`.
          * @return Green component.
         */
         float getG() const noexcept;
 
         /**
-         * @brief  Gets the blue component.
+         * @brief  Gets the blue component, between `0.0` and `1.0`.
          * @return Blue component.
         */
         float getB() const noexcept;
