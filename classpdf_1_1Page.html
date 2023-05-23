@@ -251,7 +251,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aea887b4a5c177bd5f838167a2066e2bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the line join.  <a href="classpdf_1_1Page.html#aea887b4a5c177bd5f838167a2066e2bd">More...</a><br /></td></tr>
 <tr class="separator:aea887b4a5c177bd5f838167a2066e2bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84f51cee88b48dfb06ff413fa42eaa17"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#a84f51cee88b48dfb06ff413fa42eaa17">getLineWidth</a> () const</td></tr>
-<tr class="memdesc:a84f51cee88b48dfb06ff413fa42eaa17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the line width.  <a href="classpdf_1_1Page.html#a84f51cee88b48dfb06ff413fa42eaa17">More...</a><br /></td></tr>
+<tr class="memdesc:a84f51cee88b48dfb06ff413fa42eaa17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the width of the line used to stroke a path.  <a href="classpdf_1_1Page.html#a84f51cee88b48dfb06ff413fa42eaa17">More...</a><br /></td></tr>
 <tr class="separator:a84f51cee88b48dfb06ff413fa42eaa17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa02c4ea604a616aefd0960893c38612d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#aa02c4ea604a616aefd0960893c38612d">getMiterLimit</a> () const</td></tr>
 <tr class="memdesc:aa02c4ea604a616aefd0960893c38612d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current value of the page's miter limit.  <a href="classpdf_1_1Page.html#aa02c4ea604a616aefd0960893c38612d">More...</a><br /></td></tr>
@@ -298,77 +298,74 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a63146578d8a060670e262ccb1e653157"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#a63146578d8a060670e262ccb1e653157">insertSharedContentStream</a> (const <a class="el" href="classpdf_1_1ContentStream.html">ContentStream</a> &amp;sharedStream)</td></tr>
 <tr class="memdesc:a63146578d8a060670e262ccb1e653157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a new <a class="el" href="classpdf_1_1ContentStream.html" title="Represents a content stream.">ContentStream</a> on the page.  <a href="classpdf_1_1Page.html#a63146578d8a060670e262ccb1e653157">More...</a><br /></td></tr>
 <tr class="separator:a63146578d8a060670e262ccb1e653157"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c5afc09800f39b1420e6d2819dd97c2"><td class="memItemLeft" align="right" valign="top"><a id="a4c5afc09800f39b1420e6d2819dd97c2" name="a4c5afc09800f39b1420e6d2819dd97c2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>lineTo</b> (const <a class="el" href="classpdf_1_1Coor2D.html">Coor2D</a> &amp;coors)</td></tr>
+<tr class="memitem:a4c5afc09800f39b1420e6d2819dd97c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#a4c5afc09800f39b1420e6d2819dd97c2">lineTo</a> (const <a class="el" href="classpdf_1_1Coor2D.html">Coor2D</a> &amp;coors)</td></tr>
+<tr class="memdesc:a4c5afc09800f39b1420e6d2819dd97c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a path from the current point to the specified point.  <a href="classpdf_1_1Page.html#a4c5afc09800f39b1420e6d2819dd97c2">More...</a><br /></td></tr>
 <tr class="separator:a4c5afc09800f39b1420e6d2819dd97c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77b4cdd95710c7cd6e4a143b2eab7941"><td class="memItemLeft" align="right" valign="top">std::pair&lt; unsigned int, float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#a77b4cdd95710c7cd6e4a143b2eab7941">measureText</a> (const std::string &amp;text, float width, bool wordWrap) const</td></tr>
 <tr class="memdesc:a77b4cdd95710c7cd6e4a143b2eab7941"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures calculates the byte length which can be included within the specified width.  <a href="classpdf_1_1Page.html#a77b4cdd95710c7cd6e4a143b2eab7941">More...</a><br /></td></tr>
 <tr class="separator:a77b4cdd95710c7cd6e4a143b2eab7941"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2e3637c2ce468db1594ee86d8f5601e"><td class="memItemLeft" align="right" valign="top"><a id="ad2e3637c2ce468db1594ee86d8f5601e" name="ad2e3637c2ce468db1594ee86d8f5601e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>moveTextPos</b> (const <a class="el" href="classpdf_1_1Coor2D.html">Coor2D</a> &amp;coors)</td></tr>
-<tr class="separator:ad2e3637c2ce468db1594ee86d8f5601e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c780c80f49087ed1a13923f870235a9"><td class="memItemLeft" align="right" valign="top"><a id="a0c780c80f49087ed1a13923f870235a9" name="a0c780c80f49087ed1a13923f870235a9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>moveTextPos2</b> (const <a class="el" href="classpdf_1_1Coor2D.html">Coor2D</a> &amp;coors)</td></tr>
-<tr class="separator:a0c780c80f49087ed1a13923f870235a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4f73049d3467c9a547d8008c3c57ad1"><td class="memItemLeft" align="right" valign="top"><a id="ad4f73049d3467c9a547d8008c3c57ad1" name="ad4f73049d3467c9a547d8008c3c57ad1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>moveTo</b> (const <a class="el" href="classpdf_1_1Coor2D.html">Coor2D</a> &amp;coors)</td></tr>
+<tr class="memitem:a0bd811c66ac19963bc8bafefd06810a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#a0bd811c66ac19963bc8bafefd06810a0">moveTextPos</a> (const <a class="el" href="classpdf_1_1Coor2D.html">Coor2D</a> &amp;offset, bool invertTextLeading=false)</td></tr>
+<tr class="memdesc:a0bd811c66ac19963bc8bafefd06810a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the current text position, using the specified offset values.  <a href="classpdf_1_1Page.html#a0bd811c66ac19963bc8bafefd06810a0">More...</a><br /></td></tr>
+<tr class="separator:a0bd811c66ac19963bc8bafefd06810a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f73049d3467c9a547d8008c3c57ad1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#ad4f73049d3467c9a547d8008c3c57ad1">moveTo</a> (const <a class="el" href="classpdf_1_1Coor2D.html">Coor2D</a> &amp;coors)</td></tr>
+<tr class="memdesc:ad4f73049d3467c9a547d8008c3c57ad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts a new subpath and move the current point for the drawing path.  <a href="classpdf_1_1Page.html#ad4f73049d3467c9a547d8008c3c57ad1">More...</a><br /></td></tr>
 <tr class="separator:ad4f73049d3467c9a547d8008c3c57ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0ff77e6a3335e5dc53aca9c0e300f36"><td class="memItemLeft" align="right" valign="top"><a id="ae0ff77e6a3335e5dc53aca9c0e300f36" name="ae0ff77e6a3335e5dc53aca9c0e300f36"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToNextLine</b> ()</td></tr>
+<tr class="memitem:ae0ff77e6a3335e5dc53aca9c0e300f36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#ae0ff77e6a3335e5dc53aca9c0e300f36">moveToNextLine</a> ()</td></tr>
+<tr class="memdesc:ae0ff77e6a3335e5dc53aca9c0e300f36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the current position for the text showing depending on current text showing point and text leading.  <a href="classpdf_1_1Page.html#ae0ff77e6a3335e5dc53aca9c0e300f36">More...</a><br /></td></tr>
 <tr class="separator:ae0ff77e6a3335e5dc53aca9c0e300f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95f157795fb205270448281de9e6a202"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#a95f157795fb205270448281de9e6a202">newContentStream</a> (const <a class="el" href="classpdf_1_1ContentStream.html">ContentStream</a> &amp;newStream)</td></tr>
 <tr class="memdesc:a95f157795fb205270448281de9e6a202"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change to a new <a class="el" href="classpdf_1_1ContentStream.html" title="Represents a content stream.">ContentStream</a> on the page.  <a href="classpdf_1_1Page.html#a95f157795fb205270448281de9e6a202">More...</a><br /></td></tr>
 <tr class="separator:a95f157795fb205270448281de9e6a202"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c85c800701599627c5ddffc8b7f8fe3"><td class="memItemLeft" align="right" valign="top"><a id="a0c85c800701599627c5ddffc8b7f8fe3" name="a0c85c800701599627c5ddffc8b7f8fe3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>rectangle</b> (float x, float y, float width, float height)</td></tr>
-<tr class="separator:a0c85c800701599627c5ddffc8b7f8fe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25cfc471013426e2a82dbb2b36f4395c"><td class="memItemLeft" align="right" valign="top"><a id="a25cfc471013426e2a82dbb2b36f4395c" name="a25cfc471013426e2a82dbb2b36f4395c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setCharSpace</b> (float value)</td></tr>
+<tr class="memitem:a62e9213264de429eca4fadd24157d853"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#a62e9213264de429eca4fadd24157d853">rectangle</a> (const <a class="el" href="classpdf_1_1Coor2D.html">Coor2D</a> &amp;lowerLeftCoors, float width, float height)</td></tr>
+<tr class="memdesc:a62e9213264de429eca4fadd24157d853"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a rectangle to the current path.  <a href="classpdf_1_1Page.html#a62e9213264de429eca4fadd24157d853">More...</a><br /></td></tr>
+<tr class="separator:a62e9213264de429eca4fadd24157d853"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25cfc471013426e2a82dbb2b36f4395c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#a25cfc471013426e2a82dbb2b36f4395c">setCharSpace</a> (float value)</td></tr>
+<tr class="memdesc:a25cfc471013426e2a82dbb2b36f4395c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the character spacing.  <a href="classpdf_1_1Page.html#a25cfc471013426e2a82dbb2b36f4395c">More...</a><br /></td></tr>
 <tr class="separator:a25cfc471013426e2a82dbb2b36f4395c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf15563f19e9d3a1cf20237b71077765"><td class="memItemLeft" align="right" valign="top"><a id="abf15563f19e9d3a1cf20237b71077765" name="abf15563f19e9d3a1cf20237b71077765"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setCMYKFill</b> (const <a class="el" href="classpdf_1_1CMYKColor.html">CMYKColor</a> &amp;color)</td></tr>
+<tr class="memitem:abf15563f19e9d3a1cf20237b71077765"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#abf15563f19e9d3a1cf20237b71077765">setCMYKFill</a> (const <a class="el" href="classpdf_1_1CMYKColor.html">CMYKColor</a> &amp;color)</td></tr>
+<tr class="memdesc:abf15563f19e9d3a1cf20237b71077765"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the filling <a class="el" href="classpdf_1_1CMYKColor.html" title="Represents a CMYK color.">CMYKColor</a>.  <a href="classpdf_1_1Page.html#abf15563f19e9d3a1cf20237b71077765">More...</a><br /></td></tr>
 <tr class="separator:abf15563f19e9d3a1cf20237b71077765"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67723621606a0eb3ab3339a18b567a8c"><td class="memItemLeft" align="right" valign="top"><a id="a67723621606a0eb3ab3339a18b567a8c" name="a67723621606a0eb3ab3339a18b567a8c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setCMYKStroke</b> (const <a class="el" href="classpdf_1_1CMYKColor.html">CMYKColor</a> &amp;color)</td></tr>
+<tr class="memitem:a67723621606a0eb3ab3339a18b567a8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#a67723621606a0eb3ab3339a18b567a8c">setCMYKStroke</a> (const <a class="el" href="classpdf_1_1CMYKColor.html">CMYKColor</a> &amp;color)</td></tr>
+<tr class="memdesc:a67723621606a0eb3ab3339a18b567a8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the stroking <a class="el" href="classpdf_1_1CMYKColor.html" title="Represents a CMYK color.">CMYKColor</a>.  <a href="classpdf_1_1Page.html#a67723621606a0eb3ab3339a18b567a8c">More...</a><br /></td></tr>
 <tr class="separator:a67723621606a0eb3ab3339a18b567a8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cdb0b332cda629e8cf659135f5dbdce"><td class="memItemLeft" align="right" valign="top"><a id="a1cdb0b332cda629e8cf659135f5dbdce" name="a1cdb0b332cda629e8cf659135f5dbdce"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setDash</b> (const <a class="el" href="classpdf_1_1DashMode.html">DashMode</a> &amp;mode)</td></tr>
+<tr class="memitem:a1cdb0b332cda629e8cf659135f5dbdce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#a1cdb0b332cda629e8cf659135f5dbdce">setDash</a> (const <a class="el" href="classpdf_1_1DashMode.html">DashMode</a> &amp;mode)</td></tr>
+<tr class="memdesc:a1cdb0b332cda629e8cf659135f5dbdce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the dash pattern for lines in the page.  <a href="classpdf_1_1Page.html#a1cdb0b332cda629e8cf659135f5dbdce">More...</a><br /></td></tr>
 <tr class="separator:a1cdb0b332cda629e8cf659135f5dbdce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabf4cd69b99f5e8aecd18a62bd7cbe52"><td class="memItemLeft" align="right" valign="top"><a id="aabf4cd69b99f5e8aecd18a62bd7cbe52" name="aabf4cd69b99f5e8aecd18a62bd7cbe52"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setExternGState</b> (const <a class="el" href="classpdf_1_1ContentStream.html">ContentStream</a> &amp;stream)</td></tr>
+<tr class="memitem:aabf4cd69b99f5e8aecd18a62bd7cbe52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#aabf4cd69b99f5e8aecd18a62bd7cbe52">setExternGState</a> (const <a class="el" href="classpdf_1_1ContentStream.html">ContentStream</a> &amp;stream)</td></tr>
+<tr class="memdesc:aabf4cd69b99f5e8aecd18a62bd7cbe52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the graphics state to the page.  <a href="classpdf_1_1Page.html#aabf4cd69b99f5e8aecd18a62bd7cbe52">More...</a><br /></td></tr>
 <tr class="separator:aabf4cd69b99f5e8aecd18a62bd7cbe52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8054a989edb5594eb9b9976d8a24c4a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#a8054a989edb5594eb9b9976d8a24c4a7">setFontAndSize</a> (const <a class="el" href="classpdf_1_1Font.html">Font</a> &amp;font, float size)</td></tr>
 <tr class="memdesc:a8054a989edb5594eb9b9976d8a24c4a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classpdf_1_1Font.html" title="Represents a font.">Font</a> and size.  <a href="classpdf_1_1Page.html#a8054a989edb5594eb9b9976d8a24c4a7">More...</a><br /></td></tr>
 <tr class="separator:a8054a989edb5594eb9b9976d8a24c4a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88c1cbe3bfa4d07955edce12cf635c73"><td class="memItemLeft" align="right" valign="top"><a id="a88c1cbe3bfa4d07955edce12cf635c73" name="a88c1cbe3bfa4d07955edce12cf635c73"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setGrayFill</b> (float gray)</td></tr>
+<tr class="memitem:a88c1cbe3bfa4d07955edce12cf635c73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#a88c1cbe3bfa4d07955edce12cf635c73">setGrayFill</a> (float gray)</td></tr>
+<tr class="memdesc:a88c1cbe3bfa4d07955edce12cf635c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the gray filling color.  <a href="classpdf_1_1Page.html#a88c1cbe3bfa4d07955edce12cf635c73">More...</a><br /></td></tr>
 <tr class="separator:a88c1cbe3bfa4d07955edce12cf635c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4366ee67d6edd9de1b21fd9a4331d4db"><td class="memItemLeft" align="right" valign="top"><a id="a4366ee67d6edd9de1b21fd9a4331d4db" name="a4366ee67d6edd9de1b21fd9a4331d4db"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setGrayStroke</b> (float gray)</td></tr>
+<tr class="memitem:a4366ee67d6edd9de1b21fd9a4331d4db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#a4366ee67d6edd9de1b21fd9a4331d4db">setGrayStroke</a> (float gray)</td></tr>
+<tr class="memdesc:a4366ee67d6edd9de1b21fd9a4331d4db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the gray stroking color.  <a href="classpdf_1_1Page.html#a4366ee67d6edd9de1b21fd9a4331d4db">More...</a><br /></td></tr>
 <tr class="separator:a4366ee67d6edd9de1b21fd9a4331d4db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdb49ace84fe46588e1238cd54d37bd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#abdb49ace84fe46588e1238cd54d37bd0">setHeight</a> (float height)</td></tr>
 <tr class="memdesc:abdb49ace84fe46588e1238cd54d37bd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the page height.  <a href="classpdf_1_1Page.html#abdb49ace84fe46588e1238cd54d37bd0">More...</a><br /></td></tr>
 <tr class="separator:abdb49ace84fe46588e1238cd54d37bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4de7e6e18eb6d732a72d9385f0657e60"><td class="memItemLeft" align="right" valign="top"><a id="a4de7e6e18eb6d732a72d9385f0657e60" name="a4de7e6e18eb6d732a72d9385f0657e60"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setHorizontalScalling</b> (float value)</td></tr>
-<tr class="separator:a4de7e6e18eb6d732a72d9385f0657e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b71d02dae4d172a4c4febf0deb07a79"><td class="memItemLeft" align="right" valign="top"><a id="a7b71d02dae4d172a4c4febf0deb07a79" name="a7b71d02dae4d172a4c4febf0deb07a79"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setLineCap</b> (<a class="el" href="namespacepdf_1_1enums.html#a3d53cb176a17089d1b0bf47a165d543f">enums::LineCap</a> lineCap)</td></tr>
+<tr class="memitem:a4caee7d967e5bdf437cf9c1b09161da9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#a4caee7d967e5bdf437cf9c1b09161da9">setHorizontalScaling</a> (float value)</td></tr>
+<tr class="memdesc:a4caee7d967e5bdf437cf9c1b09161da9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the horizontal scaling for text displaying.  <a href="classpdf_1_1Page.html#a4caee7d967e5bdf437cf9c1b09161da9">More...</a><br /></td></tr>
+<tr class="separator:a4caee7d967e5bdf437cf9c1b09161da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b71d02dae4d172a4c4febf0deb07a79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#a7b71d02dae4d172a4c4febf0deb07a79">setLineCap</a> (<a class="el" href="namespacepdf_1_1enums.html#a3d53cb176a17089d1b0bf47a165d543f">enums::LineCap</a> lineCap)</td></tr>
+<tr class="memdesc:a7b71d02dae4d172a4c4febf0deb07a79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the shape to be used at the ends of lines.  <a href="classpdf_1_1Page.html#a7b71d02dae4d172a4c4febf0deb07a79">More...</a><br /></td></tr>
 <tr class="separator:a7b71d02dae4d172a4c4febf0deb07a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b6ba76c50f1aeee3648d84ad42fe406"><td class="memItemLeft" align="right" valign="top"><a id="a8b6ba76c50f1aeee3648d84ad42fe406" name="a8b6ba76c50f1aeee3648d84ad42fe406"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setLineJoin</b> (<a class="el" href="namespacepdf_1_1enums.html#afe974d14fdfdb8c78b967ef1f67665e7">enums::LineJoin</a> lineJoin)</td></tr>
+<tr class="memitem:a8b6ba76c50f1aeee3648d84ad42fe406"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#a8b6ba76c50f1aeee3648d84ad42fe406">setLineJoin</a> (<a class="el" href="namespacepdf_1_1enums.html#afe974d14fdfdb8c78b967ef1f67665e7">enums::LineJoin</a> lineJoin)</td></tr>
+<tr class="memdesc:a8b6ba76c50f1aeee3648d84ad42fe406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the line join style in the page.  <a href="classpdf_1_1Page.html#a8b6ba76c50f1aeee3648d84ad42fe406">More...</a><br /></td></tr>
 <tr class="separator:a8b6ba76c50f1aeee3648d84ad42fe406"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68cfae6b76240b92b05ec963e698614a"><td class="memItemLeft" align="right" valign="top"><a id="a68cfae6b76240b92b05ec963e698614a" name="a68cfae6b76240b92b05ec963e698614a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setLineWidth</b> (float lineWidth)</td></tr>
+<tr class="memitem:a68cfae6b76240b92b05ec963e698614a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#a68cfae6b76240b92b05ec963e698614a">setLineWidth</a> (float lineWidth)</td></tr>
+<tr class="memdesc:a68cfae6b76240b92b05ec963e698614a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the width of the line used to stroke a path.  <a href="classpdf_1_1Page.html#a68cfae6b76240b92b05ec963e698614a">More...</a><br /></td></tr>
 <tr class="separator:a68cfae6b76240b92b05ec963e698614a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6417fd56a3a5a4f1a27485763645daf6"><td class="memItemLeft" align="right" valign="top"><a id="a6417fd56a3a5a4f1a27485763645daf6" name="a6417fd56a3a5a4f1a27485763645daf6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setMiterLimit</b> (float miterLimit)</td></tr>
+<tr class="memitem:a6417fd56a3a5a4f1a27485763645daf6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#a6417fd56a3a5a4f1a27485763645daf6">setMiterLimit</a> (float miterLimit)</td></tr>
+<tr class="memdesc:a6417fd56a3a5a4f1a27485763645daf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the new miter limit value.  <a href="classpdf_1_1Page.html#a6417fd56a3a5a4f1a27485763645daf6">More...</a><br /></td></tr>
 <tr class="separator:a6417fd56a3a5a4f1a27485763645daf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59e3e2b7e0e1d029b201d6e192102302"><td class="memItemLeft" align="right" valign="top"><a id="a59e3e2b7e0e1d029b201d6e192102302" name="a59e3e2b7e0e1d029b201d6e192102302"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setRGBFill</b> (const <a class="el" href="classpdf_1_1RGBColor.html">RGBColor</a> &amp;color)</td></tr>
+<tr class="memitem:a59e3e2b7e0e1d029b201d6e192102302"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#a59e3e2b7e0e1d029b201d6e192102302">setRGBFill</a> (const <a class="el" href="classpdf_1_1RGBColor.html">RGBColor</a> &amp;color)</td></tr>
+<tr class="memdesc:a59e3e2b7e0e1d029b201d6e192102302"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the filling <a class="el" href="classpdf_1_1RGBColor.html" title="Represents a RGB color.">RGBColor</a>.  <a href="classpdf_1_1Page.html#a59e3e2b7e0e1d029b201d6e192102302">More...</a><br /></td></tr>
 <tr class="separator:a59e3e2b7e0e1d029b201d6e192102302"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cd77962ebdac9555bbef9caf982e466"><td class="memItemLeft" align="right" valign="top"><a id="a7cd77962ebdac9555bbef9caf982e466" name="a7cd77962ebdac9555bbef9caf982e466"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setRGBStroke</b> (const <a class="el" href="classpdf_1_1RGBColor.html">RGBColor</a> &amp;color)</td></tr>
+<tr class="memitem:a7cd77962ebdac9555bbef9caf982e466"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#a7cd77962ebdac9555bbef9caf982e466">setRGBStroke</a> (const <a class="el" href="classpdf_1_1RGBColor.html">RGBColor</a> &amp;color)</td></tr>
+<tr class="memdesc:a7cd77962ebdac9555bbef9caf982e466"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the stroking <a class="el" href="classpdf_1_1RGBColor.html" title="Represents a RGB color.">RGBColor</a>.  <a href="classpdf_1_1Page.html#a7cd77962ebdac9555bbef9caf982e466">More...</a><br /></td></tr>
 <tr class="separator:a7cd77962ebdac9555bbef9caf982e466"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe42fee7a80ff13270a124a86d88c2d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1Page.html#abe42fee7a80ff13270a124a86d88c2d7">setRotation</a> (<a class="el" href="namespacepdf_1_1enums.html#a576f4f6cdab7d602e98e43cc7f416b1d">enums::PageRotation</a> rotation)</td></tr>
 <tr class="memdesc:abe42fee7a80ff13270a124a86d88c2d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the page rotation.  <a href="classpdf_1_1Page.html#abe42fee7a80ff13270a124a86d88c2d7">More...</a><br /></td></tr>
@@ -1279,7 +1276,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>writeText</b> (const 
 </div><div class="memdoc">
 
 <p>Gets the current value of the page's character spacing. </p>
-<dl class="section return"><dt>Returns</dt><dd>Character spacing. </dd></dl>
+<p >The initial value is <code>0.0</code>. </p><dl class="section return"><dt>Returns</dt><dd>Character spacing. </dd></dl>
 
 </div>
 </div>
@@ -1589,7 +1586,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>writeText</b> (const 
 </div><div class="memdoc">
 
 <p>Gets the current value of the page's horizontal scaling for text displaying. </p>
-<dl class="section return"><dt>Returns</dt><dd>Horizontal scaling of the page. </dd></dl>
+<p >The initial value is <code>100.0</code>. </p><dl class="section return"><dt>Returns</dt><dd>Horizontal scaling of the page. </dd></dl>
 
 </div>
 </div>
@@ -1629,7 +1626,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>writeText</b> (const 
 </div><div class="memdoc">
 
 <p>Gets the line join. </p>
-<dl class="section return"><dt>Returns</dt><dd>Line join. </dd></dl>
+<p >The initial value is <a class="el" href="namespacepdf_1_1enums.html#afe974d14fdfdb8c78b967ef1f67665e7a65947f1194c0aa56e4260a2f26170e6c" title="Miter join.">enums::LineJoin::MITER_JOIN</a>. </p><dl class="section return"><dt>Returns</dt><dd>Line join. </dd></dl>
 
 </div>
 </div>
@@ -1648,8 +1645,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>writeText</b> (const 
       </table>
 </div><div class="memdoc">
 
-<p>Gets the line width. </p>
-<dl class="section return"><dt>Returns</dt><dd>Line width. </dd></dl>
+<p>Gets the width of the line used to stroke a path. </p>
+<p >The initial value is <code>1.0</code>. </p><dl class="section return"><dt>Returns</dt><dd>Line width. </dd></dl>
 
 </div>
 </div>
@@ -1994,6 +1991,33 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>writeText</b> (const 
 
 </div>
 </div>
+<a id="a4c5afc09800f39b1420e6d2819dd97c2" name="a4c5afc09800f39b1420e6d2819dd97c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c5afc09800f39b1420e6d2819dd97c2">&#9670;&#160;</a></span>lineTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pdf::Page::lineTo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpdf_1_1Coor2D.html">Coor2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>coors</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Appends a path from the current point to the specified point. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coors</td><td>End point coordinates. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The graphics mode must be set to <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647afced3c2fc01d693be484bb0f762d8ba7" title="Path object mode.">enums::GraphicsMode::PATH_OBJECT</a> before calling this function. </dd></dl>
+
+</div>
+</div>
 <a id="a77b4cdd95710c7cd6e4a143b2eab7941" name="a77b4cdd95710c7cd6e4a143b2eab7941"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a77b4cdd95710c7cd6e4a143b2eab7941">&#9670;&#160;</a></span>measureText()</h2>
 
@@ -2043,6 +2067,92 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>writeText</b> (const 
 
 </div>
 </div>
+<a id="a0bd811c66ac19963bc8bafefd06810a0" name="a0bd811c66ac19963bc8bafefd06810a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bd811c66ac19963bc8bafefd06810a0">&#9670;&#160;</a></span>moveTextPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pdf::Page::moveTextPos </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpdf_1_1Coor2D.html">Coor2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>invertTextLeading</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes the current text position, using the specified offset values. </p>
+<p >If the current text position is (<code>x1</code>, <code>y1</code>), the new text position will be (<code>x1 + offset.getX()</code>, <code>y1 + offset.getY()</code>). </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>Offset of the new text position. </td></tr>
+    <tr><td class="paramname">invertTextLeading</td><td>If set to <code>true</code>, the text leading will be set to <code>-offset.getY()</code>, otherwise no other changes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The graphics mode must be set to <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647aa82d062f25bc13de83bfb6f50b5f5f0c" title="Text object mode.">enums::GraphicsMode::TEXT_OBJECT</a> before calling this function. </dd></dl>
+
+</div>
+</div>
+<a id="ad4f73049d3467c9a547d8008c3c57ad1" name="ad4f73049d3467c9a547d8008c3c57ad1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4f73049d3467c9a547d8008c3c57ad1">&#9670;&#160;</a></span>moveTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pdf::Page::moveTo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpdf_1_1Coor2D.html">Coor2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>coors</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Starts a new subpath and move the current point for the drawing path. </p>
+<p >This sets the start point for the path to <code>coors</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coors</td><td>Coordinates to use. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The graphics mode must be set to <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647a3fce52a805db2655fe34e1329f015396" title="Page description mode.">enums::GraphicsMode::PAGE_DESCRIPTION</a> or <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647afced3c2fc01d693be484bb0f762d8ba7" title="Path object mode.">enums::GraphicsMode::PATH_OBJECT</a> before calling this function. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The graphics mode will be set to <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647afced3c2fc01d693be484bb0f762d8ba7" title="Path object mode.">enums::GraphicsMode::PATH_OBJECT</a> after calling this function. </dd></dl>
+
+</div>
+</div>
+<a id="ae0ff77e6a3335e5dc53aca9c0e300f36" name="ae0ff77e6a3335e5dc53aca9c0e300f36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0ff77e6a3335e5dc53aca9c0e300f36">&#9670;&#160;</a></span>moveToNextLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pdf::Page::moveToNextLine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Moves the current position for the text showing depending on current text showing point and text leading. </p>
+<p >The new position is calculated with the current text transition matrix. </p>
+
+</div>
+</div>
 <a id="a95f157795fb205270448281de9e6a202" name="a95f157795fb205270448281de9e6a202"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a95f157795fb205270448281de9e6a202">&#9670;&#160;</a></span>newContentStream()</h2>
 
@@ -2066,6 +2176,187 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>writeText</b> (const 
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a62e9213264de429eca4fadd24157d853" name="a62e9213264de429eca4fadd24157d853"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62e9213264de429eca4fadd24157d853">&#9670;&#160;</a></span>rectangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pdf::Page::rectangle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpdf_1_1Coor2D.html">Coor2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>lowerLeftCoors</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Appends a rectangle to the current path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lowerLeftCoors</td><td>Lower left point of the rectangle. </td></tr>
+    <tr><td class="paramname">width</td><td>Width of the rectangle. </td></tr>
+    <tr><td class="paramname">height</td><td>Height of the rectangle. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The graphics mode must be set to <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647a3fce52a805db2655fe34e1329f015396" title="Page description mode.">enums::GraphicsMode::PAGE_DESCRIPTION</a> or <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647afced3c2fc01d693be484bb0f762d8ba7" title="Path object mode.">enums::GraphicsMode::PATH_OBJECT</a> before calling this function. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The graphics mode will be set to <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647afced3c2fc01d693be484bb0f762d8ba7" title="Path object mode.">enums::GraphicsMode::PATH_OBJECT</a> after calling this function. </dd></dl>
+
+</div>
+</div>
+<a id="a25cfc471013426e2a82dbb2b36f4395c" name="a25cfc471013426e2a82dbb2b36f4395c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25cfc471013426e2a82dbb2b36f4395c">&#9670;&#160;</a></span>setCharSpace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pdf::Page::setCharSpace </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the character spacing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>New spacing value to use. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The graphics mode must be set to <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647a3fce52a805db2655fe34e1329f015396" title="Page description mode.">enums::GraphicsMode::PAGE_DESCRIPTION</a> or <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647aa82d062f25bc13de83bfb6f50b5f5f0c" title="Text object mode.">enums::GraphicsMode::TEXT_OBJECT</a> before calling this function. </dd></dl>
+
+</div>
+</div>
+<a id="abf15563f19e9d3a1cf20237b71077765" name="abf15563f19e9d3a1cf20237b71077765"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf15563f19e9d3a1cf20237b71077765">&#9670;&#160;</a></span>setCMYKFill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pdf::Page::setCMYKFill </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpdf_1_1CMYKColor.html">CMYKColor</a> &amp;&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the filling <a class="el" href="classpdf_1_1CMYKColor.html" title="Represents a CMYK color.">CMYKColor</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td><a class="el" href="classpdf_1_1CMYKColor.html" title="Represents a CMYK color.">CMYKColor</a> to use for filling. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The graphics mode must be set to <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647a3fce52a805db2655fe34e1329f015396" title="Page description mode.">enums::GraphicsMode::PAGE_DESCRIPTION</a> or <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647aa82d062f25bc13de83bfb6f50b5f5f0c" title="Text object mode.">enums::GraphicsMode::TEXT_OBJECT</a> before calling this function. </dd></dl>
+
+</div>
+</div>
+<a id="a67723621606a0eb3ab3339a18b567a8c" name="a67723621606a0eb3ab3339a18b567a8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67723621606a0eb3ab3339a18b567a8c">&#9670;&#160;</a></span>setCMYKStroke()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pdf::Page::setCMYKStroke </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpdf_1_1CMYKColor.html">CMYKColor</a> &amp;&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the stroking <a class="el" href="classpdf_1_1CMYKColor.html" title="Represents a CMYK color.">CMYKColor</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td><a class="el" href="classpdf_1_1CMYKColor.html" title="Represents a CMYK color.">CMYKColor</a> to use for stroking. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The graphics mode must be set to <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647a3fce52a805db2655fe34e1329f015396" title="Page description mode.">enums::GraphicsMode::PAGE_DESCRIPTION</a> or <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647aa82d062f25bc13de83bfb6f50b5f5f0c" title="Text object mode.">enums::GraphicsMode::TEXT_OBJECT</a> before calling this function. </dd></dl>
+
+</div>
+</div>
+<a id="a1cdb0b332cda629e8cf659135f5dbdce" name="a1cdb0b332cda629e8cf659135f5dbdce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cdb0b332cda629e8cf659135f5dbdce">&#9670;&#160;</a></span>setDash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pdf::Page::setDash </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpdf_1_1DashMode.html">DashMode</a> &amp;&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the dash pattern for lines in the page. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td><a class="el" href="classpdf_1_1DashMode.html" title="Represents a dash mode.">DashMode</a> to use. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The graphics mode must be set to <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647a3fce52a805db2655fe34e1329f015396" title="Page description mode.">enums::GraphicsMode::PAGE_DESCRIPTION</a> or <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647aa82d062f25bc13de83bfb6f50b5f5f0c" title="Text object mode.">enums::GraphicsMode::TEXT_OBJECT</a> before calling this function. </dd></dl>
+
+</div>
+</div>
+<a id="aabf4cd69b99f5e8aecd18a62bd7cbe52" name="aabf4cd69b99f5e8aecd18a62bd7cbe52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabf4cd69b99f5e8aecd18a62bd7cbe52">&#9670;&#160;</a></span>setExternGState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pdf::Page::setExternGState </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpdf_1_1ContentStream.html">ContentStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>stream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies the graphics state to the page. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>Extended graphics state object to use. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The graphics mode must be set to <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647a3fce52a805db2655fe34e1329f015396" title="Page description mode.">enums::GraphicsMode::PAGE_DESCRIPTION</a> before calling this function. </dd></dl>
 
 </div>
 </div>
@@ -2103,6 +2394,61 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>writeText</b> (const 
   </table>
   </dd>
 </dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The graphics mode must be set to <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647a3fce52a805db2655fe34e1329f015396" title="Page description mode.">enums::GraphicsMode::PAGE_DESCRIPTION</a> or <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647aa82d062f25bc13de83bfb6f50b5f5f0c" title="Text object mode.">enums::GraphicsMode::TEXT_OBJECT</a> before calling this function. </dd></dl>
+
+</div>
+</div>
+<a id="a88c1cbe3bfa4d07955edce12cf635c73" name="a88c1cbe3bfa4d07955edce12cf635c73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88c1cbe3bfa4d07955edce12cf635c73">&#9670;&#160;</a></span>setGrayFill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pdf::Page::setGrayFill </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>gray</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the gray filling color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gray</td><td>Gray value to use (<code>0 &lt;= gray &lt;= 1</code>). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The graphics mode must be set to <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647a3fce52a805db2655fe34e1329f015396" title="Page description mode.">enums::GraphicsMode::PAGE_DESCRIPTION</a> or <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647aa82d062f25bc13de83bfb6f50b5f5f0c" title="Text object mode.">enums::GraphicsMode::TEXT_OBJECT</a> before calling this function. </dd></dl>
+
+</div>
+</div>
+<a id="a4366ee67d6edd9de1b21fd9a4331d4db" name="a4366ee67d6edd9de1b21fd9a4331d4db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4366ee67d6edd9de1b21fd9a4331d4db">&#9670;&#160;</a></span>setGrayStroke()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pdf::Page::setGrayStroke </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>gray</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the gray stroking color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gray</td><td>Gray value to use (<code>0 &lt;= gray &lt;= 1</code>). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The graphics mode must be set to <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647a3fce52a805db2655fe34e1329f015396" title="Page description mode.">enums::GraphicsMode::PAGE_DESCRIPTION</a> or <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647aa82d062f25bc13de83bfb6f50b5f5f0c" title="Text object mode.">enums::GraphicsMode::TEXT_OBJECT</a> before calling this function. </dd></dl>
 
 </div>
 </div>
@@ -2129,6 +2475,194 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>writeText</b> (const 
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a4caee7d967e5bdf437cf9c1b09161da9" name="a4caee7d967e5bdf437cf9c1b09161da9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4caee7d967e5bdf437cf9c1b09161da9">&#9670;&#160;</a></span>setHorizontalScaling()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pdf::Page::setHorizontalScaling </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the horizontal scaling for text displaying. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>New value of the horizontal scaling. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The graphics mode must be set to <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647a3fce52a805db2655fe34e1329f015396" title="Page description mode.">enums::GraphicsMode::PAGE_DESCRIPTION</a> or <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647aa82d062f25bc13de83bfb6f50b5f5f0c" title="Text object mode.">enums::GraphicsMode::TEXT_OBJECT</a> before calling this function. </dd></dl>
+
+</div>
+</div>
+<a id="a7b71d02dae4d172a4c4febf0deb07a79" name="a7b71d02dae4d172a4c4febf0deb07a79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b71d02dae4d172a4c4febf0deb07a79">&#9670;&#160;</a></span>setLineCap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pdf::Page::setLineCap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacepdf_1_1enums.html#a3d53cb176a17089d1b0bf47a165d543f">enums::LineCap</a>&#160;</td>
+          <td class="paramname"><em>lineCap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the shape to be used at the ends of lines. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lineCap</td><td>The new <a class="el" href="namespacepdf_1_1enums.html#a3d53cb176a17089d1b0bf47a165d543f" title="Represents a line cap.">enums::LineCap</a> style. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The graphics mode must be set to <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647a3fce52a805db2655fe34e1329f015396" title="Page description mode.">enums::GraphicsMode::PAGE_DESCRIPTION</a> or <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647aa82d062f25bc13de83bfb6f50b5f5f0c" title="Text object mode.">enums::GraphicsMode::TEXT_OBJECT</a> before calling this function. </dd></dl>
+
+</div>
+</div>
+<a id="a8b6ba76c50f1aeee3648d84ad42fe406" name="a8b6ba76c50f1aeee3648d84ad42fe406"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b6ba76c50f1aeee3648d84ad42fe406">&#9670;&#160;</a></span>setLineJoin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pdf::Page::setLineJoin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacepdf_1_1enums.html#afe974d14fdfdb8c78b967ef1f67665e7">enums::LineJoin</a>&#160;</td>
+          <td class="paramname"><em>lineJoin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the line join style in the page. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lineJoin</td><td>The new <a class="el" href="namespacepdf_1_1enums.html#afe974d14fdfdb8c78b967ef1f67665e7" title="Represents a line join.">enums::LineJoin</a> style. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The graphics mode must be set to <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647a3fce52a805db2655fe34e1329f015396" title="Page description mode.">enums::GraphicsMode::PAGE_DESCRIPTION</a> or <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647aa82d062f25bc13de83bfb6f50b5f5f0c" title="Text object mode.">enums::GraphicsMode::TEXT_OBJECT</a> before calling this function. </dd></dl>
+
+</div>
+</div>
+<a id="a68cfae6b76240b92b05ec963e698614a" name="a68cfae6b76240b92b05ec963e698614a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68cfae6b76240b92b05ec963e698614a">&#9670;&#160;</a></span>setLineWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pdf::Page::setLineWidth </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>lineWidth</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the width of the line used to stroke a path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lineWidth</td><td>New value of the line width. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The graphics mode must be set to <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647a3fce52a805db2655fe34e1329f015396" title="Page description mode.">enums::GraphicsMode::PAGE_DESCRIPTION</a> or <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647aa82d062f25bc13de83bfb6f50b5f5f0c" title="Text object mode.">enums::GraphicsMode::TEXT_OBJECT</a> before calling this function. </dd></dl>
+
+</div>
+</div>
+<a id="a6417fd56a3a5a4f1a27485763645daf6" name="a6417fd56a3a5a4f1a27485763645daf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6417fd56a3a5a4f1a27485763645daf6">&#9670;&#160;</a></span>setMiterLimit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pdf::Page::setMiterLimit </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>miterLimit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the new miter limit value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>New miter limit value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a59e3e2b7e0e1d029b201d6e192102302" name="a59e3e2b7e0e1d029b201d6e192102302"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59e3e2b7e0e1d029b201d6e192102302">&#9670;&#160;</a></span>setRGBFill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pdf::Page::setRGBFill </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpdf_1_1RGBColor.html">RGBColor</a> &amp;&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the filling <a class="el" href="classpdf_1_1RGBColor.html" title="Represents a RGB color.">RGBColor</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td><a class="el" href="classpdf_1_1RGBColor.html" title="Represents a RGB color.">RGBColor</a> to use for filling. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The graphics mode must be set to <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647a3fce52a805db2655fe34e1329f015396" title="Page description mode.">enums::GraphicsMode::PAGE_DESCRIPTION</a> or <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647aa82d062f25bc13de83bfb6f50b5f5f0c" title="Text object mode.">enums::GraphicsMode::TEXT_OBJECT</a> before calling this function. </dd></dl>
+
+</div>
+</div>
+<a id="a7cd77962ebdac9555bbef9caf982e466" name="a7cd77962ebdac9555bbef9caf982e466"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cd77962ebdac9555bbef9caf982e466">&#9670;&#160;</a></span>setRGBStroke()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pdf::Page::setRGBStroke </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpdf_1_1RGBColor.html">RGBColor</a> &amp;&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the stroking <a class="el" href="classpdf_1_1RGBColor.html" title="Represents a RGB color.">RGBColor</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td><a class="el" href="classpdf_1_1RGBColor.html" title="Represents a RGB color.">RGBColor</a> to use for stroking. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The graphics mode must be set to <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647a3fce52a805db2655fe34e1329f015396" title="Page description mode.">enums::GraphicsMode::PAGE_DESCRIPTION</a> or <a class="el" href="namespacepdf_1_1enums.html#a259fa1f026ce908e1cb2e651be9ad647aa82d062f25bc13de83bfb6f50b5f5f0c" title="Text object mode.">enums::GraphicsMode::TEXT_OBJECT</a> before calling this function. </dd></dl>
 
 </div>
 </div>
