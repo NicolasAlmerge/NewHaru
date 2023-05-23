@@ -15,5 +15,6 @@ var searchData=
   ['document_12',['Document',['../classpdf_1_1Document.html#afd7f780cb5912c14d39f62f1db0084ea',1,'pdf::Document::Document()'],['../classpdf_1_1Document.html',1,'pdf::Document']]],
   ['documentexception_13',['DocumentException',['../classpdf_1_1excepts_1_1DocumentException.html#a0d6065692f43686626f59dee5d6c90c2',1,'pdf::excepts::DocumentException::DocumentException()'],['../classpdf_1_1excepts_1_1DocumentException.html',1,'pdf::excepts::DocumentException']]],
   ['double_5fbyte_14',['DOUBLE_BYTE',['../namespacepdf_1_1enums.html#aa66fd976e0fa404461f0060679c3be85aff2bb61b7cd56e60a679676ba42280fc',1,'pdf::enums']]],
-  ['down_5fappearance_15',['DOWN_APPEARANCE',['../namespacepdf_1_1enums.html#a900ad02df790c838ebde295f25723a66aac3d0726241691422e2b1c506730eb46',1,'pdf::enums']]]
+  ['down_5fappearance_15',['DOWN_APPEARANCE',['../namespacepdf_1_1enums.html#a900ad02df790c838ebde295f25723a66aac3d0726241691422e2b1c506730eb46',1,'pdf::enums']]],
+  ['drawimage_16',['drawImage',['../classpdf_1_1Page.html#aebd8cda2d701fa0272a8266d397e26cd',1,'pdf::Page']]]
 ];

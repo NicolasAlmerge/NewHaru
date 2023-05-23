@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('classpdf_1_1excepts_1_1GStateLimitExce
 </div><!--header-->
 <div class="contents">
 
-<p>An exception raised when the G stack depth exceeds <a class="el" href="namespacepdf_1_1consts.html#a3ed7c3f9d2980d5765b60a48ad72899a" title="Represents the maximum G state.">consts::MAX_GSTATE</a>.  
+<p>An exception raised when calling <a class="el" href="classpdf_1_1Page.html#aad09cce01eb9d128b79aca406202e2c5" title="Saves the page&#39;s current graphics parameter to the stack.">Page::gSave</a> and the G stack depth is at <a class="el" href="namespacepdf_1_1consts.html#a3ed7c3f9d2980d5765b60a48ad72899a" title="Represents the maximum G state.">consts::MAX_GSTATE</a>.  
  <a href="classpdf_1_1excepts_1_1GStateLimitExceededException.html#details">More...</a></p>
 
 <p><code>#include &lt;Exception.hpp&gt;</code></p>
@@ -116,7 +116,7 @@ Inheritance diagram for pdf::excepts::GStateLimitExceededException:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a683b387de9c23fedb55f9e82f469c3a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1excepts_1_1GStateLimitExceededException.html#a683b387de9c23fedb55f9e82f469c3a4">GStateLimitExceededException</a> () noexcept</td></tr>
-<tr class="memdesc:a683b387de9c23fedb55f9e82f469c3a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="classpdf_1_1excepts_1_1GStateLimitExceededException.html" title="An exception raised when the G stack depth exceeds consts::MAX_GSTATE.">GStateLimitExceededException</a>.  <a href="classpdf_1_1excepts_1_1GStateLimitExceededException.html#a683b387de9c23fedb55f9e82f469c3a4">More...</a><br /></td></tr>
+<tr class="memdesc:a683b387de9c23fedb55f9e82f469c3a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="classpdf_1_1excepts_1_1GStateLimitExceededException.html" title="An exception raised when calling Page::gSave and the G stack depth is at consts::MAX_GSTATE.">GStateLimitExceededException</a>.  <a href="classpdf_1_1excepts_1_1GStateLimitExceededException.html#a683b387de9c23fedb55f9e82f469c3a4">More...</a><br /></td></tr>
 <tr class="separator:a683b387de9c23fedb55f9e82f469c3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classpdf_1_1excepts_1_1GraphicsException"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classpdf_1_1excepts_1_1GraphicsException')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classpdf_1_1excepts_1_1GraphicsException.html">pdf::excepts::GraphicsException</a></td></tr>
 <tr class="memitem:a1eb8a9687aeb897caa6d15627e3bf59f inherit pub_methods_classpdf_1_1excepts_1_1GraphicsException"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1excepts_1_1GraphicsException.html#a1eb8a9687aeb897caa6d15627e3bf59f">GraphicsException</a> (const char *className, const char *errorMessage, unsigned long errorCode, unsigned long detailCode=0U) noexcept</td></tr>
@@ -146,7 +146,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa021a4d16cfc8a9d4a4710d609b2fa7c inherit pub_methods_classpdf_1_1excepts_1_1Exception"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >An exception raised when the G stack depth exceeds <a class="el" href="namespacepdf_1_1consts.html#a3ed7c3f9d2980d5765b60a48ad72899a" title="Represents the maximum G state.">consts::MAX_GSTATE</a>. </p>
+<div class="textblock"><p >An exception raised when calling <a class="el" href="classpdf_1_1Page.html#aad09cce01eb9d128b79aca406202e2c5" title="Saves the page&#39;s current graphics parameter to the stack.">Page::gSave</a> and the G stack depth is at <a class="el" href="namespacepdf_1_1consts.html#a3ed7c3f9d2980d5765b60a48ad72899a" title="Represents the maximum G state.">consts::MAX_GSTATE</a>. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a683b387de9c23fedb55f9e82f469c3a4" name="a683b387de9c23fedb55f9e82f469c3a4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a683b387de9c23fedb55f9e82f469c3a4">&#9670;&#160;</a></span>GStateLimitExceededException()</h2>
@@ -171,7 +171,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Creates a new <a class="el" href="classpdf_1_1excepts_1_1GStateLimitExceededException.html" title="An exception raised when the G stack depth exceeds consts::MAX_GSTATE.">GStateLimitExceededException</a>. </p>
+<p>Creates a new <a class="el" href="classpdf_1_1excepts_1_1GStateLimitExceededException.html" title="An exception raised when calling Page::gSave and the G stack depth is at consts::MAX_GSTATE.">GStateLimitExceededException</a>. </p>
 <p >The error code will be set to <code>0x1014</code>. </p>
 
 </div>

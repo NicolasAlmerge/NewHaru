@@ -48,8 +48,7 @@ var namespacepdf =
         [ "SEPARATION", "namespacepdf_1_1enums.html#a319b7405daf14f2340cc626d011e67cda57bce4c304020f768514656b3aea51fd", null ],
         [ "DEVICE_N", "namespacepdf_1_1enums.html#a319b7405daf14f2340cc626d011e67cdac12020df1f5bec4f398fb6b5848be71b", null ],
         [ "INDEXED", "namespacepdf_1_1enums.html#a319b7405daf14f2340cc626d011e67cda7480c2820154d14ec47fdf08bb008aeb", null ],
-        [ "PATTERN", "namespacepdf_1_1enums.html#a319b7405daf14f2340cc626d011e67cda04ab50cd8ffc1031a09ac85aa6c5f76a", null ],
-        [ "EOF_COLOR_SPACE", "namespacepdf_1_1enums.html#a319b7405daf14f2340cc626d011e67cda0cc992f788221d5f280652271bc78a8c", null ]
+        [ "PATTERN", "namespacepdf_1_1enums.html#a319b7405daf14f2340cc626d011e67cda04ab50cd8ffc1031a09ac85aa6c5f76a", null ]
       ] ],
       [ "DateTimeAttribute", "namespacepdf_1_1enums.html#a6a0564b6cba2523559f9f77768e540f6", [
         [ "CREATION_DATE", "namespacepdf_1_1enums.html#a6a0564b6cba2523559f9f77768e540f6a1b56fd59b75da24a245e635aa5d460d1", null ],
