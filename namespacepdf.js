@@ -72,14 +72,12 @@ var namespacepdf =
       [ "LineCap", "namespacepdf_1_1enums.html#a3d53cb176a17089d1b0bf47a165d543f", [
         [ "BUTT_END", "namespacepdf_1_1enums.html#a3d53cb176a17089d1b0bf47a165d543fa70912559aceda9e49670d2b84b701f34", null ],
         [ "ROUND_END", "namespacepdf_1_1enums.html#a3d53cb176a17089d1b0bf47a165d543fa7c67e8f63ba629fc684b9a0826afad29", null ],
-        [ "PROJECTING_SQUARE_END", "namespacepdf_1_1enums.html#a3d53cb176a17089d1b0bf47a165d543faf960b7ddb9bd6b884bf2a21bdd815aba", null ],
-        [ "LINECAP_EOF", "namespacepdf_1_1enums.html#a3d53cb176a17089d1b0bf47a165d543fad06567424077aa8659d116eb1b1d0a25", null ]
+        [ "PROJECTING_SQUARE_END", "namespacepdf_1_1enums.html#a3d53cb176a17089d1b0bf47a165d543faf960b7ddb9bd6b884bf2a21bdd815aba", null ]
       ] ],
       [ "LineJoin", "namespacepdf_1_1enums.html#afe974d14fdfdb8c78b967ef1f67665e7", [
         [ "MITER_JOIN", "namespacepdf_1_1enums.html#afe974d14fdfdb8c78b967ef1f67665e7a65947f1194c0aa56e4260a2f26170e6c", null ],
         [ "ROUND_JOIN", "namespacepdf_1_1enums.html#afe974d14fdfdb8c78b967ef1f67665e7a41b008dda24374e411749df15d5536ee", null ],
-        [ "BEVEL_JOIN", "namespacepdf_1_1enums.html#afe974d14fdfdb8c78b967ef1f67665e7ada0a37c461ffef62dec51c38170524fb", null ],
-        [ "LINEJOIN_EOF", "namespacepdf_1_1enums.html#afe974d14fdfdb8c78b967ef1f67665e7a06c368afc8c094d40fc7e0f4df58a57e", null ]
+        [ "BEVEL_JOIN", "namespacepdf_1_1enums.html#afe974d14fdfdb8c78b967ef1f67665e7ada0a37c461ffef62dec51c38170524fb", null ]
       ] ],
       [ "MultiByteEncoding", "namespacepdf_1_1enums.html#afe6d4591e9edde24765a428feac125c5", [
         [ "GB_EUC_H", "namespacepdf_1_1enums.html#afe6d4591e9edde24765a428feac125c5ab3d5741e306a24d98cd34b0d460a91a4", null ],
@@ -198,8 +196,7 @@ var namespacepdf =
         [ "FILL_CLIPPING", "namespacepdf_1_1enums.html#a1a1a39f584bb03b57bf0a27bbbf62367a044444397628d044c2f49befba84a8b0", null ],
         [ "STROKE_CLIPPING", "namespacepdf_1_1enums.html#a1a1a39f584bb03b57bf0a27bbbf62367a5210d53af9556bb3d819eab7a4666dd2", null ],
         [ "FILL_STROKE_CLIPPING", "namespacepdf_1_1enums.html#a1a1a39f584bb03b57bf0a27bbbf62367af229ea200f6fcf0fb66b5614f019566b", null ],
-        [ "CLIPPING", "namespacepdf_1_1enums.html#a1a1a39f584bb03b57bf0a27bbbf62367a10140b86ceeb330915bd2fdda1b1ef37", null ],
-        [ "EOF_MODE", "namespacepdf_1_1enums.html#a1a1a39f584bb03b57bf0a27bbbf62367a0e36b06d0fa0ca87456e68b63f5a8f33", null ]
+        [ "CLIPPING", "namespacepdf_1_1enums.html#a1a1a39f584bb03b57bf0a27bbbf62367a10140b86ceeb330915bd2fdda1b1ef37", null ]
       ] ],
       [ "TransitionStyle", "namespacepdf_1_1enums.html#a2cb400bab33a8940c2d2725d781b59ec", [
         [ "WIPE_RIGHT", "namespacepdf_1_1enums.html#a2cb400bab33a8940c2d2725d781b59eca067f8632962b3e73a0f7f2855ba0c25a", null ],
@@ -228,8 +225,7 @@ var namespacepdf =
       ] ],
       [ "WritingMode", "namespacepdf_1_1enums.html#a97be1315ad3d9055eaf872bf6b5113d3", [
         [ "HORIZONTAL", "namespacepdf_1_1enums.html#a97be1315ad3d9055eaf872bf6b5113d3a86e5d0d8407ce71f7e2004ef3949894e", null ],
-        [ "VERTICAL", "namespacepdf_1_1enums.html#a97be1315ad3d9055eaf872bf6b5113d3a3e1b74251c07310c5f1b968145bf00dc", null ],
-        [ "EOF_MODE", "namespacepdf_1_1enums.html#a97be1315ad3d9055eaf872bf6b5113d3a0e36b06d0fa0ca87456e68b63f5a8f33", null ]
+        [ "VERTICAL", "namespacepdf_1_1enums.html#a97be1315ad3d9055eaf872bf6b5113d3a3e1b74251c07310c5f1b968145bf00dc", null ]
       ] ]
     ] ],
     [ "excepts", "namespacepdf_1_1excepts.html", "namespacepdf_1_1excepts" ],
