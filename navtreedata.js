@@ -52,9 +52,9 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "classpdf_1_1Document.html#ab21c4a6e380c3ba3a5f6474041772ae8",
-"classpdf_1_1Page.html#ac356cc5ff54260489c7cacebfc9b7a33",
-"classpdf_1_1excepts_1_1InvalidImageOperationException.html",
-"namespacepdf_1_1enums.html#a3ee97d4ab64873ce2b1c2191159592d6"
+"classpdf_1_1Page.html#abeae3301449da21e0032bb7c439986ba",
+"classpdf_1_1excepts_1_1InvalidFontSizeException.html",
+"namespacepdf_1_1enums.html#a319b7405daf14f2340cc626d011e67cdae593949135914f0c85e8006d591d2831"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
