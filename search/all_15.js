@@ -7,5 +7,6 @@ var searchData=
   ['wipe_5fleft_4',['WIPE_LEFT',['../namespacepdf_1_1enums.html#a2cb400bab33a8940c2d2725d781b59eca304998bb4a500fc1c3aee967192c79cf',1,'pdf::enums']]],
   ['wipe_5fright_5',['WIPE_RIGHT',['../namespacepdf_1_1enums.html#a2cb400bab33a8940c2d2725d781b59eca067f8632962b3e73a0f7f2855ba0c25a',1,'pdf::enums']]],
   ['wipe_5fup_6',['WIPE_UP',['../namespacepdf_1_1enums.html#a2cb400bab33a8940c2d2725d781b59eca82b446659d94277abbc85d9ef7422cfc',1,'pdf::enums']]],
-  ['writingmode_7',['WritingMode',['../namespacepdf_1_1enums.html#a97be1315ad3d9055eaf872bf6b5113d3',1,'pdf::enums']]]
+  ['writetext_7',['writeText',['../classpdf_1_1Page.html#a1e96c637d759436a72b5a77ac8b00e98',1,'pdf::Page']]],
+  ['writingmode_8',['WritingMode',['../namespacepdf_1_1enums.html#a97be1315ad3d9055eaf872bf6b5113d3',1,'pdf::enums']]]
 ];

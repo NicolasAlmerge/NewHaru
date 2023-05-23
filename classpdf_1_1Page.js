@@ -87,6 +87,19 @@ var classpdf_1_1Page =
     [ "setRotation", "classpdf_1_1Page.html#abe42fee7a80ff13270a124a86d88c2d7", null ],
     [ "setSize", "classpdf_1_1Page.html#abeae3301449da21e0032bb7c439986ba", null ],
     [ "setSlideShow", "classpdf_1_1Page.html#a8be5ed844a203877bb5b1228e514ee11", null ],
+    [ "setTextLeading", "classpdf_1_1Page.html#a4a8b6d56abd0ac98b8ad08108613d7b4", null ],
+    [ "setTextMatrix", "classpdf_1_1Page.html#a86ea7170069c811e90fcdea566c5ee54", null ],
+    [ "setTextRenderingMode", "classpdf_1_1Page.html#a03cb264368cf8960bb6a6e7e5729d943", null ],
+    [ "setTextRise", "classpdf_1_1Page.html#ac60c3d01abbff24c6eb835cdb9f7e020", null ],
     [ "setWidth", "classpdf_1_1Page.html#a93e46ec639b12a00ce7b4e971615227f", null ],
-    [ "setZoom", "classpdf_1_1Page.html#a9acc575fb3070c0504ef4b2cdb92cf1f", null ]
+    [ "setWordSpace", "classpdf_1_1Page.html#a38a36d31db8ed21ad5811d43d053fbc9", null ],
+    [ "setZoom", "classpdf_1_1Page.html#a9acc575fb3070c0504ef4b2cdb92cf1f", null ],
+    [ "showText", "classpdf_1_1Page.html#a62adeca2564fff4cc781f5b43d6508de", null ],
+    [ "showTextNewLine", "classpdf_1_1Page.html#a2e51b0ce27705a1aeedcc8746cc3433d", null ],
+    [ "showTextNewLine", "classpdf_1_1Page.html#a32eb2225a0fa30a0ea0a5e843ad3189c", null ],
+    [ "stroke", "classpdf_1_1Page.html#aae00b173b8c107f4b246ed4e978c1cb7", null ],
+    [ "textOut", "classpdf_1_1Page.html#a9d562b64d97a8e6822ae42004be1afb2", null ],
+    [ "textOut", "classpdf_1_1Page.html#aa94fd660ba2920cea905ac92f574c9c6", null ],
+    [ "textRect", "classpdf_1_1Page.html#aafb65d9fbcc23c7829a3c2a6ffb33671", null ],
+    [ "writeText", "classpdf_1_1Page.html#a1e96c637d759436a72b5a77ac8b00e98", null ]
 ];

@@ -123,13 +123,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a14aa01617ea736b96eec177aa278e973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="classpdf_1_1RGBColor.html" title="Represents a RGB color.">RGBColor</a> with the given attributes.  <a href="classpdf_1_1RGBColor.html#a14aa01617ea736b96eec177aa278e973">More...</a><br /></td></tr>
 <tr class="separator:a14aa01617ea736b96eec177aa278e973"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05c5ac9fe31855bac7611cf0403ee246"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1RGBColor.html#a05c5ac9fe31855bac7611cf0403ee246">getB</a> () const noexcept</td></tr>
-<tr class="memdesc:a05c5ac9fe31855bac7611cf0403ee246"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the blue component.  <a href="classpdf_1_1RGBColor.html#a05c5ac9fe31855bac7611cf0403ee246">More...</a><br /></td></tr>
+<tr class="memdesc:a05c5ac9fe31855bac7611cf0403ee246"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the blue component, between <code>0.0</code> and <code>1.0</code>.  <a href="classpdf_1_1RGBColor.html#a05c5ac9fe31855bac7611cf0403ee246">More...</a><br /></td></tr>
 <tr class="separator:a05c5ac9fe31855bac7611cf0403ee246"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a5021b2a534b130e0058a2d933ce3c8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1RGBColor.html#a8a5021b2a534b130e0058a2d933ce3c8">getG</a> () const noexcept</td></tr>
-<tr class="memdesc:a8a5021b2a534b130e0058a2d933ce3c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the green component.  <a href="classpdf_1_1RGBColor.html#a8a5021b2a534b130e0058a2d933ce3c8">More...</a><br /></td></tr>
+<tr class="memdesc:a8a5021b2a534b130e0058a2d933ce3c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the green component, between <code>0.0</code> and <code>1.0</code>.  <a href="classpdf_1_1RGBColor.html#a8a5021b2a534b130e0058a2d933ce3c8">More...</a><br /></td></tr>
 <tr class="separator:a8a5021b2a534b130e0058a2d933ce3c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afee629afc6c548c27165a509d6551ef5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1RGBColor.html#afee629afc6c548c27165a509d6551ef5">getR</a> () const noexcept</td></tr>
-<tr class="memdesc:afee629afc6c548c27165a509d6551ef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the red component.  <a href="classpdf_1_1RGBColor.html#afee629afc6c548c27165a509d6551ef5">More...</a><br /></td></tr>
+<tr class="memdesc:afee629afc6c548c27165a509d6551ef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the red component, between <code>0.0</code> and <code>1.0</code>.  <a href="classpdf_1_1RGBColor.html#afee629afc6c548c27165a509d6551ef5">More...</a><br /></td></tr>
 <tr class="separator:afee629afc6c548c27165a509d6551ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a792664eee068bea2387e4383c91af3fb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpdf_1_1RGBColor.html#a792664eee068bea2387e4383c91af3fb">operator==</a> (const <a class="el" href="classpdf_1_1Color.html">Color</a> &amp;other) const noexcept override</td></tr>
 <tr class="memdesc:a792664eee068bea2387e4383c91af3fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether two colors are equal.  <a href="classpdf_1_1RGBColor.html#a792664eee068bea2387e4383c91af3fb">More...</a><br /></td></tr>
@@ -230,7 +230,7 @@ static const <a class="el" href="classpdf_1_1RGBColor.html">RGBColor</a>&#160;</
 </div><div class="memdoc">
 
 <p>Creates the black <a class="el" href="classpdf_1_1RGBColor.html" title="Represents a RGB color.">RGBColor</a>. </p>
-<p >This is equivalent to <code>RGBColor(0, 0, 0)</code> and <a class="el" href="classpdf_1_1RGBColor.html#a36e8e1dcf89b074728589fdeb42ff3e0" title="Black color.">RGBColor::BLACK</a>. </p>
+<p >This is equivalent to <code><a class="el" href="classpdf_1_1RGBColor.html" title="Represents a RGB color.">RGBColor</a>(0.0, 0.0, 0.0)</code> and <a class="el" href="classpdf_1_1RGBColor.html#a36e8e1dcf89b074728589fdeb42ff3e0" title="Black color.">RGBColor::BLACK</a>. </p>
 
 </div>
 </div>
@@ -277,9 +277,9 @@ static const <a class="el" href="classpdf_1_1RGBColor.html">RGBColor</a>&#160;</
 <p>Creates a new <a class="el" href="classpdf_1_1RGBColor.html" title="Represents a RGB color.">RGBColor</a> with the given attributes. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">r</td><td>Red component. </td></tr>
-    <tr><td class="paramname">g</td><td>Green component. </td></tr>
-    <tr><td class="paramname">b</td><td>Blue component. </td></tr>
+    <tr><td class="paramname">r</td><td>Red component (<code>0.0 &lt;= r &lt;= 1.0</code>). </td></tr>
+    <tr><td class="paramname">g</td><td>Green component (<code>0.0 &lt;= g &lt;= 1.0</code>). </td></tr>
+    <tr><td class="paramname">b</td><td>Blue component (<code>0.0 &lt;= b &lt;= 1.0</code>). </td></tr>
   </table>
   </dd>
 </dl>
@@ -310,7 +310,7 @@ static const <a class="el" href="classpdf_1_1RGBColor.html">RGBColor</a>&#160;</
 </table>
 </div><div class="memdoc">
 
-<p>Gets the blue component. </p>
+<p>Gets the blue component, between <code>0.0</code> and <code>1.0</code>. </p>
 <dl class="section return"><dt>Returns</dt><dd>Blue component. </dd></dl>
 
 </div>
@@ -338,7 +338,7 @@ static const <a class="el" href="classpdf_1_1RGBColor.html">RGBColor</a>&#160;</
 </table>
 </div><div class="memdoc">
 
-<p>Gets the green component. </p>
+<p>Gets the green component, between <code>0.0</code> and <code>1.0</code>. </p>
 <dl class="section return"><dt>Returns</dt><dd>Green component. </dd></dl>
 
 </div>
@@ -366,7 +366,7 @@ static const <a class="el" href="classpdf_1_1RGBColor.html">RGBColor</a>&#160;</
 </table>
 </div><div class="memdoc">
 
-<p>Gets the red component. </p>
+<p>Gets the red component, between <code>0.0</code> and <code>1.0</code>. </p>
 <dl class="section return"><dt>Returns</dt><dd>Red component. </dd></dl>
 
 </div>
