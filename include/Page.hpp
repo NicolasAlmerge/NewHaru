@@ -800,9 +800,10 @@ namespace pdf {
         /**
          * @brief   Begins a text object, prints the text at the specified text position and ends the text object.
          * @details This is equivalent to:
-         * @code    beginText();
-         *          textOut(text, position);
-         *          endText();
+         * @code
+         * beginText();
+         * textOut(text, position);
+         * endText();
          * @endcode
          * @param text Text to print.
          * @param position Position at which to print the text.
