@@ -28,12 +28,42 @@ namespace pdf {
         friend class Document;
 
     public:
-        void setWidth(float value);
-        void setHeight(float value);
+
+        /**
+         * @brief Sets the page width.
+         * @param width Value to use for the width.
+        */
+        void setWidth(float width);
+
+        /**
+         * @brief Sets the page height.
+         * @param height Value to use for the height.
+        */
+        void setHeight(float height);
+
+        /**
+         * @brief Sets the page size and orientation.
+         * @param size enums::PageSize to use.
+         * @param orientation enums::PageOrientation to use.
+        */
         void setSize(enums::PageSize size, enums::PageOrientation orientation = enums::PageOrientation::PORTRAIT);
+
+        /**
+         * @brief Sets the page rotation.
+         * @param rotation enums::PageRotation to use.
+        */
         void setRotation(enums::PageRotation rotation);
 
+        /**
+         * @brief  Gets the page width.
+         * @return Page width.
+        */
         float getWidth() const;
+
+        /**
+         * @brief  Gets the page height.
+         * @return Page height.
+        */
         float getHeight() const;
 
         /**
@@ -77,14 +107,28 @@ namespace pdf {
         */
         LinkAnnotation createURILinkAnnotation(const std::string& uri, const Box& box);
 
+        /**
+         * @brief  Gets the width of a text.
+         * @return Width of `text`.
+        */
         float getTextWidth(const std::string& text) const;
 
+        /**
+         * @brief  Measures calculates the byte length which can be included within the specified width.
+         * @param  text Text to get width from.
+         * @param  width Width of the area to put the text.
+         * @param  wordWrap When `text` contains the words `"ABCDE"`, `"FGH"` and `"IJKL"`, and the substring until `"J"` can be included within the width,
+         *         if `wordWrap` is `false` it returns `12`, else it returns `10` (the end of the previous word).
+         * @return Data pair containing, in this order:
+         *         - Byte length which can be included within the specified width in current fontsize, character spacing and word spacing
+         *         - The real widths of `text`
+        */
         std::pair<unsigned int, float> measureText(const std::string& text, float width, bool wordWrap) const;
 
         /**
-         * @brief Gets the page's current graphics mode.
+         * @brief  Gets the page's current graphics mode.
          * @return Current graphics mode.
-         * @throw excepts::PageInvalidGModeException if the operation failed.
+         * @throw  excepts::InvalidGModeException if the operation failed.
         */
         enums::GraphicsMode getGraphicsMode() const;
 
@@ -114,8 +158,8 @@ namespace pdf {
 
         /**
          * @brief Sets the page zoom.
-         * @param zoom Zoom to use (between 0.08 and 32.0)
-         * @throw excepts::InvalidParameterException if `zoom < 0.08 || zoom > 32.0`
+         * @param zoom Zoom to use (`0.08 <= zoom <= 32.0`).
+         * @throw excepts::InvalidParameterException if `zoom < 0.08 || zoom > 32.0`.
         */
         void setZoom(float zoom);
 
@@ -125,61 +169,300 @@ namespace pdf {
         */
         TransposeMatrix getTransposeMatrix() const;
 
+        /**
+         * @brief  Gets the line width.
+         * @return Line width.
+        */
         float getLineWidth() const;
+
+        /**
+         * @brief  Gets the line cap.
+         * @return Line cap.
+        */
         enums::LineCap getLineCap() const;
+
+        /**
+         * @brief  Gets the line join.
+         * @return Line join.
+        */
         enums::LineJoin getLineJoin() const;
+
+        /**
+         * @brief  Gets the current value of the page's miter limit.
+         * @return Miter limit.
+        */
         float getMiterLimit() const;
 
+        /**
+         * @brief  Gets the current pattern of the page.
+         * @return Dash mode.
+        */
         DashMode getDash() const;
+
+        /**
+         * @brief  Gets the current value of the page's flatness.
+         * @return Flatness of the page.
+        */
         float getFlatness() const;
+
+        /**
+         * @brief  Gets the current value of the page's character spacing.
+         * @return Character spacing.
+        */
         float getCharSpace() const;
+
+        /**
+         * @brief  Gets the current value of the page's word spacing.
+         * @return Word spacing.
+        */
         float getWordSpace() const;
-        float getHorizontalScalling() const;
+
+        /**
+         * @brief  Gets the current value of the page's horizontal scaling for text displaying.
+         * @return Horizontal scaling of the page.
+        */
+        float getHorizontalScaling() const;
+
+        /**
+         * @brief  Gets the current value of the page's line spacing.
+         * @return Line spacing of the page.
+        */
         float getTextLeading() const;
+
+        /**
+         * @brief  Gets the current value of the page's text rendering mode.
+         * @return Text rendering mode of the page.
+        */
         enums::TextRenderingMode getTextRenderingMode() const;
+
+        /**
+         * @brief  Gets the current value of the page's text rising.
+         * @return Text rising of the page.
+        */
         float getTextRise() const;
 
+        /**
+         * @brief   Gets the current value of the page's filling RGBColor.
+         * @warning It is valid only when the page's filling color space is enums::ColorSpace::DEVICE_RGB.
+         * @return  Filling RGBColor of the page.
+        */
         RGBColor getRGBFill() const;
+
+        /**
+         * @brief   Gets the current value of the page's stroking RGBColor.
+         * @warning It is valid only when the page's stroking color space is enums::ColorSpace::DEVICE_RGB.
+         * @return  Stroking RGBColor of the page.
+        */
         RGBColor getRGBStroke() const;
+
+        /**
+         * @brief   Gets the current value of the page's filling CMYKColor.
+         * @warning It is valid only when the page's filling color space is enums::ColorSpace::DEVICE_CMYK.
+         * @return  Filling CMYKColor of the page.
+        */
         CMYKColor getCMYKFill() const;
+
+        /**
+         * @brief   Gets the current value of the page's stroking CMYKColor.
+         * @warning It is valid only when the page's stroking color space is enums::ColorSpace::DEVICE_CMYK.
+         * @return  Stroking CMYKColor of the page.
+        */
         CMYKColor getCMYKStroke() const;
 
+        /**
+         * @brief   Gets the current value of the page's filling gray color.
+         * @warning It is valid only when the page's filling color space is enums::ColorSpace::DEVICE_GRAY.
+         * @return  Filling gray color of the page.
+        */
         float getGrayFill() const;
+
+        /**
+         * @brief   Gets the current value of the page's stroking gray color.
+         * @warning It is valid only when the page's stroking color space is enums::ColorSpace::DEVICE_GRAY.
+         * @return  Stroking gray color of the page.
+        */
         float getGrayStroke() const;
 
+        /**
+         * @brief  Returns the current value of the page's stroking color space.
+         * @return Stroking color space of the page.
+        */
         enums::ColorSpace getStrokingColorSpace() const;
+
+        /**
+         * @brief  Returns the current value of the page's filling color space.
+         * @return Filling color space of the page.
+        */
         enums::ColorSpace getFillingColorSpace() const;
 
+        /**
+         * @brief  Gets the current text transformation matrix of the page.
+         * @return TransposeMatrix representing the transformation of the text.
+        */
         TransposeMatrix getTextMatrix() const;
-        unsigned int getGStateDepth() const;
-        void setSlideShow(enums::TransitionStyle type, float dispTime, float transTime);
 
+        /**
+         * @brief  Gets the number of the page's graphics state stack.
+         * @return Number of the page's graphics state stack.
+        */
+        unsigned int getGStateDepth() const;
+
+        /**
+         * @brief Configures the setting for slide transition of the page.
+         * @param type Transition type.
+         * @param dispTime Display duration of the page (in seconds).
+         * @param transTime Transition effect duration of the page (in seconds).
+        */
+        void setSlideShow(enums::TransitionStyle type, float dispTime, float transTime = 1.0F);
+
+        /**
+         * @brief Change to a new ContentStream on the page.
+         * @param newStream ContentStream to use.
+        */
         void newContentStream(const ContentStream& newStream);
+
+        /**
+         * @brief Insert a new ContentStream on the page.
+         * @param newStream ContentStream to use.
+        */
         void insertSharedContentStream(const ContentStream& sharedStream);
 
+        /**
+         * @brief Appends a circle arc to the current path.
+         * @param coors Center point of the circle.
+         * @param radius Radius of the circle.
+         * @param ang1 The angle of the begining of the arc.
+         * @param ang2 The angle of the end of the arc (must be greater than `ang1`).
+         * @note  Angles are given in degrees, with `0°` being vertical upward from `coors`.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION or enums::GraphicsMode::PATH_OBJECT before calling this function.
+         * @post  The graphics mode will be set to enums::GraphicsMode::PATH_OBJECT after calling this function.
+        */
         void arc(const Coor2D& coors, float radius, float ang1, float ang2);
 
+        /**
+         * @brief Begins a text object and sets the text position to `(0, 0)`.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION before calling this function.
+         * @post  The graphics mode will be set to enums::GraphicsMode::TEXT_OBJECT after calling this function.
+        */
         void beginText();
 
+        /**
+         * @brief Appends a circle to the current path.
+         * @param coors Center point of the circle.
+         * @param radius Radius of the circle.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION or enums::GraphicsMode::PATH_OBJECT before calling this function.
+         * @post  The graphics mode will be set to enums::GraphicsMode::PATH_OBJECT after calling this function.
+        */
         void circle(const Coor2D& coors, float radius);
 
+        /**
+         * @brief   Modifies the current clipping path by intersecting it with the current path using the nonzero winding number rule.
+         * @details The clipping path is only modified after the succeeding painting operator.
+         *          To avoid painting the current path, use the ::endPath.
+         * @warning Following painting operations will only affect the regions of the page contained by the clipping path.
+         *          Initially, the clipping path includes the entire page. There is no way to enlarge the current clipping path,
+         *          or to replace the clipping path with a new one. The functions ::gSave and ::gRestore may be used to save and
+         *          restore the current graphics state, including the clipping path.
+         * @pre     The graphics mode must be set to enums::GraphicsMode::PATH_OBJECT before calling this function.
+        */
         void clip();
 
+        /**
+         * @brief   Appends a straight line from the current point to the start point of sub path.
+         * @details The current point is moved to the start point of sub path.
+         * @pre     The graphics mode must be set to enums::GraphicsMode::PATH_OBJECT before calling this function.
+        */
         void closePath();
+
+        /**
+         * @brief Closes the current path then paints it.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PATH_OBJECT before calling this function.
+         * @post  The graphics mode will be set to enums::GraphicsMode::PAGE_DESCRIPTION after calling this function.
+        */
         void closePathStroke();
+
+        /**
+         * @brief Closes the current path, fills it using the even-odd rule and then paints it.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PATH_OBJECT before calling this function.
+         * @post  The graphics mode will be set to enums::GraphicsMode::PAGE_DESCRIPTION after calling this function.
+        */
         void closePathEofillStroke();
+
+        /**
+         * @brief Closes the current path, fills it using the nonzero winding number rule and then paints it.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PATH_OBJECT before calling this function.
+         * @post  The graphics mode will be set to enums::GraphicsMode::PAGE_DESCRIPTION after calling this function.
+        */
         void closePathFillStroke();
 
+        /**
+         * @brief Concatenates the page's current transformation matrix with the specified matrix.
+         * @param matrix Matrix to use for concatenation.
+        */
         void concat(const TransposeMatrix& matrix);
 
-        void curveTo(float x1, float y1, float x2, float y2, float x3, float y3);
-        void curveTo2(float x2, float y2, float x3, float y3);
-        void curveTo3(float x1, float y1, float x3, float y3);
+        /**
+         * @brief   Appends a Bézier curve to the current path.
+         * @details This uses the control points `first`, `second` and `third`,
+         *          then sets the current point to `third`.
+         * @param   first First point to use.
+         * @param   second Second point to use.
+         * @param   third Third point to use.
+         * @pre     The graphics mode must be set to enums::GraphicsMode::PATH_OBJECT before calling this function.
+        */
+        void curve(const Coor2D& first, const Coor2D& second, const Coor2D& third);
 
+        /**
+         * @brief   Appends a Bézier curve to the current path.
+         * @details This uses the current point, `second` and `third`,
+         *          then sets the current point to `third`.
+         * @param   second Second point to use.
+         * @param   third Third point to use.
+         * @pre     The graphics mode must be set to enums::GraphicsMode::PATH_OBJECT before calling this function.
+        */
+        void curveFromCurrent(const Coor2D& second, const Coor2D& third);
+
+        /**
+         * @brief   Appends a Bézier curve to the current path.
+         * @details This uses the control points `first` and `third`,
+         *          then sets the current point to `third`.
+         * @param   first First point to use.
+         * @param   third Third point to use.
+         * @pre     The graphics mode must be set to enums::GraphicsMode::PATH_OBJECT before calling this function.
+        */
+        void curve(const Coor2D& first, const Coor2D& third);
+
+        /**
+         * @brief Displays an Image in one operation.
+         * @param image Image to use.
+         * @param coors The lower left point of the region where the image should be displayed.
+         * @param width Width of the region where the image should be displayed.
+         * @param height Height of the region where the image should be displayed.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION before calling this function.
+        */
         void drawImage(const Image& image, const Coor2D& coors, float width, float height);
+
+        /**
+         * @brief Appends an ellipse to the current path.
+         * @param coors Center point of the ellipse.
+         * @param xRadius Horizontal radius of the ellipse.
+         * @param yRadius Vertical radius of the ellipse.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PATH_OBJECT before calling this function.
+        */
         void ellipse(const Coor2D& coors, float xRadius, float yRadius);
 
+        /**
+         * @brief Ends the path object without filling or painting.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PATH_OBJECT before calling this function.
+         * @post  The graphics mode will be set to enums::GraphicsMode::PAGE_DESCRIPTION after calling this function.
+        */
         void endPath();
+
+        /**
+         * @brief Ends a text object.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::TEXT_OBJECT before calling this function.
+         * @post  The graphics mode will be set to enums::GraphicsMode::PAGE_DESCRIPTION after calling this function.
+        */
         void endText();
 
         void eoClip();
@@ -191,7 +474,38 @@ namespace pdf {
         void fill();
         void fillStroke();
 
+        /**
+         * @brief Restores the graphics state which was saved by ::gSave.
+         * @throw excepts::NoGStateException if no graphics state was stored.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION before calling this function.
+        */
         void gRestore();
+
+        /**
+         * @brief   Saves the page's current graphics parameter to the stack.
+         * @details An application can invoke this function up to consts::MAX_GSTATE times and can restore the saved parameter by invoking ::gRestore.
+         *          The parameters that are saved are:
+         *          - Character spacing
+         *          - Clipping path
+         *          - DashMode
+         *          - Filling color
+         *          - Flatness
+         *          - Font
+         *          - The font size
+         *          - Horizontal scalling
+         *          - Line width
+         *          - enums::LineCap style
+         *          - enums::LineJoin Style
+         *          - Miter limit
+         *          - Rendering mode
+         *          - Stroking color
+         *          - Text leading
+         *          - Text rise
+         *          - TransformationMatrix (TransposeMatrix)
+         *          - Word spacing
+         * @throw   excepts::GStateLimitExceededException if the G stack depth is already at consts::MAX_GSTATE.
+         * @pre     The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION before calling this function.
+        */
         void gSave();
 
         void lineTo(const Coor2D& coors);

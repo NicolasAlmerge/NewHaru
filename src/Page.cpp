@@ -43,19 +43,19 @@ static ColorSpace convertToColorSpace(HPDF_ColorSpace colorSpace) {
         case HPDF_CS_DEVICE_N: return ColorSpace::DEVICE_N;
         case HPDF_CS_INDEXED: return ColorSpace::INDEXED;
         case HPDF_CS_PATTERN: return ColorSpace::PATTERN;
-        default: return ColorSpace::EOF_COLOR_SPACE;
+        default: throw excepts::InvalidColorSpaceException();
     }
 }
 
 
 Page::Page(_HPDF_Dict_Rec* content) noexcept: ContentStream(content) {}
 
-void Page::setWidth(float value) {
-    HPDF_Page_SetWidth(__innerContent, value);
+void Page::setWidth(float width) {
+    HPDF_Page_SetWidth(__innerContent, width);
 }
 
-void Page::setHeight(float value) {
-    HPDF_Page_SetHeight(__innerContent, value);
+void Page::setHeight(float height) {
+    HPDF_Page_SetHeight(__innerContent, height);
 }
 
 void Page::setSize(PageSize size, PageOrientation orientation) {
@@ -186,7 +186,7 @@ float Page::getWordSpace() const {
     return HPDF_Page_GetWordSpace(__innerContent);
 }
 
-float Page::getHorizontalScalling() const {
+float Page::getHorizontalScaling() const {
     return HPDF_Page_GetHorizontalScalling(__innerContent);
 }
 
@@ -309,16 +309,16 @@ void Page::concat(const TransposeMatrix& matrix) {
     HPDF_Page_Concat(__innerContent, matrix.getA(), matrix.getB(), matrix.getC(), matrix.getD(), matrix.getX(), matrix.getY());
 }
 
-void Page::curveTo(float x1, float y1, float x2, float y2, float x3, float y3) {
-    HPDF_Page_CurveTo(__innerContent, x1, y1, x2, y2, x3, y3);
+void Page::curve(const Coor2D& first, const Coor2D& second, const Coor2D& third) {
+    HPDF_Page_CurveTo(__innerContent, first.getX(), first.getY(), second.getX(), second.getY(), third.getX(), third.getY());
 }
 
-void Page::curveTo2(float x2, float y2, float x3, float y3) {
-    HPDF_Page_CurveTo2(__innerContent, x2, y2, x3, y3);
+void Page::curveFromCurrent(const Coor2D& second, const Coor2D& third) {
+    HPDF_Page_CurveTo2(__innerContent, second.getX(), second.getY(), third.getX(), third.getY());
 }
 
-void Page::curveTo3(float x1, float y1, float x3, float y3) {
-    HPDF_Page_CurveTo3(__innerContent, x1, y1, x3, y3);
+void Page::curve(const Coor2D& first, const Coor2D& third) {
+    HPDF_Page_CurveTo3(__innerContent, first.getX(), first.getY(), third.getX(), third.getY());
 }
 
 void Page::drawImage(const Image& image, const Coor2D& coors, float width, float height) {

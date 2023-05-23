@@ -51,6 +51,7 @@ namespace pdf {
         /**
          * @brief  Gets the image color space.
          * @return The image color space.
+         * @throw  excepts::InvalidColorSpaceException if color space could not be found.
         */
         enums::ColorSpace getColorSpace() const;
 

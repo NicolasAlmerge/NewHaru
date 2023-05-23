@@ -1,4 +1,5 @@
 #include "../include/Image.hpp"
+#include "Exception.hpp"
 #include "hpdf.h"
 #include "string.h"
 using namespace pdf;
@@ -25,13 +26,12 @@ unsigned int Image::getBitsPerComponent() const {
 
 enums::ColorSpace Image::getColorSpace() const {
     const char* colorSpace = HPDF_Image_GetColorSpace(__innerContent);
-    if (colorSpace == nullptr) return enums::ColorSpace::EOF_COLOR_SPACE;
-
+    if (colorSpace == nullptr) throw excepts::InvalidColorSpaceException();
     if (strcmp(colorSpace, "DeviceGray") == 0) return enums::ColorSpace::DEVICE_GRAY;
     if (strcmp(colorSpace, "DeviceRGB") == 0) return enums::ColorSpace::DEVICE_RGB;
     if (strcmp(colorSpace, "DeviceCMYK") == 0) return enums::ColorSpace::DEVICE_CMYK;
     if (strcmp(colorSpace, "Indexed") == 0) return enums::ColorSpace::INDEXED;
-    return enums::ColorSpace::EOF_COLOR_SPACE;
+    throw excepts::InvalidColorSpaceException();
 }
 
 void Image::setColorMask(

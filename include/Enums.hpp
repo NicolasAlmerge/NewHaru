@@ -385,9 +385,7 @@ namespace pdf::enums {
         /// Indexed.
         INDEXED,
         /// Pattern.
-        PATTERN,
-        /// Color space not found.
-        EOF_COLOR_SPACE
+        PATTERN
     };
 
     /// Represents a transition style.

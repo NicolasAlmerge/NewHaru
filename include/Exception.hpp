@@ -455,7 +455,7 @@ namespace pdf::excepts {
 
     /**
      * \class  GStateLimitExceededException
-     * @brief  An exception raised when the G stack depth exceeds consts::MAX_GSTATE.
+     * @brief  An exception raised when calling Page::gSave and the G stack depth is at consts::MAX_GSTATE.
      * @file   Exception.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
@@ -567,7 +567,7 @@ namespace pdf::excepts {
 
     /**
      * \class  NonMatchingBitsPerComponentException
-     * @brief  An exception raised when the number of bits per component of a pdf::Image which was set as mask image is invalid.
+     * @brief  An exception raised when the number of bits per component of an Image which was set as mask image is invalid.
      * @file   Exception.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
@@ -599,7 +599,7 @@ namespace pdf::excepts {
 
     /**
      * \class  InvalidColorSpaceException
-     * @brief  An exception raised when an invalid ColorSpace of a pdf::Image was returned or set.
+     * @brief  An exception raised when an invalid enums::ColorSpace was returned or set.
      * @file   Exception.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
@@ -855,7 +855,7 @@ namespace pdf::excepts {
 
     /**
      * \class  NoGStateException
-     * @brief  An exception raised when there are no graphics states to be restored.
+     * @brief  An exception raised when calling Page::gRestore and there are no graphics states to be restored.
      * @file   Exception.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
