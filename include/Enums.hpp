@@ -289,9 +289,7 @@ namespace pdf::enums {
         /// Horizontal mode.
         HORIZONTAL = 0,
         /// Vertical mode.
-        VERTICAL,
-        /// Mode not found.
-        EOF_MODE
+        VERTICAL
     };
 
     /// Represents a border style.
@@ -345,9 +343,7 @@ namespace pdf::enums {
         /// End of line becomes a semicircle whose center is at path endpoint.
         ROUND_END,
         /// Line continues beyond endpoint, goes on half the endpoint stroke width.
-        PROJECTING_SQUARE_END,
-        /// Linecap not found.
-        LINECAP_EOF
+        PROJECTING_SQUARE_END
     };
 
     /// Represents a line join.
@@ -357,9 +353,7 @@ namespace pdf::enums {
         /// Round join.
         ROUND_JOIN,
         /// Bevel join.
-        BEVEL_JOIN,
-        /// Line join not found.
-        LINEJOIN_EOF
+        BEVEL_JOIN
     };
 
     /// Represents a color space.
@@ -443,9 +437,7 @@ namespace pdf::enums {
         /// Fill and stroke clipping mode.
         FILL_STROKE_CLIPPING,
         /// Clipping mode.
-        CLIPPING,
-        /// Text rendering mode not found.
-        EOF_MODE
+        CLIPPING
     };
 }
 

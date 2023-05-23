@@ -35,6 +35,6 @@ enums::WritingMode Encoder::getWritingMode() const {
     switch (HPDF_Encoder_GetWritingMode(__innerContent)) {
         case HPDF_WMODE_HORIZONTAL: return enums::WritingMode::HORIZONTAL;
         case HPDF_WMODE_VERTICAL: return enums::WritingMode::VERTICAL;
-        default: return enums::WritingMode::EOF_MODE;
+        default: return enums::WritingMode::HORIZONTAL;
     }
 }

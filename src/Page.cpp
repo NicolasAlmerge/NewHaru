@@ -149,7 +149,7 @@ LineCap Page::getLineCap() const {
         case HPDF_BUTT_END: return LineCap::BUTT_END;
         case HPDF_ROUND_END: return LineCap::ROUND_END;
         case HPDF_PROJECTING_SQUARE_END: return LineCap::PROJECTING_SQUARE_END;
-        default: return LineCap::LINECAP_EOF;
+        default: return LineCap::BUTT_END;
     }
 }
 
@@ -158,7 +158,7 @@ LineJoin Page::getLineJoin() const {
         case HPDF_MITER_JOIN: return LineJoin::MITER_JOIN;
         case HPDF_ROUND_JOIN: return LineJoin::ROUND_JOIN;
         case HPDF_BEVEL_JOIN: return LineJoin::BEVEL_JOIN;
-        default: return LineJoin::LINEJOIN_EOF;
+        default: return LineJoin::MITER_JOIN;
     }
 }
 
@@ -208,7 +208,7 @@ TextRenderingMode Page::getTextRenderingMode() const {
         case HPDF_STROKE_CLIPPING: return TextRenderingMode::STROKE_CLIPPING;
         case HPDF_FILL_STROKE_CLIPPING: return TextRenderingMode::FILL_STROKE_CLIPPING;
         case HPDF_CLIPPING: return TextRenderingMode::CLIPPING;
-        default: return TextRenderingMode::EOF_MODE;
+        default: return TextRenderingMode::FILL;
     }
 }
 
