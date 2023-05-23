@@ -171,8 +171,9 @@ namespace pdf {
         TransposeMatrix getTransposeMatrix() const;
 
         /**
-         * @brief  Gets the line width.
-         * @return Line width.
+         * @brief   Gets the width of the line used to stroke a path.
+         * @details The initial value is `1.0`.
+         * @return  Line width.
         */
         float getLineWidth() const;
 
@@ -183,8 +184,9 @@ namespace pdf {
         enums::LineCap getLineCap() const;
 
         /**
-         * @brief  Gets the line join.
-         * @return Line join.
+         * @brief   Gets the line join.
+         * @details The initial value is enums::LineJoin::MITER_JOIN.
+         * @return  Line join.
         */
         enums::LineJoin getLineJoin() const;
 
@@ -207,8 +209,9 @@ namespace pdf {
         float getFlatness() const;
 
         /**
-         * @brief  Gets the current value of the page's character spacing.
-         * @return Character spacing.
+         * @brief   Gets the current value of the page's character spacing.
+         * @details The initial value is `0.0`.
+         * @return  Character spacing.
         */
         float getCharSpace() const;
 
@@ -219,8 +222,9 @@ namespace pdf {
         float getWordSpace() const;
 
         /**
-         * @brief  Gets the current value of the page's horizontal scaling for text displaying.
-         * @return Horizontal scaling of the page.
+         * @brief   Gets the current value of the page's horizontal scaling for text displaying.
+         * @details The initial value is `100.0`.
+         * @return  Horizontal scaling of the page.
         */
         float getHorizontalScaling() const;
 
@@ -549,39 +553,151 @@ namespace pdf {
         */
         void gSave();
 
+        /**
+         * @brief Appends a path from the current point to the specified point.
+         * @param coors End point coordinates.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PATH_OBJECT before calling this function.
+        */
         void lineTo(const Coor2D& coors);
-        void moveTextPos(const Coor2D& coors);
-        void moveTextPos2(const Coor2D& coors);
+
+        /**
+         * @brief   Changes the current text position, using the specified offset values.
+         * @details If the current text position is (`x1`, `y1`), the new text position will be
+         *          (`x1 + offset.getX()`, `y1 + offset.getY()`).
+         * @param   offset Offset of the new text position.
+         * @param   invertTextLeading If set to `true`, the text leading will be set to `-offset.getY()`, otherwise no other changes.
+         * @pre     The graphics mode must be set to enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
+        void moveTextPos(const Coor2D& offset, bool invertTextLeading = false);
+
+        /**
+         * @brief   Starts a new subpath and move the current point for the drawing path.
+         * @details This sets the start point for the path to `coors`.
+         * @param   coors Coordinates to use.
+         * @pre     The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION or enums::GraphicsMode::PATH_OBJECT before calling this function.
+         * @post    The graphics mode will be set to enums::GraphicsMode::PATH_OBJECT after calling this function.
+        */
         void moveTo(const Coor2D& coors);
+
+        /**
+         * @brief   Moves the current position for the text showing depending on current text showing point and text leading.
+         * @details The new position is calculated with the current text transition matrix.
+        */
         void moveToNextLine();
 
-        void rectangle(float x, float y, float width, float height);
+        /**
+         * @brief Appends a rectangle to the current path.
+         * @param lowerLeftCoors Lower left point of the rectangle.
+         * @param width Width of the rectangle.
+         * @param height Height of the rectangle.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION or enums::GraphicsMode::PATH_OBJECT before calling this function.
+         * @post  The graphics mode will be set to enums::GraphicsMode::PATH_OBJECT after calling this function.
+        */
+        void rectangle(const Coor2D& lowerLeftCoors, float width, float height);
+
+        /**
+         * @brief Sets the character spacing.
+         * @param value New spacing value to use.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION or enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
         void setCharSpace(float value);
 
+        /**
+         * @brief Sets the filling CMYKColor.
+         * @param color CMYKColor to use for filling.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION or enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
         void setCMYKFill(const CMYKColor& color);
+
+        /**
+         * @brief Sets the stroking CMYKColor.
+         * @param color CMYKColor to use for stroking.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION or enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
         void setCMYKStroke(const CMYKColor& color);
 
+        /**
+         * @brief Sets the dash pattern for lines in the page.
+         * @param mode DashMode to use.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION or enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
         void setDash(const DashMode& mode);
 
+        /**
+         * @brief Applies the graphics state to the page.
+         * @param stream Extended graphics state object to use.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION before calling this function.
+        */
         void setExternGState(const ContentStream& stream);
 
         /**
          * @brief Sets the Font and size.
          * @param font Font to use.
          * @param size The font size to use (`0 < size <= consts::MAX_FONT_SIZE`).
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION or enums::GraphicsMode::TEXT_OBJECT before calling this function.
         */
         void setFontAndSize(const Font& font, float size);
 
+        /**
+         * @brief Sets the gray filling color.
+         * @param gray Gray value to use (`0 <= gray <= 1`).
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION or enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
         void setGrayFill(float gray);
+
+        /**
+         * @brief Sets the gray stroking color.
+         * @param gray Gray value to use (`0 <= gray <= 1`).
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION or enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
         void setGrayStroke(float gray);
 
-        void setHorizontalScalling(float value);
+        /**
+         * @brief Sets the horizontal scaling for text displaying.
+         * @param value New value of the horizontal scaling.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION or enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
+        void setHorizontalScaling(float value);
+
+        /**
+         * @brief Sets the shape to be used at the ends of lines.
+         * @param lineCap The new enums::LineCap style.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION or enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
         void setLineCap(enums::LineCap lineCap);
+
+        /**
+         * @brief Sets the line join style in the page.
+         * @param lineJoin The new enums::LineJoin style.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION or enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
         void setLineJoin(enums::LineJoin lineJoin);
+
+        /**
+         * @brief Sets the width of the line used to stroke a path.
+         * @param lineWidth New value of the line width.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION or enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
         void setLineWidth(float lineWidth);
+
+        /**
+         * @brief Sets the new miter limit value.
+         * @param value New miter limit value.
+        */
         void setMiterLimit(float miterLimit);
 
+        /**
+         * @brief Sets the filling RGBColor.
+         * @param color RGBColor to use for filling.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION or enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
         void setRGBFill(const RGBColor& color);
+
+        /**
+         * @brief Sets the stroking RGBColor.
+         * @param color RGBColor to use for stroking.
+         * @pre   The graphics mode must be set to enums::GraphicsMode::PAGE_DESCRIPTION or enums::GraphicsMode::TEXT_OBJECT before calling this function.
+        */
         void setRGBStroke(const RGBColor& color);
 
         void setTextLeading(float value);

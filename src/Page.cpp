@@ -373,12 +373,9 @@ void Page::lineTo(const Coor2D& coors) {
     HPDF_Page_LineTo(__innerContent, coors.getX(), coors.getY());
 }
 
-void Page::moveTextPos(const Coor2D& coors) {
-    HPDF_Page_MoveTextPos(__innerContent, coors.getX(), coors.getY());
-}
-
-void Page::moveTextPos2(const Coor2D& coors) {
-    HPDF_Page_MoveTextPos2(__innerContent, coors.getX(), coors.getY());
+void Page::moveTextPos(const Coor2D& offset, bool invertTextLeading) {
+    if (invertTextLeading) HPDF_Page_MoveTextPos2(__innerContent, offset.getX(), offset.getY());
+    else HPDF_Page_MoveTextPos(__innerContent, offset.getX(), offset.getY());
 }
 
 void Page::moveTo(const Coor2D& coors) {
@@ -389,8 +386,8 @@ void Page::moveToNextLine() {
     HPDF_Page_MoveToNextLine(__innerContent);
 }
 
-void Page::rectangle(float x, float y, float width, float height) {
-    HPDF_Page_Rectangle(__innerContent, x, y, width, height);
+void Page::rectangle(const Coor2D& lowerLeftCoors, float width, float height) {
+    HPDF_Page_Rectangle(__innerContent, lowerLeftCoors.getX(), lowerLeftCoors.getY(), width, height);
 }
 
 void Page::setCharSpace(float value) {
@@ -426,7 +423,7 @@ void Page::setGrayStroke(float gray) {
     HPDF_Page_SetGrayStroke(__innerContent, gray);
 }
 
-void Page::setHorizontalScalling(float value) {
+void Page::setHorizontalScaling(float value) {
     HPDF_Page_SetHorizontalScalling(__innerContent, value);
 }
 

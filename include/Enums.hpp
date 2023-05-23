@@ -340,11 +340,11 @@ namespace pdf::enums {
 
     /// Represents a line cap.
     enum class LineCap {
-        /// Butt ending.
+        /// Line is squared off at path endpoint.
         BUTT_END = 0,
-        /// Round ending.
+        /// End of line becomes a semicircle whose center is at path endpoint.
         ROUND_END,
-        /// Projecting square ending.
+        /// Line continues beyond endpoint, goes on half the endpoint stroke width.
         PROJECTING_SQUARE_END,
         /// Linecap not found.
         LINECAP_EOF
