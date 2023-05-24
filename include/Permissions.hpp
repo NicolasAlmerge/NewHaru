@@ -72,7 +72,7 @@ namespace pdf {
         const static Permissions COPY;
         /// Read and edit annotations permissions.
         const static Permissions EDIT_ANNOTATIONS;
-        /// Read, edit content and edit annotations permissions.
+        /// Read, edit content and edit annotations permissions. This is equivalent to Permissions::EDIT_CONTENT + Permissions::EDIT_ANNOTATIONS.
         const static Permissions EDIT_ALL;
         /// All permissions.
         const static Permissions ALL;
