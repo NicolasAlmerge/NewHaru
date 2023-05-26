@@ -74,7 +74,7 @@ namespace pdf {
 
         /**
          * @brief   Creates a TextAnnotation on this page.
-         * @details By default, the TextAnnotation will have the AnnotationIcon::NOTE icon.
+         * @details By default, the TextAnnotation will have the enums::AnnotationIcon::NOTE icon.
          * @param   text String content of the annotation.
          * @param   box Bounding box to use.
          * @param   encoder Encoder to use.
@@ -84,7 +84,7 @@ namespace pdf {
 
         /**
          * @brief   Creates a TextAnnotation on this page.
-         * @details By default, the TextAnnotation will have the AnnotationIcon::NOTE icon.
+         * @details By default, the TextAnnotation will have the enums::AnnotationIcon::NOTE icon.
          * @param   text String content of the annotation.
          * @param   box Bounding box to use.
          * @return  Newly created TextAnnotation.
