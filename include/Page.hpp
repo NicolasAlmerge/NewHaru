@@ -19,6 +19,8 @@ namespace pdf {
     /**
      * \class  Page
      * @brief  Represents a pdf document page.
+     * @note   Note that this class cannot be instantiated manually. Rather, it is created when calling
+     *         Document::addPage, Document::getCurrentPage, Document::getPageAtIndex and Document::insertPageBefore.
      * @file   Page.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
