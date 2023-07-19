@@ -390,7 +390,7 @@ namespace pdf::excepts {
 
     /**
      * \class  EncryptionNotSetException
-     * @brief  An exception raised when calling Document::setR2EncryptMode, Document::setR3EncryptMode or Document::setPermission
+     * @brief  An exception raised when calling Document::setR2EncryptMode, Document::setR3EncryptMode or Document::setPermissions
      *         has been called before calling Document::setPassword.
      * @file   Exception.hpp
      * @author Nicolas Almerge
