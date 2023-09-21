@@ -97,6 +97,13 @@ var namespacepdf =
         [ "KSCms_UHC_HW_H", "namespacepdf_1_1enums.html#afe6d4591e9edde24765a428feac125c5ab34fd4dff70551ba67f84bb92b9171c3", null ],
         [ "KSCms_UHC_HW_V", "namespacepdf_1_1enums.html#afe6d4591e9edde24765a428feac125c5a6cdb53ec4d9fdb189b9c5b64b320be0a", null ]
       ] ],
+      [ "PageBoundary", "namespacepdf_1_1enums.html#a992edf0c4924c1c6b7f855614a979a9a", [
+        [ "MEDIABOX", "namespacepdf_1_1enums.html#a992edf0c4924c1c6b7f855614a979a9aa0f9fad5f70a753a48fdc2d15ab234c6c", null ],
+        [ "CROPBOX", "namespacepdf_1_1enums.html#a992edf0c4924c1c6b7f855614a979a9aa7cd9148913894bc518bb51f75c8e10d9", null ],
+        [ "BLEEDBOX", "namespacepdf_1_1enums.html#a992edf0c4924c1c6b7f855614a979a9aa7bd13c4af10a90ddab0eecd76366d7bf", null ],
+        [ "TRIMBOX", "namespacepdf_1_1enums.html#a992edf0c4924c1c6b7f855614a979a9aa572b81695a099439f62a38ae1717d696", null ],
+        [ "ARTBOX", "namespacepdf_1_1enums.html#a992edf0c4924c1c6b7f855614a979a9aa34746433793b430be7ef740591709c47", null ]
+      ] ],
       [ "PageLayout", "namespacepdf_1_1enums.html#aa62dcec4447a8ca3b4be9c8be820d25b", [
         [ "SINGLE_PAGE", "namespacepdf_1_1enums.html#aa62dcec4447a8ca3b4be9c8be820d25ba6859599d682aadb9fcefaebf7f8f9745", null ],
         [ "ONE_COLUMN", "namespacepdf_1_1enums.html#aa62dcec4447a8ca3b4be9c8be820d25ba07d577623fc4ecd5d88e5d935339e16a", null ],

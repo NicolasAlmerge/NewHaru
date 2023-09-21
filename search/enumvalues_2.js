@@ -17,5 +17,6 @@ var searchData=
   ['cp1257_14',['CP1257',['../namespacepdf_1_1enums.html#a4149b191ba9bc827aece819959acfa0cab00d45c387f6f12480f3c8ec49dd90a9',1,'pdf::enums']]],
   ['cp1258_15',['CP1258',['../namespacepdf_1_1enums.html#a4149b191ba9bc827aece819959acfa0ca939a63abefd0243c6dc81470b5f2d7bd',1,'pdf::enums']]],
   ['creation_5fdate_16',['CREATION_DATE',['../namespacepdf_1_1enums.html#a6a0564b6cba2523559f9f77768e540f6a1b56fd59b75da24a245e635aa5d460d1',1,'pdf::enums']]],
-  ['creator_17',['CREATOR',['../namespacepdf_1_1enums.html#a7a2ca2cdb45be529d47b6c7501d4daf8a71867d2546785ba58a16552639a722c2',1,'pdf::enums']]]
+  ['creator_17',['CREATOR',['../namespacepdf_1_1enums.html#a7a2ca2cdb45be529d47b6c7501d4daf8a71867d2546785ba58a16552639a722c2',1,'pdf::enums']]],
+  ['cropbox_18',['CROPBOX',['../namespacepdf_1_1enums.html#a992edf0c4924c1c6b7f855614a979a9aa7cd9148913894bc518bb51f75c8e10d9',1,'pdf::enums']]]
 ];

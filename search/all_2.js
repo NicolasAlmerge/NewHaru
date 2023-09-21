@@ -40,7 +40,8 @@ var searchData=
   ['createurilinkannotation_37',['createURILinkAnnotation',['../classpdf_1_1Page.html#ac356cc5ff54260489c7cacebfc9b7a33',1,'pdf::Page']]],
   ['creation_5fdate_38',['CREATION_DATE',['../namespacepdf_1_1enums.html#a6a0564b6cba2523559f9f77768e540f6a1b56fd59b75da24a245e635aa5d460d1',1,'pdf::enums']]],
   ['creator_39',['CREATOR',['../namespacepdf_1_1enums.html#a7a2ca2cdb45be529d47b6c7501d4daf8a71867d2546785ba58a16552639a722c2',1,'pdf::enums']]],
-  ['curve_40',['curve',['../classpdf_1_1Page.html#ac34588fc9c7fd068889b5edcc215cf31',1,'pdf::Page::curve(const Coor2D &amp;first, const Coor2D &amp;third)'],['../classpdf_1_1Page.html#a455ad25acff7e6d4f6264d72a37f498f',1,'pdf::Page::curve(const Coor2D &amp;first, const Coor2D &amp;second, const Coor2D &amp;third)']]],
-  ['curvefromcurrent_41',['curveFromCurrent',['../classpdf_1_1Page.html#a4e526e3d0c8c20aa7a0d4a261ae6f82f',1,'pdf::Page']]],
-  ['cyan_42',['CYAN',['../classpdf_1_1RGBColor.html#a988f2f0fea9f2e63a670b9e3c74521ae',1,'pdf::RGBColor::CYAN()'],['../classpdf_1_1CMYKColor.html#ab4cee7745f584a9974b2d5b9e5e57a13',1,'pdf::CMYKColor::CYAN()']]]
+  ['cropbox_40',['CROPBOX',['../namespacepdf_1_1enums.html#a992edf0c4924c1c6b7f855614a979a9aa7cd9148913894bc518bb51f75c8e10d9',1,'pdf::enums']]],
+  ['curve_41',['curve',['../classpdf_1_1Page.html#ac34588fc9c7fd068889b5edcc215cf31',1,'pdf::Page::curve(const Coor2D &amp;first, const Coor2D &amp;third)'],['../classpdf_1_1Page.html#a455ad25acff7e6d4f6264d72a37f498f',1,'pdf::Page::curve(const Coor2D &amp;first, const Coor2D &amp;second, const Coor2D &amp;third)']]],
+  ['curvefromcurrent_42',['curveFromCurrent',['../classpdf_1_1Page.html#a4e526e3d0c8c20aa7a0d4a261ae6f82f',1,'pdf::Page']]],
+  ['cyan_43',['CYAN',['../classpdf_1_1RGBColor.html#a988f2f0fea9f2e63a670b9e3c74521ae',1,'pdf::RGBColor::CYAN()'],['../classpdf_1_1CMYKColor.html#ab4cee7745f584a9974b2d5b9e5e57a13',1,'pdf::CMYKColor::CYAN()']]]
 ];

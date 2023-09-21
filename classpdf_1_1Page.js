@@ -68,6 +68,7 @@ var classpdf_1_1Page =
     [ "moveToNextLine", "classpdf_1_1Page.html#ae0ff77e6a3335e5dc53aca9c0e300f36", null ],
     [ "newContentStream", "classpdf_1_1Page.html#a95f157795fb205270448281de9e6a202", null ],
     [ "rectangle", "classpdf_1_1Page.html#a62e9213264de429eca4fadd24157d853", null ],
+    [ "setBoundary", "classpdf_1_1Page.html#a3aedd060845f1187c210bcbcf1ea3313", null ],
     [ "setCharSpace", "classpdf_1_1Page.html#a25cfc471013426e2a82dbb2b36f4395c", null ],
     [ "setCMYKFill", "classpdf_1_1Page.html#abf15563f19e9d3a1cf20237b71077765", null ],
     [ "setCMYKStroke", "classpdf_1_1Page.html#a67723621606a0eb3ab3339a18b567a8c", null ],

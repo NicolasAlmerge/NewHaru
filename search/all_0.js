@@ -11,5 +11,6 @@ var searchData=
   ['annotationhighlightmode_8',['AnnotationHighlightMode',['../namespacepdf_1_1enums.html#a900ad02df790c838ebde295f25723a66',1,'pdf::enums']]],
   ['annotationicon_9',['AnnotationIcon',['../namespacepdf_1_1enums.html#a94339d3fb8c424c7ca228a9eec37ad62',1,'pdf::enums']]],
   ['arc_10',['arc',['../classpdf_1_1Page.html#a70e81eb97b0eaa7bd657eebae9acf688',1,'pdf::Page']]],
-  ['author_11',['AUTHOR',['../namespacepdf_1_1enums.html#a7a2ca2cdb45be529d47b6c7501d4daf8a657bf13f12d567c344fba3e7afe3b3a3',1,'pdf::enums']]]
+  ['artbox_11',['ARTBOX',['../namespacepdf_1_1enums.html#a992edf0c4924c1c6b7f855614a979a9aa34746433793b430be7ef740591709c47',1,'pdf::enums']]],
+  ['author_12',['AUTHOR',['../namespacepdf_1_1enums.html#a7a2ca2cdb45be529d47b6c7501d4daf8a657bf13f12d567c344fba3e7afe3b3a3',1,'pdf::enums']]]
 ];
