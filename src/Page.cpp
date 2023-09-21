@@ -58,6 +58,10 @@ void Page::setHeight(float height) {
     HPDF_Page_SetHeight(__innerContent, height);
 }
 
+void Page::setBoundary(enums::PageBoundary pageBoundary, const Box& box) {
+    HPDF_Page_SetBoundary(__innerContent, (HPDF_PageBoundary) pageBoundary, box.getLeft(), box.getBottom(), box.getRight(), box.getTop());
+}
+
 void Page::setSize(PageSize size, PageOrientation orientation) {
     HPDF_Page_SetSize(__innerContent, (HPDF_PageSizes) size, (HPDF_PageDirection) orientation);
 }

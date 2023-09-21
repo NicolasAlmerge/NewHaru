@@ -44,6 +44,13 @@ namespace pdf {
         void setHeight(float height);
 
         /**
+         * @brief Sets the page boundary.
+         * @param pageBoundary Page boundary mode to use.
+         * @param box Box to use for the borders.
+        */
+        void setBoundary(enums::PageBoundary pageBoundary, const Box& box);
+
+        /**
          * @brief Sets the page size and orientation.
          * @param size enums::PageSize to use.
          * @param orientation enums::PageOrientation to use.

@@ -4,6 +4,20 @@
 /// Represents the Haru++ enumerations.
 namespace pdf::enums {
 
+    /// Represents a page boundary.
+    enum class PageBoundary {
+        /// Mediabox boundary.
+        MEDIABOX = 0,
+        /// Cropbox boundary.
+        CROPBOX,
+        /// Bleedbox boundary.
+        BLEEDBOX,
+        /// Trimbox boundary.
+        TRIMBOX,
+        /// Artbox boundary.
+        ARTBOX
+    };
+
     /// Represents a graphics mode.
     enum class GraphicsMode: unsigned short {
         /// Page description mode.
