@@ -2242,9 +2242,16 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets the number of page per pages. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This can only be called if the document does not contain any page. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pagePerPages</td><td>Value to use. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classpdf_1_1excepts_1_1PageAlreadyExistsException.html" title="An exception raised when Document::setPageConfiguration was called and the document already contained...">excepts::PageAlreadyExistsException</a></td><td>if the document already contains pages. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2362,7 +2369,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets the owner and user passwords for a pdf document. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p >If <code>userPassword</code> is an empty string, this is equivalent to calling <a class="el" href="classpdf_1_1Document.html#ae9ea8dccf36ba4ce406ff773c4f5db5f">setPassword(const std::string&amp;)</a> with <code>ownerPassword</code> passed as argument. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ownerPassword</td><td>Owner password (cannot be empty). </td></tr>
     <tr><td class="paramname">userPassword</td><td>User password (can be empty, but cannot be equal to <code>ownerPassword</code>). </td></tr>
