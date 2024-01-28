@@ -158,8 +158,10 @@ namespace pdf {
         void resetErrorCode();
 
         /**
-         * @brief Sets the number of page per pages.
-         * @param pagePerPages Value to use.
+         * @brief   Sets the number of page per pages.
+         * @warning This can only be called if the document does not contain any page.
+         * @param   pagePerPages Value to use.
+         * @throw   excepts::PageAlreadyExistsException if the document already contains pages.
         */
         void setPageConfiguration(unsigned int pagePerPages);
 
@@ -574,6 +576,7 @@ namespace pdf {
 
         /**
          * @brief Sets the owner and user passwords for a pdf document.
+         * @details If `userPassword` is an empty string, this is equivalent to calling \ref ::setPassword(const std::string&) with `ownerPassword` passed as argument.
          * @param ownerPassword Owner password (cannot be empty).
          * @param userPassword  User password (can be empty, but cannot be equal to `ownerPassword`).
          * @throw excepts::InvalidPasswordException if `ownerPassword` is empty or `ownerPassword == userPassword`.
