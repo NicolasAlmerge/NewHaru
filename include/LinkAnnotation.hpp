@@ -16,6 +16,7 @@ namespace pdf {
     class LinkAnnotation final: public Annotation {
         explicit LinkAnnotation(_HPDF_Dict_Rec* content) noexcept;
         friend class Page;
+        using Annotation::setBorderStyle;
 
     public:
 
