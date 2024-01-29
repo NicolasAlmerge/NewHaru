@@ -169,6 +169,7 @@ namespace pdf {
          * @brief  Gets the Page at a specified index.
          * @param  index Index to use.
          * @return Page at specified index `index`.
+         * @throw  excepts::InvalidPageIndexException if `index` is out of range or document is not open.
         */
         Page getPageAtIndex(unsigned int index) const;
 
@@ -181,6 +182,7 @@ namespace pdf {
         /**
          * @brief  Gets the page layout.
          * @return Current page layout.
+         * @throw  excepts::InvalidPageLayoutException if the page layout is not set.
         */
         enums::PageLayout getPageLayout() const;
 
@@ -217,6 +219,7 @@ namespace pdf {
         /**
          * @brief  Gets the current Page.
          * @return Current Page.
+         * @throw  excepts::InvalidPageIndexException if there is no current page.
         */
         Page getCurrentPage() const;
 

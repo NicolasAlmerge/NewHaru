@@ -1120,7 +1120,7 @@ namespace pdf::excepts {
 
     /**
      * \class  InvalidPageIndexException
-     * @brief  An exception raised when an invalid page index was passed.
+     * @brief  An exception raised when an invalid index was passed when calling Document::getPageAtIndex or no current page exists when calling Document::getCurrentPage.
      * @file   Exception.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
@@ -1152,7 +1152,7 @@ namespace pdf::excepts {
 
     /**
      * \class  InvalidPageLayoutException
-     * @brief  An exception raised when an invalid page layout was returned.
+     * @brief  An exception raised to signal an invalid page layout when calling Document::getPageLayout.
      * @file   Exception.hpp
      * @author Nicolas Almerge
      * @date   2023-05-16
@@ -1164,22 +1164,6 @@ namespace pdf::excepts {
              * @details The error code will be set to `0x1069`.
             */
             InvalidPageLayoutException() noexcept;
-    };
-
-    /**
-     * \class  InvalidPageModeException
-     * @brief  An exception raised when an invalid page mode was returned.
-     * @file   Exception.hpp
-     * @author Nicolas Almerge
-     * @date   2023-05-16
-    */
-    class InvalidPageModeException final: public PageException {
-        public:
-            /**
-             * @brief   Creates a new InvalidPageModeException.
-             * @details The error code will be set to `0x1070`.
-            */
-            InvalidPageModeException() noexcept;
     };
 
     /**

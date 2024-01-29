@@ -71,7 +71,6 @@ static void __haruppErrorHandler(unsigned long errorNo, unsigned long detailNo, 
         case 0x1067: throw InvalidPageIndexException();
         case 0x1068: throw EmptyURIException();
         case 0x1069: throw InvalidPageLayoutException();
-        case 0x1070: throw InvalidPageModeException();
         default: throw UndefinedException(errorNo, detailNo);
     }
 }
@@ -273,7 +272,9 @@ void Document::setPageConfiguration(unsigned int pagePerPages) {
 }
 
 Page Document::getPageAtIndex(unsigned int index) const {
-    return Page(HPDF_GetPageByIndex(pdfDoc, index));
+    HPDF_Page page = HPDF_GetPageByIndex(pdfDoc, index);
+    if (page == nullptr) throw InvalidPageIndexException();
+    return Page(page);
 }
 
 void Document::setPageLayout(PageLayout layout) {
@@ -302,7 +303,7 @@ PageMode Document::getPageMode() const {
         case HPDF_PAGE_MODE_USE_OUTLINE: return PageMode::USE_OUTLINE;
         case HPDF_PAGE_MODE_USE_THUMBS: return PageMode::USE_THUMBS;
         case HPDF_PAGE_MODE_FULL_SCREEN: return PageMode::FULL_SCREEN;
-        default: throw InvalidPageModeException();
+        default: return PageMode::NONE;
     }
 }
 
@@ -319,7 +320,9 @@ void Document::setOpenDestination(const Destination& destination) {
 }
 
 Page Document::getCurrentPage() const {
-    return Page(HPDF_GetCurrentPage(pdfDoc));
+    HPDF_Page page = HPDF_GetCurrentPage(pdfDoc);
+    if (page == nullptr) throw InvalidPageIndexException();
+    return Page(page);
 }
 
 Page Document::addPage() {

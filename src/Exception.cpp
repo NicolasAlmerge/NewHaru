@@ -406,12 +406,6 @@ InvalidPageLayoutException::InvalidPageLayoutException() noexcept: PageException
     0x1069
 ) {}
 
-InvalidPageModeException::InvalidPageModeException() noexcept: PageException(
-    "InvalidPageModeException",
-    "Page mode could not be determined.",
-    0x1070
-) {}
-
 UndefinedException::UndefinedException(unsigned long errorCode, unsigned long detailCode) noexcept: Exception(
     "UndefinedException",
     "Error code is not valid.",
