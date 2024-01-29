@@ -55,3 +55,19 @@ int main() {
     return 0;
 }
 ```
+
+## Compilation
+
+For MacOS, you first need to install [Homebrew](https://brew.sh).
+
+After installing, you should install [libharu](https://formulae.brew.sh/formula/libharu) using:
+
+```sh
+brew install libharu
+```
+
+Then, you can compile your program by running:
+
+```sh
+g++ -std=c++17 -o output -O2 -Wall program.cpp NewHaru/src/*.cpp -I$(brew --prefix)/include/ -L$(brew --prefix)/lib/ -lhpdf -lpng -lz -lm
+```
