@@ -851,6 +851,12 @@ Public Member Functions</h2></td></tr>
 
 <p>Gets the current <a class="el" href="classpdf_1_1Page.html" title="Represents a pdf document page.">Page</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>Current <a class="el" href="classpdf_1_1Page.html" title="Represents a pdf document page.">Page</a>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classpdf_1_1excepts_1_1InvalidPageIndexException.html" title="An exception raised when an invalid index was passed when calling Document::getPageAtIndex or no curr...">excepts::InvalidPageIndexException</a></td><td>if there is no current page. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1196,6 +1202,12 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classpdf_1_1Page.html" title="Represents a pdf document page.">Page</a> at specified index <code>index</code>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classpdf_1_1excepts_1_1InvalidPageIndexException.html" title="An exception raised when an invalid index was passed when calling Document::getPageAtIndex or no curr...">excepts::InvalidPageIndexException</a></td><td>if <code>index</code> is out of range or document is not open. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1216,6 +1228,12 @@ Public Member Functions</h2></td></tr>
 
 <p>Gets the page layout. </p>
 <dl class="section return"><dt>Returns</dt><dd>Current page layout. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classpdf_1_1excepts_1_1InvalidPageLayoutException.html" title="An exception raised to signal an invalid page layout when calling Document::getPageLayout.">excepts::InvalidPageLayoutException</a></td><td>if the page layout is not set. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -18,14 +18,13 @@ var searchData=
   ['invalidimageoperationexception_15',['InvalidImageOperationException',['../classpdf_1_1excepts_1_1InvalidImageOperationException.html',1,'pdf::excepts']]],
   ['invalidpageindexexception_16',['InvalidPageIndexException',['../classpdf_1_1excepts_1_1InvalidPageIndexException.html',1,'pdf::excepts']]],
   ['invalidpagelayoutexception_17',['InvalidPageLayoutException',['../classpdf_1_1excepts_1_1InvalidPageLayoutException.html',1,'pdf::excepts']]],
-  ['invalidpagemodeexception_18',['InvalidPageModeException',['../classpdf_1_1excepts_1_1InvalidPageModeException.html',1,'pdf::excepts']]],
-  ['invalidpagesizeexception_19',['InvalidPageSizeException',['../classpdf_1_1excepts_1_1InvalidPageSizeException.html',1,'pdf::excepts']]],
-  ['invalidparameterexception_20',['InvalidParameterException',['../classpdf_1_1excepts_1_1InvalidParameterException.html',1,'pdf::excepts']]],
-  ['invalidpasswordexception_21',['InvalidPasswordException',['../classpdf_1_1excepts_1_1InvalidPasswordException.html',1,'pdf::excepts']]],
-  ['invalidpngimageexception_22',['InvalidPNGImageException',['../classpdf_1_1excepts_1_1InvalidPNGImageException.html',1,'pdf::excepts']]],
-  ['invalidr3encryptionkeylengthexception_23',['InvalidR3EncryptionKeyLengthException',['../classpdf_1_1excepts_1_1InvalidR3EncryptionKeyLengthException.html',1,'pdf::excepts']]],
-  ['invalidttcfileexception_24',['InvalidTTCFileException',['../classpdf_1_1excepts_1_1InvalidTTCFileException.html',1,'pdf::excepts']]],
-  ['invalidttcindexexception_25',['InvalidTTCIndexException',['../classpdf_1_1excepts_1_1InvalidTTCIndexException.html',1,'pdf::excepts']]],
-  ['invalidttfcmapexception_26',['InvalidTTFCMapException',['../classpdf_1_1excepts_1_1InvalidTTFCMapException.html',1,'pdf::excepts']]],
-  ['invalidttfformatexception_27',['InvalidTTFFormatException',['../classpdf_1_1excepts_1_1InvalidTTFFormatException.html',1,'pdf::excepts']]]
+  ['invalidpagesizeexception_18',['InvalidPageSizeException',['../classpdf_1_1excepts_1_1InvalidPageSizeException.html',1,'pdf::excepts']]],
+  ['invalidparameterexception_19',['InvalidParameterException',['../classpdf_1_1excepts_1_1InvalidParameterException.html',1,'pdf::excepts']]],
+  ['invalidpasswordexception_20',['InvalidPasswordException',['../classpdf_1_1excepts_1_1InvalidPasswordException.html',1,'pdf::excepts']]],
+  ['invalidpngimageexception_21',['InvalidPNGImageException',['../classpdf_1_1excepts_1_1InvalidPNGImageException.html',1,'pdf::excepts']]],
+  ['invalidr3encryptionkeylengthexception_22',['InvalidR3EncryptionKeyLengthException',['../classpdf_1_1excepts_1_1InvalidR3EncryptionKeyLengthException.html',1,'pdf::excepts']]],
+  ['invalidttcfileexception_23',['InvalidTTCFileException',['../classpdf_1_1excepts_1_1InvalidTTCFileException.html',1,'pdf::excepts']]],
+  ['invalidttcindexexception_24',['InvalidTTCIndexException',['../classpdf_1_1excepts_1_1InvalidTTCIndexException.html',1,'pdf::excepts']]],
+  ['invalidttfcmapexception_25',['InvalidTTFCMapException',['../classpdf_1_1excepts_1_1InvalidTTFCMapException.html',1,'pdf::excepts']]],
+  ['invalidttfformatexception_26',['InvalidTTFFormatException',['../classpdf_1_1excepts_1_1InvalidTTFFormatException.html',1,'pdf::excepts']]]
 ];

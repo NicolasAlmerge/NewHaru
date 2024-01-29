@@ -36,7 +36,6 @@ var namespacepdf_1_1excepts =
     [ "InvalidImageOperationException", "classpdf_1_1excepts_1_1InvalidImageOperationException.html", "classpdf_1_1excepts_1_1InvalidImageOperationException" ],
     [ "InvalidPageIndexException", "classpdf_1_1excepts_1_1InvalidPageIndexException.html", "classpdf_1_1excepts_1_1InvalidPageIndexException" ],
     [ "InvalidPageLayoutException", "classpdf_1_1excepts_1_1InvalidPageLayoutException.html", "classpdf_1_1excepts_1_1InvalidPageLayoutException" ],
-    [ "InvalidPageModeException", "classpdf_1_1excepts_1_1InvalidPageModeException.html", "classpdf_1_1excepts_1_1InvalidPageModeException" ],
     [ "InvalidPageSizeException", "classpdf_1_1excepts_1_1InvalidPageSizeException.html", "classpdf_1_1excepts_1_1InvalidPageSizeException" ],
     [ "InvalidParameterException", "classpdf_1_1excepts_1_1InvalidParameterException.html", "classpdf_1_1excepts_1_1InvalidParameterException" ],
     [ "InvalidPasswordException", "classpdf_1_1excepts_1_1InvalidPasswordException.html", "classpdf_1_1excepts_1_1InvalidPasswordException" ],

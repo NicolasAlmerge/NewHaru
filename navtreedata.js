@@ -54,7 +54,7 @@ var NAVTREEINDEX =
 "classpdf_1_1Document.html#ab21c4a6e380c3ba3a5f6474041772ae8",
 "classpdf_1_1Page.html#a8054a989edb5594eb9b9976d8a24c4a7",
 "classpdf_1_1excepts_1_1FontDuplicateRegistrationException.html#a5b7f2a15bb11f44a04b042eb6a4282d1",
-"functions_w.html"
+"hierarchy.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

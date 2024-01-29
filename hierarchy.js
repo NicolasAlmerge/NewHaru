@@ -70,7 +70,6 @@ var hierarchy =
           [ "pdf::excepts::PageException", "classpdf_1_1excepts_1_1PageException.html", [
             [ "pdf::excepts::EmptyURIException", "classpdf_1_1excepts_1_1EmptyURIException.html", null ],
             [ "pdf::excepts::InvalidPageLayoutException", "classpdf_1_1excepts_1_1InvalidPageLayoutException.html", null ],
-            [ "pdf::excepts::InvalidPageModeException", "classpdf_1_1excepts_1_1InvalidPageModeException.html", null ],
             [ "pdf::excepts::InvalidPageSizeException", "classpdf_1_1excepts_1_1InvalidPageSizeException.html", null ],
             [ "pdf::excepts::PageValueOutOfRangeException", "classpdf_1_1excepts_1_1PageValueOutOfRangeException.html", null ]
           ] ]
